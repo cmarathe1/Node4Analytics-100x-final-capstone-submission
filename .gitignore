@@ -16,6 +16,7 @@ Thumbs.db
 # Local agent settings and backups
 .agents/
 .codex/
+.claude/settings.local.json
 *.bak
 
 # Keep corpus PDFs local; research retains citations
