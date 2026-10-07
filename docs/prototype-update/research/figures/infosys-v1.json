@@ -1,0 +1,623 @@
+[
+ {
+  "id": "infosys.ann.rev_usd.fy26",
+  "company": "infosys",
+  "display": "20,158",
+  "doc": "FS4",
+  "pdf_page": 4,
+  "basis": "revenue · US$ mn · FY26 · IFRS consolidated",
+  "raw_match": "20,158 19,277 4.6%",
+  "raw_value": "20,158"
+ },
+ {
+  "id": "infosys.ann.rev_usd.fy25",
+  "company": "infosys",
+  "display": "19,277",
+  "doc": "FS4",
+  "pdf_page": 4,
+  "basis": "revenue · US$ mn · FY25 · IFRS consolidated",
+  "raw_match": "20,158 19,277 4.6%",
+  "raw_value": "19,277"
+ },
+ {
+  "id": "infosys.ann.rev_usd_yoy.fy26",
+  "company": "infosys",
+  "display": "+4.6%",
+  "doc": "FS4",
+  "pdf_page": 4,
+  "basis": "revenue growth · US$ reported · FY26",
+  "raw_match": "20,158 19,277 4.6%",
+  "raw_value": "4.6"
+ },
+ {
+  "id": "infosys.ann.rev_inr.fy26",
+  "company": "infosys",
+  "display": "1,78,650",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "revenue · Rs crore · FY26 · IFRS consolidated",
+  "raw_match": "178,650 162,990 9.6%",
+  "raw_value": "178,650"
+ },
+ {
+  "id": "infosys.ann.rev_inr.fy25",
+  "company": "infosys",
+  "display": "1,62,990",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "revenue · Rs crore · FY25 · IFRS consolidated",
+  "raw_match": "178,650 162,990 9.6%",
+  "raw_value": "162,990"
+ },
+ {
+  "id": "infosys.ann.rev_inr_yoy.fy26",
+  "company": "infosys",
+  "display": "+9.6%",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "revenue growth · Rs reported · FY26",
+  "raw_match": "178,650 162,990 9.6%",
+  "raw_value": "9.6"
+ },
+ {
+  "id": "infosys.ann.opm_rep.fy26",
+  "company": "infosys",
+  "display": "20.3%",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "operating margin · reported IFRS · FY26",
+  "raw_match": "36,254 20.3 34,424 21.1 1,289 0.7",
+  "raw_value": "20.3"
+ },
+ {
+  "id": "infosys.ann.opm_rep.fy25",
+  "company": "infosys",
+  "display": "21.1%",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "operating margin · reported IFRS · FY25",
+  "raw_match": "36,254 20.3 34,424 21.1 1,289 0.7",
+  "raw_value": "21.1"
+ },
+ {
+  "id": "infosys.ann.opm_adj.fy26",
+  "company": "infosys",
+  "display": "21.0%",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "operating margin · adjusted non-IFRS (ex Labour Codes) · FY26",
+  "raw_match": "1,289 0.7 - - 37,543 21.0",
+  "raw_value": "21.0"
+ },
+ {
+  "id": "infosys.ann.labour_codes.fy26",
+  "company": "infosys",
+  "display": "₹1,289 cr",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "Labour Codes past-service gratuity + leave liability · Rs crore · inside IFRS operating profit · FY26 (all in Q3)",
+  "raw_match": "36,254 20.3 34,424 21.1 1,289 0.7",
+  "raw_value": "1,289"
+ },
+ {
+  "id": "infosys.ann.labour_codes_margin.fy26",
+  "company": "infosys",
+  "display": "0.7 pp",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "Labour Codes effect on the FY26 operating margin",
+  "raw_match": "36,254 20.3 34,424 21.1 1,289 0.7",
+  "raw_value": "0.7"
+ },
+ {
+  "id": "infosys.ann.eps.fy26",
+  "company": "infosys",
+  "display": "₹71.58",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "basic EPS · Rs · FY26",
+  "raw_match": "71.58 64.50 11.0%",
+  "raw_value": "71.58"
+ },
+ {
+  "id": "infosys.ann.eps.fy25",
+  "company": "infosys",
+  "display": "₹64.50",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "basic EPS · Rs · FY25",
+  "raw_match": "71.58 64.50 11.0%",
+  "raw_value": "64.50"
+ },
+ {
+  "id": "infosys.ann.eps_yoy.fy26",
+  "company": "infosys",
+  "display": "+11.0%",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "basic EPS growth · FY26",
+  "raw_match": "71.58 64.50 11.0%",
+  "raw_value": "11.0"
+ },
+ {
+  "id": "infosys.ann.dps.fy26",
+  "company": "infosys",
+  "display": "₹48.00",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "dividend per share · Rs · FY26 (interim 23 + final 25)",
+  "raw_match": "48.00 43.00 11.6%",
+  "raw_value": "48.00"
+ },
+ {
+  "id": "infosys.ann.dps.fy25",
+  "company": "infosys",
+  "display": "₹43.00",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "dividend per share · Rs · FY25",
+  "raw_match": "48.00 43.00 11.6%",
+  "raw_value": "43.00"
+ },
+ {
+  "id": "infosys.ann.np_yoy.fy26",
+  "company": "infosys",
+  "display": "+10.2%",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "net profit growth · after NCI · FY26",
+  "raw_match": "29,440 26,713 10.2%",
+  "raw_value": "10.2"
+ },
+ {
+  "id": "infosys.ann.tax_reversal.fy26",
+  "company": "infosys",
+  "display": "₹774 cr",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "reversal of tax provisions (orders u/s 250, 254) · FY26; FS4 p.5 prints the same 774 for Q4'26, so all of it fell in Q4",
+  "raw_match": "reversal of tax provisions amounting to ₹774 crore and ₹101 crore",
+  "raw_value": "774"
+ },
+ {
+  "id": "infosys.ann.tax_reversal.fy25",
+  "company": "infosys",
+  "display": "₹101 cr",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "reversal of tax provisions · FY25 (all in Q4 FY25 per FS4 p.5)",
+  "raw_match": "reversal of tax provisions amounting to ₹774 crore and ₹101 crore",
+  "raw_value": "101"
+ },
+ {
+  "id": "infosys.ann.tax_interest.fy26",
+  "company": "infosys",
+  "display": "₹381 cr",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "pre-tax interest income on the same tax orders, in other income · FY26",
+  "raw_match": "interest income (pre-tax) of ₹381 crore and ₹327 crore",
+  "raw_value": "381"
+ },
+ {
+  "id": "infosys.ann.roe.fy26",
+  "company": "infosys",
+  "display": "31.6%",
+  "doc": "AR26",
+  "pdf_page": 17,
+  "basis": "return on equity · FY26 · AR key trends",
+  "raw_match": "₹ 43,075 cr 31.6% 88 21.0% 48.0",
+  "raw_value": "31.6"
+ },
+ {
+  "id": "infosys.ann.netnew.fy26",
+  "company": "infosys",
+  "display": "55%",
+  "doc": "AR26",
+  "pdf_page": 17,
+  "basis": "large-deal TCV net-new share · FY26",
+  "raw_match": "with net new of 55%"
+ },
+ {
+  "id": "infosys.ann.rev_inr.fy24",
+  "company": "infosys",
+  "display": "1,53,670",
+  "doc": "AR26",
+  "pdf_page": 17,
+  "basis": "revenue · Rs crore · FY24 · IFRS (five-year table)",
+  "raw_match": "Revenues 1,78,650 1,62,990 1,53,670",
+  "raw_value": "1,53,670"
+ },
+ {
+  "id": "infosys.ann.rev_usd.fy24",
+  "company": "infosys",
+  "display": "18,562",
+  "doc": "AR26",
+  "pdf_page": 17,
+  "basis": "revenue · US$ mn · FY24 (five-year table)",
+  "raw_match": "Revenues 20,158 19,277 18,562",
+  "raw_value": "18,562"
+ },
+ {
+  "id": "infosys.ann.rev_usd_yoy.fy25",
+  "company": "infosys",
+  "display": "+3.9%",
+  "basis": "revenue growth · US$ reported · FY25 (computed from the AR five-year table)",
+  "derived_from": [
+   "infosys.ann.rev_usd.fy25",
+   "infosys.ann.rev_usd.fy24"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "infosys.seg.margin_fs.fy26",
+  "company": "infosys",
+  "display": "25.3%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Financial Services · FY26 · before unallocable costs",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "25.3"
+ },
+ {
+  "id": "infosys.seg.margin_fs.fy25",
+  "company": "infosys",
+  "display": "24.6%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Financial Services · FY25",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "24.6"
+ },
+ {
+  "id": "infosys.seg.margin_fs.chg_bps",
+  "company": "infosys",
+  "display": "+70 bps",
+  "basis": "segment margin change FY25 -> FY26 · Financial Services",
+  "derived_from": [
+   "infosys.seg.margin_fs.fy26",
+   "infosys.seg.margin_fs.fy25"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.seg.margin_mfg.fy26",
+  "company": "infosys",
+  "display": "22.1%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Manufacturing · FY26 · before unallocable costs",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "22.1"
+ },
+ {
+  "id": "infosys.seg.margin_mfg.fy25",
+  "company": "infosys",
+  "display": "19.3%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Manufacturing · FY25",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "19.3"
+ },
+ {
+  "id": "infosys.seg.margin_mfg.chg_bps",
+  "company": "infosys",
+  "display": "+280 bps",
+  "basis": "segment margin change FY25 -> FY26 · Manufacturing",
+  "derived_from": [
+   "infosys.seg.margin_mfg.fy26",
+   "infosys.seg.margin_mfg.fy25"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.seg.margin_eurs.fy26",
+  "company": "infosys",
+  "display": "25.1%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · EURS · FY26 · before unallocable costs",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "25.1"
+ },
+ {
+  "id": "infosys.seg.margin_eurs.fy25",
+  "company": "infosys",
+  "display": "28.1%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · EURS · FY25",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "28.1"
+ },
+ {
+  "id": "infosys.seg.margin_eurs.chg_bps",
+  "company": "infosys",
+  "display": "−300 bps",
+  "basis": "segment margin change FY25 -> FY26 · EURS",
+  "derived_from": [
+   "infosys.seg.margin_eurs.fy26",
+   "infosys.seg.margin_eurs.fy25"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.seg.margin_retail.fy26",
+  "company": "infosys",
+  "display": "30.7%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Retail · FY26 · before unallocable costs",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "30.7"
+ },
+ {
+  "id": "infosys.seg.margin_retail.fy25",
+  "company": "infosys",
+  "display": "32.3%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Retail · FY25",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "32.3"
+ },
+ {
+  "id": "infosys.seg.margin_retail.chg_bps",
+  "company": "infosys",
+  "display": "−160 bps",
+  "basis": "segment margin change FY25 -> FY26 · Retail",
+  "derived_from": [
+   "infosys.seg.margin_retail.fy26",
+   "infosys.seg.margin_retail.fy25"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.seg.margin_comm.fy26",
+  "company": "infosys",
+  "display": "17.7%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Communication · FY26 · before unallocable costs",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "17.7"
+ },
+ {
+  "id": "infosys.seg.margin_comm.fy25",
+  "company": "infosys",
+  "display": "17.5%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Communication · FY25",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "17.5"
+ },
+ {
+  "id": "infosys.seg.margin_comm.chg_bps",
+  "company": "infosys",
+  "display": "+20 bps",
+  "basis": "segment margin change FY25 -> FY26 · Communication",
+  "derived_from": [
+   "infosys.seg.margin_comm.fy26",
+   "infosys.seg.margin_comm.fy25"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.seg.margin_hitech.fy26",
+  "company": "infosys",
+  "display": "23.1%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Hi-Tech · FY26 · before unallocable costs",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "23.1"
+ },
+ {
+  "id": "infosys.seg.margin_hitech.fy25",
+  "company": "infosys",
+  "display": "24.6%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Hi-Tech · FY25",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "24.6"
+ },
+ {
+  "id": "infosys.seg.margin_hitech.chg_bps",
+  "company": "infosys",
+  "display": "−150 bps",
+  "basis": "segment margin change FY25 -> FY26 · Hi-Tech",
+  "derived_from": [
+   "infosys.seg.margin_hitech.fy26",
+   "infosys.seg.margin_hitech.fy25"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.seg.margin_ls.fy26",
+  "company": "infosys",
+  "display": "20.0%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Life Sciences · FY26 · before unallocable costs",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "20.0"
+ },
+ {
+  "id": "infosys.seg.margin_ls.fy25",
+  "company": "infosys",
+  "display": "22.5%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Life Sciences · FY25",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "22.5"
+ },
+ {
+  "id": "infosys.seg.margin_ls.chg_bps",
+  "company": "infosys",
+  "display": "−250 bps",
+  "basis": "segment margin change FY25 -> FY26 · Life Sciences",
+  "derived_from": [
+   "infosys.seg.margin_ls.fy26",
+   "infosys.seg.margin_ls.fy25"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.seg.margin_other.fy26",
+  "company": "infosys",
+  "display": "14.8%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · All other segments · FY26 · before unallocable costs",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "14.8"
+ },
+ {
+  "id": "infosys.seg.margin_other.fy25",
+  "company": "infosys",
+  "display": "17.2%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · All other segments · FY25",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "17.2"
+ },
+ {
+  "id": "infosys.seg.margin_other.chg_bps",
+  "company": "infosys",
+  "display": "−240 bps",
+  "basis": "segment margin change FY25 -> FY26 · All other segments",
+  "derived_from": [
+   "infosys.seg.margin_other.fy26",
+   "infosys.seg.margin_other.fy25"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.seg.margin_total.fy26",
+  "company": "infosys",
+  "display": "23.7%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Total · FY26 · before unallocable costs",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "23.7"
+ },
+ {
+  "id": "infosys.seg.margin_total.fy25",
+  "company": "infosys",
+  "display": "24.1%",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "segment operating margin · Total · FY25",
+  "raw_match": "Segmental operating margin (%) 2026 25.3 22.1 25.1 30.7 17.7 23.1 20.0 14.8 23.7 2025 24.6 19.3 28.1 32.3 17.5 24.6 22.5 17.2 24.1",
+  "raw_value": "24.1"
+ },
+ {
+  "id": "infosys.seg.margin_total.chg_bps",
+  "company": "infosys",
+  "display": "−40 bps",
+  "basis": "segment margin change FY25 -> FY26 · Total",
+  "derived_from": [
+   "infosys.seg.margin_total.fy26",
+   "infosys.seg.margin_total.fy25"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.oneoff.lc_ifrs_q3.op",
+  "company": "infosys",
+  "display": "₹1,289 cr",
+  "doc": "FS3",
+  "pdf_page": 4,
+  "basis": "Q3 FY26 · IFRS factsheet: the charge is INSIDE operating profit (8,355 reported + 1,289 = 9,644 adjusted)",
+  "raw_match": "Reported IFRS Adjustment for Labour Codes(1) Adjusted non-IFRS Reported IFRS 8,355 1,289 9,644",
+  "raw_value": "1,289"
+ },
+ {
+  "id": "infosys.oneoff.lc_ifrs_q3.margin",
+  "company": "infosys",
+  "display": "2.8 pp",
+  "doc": "FS3",
+  "pdf_page": 4,
+  "basis": "Q3 FY26 · IFRS margin 18.4% reported + 2.8 pp = 21.2% adjusted",
+  "raw_match": "18.4 2.8 21.2 21.3",
+  "raw_value": "2.8"
+ },
+ {
+  "id": "infosys.oneoff.lc_indas_q3",
+  "company": "infosys",
+  "display": "₹1,289 cr",
+  "doc": "CFS3",
+  "pdf_page": 3,
+  "basis": "Q3 FY26 · Ind AS consolidated: the same charge is an EXCEPTIONAL ITEM below 'profit before exceptional item and tax'",
+  "raw_match": "Exceptional item Impact of Labour Codes 2.18.1 1,289",
+  "raw_value": "1,289"
+ },
+ {
+  "id": "infosys.ann.netnew.fy25",
+  "company": "infosys",
+  "display": "56%",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "large-deal TCV net-new share · FY25 · CFO",
+  "raw_match": "TCV of $11.6 bn and 56% net new",
+  "raw_value": "56"
+ },
+ {
+  "id": "infosys.cr.decl.fy25",
+  "company": "infosys",
+  "display": "17,814",
+  "basis": "dividends declared for FY25 (interim + final), Rs crore; no buyback in FY25",
+  "derived_from": [
+   "infosys.kpi.div_int.fy25",
+   "infosys.kpi.div_fin.fy25"
+  ],
+  "formula": "a + b"
+ },
+ {
+  "id": "infosys.cr.decl_vs_np.fy26",
+  "company": "infosys",
+  "display": "128%",
+  "basis": "returned for FY26 incl. buyback costs / FY26 net profit",
+  "derived_from": [
+   "infosys.kpi.cr_decl_txn.fy26",
+   "infosys.kpi.np.fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "infosys.oneoff.lc_cash.q3fy26",
+  "company": "infosys",
+  "display": "US$50 mn",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "Q3 FY26 Labour Codes cash payment, the FCF adjustment (US$915 mn -> US$965 mn)",
+  "raw_match": "915 1,101 1,263 50 - - 965",
+  "raw_value": "50"
+ },
+ {
+  "id": "infosys.oneoff.lc_cash.q4fy26",
+  "company": "infosys",
+  "display": "US$49 mn",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "Q4 FY26 Labour Codes cash payment, inside the reported US$833 mn FCF (no adjusted figure printed)",
+  "raw_match": "cash payments made towards The Labour codes of $49Mn (₹452 crore)",
+  "raw_value": "49"
+ },
+ {
+  "id": "infosys.seg.cause.fy26",
+  "company": "infosys",
+  "display": "lower utilization; and investments in talent, AI, sales & marketing",
+  "doc": "AR26",
+  "pdf_page": 81,
+  "basis": "AR26: why segment profitability fell in FY26",
+  "raw_match": "lower utilization; and investments in talent, AI, sales & marketing",
+  "kind": "quote"
+ }
+]

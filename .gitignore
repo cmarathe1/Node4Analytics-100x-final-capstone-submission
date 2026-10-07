@@ -1,0 +1,34 @@
+# Dependencies, builds and local environment
+node_modules/
+.next/
+out/
+coverage/
+.env*
+!.env.example
+*.tsbuildinfo
+*.log
+.vercel/
+.DS_Store
+Thumbs.db
+*.pem
+*.key
+
+# Local agent settings and backups
+.agents/
+.codex/
+*.bak
+
+# Keep corpus PDFs local; research retains citations
+data/**
+!data/seed/
+!data/seed/README.md
+
+# Generated prototype snapshots and review tooling
+docs/prototype-update/work/
+docs/prototype-update/tools/
+__pycache__/
+*.pyc
+*.crdownload
+
+# Temporary verification output
+.verification/

@@ -1,0 +1,289 @@
+[
+ {
+  "id": "hdfc.proto.kpj.aum.jun26",
+  "company": "hdfc",
+  "display": "31,272",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "advances under management · Jun-26 · Rs bn",
+  "raw_match": "31,272",
+  "anchor": "Advances under management"
+ },
+ {
+  "id": "hdfc.proto.kpj.mort.jun26",
+  "company": "hdfc",
+  "display": "9,005",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Mortgages · Jun-26 · Rs bn",
+  "raw_match": "9,005",
+  "anchor": "Mortgages"
+ },
+ {
+  "id": "hdfc.proto.kpj.mort.jun25",
+  "company": "hdfc",
+  "display": "8,428",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Mortgages · Jun-25 · Rs bn",
+  "raw_match": "8,428",
+  "anchor": "Mortgages"
+ },
+ {
+  "id": "hdfc.proto.kpj.corp.jun26",
+  "company": "hdfc",
+  "display": "8,401",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Corporate and other wholesale · Jun-26 · Rs bn",
+  "raw_match": "8,401",
+  "anchor": "Corporate and other wholesale"
+ },
+ {
+  "id": "hdfc.proto.kpj.corp.jun25",
+  "company": "hdfc",
+  "display": "7,082",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Corporate and other wholesale · Jun-25 · Rs bn",
+  "raw_match": "7,082",
+  "anchor": "Corporate and other wholesale"
+ },
+ {
+  "id": "hdfc.proto.kpj.bb.jun26",
+  "company": "hdfc",
+  "display": "4,823",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Business Banking · Jun-26 · Rs bn",
+  "raw_match": "4,823",
+  "anchor": "Business Banking"
+ },
+ {
+  "id": "hdfc.proto.kpj.bb.jun25",
+  "company": "hdfc",
+  "display": "3,944",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Business Banking · Jun-25 · Rs bn",
+  "raw_match": "3,944",
+  "anchor": "Business Banking"
+ },
+ {
+  "id": "hdfc.proto.kpj.pl.jun26",
+  "company": "hdfc",
+  "display": "2,224",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Personal Loans · Jun-26 · Rs bn",
+  "raw_match": "2,224",
+  "anchor": "Personal Loans"
+ },
+ {
+  "id": "hdfc.proto.kpj.pl.jun25",
+  "company": "hdfc",
+  "display": "2,016",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Personal Loans · Jun-25 · Rs bn",
+  "raw_match": "2,016",
+  "anchor": "Personal Loans"
+ },
+ {
+  "id": "hdfc.proto.kpj.agri.jun26",
+  "company": "hdfc",
+  "display": "1,241",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Agri · Jun-26 · Rs bn",
+  "raw_match": "1,241",
+  "anchor": "Agri"
+ },
+ {
+  "id": "hdfc.proto.kpj.agri.jun25",
+  "company": "hdfc",
+  "display": "1,153",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Agri · Jun-25 · Rs bn",
+  "raw_match": "1,153",
+  "anchor": "Agri"
+ },
+ {
+  "id": "hdfc.proto.kpj.pay.jun26",
+  "company": "hdfc",
+  "display": "1,161",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Payment Business · Jun-26 · Rs bn",
+  "raw_match": "1,161",
+  "anchor": "Payment Business"
+ },
+ {
+  "id": "hdfc.proto.kpj.pay.jun25",
+  "company": "hdfc",
+  "display": "1,135",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "Payment Business · Jun-25 · Rs bn",
+  "raw_match": "1,135",
+  "anchor": "Payment Business"
+ },
+ {
+  "id": "hdfc.proto.share.mort.jun26",
+  "company": "hdfc",
+  "display": "28.8%",
+  "derived_from": [
+   "hdfc.proto.kpj.mort.jun26",
+   "hdfc.proto.kpj.aum.jun26"
+  ],
+  "formula": "a / b * 100",
+  "basis": "share of advances under management, Jun-26 (computed from KPj p.1)"
+ },
+ {
+  "id": "hdfc.proto.share.corp.jun26",
+  "company": "hdfc",
+  "display": "26.9%",
+  "derived_from": [
+   "hdfc.proto.kpj.corp.jun26",
+   "hdfc.proto.kpj.aum.jun26"
+  ],
+  "formula": "a / b * 100",
+  "basis": "share of advances under management, Jun-26 (computed from KPj p.1)"
+ },
+ {
+  "id": "hdfc.proto.share.bb.jun26",
+  "company": "hdfc",
+  "display": "15.4%",
+  "derived_from": [
+   "hdfc.proto.kpj.bb.jun26",
+   "hdfc.proto.kpj.aum.jun26"
+  ],
+  "formula": "a / b * 100",
+  "basis": "share of advances under management, Jun-26 (computed from KPj p.1)"
+ },
+ {
+  "id": "hdfc.proto.share.pl.jun26",
+  "company": "hdfc",
+  "display": "7.1%",
+  "derived_from": [
+   "hdfc.proto.kpj.pl.jun26",
+   "hdfc.proto.kpj.aum.jun26"
+  ],
+  "formula": "a / b * 100",
+  "basis": "share of advances under management, Jun-26 (computed from KPj p.1)"
+ },
+ {
+  "id": "hdfc.proto.share.agri.jun26",
+  "company": "hdfc",
+  "display": "4.0%",
+  "derived_from": [
+   "hdfc.proto.kpj.agri.jun26",
+   "hdfc.proto.kpj.aum.jun26"
+  ],
+  "formula": "a / b * 100",
+  "basis": "share of advances under management, Jun-26 (computed from KPj p.1)"
+ },
+ {
+  "id": "hdfc.proto.share.pay.jun26",
+  "company": "hdfc",
+  "display": "3.7%",
+  "derived_from": [
+   "hdfc.proto.kpj.pay.jun26",
+   "hdfc.proto.kpj.aum.jun26"
+  ],
+  "formula": "a / b * 100",
+  "basis": "share of advances under management, Jun-26 (computed from KPj p.1)"
+ },
+ {
+  "id": "hdfc.proto.yoy.pl.q1fy27",
+  "company": "hdfc",
+  "display": "+10.3%",
+  "derived_from": [
+   "hdfc.proto.kpj.pl.jun26",
+   "hdfc.proto.kpj.pl.jun25"
+  ],
+  "formula": "(a / b - 1) * 100",
+  "basis": "YoY growth, Jun-26 on Jun-25 (computed from KPj p.1)"
+ },
+ {
+  "id": "hdfc.proto.yoy.agri.q1fy27",
+  "company": "hdfc",
+  "display": "+7.6%",
+  "derived_from": [
+   "hdfc.proto.kpj.agri.jun26",
+   "hdfc.proto.kpj.agri.jun25"
+  ],
+  "formula": "(a / b - 1) * 100",
+  "basis": "YoY growth, Jun-26 on Jun-25 (computed from KPj p.1)"
+ },
+ {
+  "id": "hdfc.proto.yoy.pay.q1fy27",
+  "company": "hdfc",
+  "display": "+2.3%",
+  "derived_from": [
+   "hdfc.proto.kpj.pay.jun26",
+   "hdfc.proto.kpj.pay.jun25"
+  ],
+  "formula": "(a / b - 1) * 100",
+  "basis": "YoY growth, Jun-26 on Jun-25 (computed from KPj p.1)"
+ },
+ {
+  "id": "infosys.proto.pat.fy26",
+  "company": "infosys",
+  "display": "₹29,440 cr",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "net profit FY26 · Rs crore",
+  "raw_match": "29,440"
+ },
+ {
+  "id": "infosys.proto.eps.fy26",
+  "company": "infosys",
+  "display": "₹71.58",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "basic EPS FY26 · Rs",
+  "raw_match": "71.58"
+ },
+ {
+  "id": "infosys.proto.rev.fy26",
+  "company": "infosys",
+  "display": "₹1,78,650 cr",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "revenue FY26 · Rs crore",
+  "raw_match": "178,650"
+ },
+ {
+  "id": "infosys.proto.emp.mar26",
+  "company": "infosys",
+  "display": "3,28,594",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "total employees · 31 Mar 2026",
+  "raw_match": "328,594"
+ },
+ {
+  "id": "infosys.proto.shares.fy26",
+  "company": "infosys",
+  "display": "4,113 mn",
+  "derived_from": [
+   "infosys.proto.pat.fy26",
+   "infosys.proto.eps.fy26"
+  ],
+  "formula": "a / b * 10",
+  "basis": "implied shares, mn = net profit (Rs crore) / basic EPS x 10"
+ },
+ {
+  "id": "infosys.proto.rev_per_emp.fy26",
+  "company": "infosys",
+  "display": "₹54.4 lakh",
+  "derived_from": [
+   "infosys.proto.rev.fy26",
+   "infosys.proto.emp.mar26"
+  ],
+  "formula": "a / b * 100",
+  "basis": "revenue per closing employee, Rs lakh = Rs crore / headcount x 100"
+ }
+]

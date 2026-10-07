@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hdfc.proto.floating.q1fy27",
+    "company": "hdfc",
+    "display": "214",
+    "doc": "Q1D",
+    "pdf_page": 19,
+    "basis": "floating provisions, Jun-26, ₹ billion, period-end",
+    "raw_match": "214",
+    "raw_value": "214",
+    "anchor": "Floating"
+  },
+  {
+    "id": "hdfc.proto.contingent.q1fy27",
+    "company": "hdfc",
+    "display": "156",
+    "doc": "Q1D",
+    "pdf_page": 19,
+    "basis": "contingent provisions, Jun-26, ₹ billion, period-end",
+    "raw_match": "156",
+    "raw_value": "156",
+    "anchor": "Contingent"
+  },
+  {
+    "id": "hdfc.proto.provision_buffer.q1fy27",
+    "company": "hdfc",
+    "display": "₹37,000 cr",
+    "derived_from": ["hdfc.proto.floating.q1fy27", "hdfc.proto.contingent.q1fy27"],
+    "formula": "(a + b) * 100",
+    "basis": "floating plus contingent provisions, Jun-26; computed from ₹214 bn + ₹156 bn, converted to crore"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "_about": "Known-bad citations as they stand in the reviewed prototype (ACCURACY-LEDGER.md). `check_figures.py --must-fire` extracts each from the HTML at `rev` and requires it to FAIL: proof the gate can fire (EVAL-DOCTRINE rule 1). One case per defect class. Never 'fix' a case here; add one when a new class of defect is found.",
+  "rev": "102c2ef",
+  "cases": [
+    {"ledger": "A-01", "line": 6376, "contains": "37,500",
+     "class": "a figure from a news article cited to an issuer page (Sahi p.2, cited as FS4 p.6)"},
+    {"ledger": "A-17", "line": 12319, "contains": "170 bps",
+     "class": "a broker's figure riding on an issuer citation (Investec via Upstox p.3, cited as Q1D p.19)"},
+    {"ledger": "A-21", "line": 12435, "contains": "15.50",
+     "class": "a citation to the exchange cover letter (AR26 p.1) instead of the page that prints it (p.30)"},
+    {"ledger": "A-09", "line": 5062, "contains": "1,78,650",
+     "class": "an annual-report printed folio used as a PDF page (Infosys AR26 'p.318')"}
+  ]
+}

@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Node4analytics | Workflow Concept</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { overflow: hidden; height: 100vh; width: 100vw; font-family: 'Inter', sans-serif; background: #fff; }
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 99px; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+@keyframes flowDash { to { stroke-dashoffset: -24; } }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes dotPulse { 0%,100%{opacity:0.4;transform:scale(1)} 50%{opacity:1;transform:scale(1.15)} }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect, useRef, useCallback } = React;
+
+/* ── PALETTE ─────────────────────────────── */
+const C = {
+  bg:       '#ffffff',
+  canvas:   '#fafafa',
+  dot:      '#e8eaed',
+  node:     '#ffffff',
+  border:   '#e5e7eb',
+  borderHov:'#d1d5db',
+  surfaceA: '#f9fafb',
+  surfaceB: '#f3f4f6',
+  text:     '#111827',
+  textSec:  '#6b7280',
+  textMut:  '#9ca3af',
+  accent:   '#111827',
+  blue:     '#2563eb',
+  blueS:    '#eff6ff',
+  green:    '#16a34a',
+  greenS:   '#f0fdf4',
+  violet:   '#7c3aed',
+  violetS:  '#f5f3ff',
+  amber:    '#d97706',
+  red:      '#dc2626',
+  shadow:   '0 1px 3px rgba(0,0,0,0.06), 0 4px 20px rgba(0,0,0,0.08)',
+  shadowSel:'0 2px 8px rgba(0,0,0,0.06), 0 8px 32px rgba(0,0,0,0.13)',
+};
+
+/* ── NODE DIMENSIONS ─────────────────────── */
+const DIM = {
+  data:  { w:300, h:432 },
+  ai:    { w:348, h:468 },
+  excel: { w:442, h:512 },
+  doc:   { w:380, h:528 },
+};
+
+const INIT = {
+  data:  { x: 60,  y: 160 },
+  ai:    { x: 430, y: 38  },
+  excel: { x: 430, y: 490 },
+  doc:   { x: 960, y: 160 },
+};
+
+const EDGES = [
+  { from:'data',  to:'ai',    label:'Data access'  },
+  { from:'data',  to:'excel', label:'Raw data'     },
+  { from:'ai',    to:'doc',   label:'Visualisation' },
+  { from:'excel', to:'doc',   label:'Analysis'     },
+];
+
+/* ── PIE CHART ───────────────────────────── */
+const PIE_DATA = [
+  { label:'Equities',     pct:38, color:'#111827' },
+  { label:'Fixed Income', pct:24, color:'#6b7280' },
+  { label:'FX Trading',   pct:18, color:'#2563eb' },
+  { label:'Derivatives',  pct:12, color:'#9ca3af' },
+  { label:'Commodities',  pct:8,  color:'#d1d5db' },
+];
+
+function polarPt(cx, cy, r, deg) {
+  const rad = (deg - 90) * Math.PI / 180;
+  return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+}
+
+function PieChart() {
+  const [hov, setHov] = useState(null);
+  const cx=80, cy=80, R=68, ri=34;
+  let angle=0;
+  const slices = PIE_DATA.map(d => {
+    const sw = d.pct/100*360;
+    const [x0,y0]=polarPt(cx,cy,R,angle), [x1,y1]=polarPt(cx,cy,R,angle+sw);
+    const [i0,j0]=polarPt(cx,cy,ri,angle), [i1,j1]=polarPt(cx,cy,ri,angle+sw);
+    const lg = sw>180?1:0;
+    const path=`M${i0},${j0} L${x0},${y0} A${R},${R} 0 ${lg} 1 ${x1},${y1} L${i1},${j1} A${ri},${ri} 0 ${lg} 0 ${i0},${j0}`;
+    const [lx,ly]=polarPt(cx,cy,(R+ri)/2,angle+sw/2);
+    angle+=sw;
+    return {...d, path, lx, ly};
+  });
+  return (
+    <div style={{display:'flex',gap:14,alignItems:'center'}}>
+      <svg width={160} height={160} style={{flexShrink:0}}>
+        {slices.map((s,i)=>(
+          <path key={i} d={s.path} fill={s.color}
+            opacity={hov===null||hov===i?1:0.15}
+            transform={hov===i?`translate(${(s.lx-cx)*0.07},${(s.ly-cy)*0.07})`:''}
+            style={{cursor:'pointer',transition:'all 0.15s'}}
+            onMouseEnter={()=>setHov(i)} onMouseLeave={()=>setHov(null)}
+          />
+        ))}
+        <circle cx={cx} cy={cy} r={ri-2} fill="white"/>
+        <text x={cx} y={cy-4} textAnchor="middle" fill={C.textMut} fontSize="8.5" fontFamily="Inter,sans-serif">Revenue</text>
+        <text x={cx} y={cy+9} textAnchor="middle" fill={C.text} fontSize="11" fontWeight="700" fontFamily="Inter,sans-serif">FY 2025</text>
+      </svg>
+      <div style={{display:'flex',flexDirection:'column',gap:6}}>
+        {PIE_DATA.map((d,i)=>(
+          <div key={i} style={{display:'flex',alignItems:'center',gap:7,opacity:hov===null||hov===i?1:0.2,transition:'opacity 0.15s',cursor:'default'}}
+            onMouseEnter={()=>setHov(i)} onMouseLeave={()=>setHov(null)}>
+            <div style={{width:8,height:8,borderRadius:2,background:d.color,flexShrink:0}}/>
+            <span style={{fontSize:10.5,color:C.textSec,width:80}}>{d.label}</span>
+            <span style={{fontSize:10.5,color:C.text,fontWeight:700}}>{d.pct}%</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ── SPREADSHEET DATA ────────────────────── */
+const SS = [
+  {name:'Equities',   q:[142.3,156.8,171.2,189.4],total:659.7},
+  {name:'Fixed Inc.', q:[89.4,92.1,88.7,95.3],   total:365.5},
+  {name:'FX Trading', q:[67.2,71.5,69.8,74.1],   total:282.6},
+  {name:'Derivatives',q:[44.8,47.2,51.6,55.9],   total:199.5},
+  {name:'Commodities',q:[29.1,31.4,28.9,33.2],   total:122.6},
+];
+
+/* ── SPREADSHEET COMPONENT ───────────────── */
+function SpreadsheetTable({selRow, onSelRow, small}) {
+  const fs = small ? 10 : 12;
+  const pd = small ? '4px 7px' : '7px 10px';
+  const hd = {background:'#f9fafb',color:C.textMut,fontSize:small?9:10.5,fontWeight:600,
+              padding:pd,borderBottom:`1px solid ${C.border}`,textAlign:'right',userSelect:'none'};
+  const nm = {fontVariantNumeric:'tabular-nums',fontFamily:"'Inter',monospace"};
+  return (
+    <table style={{width:'100%',borderCollapse:'collapse',tableLayout:'fixed'}}>
+      <colgroup>
+        <col style={{width:small?18:26}}/>
+        <col style={{width:small?80:110}}/>
+        <col/><col/><col/><col/>
+        <col style={{width:small?54:70}}/>
+      </colgroup>
+      <thead>
+        <tr>
+          <th style={{...hd,textAlign:'center',color:'#f3f4f6'}}></th>
+          <th style={{...hd,textAlign:'left'}}>Product</th>
+          {['Q1','Q2','Q3','Q4'].map(h=><th key={h} style={hd}>{h}</th>)}
+          <th style={{...hd,color:C.text}}>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        {SS.map((r,i)=>(
+          <tr key={i} onClick={()=>onSelRow&&onSelRow(i)} style={{
+            background:selRow===i?'#eff6ff':i%2===0?'#fff':'#fafafa',
+            cursor:'pointer',transition:'background 0.1s'}}>
+            <td style={{fontSize:small?7.5:9,color:C.textMut,textAlign:'center',padding:small?'3px 0':'5px 0',...nm}}>{i+2}</td>
+            <td style={{padding:pd,fontSize:fs,fontWeight:selRow===i?600:400,color:selRow===i?C.text:C.textSec}}>{r.name}</td>
+            {r.q.map((v,j)=><td key={j} style={{textAlign:'right',padding:pd,fontSize:fs,color:selRow===i?C.text:C.textSec,...nm}}>{v.toFixed(1)}</td>)}
+            <td style={{textAlign:'right',padding:pd,fontSize:fs,fontWeight:700,color:C.text,...nm}}>{r.total.toFixed(1)}</td>
+          </tr>
+        ))}
+        <tr style={{borderTop:`2px solid ${C.border}`,background:'#f9fafb'}}>
+          <td></td>
+          <td style={{padding:pd,fontSize:small?9:11,fontWeight:700,color:C.text,letterSpacing:0.3}}>TOTAL</td>
+          {[372.8,399.0,410.2,447.9].map((v,i)=><td key={i} style={{textAlign:'right',padding:pd,fontSize:fs,fontWeight:700,color:C.green,...nm}}>{v.toFixed(1)}</td>)}
+          <td style={{textAlign:'right',padding:pd,fontWeight:800,color:C.green,fontSize:fs,...nm}}>1,629.9</td>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
+
+/* ── PORT ─────────────────────────────────── */
+function Port({side}) {
+  return (
+    <div style={{
+      position:'absolute', width:10, height:10, borderRadius:'50%',
+      background:'#fff', border:`2px solid ${C.border}`,
+      top:'50%', transform:'translateY(-50%)',
+      [side]:-5, zIndex:10,
+      boxShadow:'0 1px 4px rgba(0,0,0,0.12)',
+      transition:'border-color 0.15s',
+    }}/>
+  );
+}
+
+/* ── NODE SHELL ──────────────────────────── */
+function NodeShell({id, pos, selected, children, noLeft, noRight}) {
+  const {w,h}=DIM[id];
+  return (
+    <div style={{
+      position:'absolute', left:pos.x, top:pos.y, width:w, height:h,
+    }}>
+      {!noLeft  && <Port side="left"/>}
+      {!noRight && <Port side="right"/>}
+      <div style={{
+        width:'100%', height:'100%', background:C.node,
+        border:`1px solid ${selected?C.accent:C.border}`,
+        borderRadius:12, overflow:'hidden',
+        display:'flex', flexDirection:'column',
+        boxShadow: selected ? C.shadowSel : C.shadow,
+        transition:'border-color 0.2s, box-shadow 0.2s',
+        animation:'fadeUp 0.28s ease both',
+      }}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+/* ── NODE HEADER ─────────────────────────── */
+function NodeHead({icon, iconBg, iconColor, title, sub, onOpen, onDrag, pill}) {
+  return (
+    <div onMouseDown={onDrag} style={{
+      padding:'11px 13px', borderBottom:`1px solid ${C.border}`,
+      cursor:'grab', background:'#fff',
+      userSelect:'none', flexShrink:0,
+      display:'flex', alignItems:'center', gap:9,
+    }}>
+      <div style={{width:30,height:30,borderRadius:8,background:iconBg,
+        display:'flex',alignItems:'center',justifyContent:'center',
+        fontSize:15,color:iconColor,flexShrink:0}}>
+        {icon}
+      </div>
+      <div style={{flex:1,minWidth:0}}>
+        <div style={{display:'flex',alignItems:'center',gap:6}}>
+          <div style={{fontSize:12,fontWeight:600,color:C.text,letterSpacing:-0.15,
+            overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{title}</div>
+          {pill && <span style={{padding:'1.5px 6px',borderRadius:99,
+            background:C.surfaceB,color:C.textMut,fontSize:8.5,fontWeight:600,
+            letterSpacing:0.3,flexShrink:0}}>{pill}</span>}
+        </div>
+        <div style={{fontSize:9.5,color:C.textMut,marginTop:1.5,
+          overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{sub}</div>
+      </div>
+      {onOpen && (
+        <button onClick={e=>{e.stopPropagation();onOpen();}} title="Open file"
+          style={{width:27,height:27,borderRadius:7,display:'flex',alignItems:'center',
+          justifyContent:'center',fontSize:13,color:C.textMut,cursor:'pointer',
+          background:C.surfaceA,border:`1px solid ${C.border}`,
+          flexShrink:0,transition:'all 0.12s',outline:'none'}}>
+          ↗
+        </button>
+      )}
+    </div>
+  );
+}
+
+/* ── DATA NODE ───────────────────────────── */
+const DATA_ITEMS = [
+  {name:'Q1 2025 Earnings Report.pdf', type:'PDF',  meta:'2.4 MB · Indexed',      ext:'⬚', ec:'#dc2626'},
+  {name:'Product Revenue Data.xlsx',   type:'XLSX', meta:'847 rows · Synced',     ext:'⊞', ec:'#16a34a'},
+  {name:'Market Analysis Brief',       type:'KB',   meta:'14 docs · 2,103 vectors',ext:'◈', ec:'#2563eb'},
+];
+
+function DataNode({pos,selected,onSel,onDrag}) {
+  return (
+    <NodeShell id="data" pos={pos} selected={selected} noLeft>
+      <NodeHead icon="◈" iconBg={C.blueS} iconColor={C.blue} title="Data Sources" sub="3 sources · Synced 4 min ago" onDrag={onDrag}/>
+      <div style={{flex:1,padding:'10px 12px',display:'flex',flexDirection:'column',gap:7,overflow:'hidden'}}>
+        {DATA_ITEMS.map((s,i)=>(
+          <div key={i} style={{padding:'9px 11px',background:C.surfaceA,
+            border:`1px solid ${C.border}`,borderRadius:8,
+            display:'flex',gap:9,alignItems:'flex-start',transition:'border-color 0.12s'}}
+            onMouseEnter={e=>e.currentTarget.style.borderColor=C.borderHov}
+            onMouseLeave={e=>e.currentTarget.style.borderColor=C.border}>
+            <div style={{width:28,height:28,borderRadius:7,background:s.ec+'14',
+              display:'flex',alignItems:'center',justifyContent:'center',
+              fontSize:13,color:s.ec,flexShrink:0}}>{s.ext}</div>
+            <div style={{flex:1,minWidth:0}}>
+              <div style={{fontSize:10.5,color:C.text,fontWeight:500,
+                overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{s.name}</div>
+              <div style={{display:'flex',alignItems:'center',gap:5,marginTop:3}}>
+                <span style={{fontSize:8.5,color:s.ec,fontWeight:700,
+                  background:s.ec+'14',padding:'1px 5px',borderRadius:3}}>{s.type}</span>
+                <span style={{fontSize:9.5,color:C.textMut}}>{s.meta}</span>
+              </div>
+            </div>
+            <div style={{width:5,height:5,borderRadius:'50%',background:C.green,
+              marginTop:6,flexShrink:0,animation:'dotPulse 2.5s ease infinite'}}/>
+          </div>
+        ))}
+        <button onMouseDown={e=>e.stopPropagation()}
+          style={{padding:'8px',border:`1.5px dashed ${C.border}`,borderRadius:8,
+          display:'flex',alignItems:'center',justifyContent:'center',gap:5,
+          cursor:'pointer',color:C.textMut,fontSize:11,background:'transparent',
+          transition:'all 0.15s',outline:'none'}}
+          onMouseEnter={e=>{e.currentTarget.style.borderColor=C.accent;e.currentTarget.style.color=C.accent;}}
+          onMouseLeave={e=>{e.currentTarget.style.borderColor=C.border;e.currentTarget.style.color=C.textMut;}}>
+          <span style={{fontSize:17,lineHeight:1}}>+</span> Add data source
+        </button>
+        <div onMouseDown={e=>e.stopPropagation()} style={{display:'flex',alignItems:'center',gap:7,
+          padding:'7px 10px',background:C.surfaceA,border:`1px solid ${C.border}`,
+          borderRadius:7,marginTop:'auto',cursor:'text'}}>
+          <span style={{fontSize:13,color:C.textMut}}>⌕</span>
+          <span style={{fontSize:10.5,color:C.textMut}}>Search knowledge base…</span>
+        </div>
+      </div>
+    </NodeShell>
+  );
+}
+
+/* ── AI NODE ─────────────────────────────── */
+function AINode({pos,selected,onSel,onDrag}) {
+  const [input,setInput]=useState('');
+  return (
+    <NodeShell id="ai" pos={pos} selected={selected}>
+      <NodeHead icon="✦" iconBg={C.violetS} iconColor={C.violet} title="AI Assistant" sub="Connected · GPT-4o · Data Sources" onDrag={onDrag}/>
+      <div style={{flex:1,padding:'11px 13px',display:'flex',flexDirection:'column',gap:10,overflow:'hidden'}}>
+        {/* user bubble */}
+        <div style={{display:'flex',gap:8,alignItems:'flex-start'}}>
+          <div style={{width:22,height:22,borderRadius:'50%',background:C.surfaceB,
+            display:'flex',alignItems:'center',justifyContent:'center',
+            fontSize:8.5,color:C.textSec,fontWeight:700,flexShrink:0,letterSpacing:-0.3}}>JA</div>
+          <div style={{background:C.surfaceB,padding:'7px 10px',
+            borderRadius:'3px 9px 9px 9px',fontSize:10.5,color:C.textSec,lineHeight:1.6,flex:1}}>
+            Create a pie chart showing revenue distribution by product contribution
+          </div>
+        </div>
+        {/* ai bubble */}
+        <div style={{display:'flex',gap:8,alignItems:'flex-start'}}>
+          <div style={{width:22,height:22,borderRadius:7,background:C.violetS,
+            border:`1px solid ${C.violet}20`,display:'flex',alignItems:'center',
+            justifyContent:'center',fontSize:11,color:C.violet,flexShrink:0}}>✦</div>
+          <div style={{flex:1}}>
+            <p style={{fontSize:10.5,color:C.textSec,lineHeight:1.6,marginBottom:8}}>
+              Here's the FY 2025 revenue breakdown across all product lines:
+            </p>
+            <div style={{background:C.surfaceA,border:`1px solid ${C.border}`,
+              borderRadius:10,padding:'11px 10px'}}>
+              <PieChart/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{padding:'9px 12px',borderTop:`1px solid ${C.border}`,flexShrink:0,
+        display:'flex',gap:6}} onMouseDown={e=>e.stopPropagation()}>
+        <input value={input} onChange={e=>setInput(e.target.value)}
+          placeholder="Ask a follow-up…"
+          style={{flex:1,background:C.surfaceA,border:`1px solid ${C.border}`,
+          borderRadius:7,padding:'6px 10px',fontSize:10.5,color:C.text,outline:'none'}}
+          onFocus={e=>e.target.style.borderColor=C.violet}
+          onBlur={e=>e.target.style.borderColor=C.border}/>
+        <button style={{width:29,height:29,borderRadius:7,
+          background:input?C.violet:C.surfaceA,
+          border:`1px solid ${input?C.violet:C.border}`,
+          display:'flex',alignItems:'center',justifyContent:'center',
+          fontSize:13,color:input?'#fff':C.textMut,cursor:'pointer',
+          transition:'all 0.15s',flexShrink:0,outline:'none'}}>↑</button>
+      </div>
+    </NodeShell>
+  );
+}
+
+/* ── EXCEL MODAL ─────────────────────────── */
+function ExcelModal({onClose}) {
+  const [selRow,setSelRow]=useState(null);
+  const [msgs,setMsgs]=useState([{r:'ai',t:"I've loaded Revenue_Breakdown_FY2025.xlsx. I can help you analyze, summarize, or transform any of this data. What would you like to know?"}]);
+  const [q,setQ]=useState('');
+  const [typing,setTyping]=useState(false);
+  const scrollRef=useRef(null);
+  useEffect(()=>{scrollRef.current?.scrollTo(0,9999);},[msgs,typing]);
+
+  const send=(text)=>{
+    if(!text.trim())return;
+    setMsgs(m=>[...m,{r:'user',t:text}]);
+    setQ('');setTyping(true);
+    setTimeout(()=>{
+      const lo=text.toLowerCase();
+      const res=lo.includes('total')||lo.includes('revenue')
+        ? 'Total FY2025 revenue is $1,629.9M — up 14.2% YoY. Q4 was the strongest quarter at $447.9M.'
+        : lo.includes('fx')
+        ? 'FX Trading reached $282.6M for the year, with Q4 the strongest at $74.1M — representing +10.3% QoQ growth.'
+        : lo.includes('equit')
+        ? 'Equities contributed $659.7M, the largest share at 38% of total revenue. Q4 alone was $189.4M.'
+        : lo.includes('chart')||lo.includes('visual')
+        ? 'I can generate a bar chart or trend line for any product. Which segment are you focused on?'
+        : selRow!==null
+        ? `${SS[selRow].name}: $${SS[selRow].total.toFixed(1)}M total. Q4 was $${SS[selRow].q[3].toFixed(1)}M — ${selRow===0?'the highest-performing segment.':'solid performance year-round.'}`
+        : 'Based on the data: Equities leads at 38%, Fixed Income at 22.4%. Want a QoQ trend or year-end summary?';
+      setMsgs(m=>[...m,{r:'ai',t:res}]);
+      setTyping(false);
+    },800);
+  };
+
+  const suggestions=['What is the total revenue?','Which product grew fastest?','Summarise Q4 performance'];
+
+  return (
+    <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.25)',
+      zIndex:1000,display:'flex',alignItems:'center',justifyContent:'center',
+      backdropFilter:'blur(4px)'}} onClick={e=>e.target===e.currentTarget&&onClose()}>
+      <div style={{width:'92vw',maxWidth:1140,height:'88vh',background:'#fff',
+        borderRadius:14,overflow:'hidden',display:'flex',flexDirection:'column',
+        boxShadow:'0 24px 80px rgba(0,0,0,0.18)',animation:'fadeUp 0.22s ease'}}>
+
+        {/* Title bar */}
+        <div style={{display:'flex',alignItems:'center',gap:10,padding:'11px 16px',
+          borderBottom:`1px solid ${C.border}`,background:'#fff',flexShrink:0}}>
+          <div style={{width:28,height:28,borderRadius:7,background:C.greenS,
+            display:'flex',alignItems:'center',justifyContent:'center',
+            fontSize:15,color:C.green}}>⊞</div>
+          <div>
+            <div style={{fontSize:13,fontWeight:600,color:C.text}}>Revenue_Breakdown_FY2025.xlsx</div>
+            <div style={{fontSize:9.5,color:C.textMut}}>Sheet: Revenue · 5 rows · Read-only preview</div>
+          </div>
+          <div style={{flex:1}}/>
+          <button onClick={onClose} style={{width:28,height:28,borderRadius:7,
+            display:'flex',alignItems:'center',justifyContent:'center',
+            background:C.surfaceA,border:`1px solid ${C.border}`,
+            cursor:'pointer',fontSize:15,color:C.textMut,outline:'none'}}>✕</button>
+        </div>
+
+        {/* Ribbon */}
+        <div style={{display:'flex',alignItems:'center',gap:3,padding:'5px 14px',
+          borderBottom:`1px solid ${C.border}`,background:C.surfaceA,flexShrink:0}}>
+          {['B','I','U','$','%','∑','⊞'].map((t,i)=>(
+            <div key={i} style={{width:22,height:22,borderRadius:4,background:'#fff',
+              border:`1px solid ${C.border}`,display:'flex',alignItems:'center',
+              justifyContent:'center',fontSize:10,color:C.textSec,cursor:'pointer',
+              transition:'all 0.1s'}}
+              onMouseEnter={e=>{e.currentTarget.style.background=C.surfaceB;}}
+              onMouseLeave={e=>{e.currentTarget.style.background='#fff';}}>{t}</div>
+          ))}
+          <div style={{width:1,height:16,background:C.border,margin:'0 4px'}}/>
+          {/* Sheet tabs */}
+          {['Revenue','Quarterly','YoY Growth','Breakdown'].map((tab,i)=>(
+            <div key={tab} style={{padding:'3px 10px',fontSize:10,cursor:'pointer',
+              borderRadius:5,
+              background:i===0?C.green+'18':'transparent',
+              color:i===0?C.green:C.textMut,
+              fontWeight:i===0?600:400}}>
+              {tab}
+            </div>
+          ))}
+          <div style={{flex:1}}/>
+          <div style={{display:'flex',alignItems:'center',gap:5,fontSize:10,color:C.green}}>
+            <div style={{width:6,height:6,borderRadius:'50%',background:C.green,animation:'dotPulse 2s ease infinite'}}/>
+            AI analyzing
+          </div>
+        </div>
+
+        {/* Formula bar */}
+        <div style={{display:'flex',gap:0,padding:'4px 14px',
+          borderBottom:`1px solid ${C.border}`,background:'#fff',flexShrink:0,alignItems:'center'}}>
+          <div style={{padding:'2px 7px',background:C.surfaceA,
+            border:`1px solid ${C.border}`,borderRadius:'4px 0 0 4px',
+            fontSize:9.5,color:C.textSec,width:36,textAlign:'center',
+            fontFamily:'monospace',borderRight:'none'}}>
+            {selRow!==null?`A${selRow+2}`:'—'}
+          </div>
+          <div style={{flex:1,padding:'2px 9px',background:'#fff',
+            border:`1px solid ${C.border}`,borderRadius:'0 4px 4px 0',
+            fontSize:9.5,color:C.text,fontFamily:'monospace'}}>
+            {selRow!==null ? SS[selRow].name : 'Select a cell'}
+          </div>
+        </div>
+
+        {/* Body: spreadsheet + AI */}
+        <div style={{flex:1,display:'flex',overflow:'hidden'}}>
+          {/* Spreadsheet */}
+          <div style={{flex:1,overflow:'auto',padding:'0'}}>
+            <SpreadsheetTable selRow={selRow} onSelRow={setSelRow}/>
+          </div>
+
+          {/* AI panel */}
+          <div style={{width:300,borderLeft:`1px solid ${C.border}`,display:'flex',flexDirection:'column',background:'#fff'}}>
+            <div style={{padding:'11px 14px',borderBottom:`1px solid ${C.border}`,
+              display:'flex',alignItems:'center',gap:7,flexShrink:0}}>
+              <div style={{width:22,height:22,borderRadius:6,background:C.greenS,
+                display:'flex',alignItems:'center',justifyContent:'center',
+                fontSize:10,color:C.green}}>✦</div>
+              <span style={{fontSize:12,fontWeight:600,color:C.text}}>AI Assistant</span>
+              <span style={{marginLeft:'auto',fontSize:8.5,color:C.green,fontWeight:700,
+                padding:'2px 6px',background:C.greenS,borderRadius:99}}>GPT-4o</span>
+            </div>
+            {/* Suggestion chips */}
+            <div style={{padding:'8px 10px',borderBottom:`1px solid ${C.border}`,
+              display:'flex',flexDirection:'column',gap:4,flexShrink:0}}>
+              {suggestions.map((s,i)=>(
+                <div key={i} onClick={()=>send(s)} style={{padding:'5px 9px',
+                  background:C.surfaceA,border:`1px solid ${C.border}`,
+                  borderRadius:6,fontSize:10,color:C.textSec,cursor:'pointer',
+                  display:'flex',alignItems:'center',gap:5,transition:'all 0.1s'}}
+                  onMouseEnter={e=>{e.currentTarget.style.borderColor=C.green;e.currentTarget.style.color=C.text;}}
+                  onMouseLeave={e=>{e.currentTarget.style.borderColor=C.border;e.currentTarget.style.color=C.textSec;}}>
+                  <span style={{color:C.green,fontSize:9}}>✦</span>{s}
+                </div>
+              ))}
+            </div>
+            {/* Messages */}
+            <div ref={scrollRef} style={{flex:1,padding:'10px',overflow:'auto',
+              display:'flex',flexDirection:'column',gap:8}}>
+              {msgs.map((m,i)=>(
+                <div key={i} style={{display:'flex',gap:7,alignItems:'flex-start',
+                  animation:'fadeUp 0.2s ease'}}>
+                  <div style={{width:20,height:20,borderRadius:m.r==='ai'?5:'50%',
+                    background:m.r==='ai'?C.greenS:C.surfaceB,
+                    display:'flex',alignItems:'center',justifyContent:'center',
+                    fontSize:m.r==='ai'?9:8,color:m.r==='ai'?C.green:C.textSec,
+                    fontWeight:700,flexShrink:0,marginTop:1}}>
+                    {m.r==='ai'?'✦':'JA'}
+                  </div>
+                  <div style={{background:C.surfaceA,border:`1px solid ${C.border}`,
+                    padding:'7px 10px',
+                    borderRadius:m.r==='ai'?'3px 8px 8px 8px':'8px 3px 8px 8px',
+                    fontSize:10.5,color:C.textSec,lineHeight:1.58,flex:1}}>
+                    {m.t}
+                  </div>
+                </div>
+              ))}
+              {typing&&(
+                <div style={{display:'flex',gap:7,alignItems:'flex-start'}}>
+                  <div style={{width:20,height:20,borderRadius:5,background:C.greenS,
+                    display:'flex',alignItems:'center',justifyContent:'center',
+                    fontSize:9,color:C.green}}>✦</div>
+                  <div style={{background:C.surfaceA,border:`1px solid ${C.border}`,
+                    padding:'8px 12px',borderRadius:'3px 8px 8px 8px',
+                    display:'flex',gap:4,alignItems:'center'}}>
+                    {[0,1,2].map(j=>(
+                      <div key={j} style={{width:4,height:4,borderRadius:'50%',
+                        background:C.textMut,
+                        animation:`dotPulse 1s ${j*0.18}s ease infinite`}}/>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+            {/* Input */}
+            <div style={{padding:'9px',borderTop:`1px solid ${C.border}`,
+              background:'#fff',display:'flex',gap:6,flexShrink:0}}>
+              <input value={q} onChange={e=>setQ(e.target.value)}
+                onKeyDown={e=>e.key==='Enter'&&send(q)}
+                placeholder="Ask about this file…"
+                style={{flex:1,background:C.surfaceA,border:`1px solid ${C.border}`,
+                borderRadius:6,padding:'6px 9px',fontSize:10.5,color:C.text,outline:'none'}}
+                onFocus={e=>e.target.style.borderColor=C.green}
+                onBlur={e=>e.target.style.borderColor=C.border}/>
+              <button onClick={()=>send(q)} style={{width:30,height:30,borderRadius:7,
+                background:q?C.green:'#fff',
+                border:`1px solid ${q?C.green:C.border}`,
+                display:'flex',alignItems:'center',justifyContent:'center',
+                fontSize:13,color:q?'#fff':C.textMut,cursor:'pointer',
+                transition:'all 0.15s',outline:'none'}}>↑</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── EXCEL NODE ──────────────────────────── */
+function ExcelNode({pos,selected,onSel,onDrag,onOpen}) {
+  const [selRow,setSelRow]=useState(null);
+  return (
+    <NodeShell id="excel" pos={pos} selected={selected}>
+      <NodeHead icon="⊞" iconBg={C.greenS} iconColor={C.green}
+        title="Revenue_Breakdown_FY2025.xlsx"
+        sub="5 sheets · Modified today · Excel 365"
+        onOpen={onOpen} onDrag={onDrag}/>
+
+      {/* Formula bar */}
+      <div style={{display:'flex',gap:0,padding:'3px 10px',
+        borderBottom:`1px solid ${C.border}`,background:C.surfaceA,
+        flexShrink:0,alignItems:'center'}} onMouseDown={e=>e.stopPropagation()}>
+        <div style={{padding:'2px 6px',background:'#fff',
+          border:`1px solid ${C.border}`,borderRadius:'4px 0 0 4px',
+          fontSize:9,color:C.textSec,width:32,textAlign:'center',
+          fontFamily:'monospace',borderRight:'none'}}>
+          {selRow!==null?`A${selRow+2}`:'A1'}
+        </div>
+        <div style={{flex:1,padding:'2px 7px',background:'#fff',
+          border:`1px solid ${C.border}`,borderRadius:'0 4px 4px 0',
+          fontSize:9,color:C.text,fontFamily:'monospace'}}>
+          {selRow!==null?SS[selRow].name:'Product'}
+        </div>
+        <div style={{marginLeft:6,fontSize:9.5,color:C.green,
+          display:'flex',alignItems:'center',gap:4}}>
+          <div style={{width:5,height:5,borderRadius:'50%',
+            background:C.green,animation:'dotPulse 2s ease infinite'}}/>
+          AI
+        </div>
+      </div>
+
+      {/* Sheet tabs */}
+      <div style={{display:'flex',borderBottom:`1px solid ${C.border}`,
+        background:C.surfaceA,flexShrink:0,overflowX:'hidden'}} onMouseDown={e=>e.stopPropagation()}>
+        {['Revenue','Quarterly','YoY'].map((tab,i)=>(
+          <div key={tab} style={{padding:'4px 11px',fontSize:9.5,cursor:'pointer',
+            borderRight:`1px solid ${C.border}`,
+            background:i===0?'#fff':C.surfaceA,
+            color:i===0?C.text:C.textMut,
+            fontWeight:i===0?600:400,
+            borderBottom:i===0?`2px solid ${C.green}`:'2px solid transparent',
+            whiteSpace:'nowrap'}}>
+            {tab}
+          </div>
+        ))}
+      </div>
+
+      {/* Table */}
+      <div style={{flex:1,overflow:'hidden',padding:'0'}} onMouseDown={e=>e.stopPropagation()}>
+        <SpreadsheetTable small selRow={selRow} onSelRow={setSelRow}/>
+      </div>
+
+      {/* AI bar */}
+      <div style={{borderTop:`1px solid ${C.border}`,padding:'8px 12px',
+        background:C.surfaceA,flexShrink:0}} onMouseDown={e=>e.stopPropagation()}>
+        {selRow!==null && (
+          <div style={{display:'flex',gap:6,marginBottom:6,alignItems:'flex-start'}}>
+            <span style={{color:C.green,fontSize:10,flexShrink:0}}>✦</span>
+            <p style={{fontSize:9.5,color:C.textSec,lineHeight:1.5}}>
+              <strong style={{color:C.text}}>{SS[selRow].name}</strong> — ${SS[selRow].total.toFixed(1)}M total.
+              Q4 strongest at ${SS[selRow].q[3].toFixed(1)}M.
+            </p>
+          </div>
+        )}
+        <div style={{display:'flex',gap:5,alignItems:'center'}}>
+          <div style={{width:18,height:18,borderRadius:5,background:C.greenS,
+            display:'flex',alignItems:'center',justifyContent:'center',
+            fontSize:9,color:C.green,flexShrink:0}}>✦</div>
+          <div style={{flex:1,background:'#fff',border:`1px solid ${C.border}`,
+            borderRadius:6,padding:'5px 9px',fontSize:10,color:C.textMut}}>
+            Ask AI about this spreadsheet…
+          </div>
+          <button onClick={onOpen} style={{padding:'5px 10px',borderRadius:6,
+            background:C.greenS,color:C.green,fontSize:10,fontWeight:600,
+            border:`1px solid ${C.green}28`,cursor:'pointer',
+            whiteSpace:'nowrap',outline:'none'}}>Open full</button>
+        </div>
+      </div>
+    </NodeShell>
+  );
+}
+
+/* ── DOCUMENT MODAL ──────────────────────── */
+function DocModal({onClose}) {
+  return (
+    <div style={{position:'fixed',inset:0,background:'rgba(0,0,0,0.25)',
+      zIndex:1000,display:'flex',alignItems:'center',justifyContent:'center',
+      backdropFilter:'blur(4px)'}} onClick={e=>e.target===e.currentTarget&&onClose()}>
+      <div style={{width:'78vw',maxWidth:860,height:'88vh',background:'#fff',
+        borderRadius:14,overflow:'hidden',display:'flex',flexDirection:'column',
+        boxShadow:'0 24px 80px rgba(0,0,0,0.18)',animation:'fadeUp 0.22s ease'}}>
+
+        {/* Title bar */}
+        <div style={{display:'flex',alignItems:'center',gap:10,padding:'11px 16px',
+          borderBottom:`1px solid ${C.border}`,background:'#fff',flexShrink:0}}>
+          <div style={{width:28,height:28,borderRadius:7,background:C.surfaceB,
+            display:'flex',alignItems:'center',justifyContent:'center',
+            fontSize:15,color:C.text}}>◎</div>
+          <div>
+            <div style={{fontSize:13,fontWeight:600,color:C.text}}>Q1_Revenue_Analysis.docx</div>
+            <div style={{fontSize:9.5,color:C.textMut}}>Draft · J. Anderson · Edited just now</div>
+          </div>
+          <div style={{flex:1}}/>
+          <span style={{padding:'2px 8px',borderRadius:99,background:C.surfaceB,
+            color:C.textSec,fontSize:9,fontWeight:600}}>DRAFT</span>
+          <button onClick={onClose} style={{width:28,height:28,borderRadius:7,
+            display:'flex',alignItems:'center',justifyContent:'center',
+            background:C.surfaceA,border:`1px solid ${C.border}`,
+            cursor:'pointer',fontSize:15,color:C.textMut,outline:'none',marginLeft:4}}>✕</button>
+        </div>
+
+        {/* Doc body */}
+        <div style={{flex:1,overflow:'auto',padding:'40px 64px',maxWidth:760,margin:'0 auto',width:'100%'}}>
+          <h1 style={{fontSize:26,fontWeight:800,color:C.text,letterSpacing:-0.6,marginBottom:6}}>Q1 2025 Revenue Analysis</h1>
+          <p style={{fontSize:12,color:C.textMut,marginBottom:32}}>J. Anderson · April 23, 2025 · Financial Strategy</p>
+
+          <h2 style={{fontSize:14,fontWeight:700,color:C.text,letterSpacing:-0.2,marginBottom:10,borderBottom:`1px solid ${C.border}`,paddingBottom:8}}>Executive Summary</h2>
+          <p style={{fontSize:13,color:C.textSec,lineHeight:1.75,marginBottom:20}}>
+            Total FY2025 revenue reached <strong style={{color:C.text}}>$1,629.9M</strong>, representing a{' '}
+            <strong style={{color:C.blue}}>14.2% year-over-year increase</strong>. Equities remained the dominant revenue driver,
+            contributing 38% of total revenue. Q4 was the strongest quarter across all product lines, with total revenue of{' '}
+            <strong style={{color:C.text}}>$447.9M</strong>.
+          </p>
+
+          {/* Figure chip */}
+          <div style={{border:`1px solid ${C.border}`,borderRadius:10,padding:'10px 14px',
+            background:C.surfaceA,display:'flex',alignItems:'center',gap:10,
+            marginBottom:20,cursor:'pointer',transition:'border-color 0.12s'}}
+            onMouseEnter={e=>e.currentTarget.style.borderColor=C.violet+'50'}
+            onMouseLeave={e=>e.currentTarget.style.borderColor=C.border}>
+            <div style={{width:36,height:26,background:C.violetS,borderRadius:7,
+              display:'flex',alignItems:'center',justifyContent:'center',
+              fontSize:13,color:C.violet}}>⬤</div>
+            <div>
+              <div style={{fontSize:12,color:C.text,fontWeight:600}}>Figure 1 — Revenue Distribution by Product (FY2025)</div>
+              <div style={{fontSize:10,color:C.textMut}}>Linked from AI Assistant · Pie chart · Click to preview</div>
+            </div>
+            <div style={{marginLeft:'auto',fontSize:12,color:C.violet}}>↗</div>
+          </div>
+
+          <h2 style={{fontSize:14,fontWeight:700,color:C.text,letterSpacing:-0.2,marginBottom:10,borderBottom:`1px solid ${C.border}`,paddingBottom:8}}>Product Analysis</h2>
+          <p style={{fontSize:13,color:C.textSec,lineHeight:1.75,marginBottom:12}}>
+            <strong style={{color:C.text}}>Equities</strong> delivered <strong style={{color:C.text}}>$659.7M</strong> for the full year,
+            with Q4 reaching $189.4M — the highest single-quarter result of any segment.
+            The consistent quarterly growth trajectory signals continued momentum heading into Q2 2025.
+          </p>
+          <p style={{fontSize:13,color:C.textSec,lineHeight:1.75,marginBottom:12}}>
+            <strong style={{color:C.text}}>FX Trading</strong> emerged as the fastest-growing segment at{' '}
+            <strong style={{color:C.green}}>+18.6% QoQ in Q4</strong>, driven by heightened volatility in emerging market currencies.
+            Full-year contribution was $282.6M, representing 17.3% of total revenue.
+          </p>
+          <p style={{fontSize:13,color:C.textSec,lineHeight:1.75,marginBottom:24}}>
+            <strong style={{color:C.text}}>Fixed Income</strong> showed resilient performance at $365.5M despite a slight Q3 dip,
+            recovering strongly in Q4 with $95.3M.
+          </p>
+
+          {/* Reference tags */}
+          <div style={{borderTop:`1px solid ${C.border}`,paddingTop:16}}>
+            <div style={{fontSize:10,fontWeight:700,color:C.textMut,letterSpacing:0.6,
+              textTransform:'uppercase',marginBottom:8}}>Sources</div>
+            <div style={{display:'flex',gap:6,flexWrap:'wrap'}}>
+              {['Earnings Report · p.4','Revenue Data · B2:F7','Market Brief · §3.2','Excel Model · Sheet 1'].map((r,i)=>(
+                <div key={i} style={{padding:'3px 9px',borderRadius:5,background:C.surfaceA,
+                  color:C.textSec,fontSize:10,fontWeight:500,cursor:'pointer',
+                  border:`1px solid ${C.border}`,transition:'all 0.1s'}}
+                  onMouseEnter={e=>{e.currentTarget.style.borderColor=C.borderHov;e.currentTarget.style.color=C.text;}}
+                  onMouseLeave={e=>{e.currentTarget.style.borderColor=C.border;e.currentTarget.style.color=C.textSec;}}>
+                  ¶ {r}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* AI footer bar */}
+        <div style={{borderTop:`1px solid ${C.border}`,padding:'10px 20px',
+          background:C.surfaceA,display:'flex',gap:8,alignItems:'center',flexShrink:0}}>
+          <div style={{width:22,height:22,borderRadius:6,background:C.surfaceB,
+            display:'flex',alignItems:'center',justifyContent:'center',
+            fontSize:10,color:C.textSec}}>✦</div>
+          <input placeholder="Ask AI to draft, edit, or add a section…"
+            style={{flex:1,background:'#fff',border:`1px solid ${C.border}`,
+            borderRadius:7,padding:'7px 11px',fontSize:11,color:C.text,outline:'none'}}
+            onFocus={e=>e.target.style.borderColor=C.accent}
+            onBlur={e=>e.target.style.borderColor=C.border}/>
+          <div style={{display:'flex',gap:5}}>
+            {['Insert chart','Add reference','Expand section'].map((a,i)=>(
+              <button key={i} style={{padding:'6px 11px',borderRadius:6,
+                background:'#fff',border:`1px solid ${C.border}`,
+                color:C.textSec,fontSize:10.5,cursor:'pointer',outline:'none',
+                transition:'all 0.1s'}}
+                onMouseEnter={e=>{e.currentTarget.style.borderColor=C.borderHov;e.currentTarget.style.color=C.text;}}
+                onMouseLeave={e=>{e.currentTarget.style.borderColor=C.border;e.currentTarget.style.color=C.textSec;}}>
+                {a}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── DOC NODE ────────────────────────────── */
+function DocNode({pos,selected,onSel,onDrag,onOpen}) {
+  return (
+    <NodeShell id="doc" pos={pos} selected={selected} noRight>
+      <NodeHead icon="◎" iconBg={C.surfaceB} iconColor={C.text}
+        title="Q1_Revenue_Analysis.docx"
+        sub="Draft · 4 sections · J. Anderson"
+        onOpen={onOpen} onDrag={onDrag} pill="DRAFT"/>
+
+      <div style={{flex:1,overflow:'hidden',padding:'14px 16px',
+        display:'flex',flexDirection:'column',gap:11,position:'relative'}}
+        onMouseDown={e=>e.stopPropagation()}>
+
+        <div style={{borderBottom:`1px solid ${C.border}`,paddingBottom:11}}>
+          <div style={{fontSize:16.5,fontWeight:800,color:C.text,
+            letterSpacing:-0.5,lineHeight:1.25}}>Q1 2025 Revenue Analysis</div>
+          <div style={{fontSize:9.5,color:C.textMut,marginTop:3}}>J. Anderson · April 23, 2025</div>
+        </div>
+
+        <div>
+          <div style={{fontSize:8.5,fontWeight:700,color:C.textMut,
+            letterSpacing:0.6,marginBottom:7,textTransform:'uppercase'}}>Executive Summary</div>
+          <p style={{fontSize:11,color:C.textSec,lineHeight:1.7,textWrap:'pretty'}}>
+            Total FY2025 revenue reached{' '}
+            <strong style={{color:C.text}}>$1,629.9M</strong>, a{' '}
+            <strong style={{color:C.blue}}>14.2% YoY increase</strong>.
+            Equities contributed 38% of total, with Q4 the strongest quarter at $447.9M.
+          </p>
+        </div>
+
+        {/* Figure chip */}
+        <div style={{border:`1px solid ${C.border}`,borderRadius:8,
+          padding:'7px 10px',background:C.surfaceA,display:'flex',
+          alignItems:'center',gap:8,cursor:'pointer',transition:'border-color 0.12s'}}
+          onMouseEnter={e=>e.currentTarget.style.borderColor=C.violet+'50'}
+          onMouseLeave={e=>e.currentTarget.style.borderColor=C.border}>
+          <div style={{width:28,height:20,background:C.violetS,borderRadius:5,
+            display:'flex',alignItems:'center',justifyContent:'center',
+            fontSize:11,color:C.violet,flexShrink:0}}>⬤</div>
+          <div style={{flex:1,minWidth:0}}>
+            <div style={{fontSize:10.5,color:C.text,fontWeight:600}}>Figure 1 — Revenue Distribution Chart</div>
+            <div style={{fontSize:9,color:C.textMut}}>From AI Assistant · FY2025</div>
+          </div>
+          <div style={{fontSize:11,color:C.violet}}>↗</div>
+        </div>
+
+        <div>
+          <div style={{fontSize:8.5,fontWeight:700,color:C.textMut,
+            letterSpacing:0.6,marginBottom:7,textTransform:'uppercase'}}>Key Findings</div>
+          {[
+            ['Equities','$659.7M','38% of total',C.text],
+            ['Fixed Income','$365.5M','Stable +3.2%',C.textSec],
+            ['FX Trading','$282.6M','+18.6% QoQ ↑',C.green],
+          ].map(([l,v,n,nc],i)=>(
+            <div key={i} style={{display:'flex',alignItems:'center',gap:8,
+              padding:'5px 0',borderBottom:`1px solid ${C.borderSub||C.border}`}}>
+              <div style={{width:4,height:4,borderRadius:'50%',background:C.border,flexShrink:0}}/>
+              <span style={{fontSize:10.5,color:C.textSec,flex:1}}>{l}</span>
+              <span style={{fontSize:10.5,color:C.text,fontWeight:700}}>{v}</span>
+              <span style={{fontSize:9.5,color:nc,fontWeight:600}}>{n}</span>
+            </div>
+          ))}
+        </div>
+
+        <div>
+          <div style={{fontSize:8.5,fontWeight:700,color:C.textMut,
+            letterSpacing:0.6,marginBottom:5,textTransform:'uppercase'}}>Sources</div>
+          <div style={{display:'flex',gap:4,flexWrap:'wrap'}}>
+            {['Earnings · p.4','Revenue Data','Market Brief'].map((r,i)=>(
+              <div key={i} style={{padding:'2px 7px',borderRadius:4,
+                background:C.surfaceA,color:C.textSec,fontSize:9,
+                fontWeight:500,cursor:'pointer',border:`1px solid ${C.border}`}}>¶ {r}</div>
+            ))}
+          </div>
+        </div>
+
+        {/* fade gradient */}
+        <div style={{position:'absolute',bottom:0,left:0,right:0,height:44,
+          background:'linear-gradient(transparent,white)',pointerEvents:'none'}}/>
+      </div>
+
+      {/* AI bar */}
+      <div style={{borderTop:`1px solid ${C.border}`,padding:'8px 12px',
+        background:C.surfaceA,flexShrink:0}} onMouseDown={e=>e.stopPropagation()}>
+        <div style={{display:'flex',gap:5,alignItems:'center',marginBottom:6}}>
+          <span style={{color:C.textMut,fontSize:10}}>✦</span>
+          <span style={{fontSize:9.5,color:C.textSec}}>Suggestion: add FX Trading section — data available from Excel node.</span>
+        </div>
+        <div style={{display:'flex',gap:5}}>
+          <div style={{flex:1,background:'#fff',border:`1px solid ${C.border}`,
+            borderRadius:6,padding:'5px 9px',fontSize:10,color:C.textMut}}>
+            Ask AI to draft or edit…
+          </div>
+          <button onClick={onOpen} style={{padding:'5px 11px',borderRadius:6,
+            background:C.surfaceB,color:C.text,fontSize:10,fontWeight:600,
+            border:`1px solid ${C.border}`,cursor:'pointer',outline:'none',
+            whiteSpace:'nowrap'}}>Open full</button>
+        </div>
+      </div>
+    </NodeShell>
+  );
+}
+
+/* ── CONNECTION LINES ────────────────────── */
+function Edges({positions}) {
+  const getAnchors = (id) => {
+    const p = positions[id];
+    const d = DIM[id];
+    return {
+      left:  { x: p.x,       y: p.y + d.h/2 },
+      right: { x: p.x + d.w, y: p.y + d.h/2 },
+    };
+  };
+  return (
+    <svg style={{position:'absolute',inset:0,width:'100%',height:'100%',
+      overflow:'visible',pointerEvents:'none'}}>
+      {EDGES.map(e=>{
+        const fa=getAnchors(e.from).right;
+        const ta=getAnchors(e.to).left;
+        const mx=(fa.x+ta.x)/2;
+        const path=`M${fa.x},${fa.y} C${mx},${fa.y} ${mx},${ta.y} ${ta.x},${ta.y}`;
+        const lx=mx, ly=(fa.y+ta.y)/2;
+        return (
+          <g key={e.from+e.to}>
+            {/* glow */}
+            <path d={path} fill="none" stroke="#000" strokeWidth={5} opacity={0.03}/>
+            {/* base line */}
+            <path d={path} fill="none" stroke={C.border} strokeWidth={1.5}/>
+            {/* animated dash */}
+            <path d={path} fill="none" stroke={C.accent} strokeWidth={1.5}
+              strokeDasharray="4 10" opacity={0.45}
+              style={{animation:'flowDash 1.8s linear infinite'}}/>
+            {/* label */}
+            <rect x={lx-22} y={ly-9} width={44} height={17} rx={5}
+              fill="white" stroke={C.border} strokeWidth={1}/>
+            <text x={lx} y={ly+4.5} textAnchor="middle"
+              fill={C.textMut} fontSize="8.5" fontWeight="500"
+              fontFamily="Inter,sans-serif">{e.label}</text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+/* ── APP ─────────────────────────────────── */
+function App() {
+  const canvasRef = useRef(null);
+  const [positions, setPositions] = useState(() => {
+    try {
+      const saved = localStorage.getItem('fa-positions-v2');
+      return saved ? JSON.parse(saved) : INIT;
+    } catch { return INIT; }
+  });
+  const [selected, setSelected] = useState(null);
+  const [excelOpen, setExcelOpen] = useState(false);
+  const [docOpen, setDocOpen] = useState(false);
+
+  // persist positions
+  useEffect(()=>{
+    localStorage.setItem('fa-positions-v2', JSON.stringify(positions));
+  },[positions]);
+
+  // drag state via ref to avoid stale closures
+  const drag = useRef(null);
+
+  const startDrag = useCallback((id, e) => {
+    e.preventDefault();
+    const rect = canvasRef.current.getBoundingClientRect();
+    drag.current = {
+      id,
+      ox: e.clientX - positions[id].x,
+      oy: e.clientY - positions[id].y,
+    };
+    setSelected(id);
+  }, [positions]);
+
+  useEffect(() => {
+    const onMove = (e) => {
+      if (!drag.current) return;
+      const {id, ox, oy} = drag.current;
+      const nx = e.clientX - ox;
+      const ny = e.clientY - oy;
+      setPositions(p => ({...p, [id]: { x: Math.max(0,nx), y: Math.max(0,ny) }}));
+    };
+    const onUp = () => { drag.current = null; };
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+    return () => {
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onUp);
+    };
+  }, []);
+
+  const sel = (id) => setSelected(s => s===id ? null : id);
+
+  return (
+    <div ref={canvasRef} onClick={()=>setSelected(null)}
+      style={{width:'100vw',height:'100vh',position:'relative',overflow:'hidden',
+        background:'#fff',
+        backgroundImage:'radial-gradient(circle, #e5e7eb 1px, transparent 1px)',
+        backgroundSize:'22px 22px',
+        cursor:'default'}}>
+
+      <Edges positions={positions}/>
+
+      <DataNode
+        pos={positions.data} selected={selected==='data'}
+        onSel={()=>sel('data')}
+        onDrag={e=>startDrag('data',e)}
+      />
+      <AINode
+        pos={positions.ai} selected={selected==='ai'}
+        onSel={()=>sel('ai')}
+        onDrag={e=>startDrag('ai',e)}
+      />
+      <ExcelNode
+        pos={positions.excel} selected={selected==='excel'}
+        onSel={()=>sel('excel')}
+        onDrag={e=>startDrag('excel',e)}
+        onOpen={()=>setExcelOpen(true)}
+      />
+      <DocNode
+        pos={positions.doc} selected={selected==='doc'}
+        onSel={()=>sel('doc')}
+        onDrag={e=>startDrag('doc',e)}
+        onOpen={()=>setDocOpen(true)}
+      />
+
+      {/* Canvas hint */}
+      <div style={{position:'fixed',bottom:18,right:18,
+        display:'flex',alignItems:'center',gap:5,
+        padding:'6px 11px',borderRadius:8,background:'rgba(255,255,255,0.9)',
+        border:`1px solid ${C.border}`,fontSize:10,color:C.textMut,
+        backdropFilter:'blur(4px)',userSelect:'none'}}>
+        Node4analytics · Sample data and responses · Drag nodes to reposition
+      </div>
+
+      {excelOpen && <ExcelModal onClose={()=>setExcelOpen(false)}/>}
+      {docOpen   && <DocModal   onClose={()=>setDocOpen(false)}/>}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

@@ -1,0 +1,1261 @@
+[
+ {
+  "id": "hdfc.rr.nii_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "+1.4%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q1 FY27 vs Q4 FY26 · as printed by the bank",
+  "raw_match": "Net interest income 314.4 330.8 335.3 1.4% 6.7%",
+  "raw_value": "1.4"
+ },
+ {
+  "id": "hdfc.rr.oth_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "−2.9%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "non-interest income · standalone · Q1 FY27 vs Q4 FY26 · as printed by the bank",
+  "raw_match": "Non-interest income 217.3 132.0 128.2 (2.9%) (41.0%)",
+  "raw_value": "2.9"
+ },
+ {
+  "id": "hdfc.rr.oth_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "−41.0%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "non-interest income · standalone · Q1 FY27 vs Q1 FY26 · as printed by the bank",
+  "raw_match": "Non-interest income 217.3 132.0 128.2 (2.9%) (41.0%)",
+  "raw_value": "41.0"
+ },
+ {
+  "id": "hdfc.rr.rev_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "+0.2%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "net revenue · standalone · Q1 FY27 vs Q4 FY26 · as printed by the bank",
+  "raw_match": "Net revenue 531.7 462.8 463.6 0.2% (12.8%)",
+  "raw_value": "0.2"
+ },
+ {
+  "id": "hdfc.rr.rev_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "−12.8%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "net revenue · standalone · Q1 FY27 vs Q1 FY26 · as printed by the bank",
+  "raw_match": "Net revenue 531.7 462.8 463.6 0.2% (12.8%)",
+  "raw_value": "12.8"
+ },
+ {
+  "id": "hdfc.rr.opex_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "−1.6%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "operating expenses · standalone · Q1 FY27 vs Q4 FY26 · as printed by the bank",
+  "raw_match": "Operating expenses 174.3 184.8 181.9 (1.6%) 4.3%",
+  "raw_value": "1.6"
+ },
+ {
+  "id": "hdfc.rr.opex_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "+4.3%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "operating expenses · standalone · Q1 FY27 vs Q1 FY26 · as printed by the bank",
+  "raw_match": "Operating expenses 174.3 184.8 181.9 (1.6%) 4.3%",
+  "raw_value": "4.3"
+ },
+ {
+  "id": "hdfc.rr.prov_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "+17.2%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "provisions · standalone · Q1 FY27 vs Q4 FY26 · as printed by the bank",
+  "raw_match": "Provisions 144.4 26.1 30.6 17.2% (78.8%)",
+  "raw_value": "17.2"
+ },
+ {
+  "id": "hdfc.rr.prov_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "−78.8%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "provisions · standalone · Q1 FY27 vs Q1 FY26 · as printed by the bank",
+  "raw_match": "Provisions 144.4 26.1 30.6 17.2% (78.8%)",
+  "raw_value": "78.8"
+ },
+ {
+  "id": "hdfc.rr.pbt_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "−0.3%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit before tax · standalone · Q1 FY27 vs Q4 FY26 · as printed by the bank",
+  "raw_match": "Profit before tax 212.9 251.9 251.1 (0.3%) 17.9%",
+  "raw_value": "0.3"
+ },
+ {
+  "id": "hdfc.rr.pbt_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "+17.9%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit before tax · standalone · Q1 FY27 vs Q1 FY26 · as printed by the bank",
+  "raw_match": "Profit before tax 212.9 251.9 251.1 (0.3%) 17.9%",
+  "raw_value": "17.9"
+ },
+ {
+  "id": "hdfc.rr.pat_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "−0.8%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit after tax · standalone · Q1 FY27 vs Q4 FY26 · as printed by the bank",
+  "raw_match": "Profit after tax 181.6 192.2 190.6 (0.8%) 5.0%",
+  "raw_value": "0.8"
+ },
+ {
+  "id": "hdfc.rr.pat_adj_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "+9.8%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "PAT growth with Q1 FY26 adjusted for the HDB transaction gain, certain provisions and a tax credit · standalone · YoY",
+  "raw_match": "Profit after tax (Adjusted)* 173.7 192.2 190.6 (0.8%) 9.8%",
+  "raw_value": "9.8"
+ },
+ {
+  "id": "hdfc.rr.gross_adv_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "+3.4%",
+  "doc": "Q1D",
+  "pdf_page": 10,
+  "basis": "gross advances · standalone · period-end · Jun-26 vs Mar-26",
+  "raw_match": "Gross Advances 26,532 29,600 30,608 3.4% 15.4%",
+  "raw_value": "3.4"
+ },
+ {
+  "id": "hdfc.rr.ppop_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "−21.2%",
+  "basis": "PPOP · standalone · YoY · the base holds the Rs 9,130 cr HDB gain",
+  "derived_from": [
+   "hdfc.kpi.ppop.q1fy27",
+   "hdfc.kpi.ppop.q1fy26"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "hdfc.rr.ppop_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "+1.3%",
+  "basis": "PPOP · standalone · QoQ",
+  "derived_from": [
+   "hdfc.kpi.ppop.q1fy27",
+   "hdfc.kpi.ppop.q4fy26"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "hdfc.rr.deposits_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "+2.1%",
+  "basis": "deposits · standalone · period-end · Jun-26 vs Mar-26",
+  "derived_from": [
+   "hdfc.kpi.deposits.q1fy27",
+   "hdfc.kpi.deposits.q4fy26"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "hdfc.rr.nim_ta_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−12 bps",
+  "basis": "NIM on total assets, two decimals (decks p.3) · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.nim_ta2.q1fy27",
+   "hdfc.kpi.nim_ta2.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.nim_ta_yoy_1dp.q1fy27",
+  "company": "hdfc",
+  "display": "−0.1",
+  "basis": "NIM on total assets · change Q1 FY26 -> Q1 FY27 in percentage points at the KP sheet's one decimal (3.4% -> 3.3%); no two-decimal Q1 FY26 NIM is in the corpus",
+  "derived_from": [
+   "hdfc.kpi.nim_ta.q1fy27",
+   "hdfc.kpi.nim_ta.q1fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.rr.nim_iea_qoq_1dp.q1fy27",
+  "company": "hdfc",
+  "display": "−0.1",
+  "basis": "NIM on interest-earning assets · pp at one decimal (3.5% -> 3.4%)",
+  "derived_from": [
+   "hdfc.kpi.nim_iea.q1fy27",
+   "hdfc.kpi.nim_iea.q4fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.rr.casa_yoy_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−160 bps",
+  "basis": "CASA ratio, period-end · change Q1 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.casa.q1fy27",
+   "hdfc.kpi.casa.q1fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.casa_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−180 bps",
+  "basis": "CASA ratio, period-end · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.casa.q1fy27",
+   "hdfc.kpi.casa.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.gnpa_yoy_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−23 bps",
+  "basis": "GNPA ratio · change Q1 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.gnpa.q1fy27",
+   "hdfc.kpi.gnpa.q1fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.gnpa_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "+2 bps",
+  "basis": "GNPA ratio · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.gnpa.q1fy27",
+   "hdfc.kpi.gnpa.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.cc_yoy_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−16 bps",
+  "basis": "credit cost, % of advances · change Q1 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.credit_cost.q1fy27",
+   "hdfc.kpi.credit_cost.q1fy26"
+  ],
+  "formula": "(a - b) * 100",
+  "note": "Q1 FY26's 0.56% excludes the Rs 9,000 cr floating and Rs 1,700 cr contingent provisions (KPj p.2)"
+ },
+ {
+  "id": "hdfc.rr.cc_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "+5 bps",
+  "basis": "credit cost, % of advances · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.credit_cost.q1fy27",
+   "hdfc.kpi.credit_cost.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.ccn_yoy_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−12 bps",
+  "basis": "credit cost net of recoveries · change Q1 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.credit_cost_net.q1fy27",
+   "hdfc.kpi.credit_cost_net.q1fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.ccn_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "+8 bps",
+  "basis": "credit cost net of recoveries · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.credit_cost_net.q1fy27",
+   "hdfc.kpi.credit_cost_net.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.ldr_yoy_bps.q1fy27",
+  "company": "hdfc",
+  "display": "+70 bps",
+  "basis": "LDR, net advances / deposits (computed) · change Q1 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.ldr.q1fy27",
+   "hdfc.kpi.ldr.q1fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.ldr_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "+120 bps",
+  "basis": "LDR, net advances / deposits (computed) · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.ldr.q1fy27",
+   "hdfc.kpi.ldr.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.cti_yoy_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−40 bps",
+  "basis": "core cost-to-income · change Q1 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.cti.q1fy27",
+   "hdfc.kpi.cti.q1fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.cti_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−70 bps",
+  "basis": "core cost-to-income · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.cti.q1fy27",
+   "hdfc.kpi.cti.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.roa_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−11 bps",
+  "basis": "RoA, annualised · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.roa.q1fy27",
+   "hdfc.kpi.roa.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.cet1_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "+10 bps",
+  "basis": "CET1 · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.cet1.q1fy27",
+   "hdfc.kpi.cet1.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.yield_yoy_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−40 bps",
+  "basis": "yield on assets (one decimal) · change Q1 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.yield.q1fy27",
+   "hdfc.kpi.yield.q1fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.yield_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−10 bps",
+  "basis": "yield on assets (one decimal) · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.yield.q1fy27",
+   "hdfc.kpi.yield.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.cof_yoy_bps.q1fy27",
+  "company": "hdfc",
+  "display": "−40 bps",
+  "basis": "cost of funds (one decimal) · change Q1 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.cof.q1fy27",
+   "hdfc.kpi.cof.q1fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.rr.cof_qoq_bps.q1fy27",
+  "company": "hdfc",
+  "display": "0 bps",
+  "basis": "cost of funds (one decimal) · change Q4 FY26 -> Q1 FY27, bps",
+  "derived_from": [
+   "hdfc.kpi.cof.q1fy27",
+   "hdfc.kpi.cof.q4fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "hdfc.walk.close_check.q2fy26",
+  "company": "hdfc",
+  "display": "34,300",
+  "basis": "GNPA walk identity · standalone · q2fy26 · Rs crore (deck Rs bn x 100); must equal the printed closing stock",
+  "derived_from": [
+   "hdfc.kpi.gnpa_stock_open.q2fy26",
+   "hdfc.kpi.slippages.q2fy26",
+   "hdfc.kpi.upgrades.q2fy26",
+   "hdfc.kpi.writeoffs.q2fy26"
+  ],
+  "formula": "a + b - c - d"
+ },
+ {
+  "id": "hdfc.walk.close_check.q3fy26",
+  "company": "hdfc",
+  "display": "35,200",
+  "basis": "GNPA walk identity · standalone · q3fy26 · Rs crore (deck Rs bn x 100); must equal the printed closing stock",
+  "derived_from": [
+   "hdfc.kpi.gnpa_stock_open.q3fy26",
+   "hdfc.kpi.slippages.q3fy26",
+   "hdfc.kpi.upgrades.q3fy26",
+   "hdfc.kpi.writeoffs.q3fy26"
+  ],
+  "formula": "a + b - c - d"
+ },
+ {
+  "id": "hdfc.walk.close_check.q4fy26",
+  "company": "hdfc",
+  "display": "34,100",
+  "basis": "GNPA walk identity · standalone · q4fy26 · Rs crore (deck Rs bn x 100); must equal the printed closing stock",
+  "derived_from": [
+   "hdfc.kpi.gnpa_stock_open.q4fy26",
+   "hdfc.kpi.slippages.q4fy26",
+   "hdfc.kpi.upgrades.q4fy26",
+   "hdfc.kpi.writeoffs.q4fy26"
+  ],
+  "formula": "a + b - c - d"
+ },
+ {
+  "id": "hdfc.walk.close_check.q1fy27",
+  "company": "hdfc",
+  "display": "35,800",
+  "basis": "GNPA walk identity · standalone · q1fy27 · Rs crore (deck Rs bn x 100); must equal the printed closing stock",
+  "derived_from": [
+   "hdfc.kpi.gnpa_stock_open.q1fy27",
+   "hdfc.kpi.slippages.q1fy27",
+   "hdfc.kpi.upgrades.q1fy27",
+   "hdfc.kpi.writeoffs.q1fy27"
+  ],
+  "formula": "a + b - c - d"
+ },
+ {
+  "id": "hdfc.walk.agri_slip.q2fy26",
+  "company": "hdfc",
+  "display": "1,100",
+  "basis": "agri slippages = total - ex-agri · standalone · q2fy26 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.slippages.q2fy26",
+   "hdfc.kpi.slippages_exagri.q2fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.walk.agri_slip.q3fy26",
+  "company": "hdfc",
+  "display": "1,900",
+  "basis": "agri slippages = total - ex-agri · standalone · q3fy26 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.slippages.q3fy26",
+   "hdfc.kpi.slippages_exagri.q3fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.walk.agri_slip.q4fy26",
+  "company": "hdfc",
+  "display": "800",
+  "basis": "agri slippages = total - ex-agri · standalone · q4fy26 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.slippages.q4fy26",
+   "hdfc.kpi.slippages_exagri.q4fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.walk.agri_slip.q1fy27",
+  "company": "hdfc",
+  "display": "1,900",
+  "basis": "agri slippages = total - ex-agri · standalone · q1fy27 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.slippages.q1fy27",
+   "hdfc.kpi.slippages_exagri.q1fy27"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.broker.ax.date",
+  "company": "hdfc",
+  "display": "20 Apr 2026",
+  "doc": "AX",
+  "pdf_page": 1,
+  "basis": "AxisDirect note date",
+  "raw_match": "Result Update 20th April, 2026",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.ax.rating",
+  "company": "hdfc",
+  "display": "BUY (maintained)",
+  "doc": "AX",
+  "pdf_page": 1,
+  "basis": "AxisDirect rating",
+  "raw_match": "We maintain our BUY recommendation on the stock",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.ax.cmp_date",
+  "company": "hdfc",
+  "display": "price as of 17 Apr 2026",
+  "doc": "AX",
+  "pdf_page": 1,
+  "basis": "AxisDirect price date",
+  "raw_match": "(CMP as of 17th April, 2026)",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.ax.prior_tp",
+  "company": "hdfc",
+  "display": "₹1,020",
+  "doc": "AX",
+  "pdf_page": 1,
+  "basis": "AxisDirect previous target",
+  "raw_match": "Earlier TP: Rs 1,020/share"
+ },
+ {
+  "id": "hdfc.broker.ax.method",
+  "company": "hdfc",
+  "display": "1.9× FY28E ABV",
+  "doc": "AX",
+  "pdf_page": 1,
+  "basis": "AxisDirect valuation multiple on the standalone (parent) bank",
+  "raw_match": "Current Valuation: 1.9x FY28E ABV"
+ },
+ {
+  "id": "hdfc.broker.ax.prior_method",
+  "company": "hdfc",
+  "display": "2.1× Sep-27E ABV",
+  "doc": "AX",
+  "pdf_page": 1,
+  "basis": "AxisDirect previous multiple",
+  "raw_match": "Earlier Valuation: 2.1x Sep’27E ABV",
+  "raw_value": "2.1"
+ },
+ {
+  "id": "hdfc.broker.ax.core",
+  "company": "hdfc",
+  "display": "₹844",
+  "doc": "AX",
+  "pdf_page": 3,
+  "basis": "AxisDirect SOTP: standalone bank per share",
+  "raw_match": "HDFC Bank - Parent 1.9x FY28E ABV 844",
+  "raw_value": "844"
+ },
+ {
+  "id": "hdfc.broker.ax.subs_gross",
+  "company": "hdfc",
+  "display": "₹161",
+  "doc": "AX",
+  "pdf_page": 3,
+  "basis": "AxisDirect SOTP: subsidiaries before the holdco discount",
+  "raw_match": "Total Subsidiary Value 161"
+ },
+ {
+  "id": "hdfc.broker.ax.holdco",
+  "company": "hdfc",
+  "display": "20%",
+  "doc": "AX",
+  "pdf_page": 3,
+  "basis": "AxisDirect holdco discount",
+  "raw_match": "Less: 20% holding discount 32",
+  "raw_value": "20"
+ },
+ {
+  "id": "hdfc.broker.ax.subs_net",
+  "company": "hdfc",
+  "display": "₹129",
+  "doc": "AX",
+  "pdf_page": 3,
+  "basis": "AxisDirect SOTP: subsidiaries after the discount",
+  "raw_match": "Net Value of Sub. 129"
+ },
+ {
+  "id": "hdfc.broker.ax.sotp_sum",
+  "company": "hdfc",
+  "display": "₹973",
+  "basis": "AxisDirect SOTP components summed (N4A arithmetic); the note states a Rs 975 target, Rs 2 more than its own components",
+  "derived_from": [
+   "hdfc.broker.ax.core",
+   "hdfc.broker.ax.subs_net"
+  ],
+  "formula": "a + b"
+ },
+ {
+  "id": "hdfc.broker.ax.upside",
+  "company": "hdfc",
+  "display": "22%",
+  "doc": "AX",
+  "pdf_page": 3,
+  "basis": "AxisDirect upside to its target from Rs 800",
+  "raw_match": "Potential Upside 22%"
+ },
+ {
+  "id": "hdfc.broker.dc.date",
+  "company": "hdfc",
+  "display": "22 Apr 2026",
+  "doc": "DC",
+  "pdf_page": 1,
+  "basis": "DevenChoksey note date",
+  "raw_match": "Date: 22nd April 2026",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.dc.rating",
+  "company": "hdfc",
+  "display": "BUY (reiterated)",
+  "doc": "DC",
+  "pdf_page": 1,
+  "basis": "DevenChoksey rating",
+  "raw_match": "reiterate BUY",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.dc.method",
+  "company": "hdfc",
+  "display": "2.0× FY28E ABV",
+  "doc": "DC",
+  "pdf_page": 1,
+  "basis": "DevenChoksey multiple on the standalone bank",
+  "raw_match": "The standalone bank is valued at 2.0x FY28E ABV (INR 901/share)",
+  "raw_value": "2.0"
+ },
+ {
+  "id": "hdfc.broker.dc.core",
+  "company": "hdfc",
+  "display": "₹901",
+  "doc": "DC",
+  "pdf_page": 1,
+  "basis": "DevenChoksey SOTP: standalone bank per share",
+  "raw_match": "The standalone bank is valued at 2.0x FY28E ABV (INR 901/share)",
+  "raw_value": "901"
+ },
+ {
+  "id": "hdfc.broker.dc.subs_net",
+  "company": "hdfc",
+  "display": "₹110",
+  "doc": "DC",
+  "pdf_page": 1,
+  "basis": "DevenChoksey SOTP: subsidiaries after a 15% holdco discount",
+  "raw_match": "Subsidiaries contribute INR 110/share net of a 15% holdco discount",
+  "raw_value": "110"
+ },
+ {
+  "id": "hdfc.broker.dc.holdco",
+  "company": "hdfc",
+  "display": "15%",
+  "doc": "DC",
+  "pdf_page": 1,
+  "basis": "DevenChoksey holdco discount",
+  "raw_match": "Subsidiaries contribute INR 110/share net of a 15% holdco discount",
+  "raw_value": "15"
+ },
+ {
+  "id": "hdfc.broker.dc.sotp_sum",
+  "company": "hdfc",
+  "display": "₹1,011",
+  "basis": "DevenChoksey SOTP components summed; equals its stated target",
+  "derived_from": [
+   "hdfc.broker.dc.core",
+   "hdfc.broker.dc.subs_net"
+  ],
+  "formula": "a + b"
+ },
+ {
+  "id": "hdfc.broker.dc.upside",
+  "company": "hdfc",
+  "display": "~25%",
+  "doc": "DC",
+  "pdf_page": 1,
+  "basis": "DevenChoksey upside to its target from Rs 812",
+  "raw_match": "implies ~25% upside"
+ },
+ {
+  "id": "hdfc.broker.gj.date",
+  "company": "hdfc",
+  "display": "22 Apr 2026",
+  "doc": "GJ",
+  "pdf_page": 1,
+  "basis": "Geojit note date",
+  "raw_match": "22nd April, 2026",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.gj.rating",
+  "company": "hdfc",
+  "display": "BUY (upgraded from HOLD)",
+  "doc": "GJ",
+  "pdf_page": 1,
+  "basis": "Geojit rating",
+  "raw_match": "we upgrade our BUY rating on the stock",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.gj.method",
+  "company": "hdfc",
+  "display": "1.9× FY28E BVPS",
+  "doc": "GJ",
+  "pdf_page": 1,
+  "basis": "Geojit multiple on consolidated book value per share",
+  "raw_match": "based on 1.9x FY28E BVPS"
+ },
+ {
+  "id": "hdfc.broker.gj.basis",
+  "company": "hdfc",
+  "display": "consolidated",
+  "doc": "GJ",
+  "pdf_page": 1,
+  "basis": "Geojit's tables are consolidated",
+  "raw_match": "Quarterly Finance Consolidated",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.gj.return",
+  "company": "hdfc",
+  "display": "+12%",
+  "doc": "GJ",
+  "pdf_page": 1,
+  "basis": "Geojit expected return to target from Rs 799",
+  "raw_match": "Return +12%"
+ },
+ {
+  "id": "hdfc.broker.gj.prior",
+  "company": "hdfc",
+  "display": "HOLD ₹1,022 (10 Feb 2026)",
+  "doc": "GJ",
+  "pdf_page": 4,
+  "basis": "Geojit previous rating and target",
+  "raw_match": "10-Feb-26 HOLD 1,022",
+  "raw_value": "1,022"
+ },
+ {
+  "id": "hdfc.broker.gj.prior_buy",
+  "company": "hdfc",
+  "display": "BUY ₹1,096 (6 May 2025)",
+  "doc": "GJ",
+  "pdf_page": 4,
+  "basis": "Geojit rating history: last BUY before the downgrade",
+  "raw_match": "06-May-25 BUY 1,096",
+  "raw_value": "1,096"
+ },
+ {
+  "id": "hdfc.broker.nomura.method",
+  "company": "hdfc",
+  "display": "1.9× FY28E BVPS",
+  "doc": "UP",
+  "pdf_page": 2,
+  "basis": "Nomura (via Upstox, 20 Jul 2026): valuation multiple; no target price in the article",
+  "raw_match": "1.9x its estimated FY28 book value per share",
+  "raw_value": "1.9"
+ },
+ {
+  "id": "hdfc.broker.investec.roa",
+  "company": "hdfc",
+  "display": "1.74%",
+  "doc": "UP",
+  "pdf_page": 2,
+  "basis": "Investec's Q1 FY27 RoA (via Upstox); the bank prints 1.85% (Q1D p.2)",
+  "raw_match": "return on assets (RoA) fell to 1.74%"
+ },
+ {
+  "id": "hdfc.broker.investec.pcr",
+  "company": "hdfc",
+  "display": "170 bps",
+  "doc": "UP",
+  "pdf_page": 3,
+  "basis": "Investec: specific PCR change QoQ (via Upstox); the bank prints 67% -> 66% (KPm, KPj p.2)",
+  "raw_match": "declined by 170 basis points QoQ to 66%",
+  "raw_value": "170"
+ },
+ {
+  "id": "hdfc.broker.investec.cc",
+  "company": "hdfc",
+  "display": "41 bps",
+  "doc": "UP",
+  "pdf_page": 2,
+  "basis": "Investec's Q1 FY27 credit cost (via Upstox); the bank prints 0.40% (KPj p.2)",
+  "raw_match": "Credit costs increased to 41 basis points"
+ },
+ {
+  "id": "hdfc.broker.gj.nim_basis",
+  "company": "hdfc",
+  "display": "NIM (%) 4.0",
+  "doc": "GJ",
+  "pdf_page": 1,
+  "basis": "Geojit's model NIM, a different (consolidated, calculated) basis from the bank's 3.26-3.38%",
+  "raw_match": "NIM (%) 4.0 4.0 4.0",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.gj.pat_rep",
+  "company": "hdfc",
+  "display": "₹79,219 cr",
+  "doc": "GJ",
+  "pdf_page": 1,
+  "basis": "Geojit FY26 reported consolidated PAT incl. minority interest",
+  "raw_match": "Rep. PAT 21,074 19,285 9.3 20,691 1.9 79,219",
+  "raw_value": "79,219"
+ },
+ {
+  "id": "hdfc.broker.gj.np",
+  "company": "hdfc",
+  "display": "₹76,026 cr",
+  "doc": "GJ",
+  "pdf_page": 1,
+  "basis": "Geojit FY26 net profit (after minority interest)",
+  "raw_match": "Net Profit 76,026 83,342 92,526",
+  "raw_value": "76,026"
+ },
+ {
+  "id": "hdfc.rr.nim_iea_yoy_1dp.q1fy27",
+  "company": "hdfc",
+  "display": "−0.1",
+  "basis": "NIM on interest-earning assets · pp at one decimal (3.5% -> 3.4%), Q1 FY26 -> Q1 FY27",
+  "derived_from": [
+   "hdfc.kpi.nim_iea.q1fy27",
+   "hdfc.kpi.nim_iea.q1fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.rr.emp_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "−5,864",
+  "basis": "employees · change Jun-25 -> Jun-26",
+  "derived_from": [
+   "hdfc.kpi.employees.q1fy27",
+   "hdfc.kpi.employees.q1fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.rr.emp_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "+1,780",
+  "basis": "employees · change Mar-26 -> Jun-26",
+  "derived_from": [
+   "hdfc.kpi.employees.q1fy27",
+   "hdfc.kpi.employees.q4fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.rr.borrow_share.q1fy27",
+  "company": "hdfc",
+  "display": "10.5%",
+  "basis": "borrowings / total assets (= total liabilities and equity) · Jun-26 · the deck rounds to 11% (Q1D p.14)",
+  "derived_from": [
+   "hdfc.kpi.borrowings.q1fy27",
+   "hdfc.kpi.total_assets.q1fy27"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.rr.borrow_share.q1fy26",
+  "company": "hdfc",
+  "display": "12.9%",
+  "basis": "borrowings / total assets · Jun-25",
+  "derived_from": [
+   "hdfc.kpi.borrowings.q1fy26",
+   "hdfc.kpi.total_assets.q1fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.rr.assets_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "+11.2%",
+  "basis": "total assets · standalone · Jun-25 -> Jun-26",
+  "derived_from": [
+   "hdfc.kpi.total_assets.q1fy27",
+   "hdfc.kpi.total_assets.q1fy26"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "hdfc.liq.lcr.q3fy26",
+  "company": "hdfc",
+  "display": "116%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "average LCR · q3fy26 (the chart's upper row; rendered page checked: the lower row is NSFR)",
+  "raw_match": "119% 124% 120% 116% 114% 115%",
+  "raw_value": "116"
+ },
+ {
+  "id": "hdfc.liq.lcr.q4fy26",
+  "company": "hdfc",
+  "display": "114%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "average LCR · q4fy26 (the chart's upper row; rendered page checked: the lower row is NSFR)",
+  "raw_match": "119% 124% 120% 116% 114% 115%",
+  "raw_value": "114"
+ },
+ {
+  "id": "hdfc.liq.lcr.q1fy27",
+  "company": "hdfc",
+  "display": "115%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "average LCR · q1fy27 (the chart's upper row; rendered page checked: the lower row is NSFR)",
+  "raw_match": "119% 124% 120% 116% 114% 115%",
+  "raw_value": "115"
+ },
+ {
+  "id": "hdfc.event.merger",
+  "company": "hdfc",
+  "display": "1 Jul 2023",
+  "doc": "AR24",
+  "pdf_page": 43,
+  "basis": "merger effective date (the FY24 comparability break)",
+  "raw_match": "HDFC Bank and HDFC Limited merged with effect from July 1, 2023",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.event.bonus",
+  "company": "hdfc",
+  "display": "1:1 bonus, record date 27 Aug 2025",
+  "doc": "AR26",
+  "pdf_page": 10,
+  "basis": "first-ever bonus issue",
+  "raw_match": "allotted bonus equity shares in the proportion of 1:1",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.event.bonus_date",
+  "company": "hdfc",
+  "display": "27 Aug 2025",
+  "doc": "AR26",
+  "pdf_page": 10,
+  "basis": "bonus issue record date",
+  "raw_match": "Record Date i.e. August 27, 2025",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.guide.ldr_fy26_band",
+  "company": "hdfc",
+  "display": "90% to 96% in FY26",
+  "doc": "Cj26",
+  "pdf_page": 6,
+  "basis": "CEO, Jan-26: FY26 LDR band",
+  "raw_match": "We said we will try and be in a range of somewhere between 90% to 96% in the year FY '26",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.ctx.system_credit.fy25",
+  "company": "hdfc",
+  "display": "11.0%",
+  "doc": "AR25",
+  "pdf_page": 33,
+  "basis": "banking-system credit growth FY25 (the bank's own annual report)",
+  "raw_match": "slowed banking system credit growth, to 11.0 per cent"
+ },
+ {
+  "id": "hdfc.ctx.system_credit.fy26",
+  "company": "hdfc",
+  "display": "14.1%",
+  "doc": "AR26",
+  "pdf_page": 40,
+  "basis": "banking-system credit growth FY26 (the bank's own annual report)",
+  "raw_match": "System credit growth stood at 14.1 per cent"
+ },
+ {
+  "id": "hdfc.ctx.system_deposits.fy26",
+  "company": "hdfc",
+  "display": "11.5%",
+  "doc": "AR26",
+  "pdf_page": 40,
+  "basis": "banking-system deposit growth FY26",
+  "raw_match": "System deposit growth also improved meaningfully to 11.5 per cent"
+ },
+ {
+  "id": "hdfc.broker.gj.minority",
+  "company": "hdfc",
+  "display": "₹3,193 cr",
+  "doc": "GJ",
+  "pdf_page": 3,
+  "basis": "Geojit FY26 minority interests",
+  "raw_match": "Minority Interests 1,384 2,648 3,193",
+  "raw_value": "3,193"
+ },
+ {
+  "id": "hdfc.broker.gj.np_check",
+  "company": "hdfc",
+  "display": "₹76,026 cr",
+  "basis": "Geojit FY26: reported PAT incl. minority (79,219) less minority interests (3,193) = net profit (76,026): not a contradiction",
+  "derived_from": [
+   "hdfc.broker.gj.pat_rep",
+   "hdfc.broker.gj.minority"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.broker.dc.subs_gross_implied",
+  "company": "hdfc",
+  "display": "≈₹129",
+  "basis": "DevenChoksey's subsidiaries before its 15% discount (N4A arithmetic; DC does not print it) vs AxisDirect's Rs 161",
+  "derived_from": [
+   "hdfc.broker.dc.subs_net"
+  ],
+  "formula": "a / 0.85"
+ },
+ {
+  "id": "hdfc.broker.ax.nim_fy27e",
+  "company": "hdfc",
+  "display": "3.4%",
+  "doc": "AX",
+  "pdf_page": 6,
+  "basis": "AxisDirect model NIM FY27E (FY25, FY26, FY27E, FY28E = 3.5, 3.3, 3.4, 3.4); basis not stated",
+  "raw_match": "NIM (%) 3.5 3.3 3.4 3.4",
+  "raw_value": "3.4"
+ },
+ {
+  "id": "hdfc.broker.dc.nim_path",
+  "company": "hdfc",
+  "display": "3.38% to ~3.55%",
+  "doc": "DC",
+  "pdf_page": 1,
+  "basis": "DevenChoksey NIM path to FY28E",
+  "raw_match": "This underpins a NIM expansion from 3.38% to ~3.55%"
+ },
+ {
+  "id": "hdfc.broker.dc.repricing",
+  "company": "hdfc",
+  "display": "~40–50 bps vs 125 bps",
+  "doc": "DC",
+  "pdf_page": 1,
+  "basis": "DevenChoksey: deposit repricing done so far",
+  "raw_match": "only ~40–50 bps vs 125 bps rate cuts on assets",
+  "raw_value": "40"
+ },
+ {
+  "id": "hdfc.broker.bernstein.view",
+  "company": "hdfc",
+  "display": "another steady quarter",
+  "doc": "UP",
+  "pdf_page": 2,
+  "basis": "Bernstein on Q1 FY27 (via Upstox)",
+  "raw_match": "Bernstein noted that HDFC Bank delivered another steady quarter",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.investec.nim_low",
+  "company": "hdfc",
+  "display": "the lowest level since the merger",
+  "doc": "UP",
+  "pdf_page": 2,
+  "basis": "Investec on Q1 FY27 NIM (via Upstox)",
+  "raw_match": "to 3.26%, the lowest level since the merger",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.walk.slip_ratio.q1fy27",
+  "company": "hdfc",
+  "display": "1.08%",
+  "basis": "gross slippages annualised / opening (Mar-26) gross advances · Q1 FY27",
+  "derived_from": [
+   "hdfc.kpi.slippages.q1fy27",
+   "hdfc.kpi.gross_adv.q4fy26"
+  ],
+  "formula": "a * 4 / b * 100"
+ },
+ {
+  "id": "hdfc.walk.slip_ratio_exagri.q1fy27",
+  "company": "hdfc",
+  "display": "0.82%",
+  "basis": "slippages ex-agri annualised / opening gross advances · Q1 FY27",
+  "derived_from": [
+   "hdfc.kpi.slippages_exagri.q1fy27",
+   "hdfc.kpi.gross_adv.q4fy26"
+  ],
+  "formula": "a * 4 / b * 100"
+ },
+ {
+  "id": "hdfc.walk.outflow.q1fy27",
+  "company": "hdfc",
+  "display": "6,300",
+  "basis": "GNPA outflows (upgrades & recoveries + write-offs) · Q1 FY27",
+  "derived_from": [
+   "hdfc.kpi.upgrades.q1fy27",
+   "hdfc.kpi.writeoffs.q1fy27"
+  ],
+  "formula": "a + b"
+ },
+ {
+  "id": "hdfc.walk.outflow.q4fy26",
+  "company": "hdfc",
+  "display": "7,300",
+  "basis": "GNPA outflows · Q4 FY26",
+  "derived_from": [
+   "hdfc.kpi.upgrades.q4fy26",
+   "hdfc.kpi.writeoffs.q4fy26"
+  ],
+  "formula": "a + b"
+ },
+ {
+  "id": "hdfc.broker.ax.stake_hdb",
+  "company": "hdfc",
+  "display": "74.1%",
+  "doc": "AX",
+  "pdf_page": 3,
+  "basis": "AxisDirect SOTP: stake held in HDB Financial Services",
+  "raw_match": "HDB Financial Services 74.1",
+  "raw_value": "74.1"
+ },
+ {
+  "id": "hdfc.broker.ax.stake_sec",
+  "company": "hdfc",
+  "display": "94.0%",
+  "doc": "AX",
+  "pdf_page": 3,
+  "basis": "AxisDirect SOTP: stake held in HDFC Securities",
+  "raw_match": "HDFC Securities 94.0",
+  "raw_value": "94.0"
+ },
+ {
+  "id": "hdfc.broker.ax.stake_life",
+  "company": "hdfc",
+  "display": "50.2%",
+  "doc": "AX",
+  "pdf_page": 3,
+  "basis": "AxisDirect SOTP: stake held in HDFC Life",
+  "raw_match": "HDFC Life 50.2",
+  "raw_value": "50.2"
+ },
+ {
+  "id": "hdfc.broker.ax.stake_amc",
+  "company": "hdfc",
+  "display": "52.4%",
+  "doc": "AX",
+  "pdf_page": 3,
+  "basis": "AxisDirect SOTP: stake held in HDFC AMC",
+  "raw_match": "HDFC AMC 52.4",
+  "raw_value": "52.4"
+ },
+ {
+  "id": "hdfc.broker.ax.stake_ergo",
+  "company": "hdfc",
+  "display": "50.3%",
+  "doc": "AX",
+  "pdf_page": 3,
+  "basis": "AxisDirect SOTP: stake held in HDFC Ergo",
+  "raw_match": "HDFC Ergo 50.3",
+  "raw_value": "50.3"
+ },
+ {
+  "id": "hdfc.guide.capital_headroom.co25",
+  "company": "hdfc",
+  "display": "three to four years of growth, from FY27",
+  "doc": "Co25",
+  "pdf_page": 6,
+  "basis": "CFO, Oct-25: capital headroom",
+  "raw_match": "that much of cushion to be able to have three to four years of growth",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.guide.branches.cj26",
+  "company": "hdfc",
+  "display": "500 to 700 branches annual... I don't believe",
+  "doc": "Cj26",
+  "pdf_page": 14,
+  "basis": "CFO, Jan-26: branch additions below 500-700 a year",
+  "raw_match": "5% to 7% implies 500 to 700 branches annual. I don't believe that, that kind of branch addition in the near future",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.guide.lcr.cj26",
+  "company": "hdfc",
+  "display": "116",
+  "doc": "Cj26",
+  "pdf_page": 12,
+  "basis": "CFO, Jan-26: Q3 FY26 LCR",
+  "raw_match": "LCR, we reported 116 in this quarter"
+ },
+ {
+  "id": "hdfc.guide.borrow_mature.ca25",
+  "company": "hdfc",
+  "display": "0.5 trillion",
+  "doc": "Ca25",
+  "pdf_page": 14,
+  "basis": "CFO, Apr-25: legacy borrowings maturing",
+  "raw_match": "0.5 trillion or thereabouts of the legac",
+  "raw_value": "0.5"
+ },
+ {
+  "id": "hdfc.guide.borrow_share.cj26",
+  "company": "hdfc",
+  "display": "about 13%",
+  "doc": "Cj26",
+  "pdf_page": 13,
+  "basis": "CFO, Jan-26: borrowings share of the balance sheet",
+  "raw_match": "Quarter-to-quarter has remained static at about 13%",
+  "raw_value": "13"
+ },
+ {
+  "id": "hdfc.broker.dc.cc_range",
+  "company": "hdfc",
+  "display": "~35–45 bps through cycles (DevenChoksey's view)",
+  "doc": "DC",
+  "pdf_page": 4,
+  "basis": "DevenChoksey's own credit-cost expectation, not management guidance",
+  "raw_match": "anchoring credit costs in the ~35–45 bps range through cycles",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.dc.cti_40",
+  "company": "hdfc",
+  "display": "below 40% over the medium term (DevenChoksey's view)",
+  "doc": "DC",
+  "pdf_page": 4,
+  "basis": "DevenChoksey's own cost-to-income expectation",
+  "raw_match": "pushing Cost to Income sustainably below 40% over the medium term",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.ax.msme",
+  "company": "hdfc",
+  "display": "MSME 18-20% (via AxisDirect)",
+  "doc": "AX",
+  "pdf_page": 1,
+  "basis": "AxisDirect, reporting the Q4 FY26 call (not in the corpus): MSME growth expectation",
+  "raw_match": "expected to register a healthy 18-20% growth",
+  "kind": "quote"
+ },
+ {
+  "id": "hdfc.broker.ax.share_gain",
+  "company": "hdfc",
+  "display": "deposit share gains of 30-50 bps a year (via AxisDirect)",
+  "doc": "AX",
+  "pdf_page": 2,
+  "basis": "AxisDirect paraphrasing management after the Q4 FY26 call",
+  "raw_match": "gain deposit market share by 30-50 bps annually",
+  "kind": "quote"
+ }
+]

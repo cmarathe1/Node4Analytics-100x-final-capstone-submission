@@ -1,0 +1,5056 @@
+[
+ {
+  "id": "hdfc.kpi.yield.q3fy25",
+  "company": "hdfc",
+  "display": "8.3%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "yield on assets · standalone · quarter · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Yield on assets (%) 8.3 7.8 7.8",
+  "raw_value": "8.3"
+ },
+ {
+  "id": "hdfc.kpi.yield.q4fy25",
+  "company": "hdfc",
+  "display": "8.4%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "yield on assets · standalone · quarter · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Yield on assets (%) 8.4 7.8 7.8",
+  "raw_value": "8.4"
+ },
+ {
+  "id": "hdfc.kpi.yield.q1fy26",
+  "company": "hdfc",
+  "display": "8.1%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "yield on assets · standalone · quarter · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Yield on assets (%) 8.1 7.8 7.7",
+  "raw_value": "8.1"
+ },
+ {
+  "id": "hdfc.kpi.yield.q2fy26",
+  "company": "hdfc",
+  "display": "7.8%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "yield on assets · standalone · quarter · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Yield on assets (%) 8.3 7.8 7.8",
+  "raw_value": "7.8"
+ },
+ {
+  "id": "hdfc.kpi.yield.q3fy26",
+  "company": "hdfc",
+  "display": "7.8%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "yield on assets · standalone · quarter · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Yield on assets (%) 8.3 7.8 7.8",
+  "raw_value": "7.8"
+ },
+ {
+  "id": "hdfc.kpi.yield.q4fy26",
+  "company": "hdfc",
+  "display": "7.8%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "yield on assets · standalone · quarter · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Yield on assets (%) 8.4 7.8 7.8",
+  "raw_value": "7.8"
+ },
+ {
+  "id": "hdfc.kpi.yield.q1fy27",
+  "company": "hdfc",
+  "display": "7.7%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "yield on assets · standalone · quarter · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Yield on assets (%) 8.1 7.8 7.7",
+  "raw_value": "7.7"
+ },
+ {
+  "id": "hdfc.kpi.cof.q3fy25",
+  "company": "hdfc",
+  "display": "4.9%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "cost of funds incl. shareholders' funds · standalone · quarter · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Cost of funds (incl. shareholders' funds) (%) 4.9 4.6 4.5",
+  "raw_value": "4.9"
+ },
+ {
+  "id": "hdfc.kpi.cof.q4fy25",
+  "company": "hdfc",
+  "display": "4.9%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "cost of funds incl. shareholders' funds · standalone · quarter · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Cost of funds (incl. shareholders' funds) (%) 4.9 4.5 4.4",
+  "raw_value": "4.9"
+ },
+ {
+  "id": "hdfc.kpi.cof.q1fy26",
+  "company": "hdfc",
+  "display": "4.8%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "cost of funds incl. shareholders' funds · standalone · quarter · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Cost of funds (incl. shareholders' funds) (%) 4.8 4.4 4.4",
+  "raw_value": "4.8"
+ },
+ {
+  "id": "hdfc.kpi.cof.q2fy26",
+  "company": "hdfc",
+  "display": "4.6%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "cost of funds incl. shareholders' funds · standalone · quarter · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Cost of funds (incl. shareholders' funds) (%) 4.9 4.6 4.5",
+  "raw_value": "4.6"
+ },
+ {
+  "id": "hdfc.kpi.cof.q3fy26",
+  "company": "hdfc",
+  "display": "4.5%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "cost of funds incl. shareholders' funds · standalone · quarter · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Cost of funds (incl. shareholders' funds) (%) 4.9 4.6 4.5",
+  "raw_value": "4.5"
+ },
+ {
+  "id": "hdfc.kpi.cof.q4fy26",
+  "company": "hdfc",
+  "display": "4.4%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "cost of funds incl. shareholders' funds · standalone · quarter · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Cost of funds (incl. shareholders' funds) (%) 4.9 4.5 4.4",
+  "raw_value": "4.4"
+ },
+ {
+  "id": "hdfc.kpi.cof.q1fy27",
+  "company": "hdfc",
+  "display": "4.4%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "cost of funds incl. shareholders' funds · standalone · quarter · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Cost of funds (incl. shareholders' funds) (%) 4.8 4.4 4.4",
+  "raw_value": "4.4"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta.q3fy25",
+  "company": "hdfc",
+  "display": "3.4%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "NIM on total assets · standalone · quarter · printed to one decimal · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Net Interest Margin - assets (%) 3.4 3.3 3.4",
+  "raw_value": "3.4"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta.q4fy25",
+  "company": "hdfc",
+  "display": "3.5%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "NIM on total assets · standalone · quarter · printed to one decimal · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Net Interest Margin - assets (%) 3.5 3.4 3.4",
+  "raw_value": "3.5"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta.q1fy26",
+  "company": "hdfc",
+  "display": "3.4%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "NIM on total assets · standalone · quarter · printed to one decimal · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Net Interest Margin - assets (%) 3.4 3.4 3.3",
+  "raw_value": "3.4"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta.q2fy26",
+  "company": "hdfc",
+  "display": "3.3%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "NIM on total assets · standalone · quarter · printed to one decimal · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Net Interest Margin - assets (%) 3.4 3.3 3.4",
+  "raw_value": "3.3"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta.q3fy26",
+  "company": "hdfc",
+  "display": "3.4%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "NIM on total assets · standalone · quarter · printed to one decimal · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Net Interest Margin - assets (%) 3.4 3.3 3.4",
+  "raw_value": "3.4"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta.q4fy26",
+  "company": "hdfc",
+  "display": "3.4%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "NIM on total assets · standalone · quarter · printed to one decimal · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Net Interest Margin - assets (%) 3.5 3.4 3.4",
+  "raw_value": "3.4"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta.q1fy27",
+  "company": "hdfc",
+  "display": "3.3%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "NIM on total assets · standalone · quarter · printed to one decimal · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Net Interest Margin - assets (%) 3.4 3.4 3.3",
+  "raw_value": "3.3"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea.q3fy25",
+  "company": "hdfc",
+  "display": "3.6%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "NIM on interest-earning assets · standalone · quarter · printed to one decimal · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Net Interest Margin - interest earning assets (%) 3.6 3.4 3.5",
+  "raw_value": "3.6"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea.q4fy25",
+  "company": "hdfc",
+  "display": "3.7%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "NIM on interest-earning assets · standalone · quarter · printed to one decimal · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Net Interest Margin - interest earning assets (%) 3.7 3.5 3.5",
+  "raw_value": "3.7"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea.q1fy26",
+  "company": "hdfc",
+  "display": "3.5%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "NIM on interest-earning assets · standalone · quarter · printed to one decimal · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Net Interest Margin - interest earning assets (%) 3.5 3.5 3.4",
+  "raw_value": "3.5"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea.q2fy26",
+  "company": "hdfc",
+  "display": "3.4%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "NIM on interest-earning assets · standalone · quarter · printed to one decimal · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Net Interest Margin - interest earning assets (%) 3.6 3.4 3.5",
+  "raw_value": "3.4"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea.q3fy26",
+  "company": "hdfc",
+  "display": "3.5%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "NIM on interest-earning assets · standalone · quarter · printed to one decimal · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Net Interest Margin - interest earning assets (%) 3.6 3.4 3.5",
+  "raw_value": "3.5"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea.q4fy26",
+  "company": "hdfc",
+  "display": "3.5%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "NIM on interest-earning assets · standalone · quarter · printed to one decimal · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Net Interest Margin - interest earning assets (%) 3.7 3.5 3.5",
+  "raw_value": "3.5"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea.q1fy27",
+  "company": "hdfc",
+  "display": "3.4%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "NIM on interest-earning assets · standalone · quarter · printed to one decimal · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Net Interest Margin - interest earning assets (%) 3.5 3.5 3.4",
+  "raw_value": "3.4"
+ },
+ {
+  "id": "hdfc.kpi.employees.q3fy25",
+  "company": "hdfc",
+  "display": "2,10,219",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "count of employees · standalone · period-end · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Count of employees 2,10,219 2,20,339 2,15,739",
+  "raw_value": "2,10,219"
+ },
+ {
+  "id": "hdfc.kpi.employees.q4fy25",
+  "company": "hdfc",
+  "display": "2,14,521",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "count of employees · standalone · period-end · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Count of employees 2,14,521 2,15,739 2,11,178",
+  "raw_value": "2,14,521"
+ },
+ {
+  "id": "hdfc.kpi.employees.q1fy26",
+  "company": "hdfc",
+  "display": "2,18,822",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "count of employees · standalone · period-end · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Count of employees 2,18,822 2,11,178 2,12,958",
+  "raw_value": "2,18,822"
+ },
+ {
+  "id": "hdfc.kpi.employees.q2fy26",
+  "company": "hdfc",
+  "display": "2,20,339",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "count of employees · standalone · period-end · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Count of employees 2,10,219 2,20,339 2,15,739",
+  "raw_value": "2,20,339"
+ },
+ {
+  "id": "hdfc.kpi.employees.q3fy26",
+  "company": "hdfc",
+  "display": "2,15,739",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "count of employees · standalone · period-end · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Count of employees 2,10,219 2,20,339 2,15,739",
+  "raw_value": "2,15,739"
+ },
+ {
+  "id": "hdfc.kpi.employees.q4fy26",
+  "company": "hdfc",
+  "display": "2,11,178",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "count of employees · standalone · period-end · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Count of employees 2,14,521 2,15,739 2,11,178",
+  "raw_value": "2,11,178"
+ },
+ {
+  "id": "hdfc.kpi.employees.q1fy27",
+  "company": "hdfc",
+  "display": "2,12,958",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "count of employees · standalone · period-end · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Count of employees 2,18,822 2,11,178 2,12,958",
+  "raw_value": "2,12,958"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost.q3fy25",
+  "company": "hdfc",
+  "display": "0.50%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "credit cost, % of advances, gross of recoveries · standalone · quarter (annualised) · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Credit costs as a % of advances 0.50% 0.51% 0.55%*",
+  "raw_value": "0.50"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost.q4fy25",
+  "company": "hdfc",
+  "display": "0.48%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "credit cost, % of advances, gross of recoveries · standalone · quarter (annualised) · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Credit costs as a % of advances 0.48% 0.55%* 0.35%",
+  "raw_value": "0.48"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost.q1fy26",
+  "company": "hdfc",
+  "display": "0.56%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "credit cost, % of advances, gross of recoveries · standalone · quarter (annualised) · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Credit costs as a % of advances 0.56% 0.35% 0.40%",
+  "raw_value": "0.56",
+  "note": "excludes floating provisions of Rs 90 bn and contingent provisions of Rs 17 bn (KPj p.2 note)"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost.q2fy26",
+  "company": "hdfc",
+  "display": "0.51%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "credit cost, % of advances, gross of recoveries · standalone · quarter (annualised) · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Credit costs as a % of advances 0.50% 0.51% 0.55%*",
+  "raw_value": "0.51"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost.q3fy26",
+  "company": "hdfc",
+  "display": "0.55%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "credit cost, % of advances, gross of recoveries · standalone · quarter (annualised) · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Credit costs as a % of advances 0.50% 0.51% 0.55%*",
+  "raw_value": "0.55",
+  "note": "excludes release of provision for a large borrower group (KPd p.2 *)"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost.q4fy26",
+  "company": "hdfc",
+  "display": "0.35%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "credit cost, % of advances, gross of recoveries · standalone · quarter (annualised) · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Credit costs as a % of advances 0.48% 0.55%* 0.35%",
+  "raw_value": "0.35"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost.q1fy27",
+  "company": "hdfc",
+  "display": "0.40%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "credit cost, % of advances, gross of recoveries · standalone · quarter (annualised) · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Credit costs as a % of advances 0.56% 0.35% 0.40%",
+  "raw_value": "0.40"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost_net.q3fy25",
+  "company": "hdfc",
+  "display": "0.36%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "credit cost net of recoveries, % of advances · standalone · quarter · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Credit costs net of recoveries as a % of advances 0.36% 0.37% 0.41%*",
+  "raw_value": "0.36"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost_net.q4fy25",
+  "company": "hdfc",
+  "display": "0.29%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "credit cost net of recoveries, % of advances · standalone · quarter · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Credit costs net of recoveries as a % of advances 0.29% 0.41%* 0.21%",
+  "raw_value": "0.29"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost_net.q1fy26",
+  "company": "hdfc",
+  "display": "0.41%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "credit cost net of recoveries, % of advances · standalone · quarter · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Credit costs net of recoveries as a % of advances 0.41% 0.21% 0.29%",
+  "raw_value": "0.41",
+  "note": "excludes floating Rs 90 bn and contingent Rs 17 bn provisions (KPj p.2 note)"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost_net.q2fy26",
+  "company": "hdfc",
+  "display": "0.37%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "credit cost net of recoveries, % of advances · standalone · quarter · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Credit costs net of recoveries as a % of advances 0.36% 0.37% 0.41%*",
+  "raw_value": "0.37"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost_net.q3fy26",
+  "company": "hdfc",
+  "display": "0.41%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "credit cost net of recoveries, % of advances · standalone · quarter · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Credit costs net of recoveries as a % of advances 0.36% 0.37% 0.41%*",
+  "raw_value": "0.41",
+  "note": "excludes release of provision for a large borrower group (KPd p.2 *)"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost_net.q4fy26",
+  "company": "hdfc",
+  "display": "0.21%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "credit cost net of recoveries, % of advances · standalone · quarter · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Credit costs net of recoveries as a % of advances 0.29% 0.41%* 0.21%",
+  "raw_value": "0.21"
+ },
+ {
+  "id": "hdfc.kpi.credit_cost_net.q1fy27",
+  "company": "hdfc",
+  "display": "0.29%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "credit cost net of recoveries, % of advances · standalone · quarter · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Credit costs net of recoveries as a % of advances 0.41% 0.21% 0.29%",
+  "raw_value": "0.29"
+ },
+ {
+  "id": "hdfc.kpi.aum_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "6.1%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "advances under management (gross of IBPC/BRDS/securitisation) · period-end · YoY · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Growth in advances under management (YoY) ^ 6.1% 8.9% 9.8%",
+  "raw_value": "6.1"
+ },
+ {
+  "id": "hdfc.kpi.aum_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "7.7%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "advances under management (gross of IBPC/BRDS/securitisation) · period-end · YoY · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Growth in advances under management (YoY) ^ 7.7% 9.8% 10.2%",
+  "raw_value": "7.7"
+ },
+ {
+  "id": "hdfc.kpi.aum_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "8.0%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "advances under management (gross of IBPC/BRDS/securitisation) · period-end · YoY · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Growth in advances under management (YoY) ^ 8.0% 10.2% 12.4%",
+  "raw_value": "8.0"
+ },
+ {
+  "id": "hdfc.kpi.aum_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "8.9%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "advances under management (gross of IBPC/BRDS/securitisation) · period-end · YoY · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Growth in advances under management (YoY) ^ 6.1% 8.9% 9.8%",
+  "raw_value": "8.9"
+ },
+ {
+  "id": "hdfc.kpi.aum_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "9.8%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "advances under management (gross of IBPC/BRDS/securitisation) · period-end · YoY · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Growth in advances under management (YoY) ^ 6.1% 8.9% 9.8%",
+  "raw_value": "9.8"
+ },
+ {
+  "id": "hdfc.kpi.aum_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "10.2%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "advances under management (gross of IBPC/BRDS/securitisation) · period-end · YoY · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Growth in advances under management (YoY) ^ 7.7% 9.8% 10.2%",
+  "raw_value": "10.2"
+ },
+ {
+  "id": "hdfc.kpi.aum_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "12.4%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "advances under management (gross of IBPC/BRDS/securitisation) · period-end · YoY · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Growth in advances under management (YoY) ^ 8.0% 10.2% 12.4%",
+  "raw_value": "12.4"
+ },
+ {
+  "id": "hdfc.kpi.retail_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "10.4%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "retail advances under management · period-end · YoY · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Retail advances 10.4% 7.4% 6.9%",
+  "raw_value": "10.4"
+ },
+ {
+  "id": "hdfc.kpi.retail_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "8.9%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "retail advances under management · period-end · YoY · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Retail advances 8.9% 6.9% 6.5%",
+  "raw_value": "8.9"
+ },
+ {
+  "id": "hdfc.kpi.retail_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "8.1%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "retail advances under management · period-end · YoY · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Retail advances 8.1% 6.5% 7.2%",
+  "raw_value": "8.1"
+ },
+ {
+  "id": "hdfc.kpi.retail_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "7.4%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "retail advances under management · period-end · YoY · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Retail advances 10.4% 7.4% 6.9%",
+  "raw_value": "7.4"
+ },
+ {
+  "id": "hdfc.kpi.retail_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "6.9%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "retail advances under management · period-end · YoY · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Retail advances 10.4% 7.4% 6.9%",
+  "raw_value": "6.9"
+ },
+ {
+  "id": "hdfc.kpi.retail_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "6.5%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "retail advances under management · period-end · YoY · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Retail advances 8.9% 6.9% 6.5%",
+  "raw_value": "6.5"
+ },
+ {
+  "id": "hdfc.kpi.retail_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "7.2%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "retail advances under management · period-end · YoY · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Retail advances 8.1% 6.5% 7.2%",
+  "raw_value": "7.2"
+ },
+ {
+  "id": "hdfc.kpi.smm_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "16.7%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "small and mid-market advances under management · period-end · YoY · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Small and mid-market advances 16.7% 17.0% 17.2%",
+  "raw_value": "16.7"
+ },
+ {
+  "id": "hdfc.kpi.smm_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "17.4%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "small and mid-market advances under management · period-end · YoY · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Small and mid-market advances 17.4% 17.2% 17.2%",
+  "raw_value": "17.4"
+ },
+ {
+  "id": "hdfc.kpi.smm_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "17.1%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "small and mid-market advances under management · period-end · YoY · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Small and mid-market advances 17.1% 17.2% 18.7%",
+  "raw_value": "17.1"
+ },
+ {
+  "id": "hdfc.kpi.smm_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "17.0%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "small and mid-market advances under management · period-end · YoY · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Small and mid-market advances 16.7% 17.0% 17.2%",
+  "raw_value": "17.0"
+ },
+ {
+  "id": "hdfc.kpi.smm_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "17.2%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "small and mid-market advances under management · period-end · YoY · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Small and mid-market advances 16.7% 17.0% 17.2%",
+  "raw_value": "17.2"
+ },
+ {
+  "id": "hdfc.kpi.smm_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "17.2%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "small and mid-market advances under management · period-end · YoY · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Small and mid-market advances 17.4% 17.2% 17.2%",
+  "raw_value": "17.2"
+ },
+ {
+  "id": "hdfc.kpi.smm_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "18.7%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "small and mid-market advances under management · period-end · YoY · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Small and mid-market advances 17.1% 17.2% 18.7%",
+  "raw_value": "18.7"
+ },
+ {
+  "id": "hdfc.kpi.corp_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "−7.5%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "corporate and other wholesale advances under management · period-end · YoY · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Corporate and other wholesale advances -7.5% 6.4% 10.3%",
+  "raw_value": "7.5"
+ },
+ {
+  "id": "hdfc.kpi.corp_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "−0.9%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "corporate and other wholesale advances under management · period-end · YoY · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Corporate and other wholesale advances (0.9%) 10.3% 13.0%",
+  "raw_value": "0.9"
+ },
+ {
+  "id": "hdfc.kpi.corp_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "1.7%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "corporate and other wholesale advances under management · period-end · YoY · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Corporate and other wholesale advances 1.7% 13.0% 18.6%",
+  "raw_value": "1.7"
+ },
+ {
+  "id": "hdfc.kpi.corp_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "6.4%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "corporate and other wholesale advances under management · period-end · YoY · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Corporate and other wholesale advances -7.5% 6.4% 10.3%",
+  "raw_value": "6.4"
+ },
+ {
+  "id": "hdfc.kpi.corp_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "10.3%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "corporate and other wholesale advances under management · period-end · YoY · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Corporate and other wholesale advances -7.5% 6.4% 10.3%",
+  "raw_value": "10.3"
+ },
+ {
+  "id": "hdfc.kpi.corp_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "13.0%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "corporate and other wholesale advances under management · period-end · YoY · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Corporate and other wholesale advances (0.9%) 10.3% 13.0%",
+  "raw_value": "13.0"
+ },
+ {
+  "id": "hdfc.kpi.corp_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "18.6%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "corporate and other wholesale advances under management · period-end · YoY · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Corporate and other wholesale advances 1.7% 13.0% 18.6%",
+  "raw_value": "18.6"
+ },
+ {
+  "id": "hdfc.kpi.dep_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "15.8%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "total deposits · period-end · YoY · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Growth in deposits (YoY) 15.8% 12.1% 11.6%",
+  "raw_value": "15.8"
+ },
+ {
+  "id": "hdfc.kpi.dep_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "14.1%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "total deposits · period-end · YoY · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Growth in deposits (YoY) 14.1% 11.6% 14.4%",
+  "raw_value": "14.1"
+ },
+ {
+  "id": "hdfc.kpi.dep_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "16.2%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "total deposits · period-end · YoY · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Growth in deposits (YoY) 16.2% 14.4% 14.7%",
+  "raw_value": "16.2"
+ },
+ {
+  "id": "hdfc.kpi.dep_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "12.1%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "total deposits · period-end · YoY · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Growth in deposits (YoY) 15.8% 12.1% 11.6%",
+  "raw_value": "12.1"
+ },
+ {
+  "id": "hdfc.kpi.dep_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "11.6%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "total deposits · period-end · YoY · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Growth in deposits (YoY) 15.8% 12.1% 11.6%",
+  "raw_value": "11.6"
+ },
+ {
+  "id": "hdfc.kpi.dep_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "14.4%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "total deposits · period-end · YoY · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Growth in deposits (YoY) 14.1% 11.6% 14.4%",
+  "raw_value": "14.4"
+ },
+ {
+  "id": "hdfc.kpi.dep_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "14.7%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "total deposits · period-end · YoY · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Growth in deposits (YoY) 16.2% 14.4% 14.7%",
+  "raw_value": "14.7"
+ },
+ {
+  "id": "hdfc.kpi.casa_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "4.4%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "CASA deposits · period-end · YoY · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "CASA deposits 4.4% 7.4% 10.1%",
+  "raw_value": "4.4"
+ },
+ {
+  "id": "hdfc.kpi.casa_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "3.9%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "CASA deposits · period-end · YoY · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "CASA deposits 3.9% 10.1% 12.3%",
+  "raw_value": "3.9"
+ },
+ {
+  "id": "hdfc.kpi.casa_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "8.5%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "CASA deposits · period-end · YoY · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "CASA deposits 8.5% 12.3% 9.4%",
+  "raw_value": "8.5"
+ },
+ {
+  "id": "hdfc.kpi.casa_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "7.4%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "CASA deposits · period-end · YoY · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "CASA deposits 4.4% 7.4% 10.1%",
+  "raw_value": "7.4"
+ },
+ {
+  "id": "hdfc.kpi.casa_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "10.1%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "CASA deposits · period-end · YoY · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "CASA deposits 4.4% 7.4% 10.1%",
+  "raw_value": "10.1"
+ },
+ {
+  "id": "hdfc.kpi.casa_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "12.3%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "CASA deposits · period-end · YoY · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "CASA deposits 3.9% 10.1% 12.3%",
+  "raw_value": "12.3"
+ },
+ {
+  "id": "hdfc.kpi.casa_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "9.4%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "CASA deposits · period-end · YoY · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "CASA deposits 8.5% 12.3% 9.4%",
+  "raw_value": "9.4"
+ },
+ {
+  "id": "hdfc.kpi.ca_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "4.4%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "current-account deposits · period-end · YoY · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "CA deposits 4.4% 7.6% 12.1%",
+  "raw_value": "4.4"
+ },
+ {
+  "id": "hdfc.kpi.ca_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "1.3%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "current-account deposits · period-end · YoY · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "CA deposits 1.3% 12.1% 12.9%",
+  "raw_value": "1.3"
+ },
+ {
+  "id": "hdfc.kpi.ca_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "11.5%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "current-account deposits · period-end · YoY · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "CA deposits 11.5% 12.9% 8.9%",
+  "raw_value": "11.5"
+ },
+ {
+  "id": "hdfc.kpi.ca_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "7.6%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "current-account deposits · period-end · YoY · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "CA deposits 4.4% 7.6% 12.1%",
+  "raw_value": "7.6"
+ },
+ {
+  "id": "hdfc.kpi.ca_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "12.1%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "current-account deposits · period-end · YoY · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "CA deposits 4.4% 7.6% 12.1%",
+  "raw_value": "12.1"
+ },
+ {
+  "id": "hdfc.kpi.ca_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "12.9%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "current-account deposits · period-end · YoY · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "CA deposits 1.3% 12.1% 12.9%",
+  "raw_value": "12.9"
+ },
+ {
+  "id": "hdfc.kpi.ca_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "8.9%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "current-account deposits · period-end · YoY · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "CA deposits 11.5% 12.9% 8.9%",
+  "raw_value": "8.9"
+ },
+ {
+  "id": "hdfc.kpi.sa_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "4.4%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "savings deposits · period-end · YoY · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "SA deposits 4.4% 7.3% 9.3%",
+  "raw_value": "4.4"
+ },
+ {
+  "id": "hdfc.kpi.sa_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "5.3%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "savings deposits · period-end · YoY · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "SA deposits 5.3% 9.3% 11.9%",
+  "raw_value": "5.3"
+ },
+ {
+  "id": "hdfc.kpi.sa_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "7.1%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "savings deposits · period-end · YoY · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "SA deposits 7.1% 11.9% 9.7%",
+  "raw_value": "7.1"
+ },
+ {
+  "id": "hdfc.kpi.sa_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "7.3%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "savings deposits · period-end · YoY · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "SA deposits 4.4% 7.3% 9.3%",
+  "raw_value": "7.3"
+ },
+ {
+  "id": "hdfc.kpi.sa_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "9.3%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "savings deposits · period-end · YoY · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "SA deposits 4.4% 7.3% 9.3%",
+  "raw_value": "9.3"
+ },
+ {
+  "id": "hdfc.kpi.sa_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "11.9%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "savings deposits · period-end · YoY · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "SA deposits 5.3% 9.3% 11.9%",
+  "raw_value": "11.9"
+ },
+ {
+  "id": "hdfc.kpi.sa_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "9.7%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "savings deposits · period-end · YoY · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "SA deposits 7.1% 11.9% 9.7%",
+  "raw_value": "9.7"
+ },
+ {
+  "id": "hdfc.kpi.td_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "22.7%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "term deposits · period-end · YoY · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Term deposits 22.7% 14.6% 12.3%",
+  "raw_value": "22.7"
+ },
+ {
+  "id": "hdfc.kpi.td_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "20.3%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "term deposits · period-end · YoY · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Term deposits 20.3% 12.3% 15.5%",
+  "raw_value": "20.3"
+ },
+ {
+  "id": "hdfc.kpi.td_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "20.6%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "term deposits · period-end · YoY · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Term deposits 20.6% 15.5% 17.4%",
+  "raw_value": "20.6"
+ },
+ {
+  "id": "hdfc.kpi.td_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "14.6%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "term deposits · period-end · YoY · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Term deposits 22.7% 14.6% 12.3%",
+  "raw_value": "14.6"
+ },
+ {
+  "id": "hdfc.kpi.td_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "12.3%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "term deposits · period-end · YoY · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Term deposits 22.7% 14.6% 12.3%",
+  "raw_value": "12.3"
+ },
+ {
+  "id": "hdfc.kpi.td_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "15.5%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "term deposits · period-end · YoY · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Term deposits 20.3% 12.3% 15.5%",
+  "raw_value": "15.5"
+ },
+ {
+  "id": "hdfc.kpi.td_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "17.4%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "term deposits · period-end · YoY · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Term deposits 20.6% 15.5% 17.4%",
+  "raw_value": "17.4"
+ },
+ {
+  "id": "hdfc.kpi.casa.q3fy25",
+  "company": "hdfc",
+  "display": "34.0%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "CASA ratio · standalone · period-end · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "CASA ratio 34.0% 33.9% 33.6%",
+  "raw_value": "34.0"
+ },
+ {
+  "id": "hdfc.kpi.casa.q4fy25",
+  "company": "hdfc",
+  "display": "34.8%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "CASA ratio · standalone · period-end · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "CASA ratio 34.8% 33.6% 34.1%",
+  "raw_value": "34.8"
+ },
+ {
+  "id": "hdfc.kpi.casa.q1fy26",
+  "company": "hdfc",
+  "display": "33.9%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "CASA ratio · standalone · period-end · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "CASA ratio 33.9% 34.1% 32.3%",
+  "raw_value": "33.9"
+ },
+ {
+  "id": "hdfc.kpi.casa.q2fy26",
+  "company": "hdfc",
+  "display": "33.9%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "CASA ratio · standalone · period-end · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "CASA ratio 34.0% 33.9% 33.6%",
+  "raw_value": "33.9"
+ },
+ {
+  "id": "hdfc.kpi.casa.q3fy26",
+  "company": "hdfc",
+  "display": "33.6%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "CASA ratio · standalone · period-end · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "CASA ratio 34.0% 33.9% 33.6%",
+  "raw_value": "33.6"
+ },
+ {
+  "id": "hdfc.kpi.casa.q4fy26",
+  "company": "hdfc",
+  "display": "34.1%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "CASA ratio · standalone · period-end · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "CASA ratio 34.8% 33.6% 34.1%",
+  "raw_value": "34.1"
+ },
+ {
+  "id": "hdfc.kpi.casa.q1fy27",
+  "company": "hdfc",
+  "display": "32.3%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "CASA ratio · standalone · period-end · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "CASA ratio 33.9% 34.1% 32.3%",
+  "raw_value": "32.3"
+ },
+ {
+  "id": "hdfc.kpi.retail_dep_mix.q3fy25",
+  "company": "hdfc",
+  "display": "83%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "retail share of deposits · quarterly average · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Average retail mix of deposits 83% 83% 83%",
+  "raw_value": "83"
+ },
+ {
+  "id": "hdfc.kpi.retail_dep_mix.q4fy25",
+  "company": "hdfc",
+  "display": "83%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "retail share of deposits · quarterly average · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Average retail mix of deposits 83% 83% 82%",
+  "raw_value": "83"
+ },
+ {
+  "id": "hdfc.kpi.retail_dep_mix.q1fy26",
+  "company": "hdfc",
+  "display": "82%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "retail share of deposits · quarterly average · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Average retail mix of deposits 82% 82% 80%",
+  "raw_value": "82"
+ },
+ {
+  "id": "hdfc.kpi.retail_dep_mix.q2fy26",
+  "company": "hdfc",
+  "display": "83%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "retail share of deposits · quarterly average · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Average retail mix of deposits 83% 83% 83%",
+  "raw_value": "83"
+ },
+ {
+  "id": "hdfc.kpi.retail_dep_mix.q3fy26",
+  "company": "hdfc",
+  "display": "83%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "retail share of deposits · quarterly average · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Average retail mix of deposits 83% 83% 83%",
+  "raw_value": "83"
+ },
+ {
+  "id": "hdfc.kpi.retail_dep_mix.q4fy26",
+  "company": "hdfc",
+  "display": "82%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "retail share of deposits · quarterly average · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Average retail mix of deposits 83% 83% 82%",
+  "raw_value": "82"
+ },
+ {
+  "id": "hdfc.kpi.retail_dep_mix.q1fy27",
+  "company": "hdfc",
+  "display": "80%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "retail share of deposits · quarterly average · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Average retail mix of deposits 82% 82% 80%",
+  "raw_value": "80"
+ },
+ {
+  "id": "hdfc.kpi.gnpa.q3fy25",
+  "company": "hdfc",
+  "display": "1.42%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "GNPA, % of gross advances · standalone · period-end · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Total GNPA as a ratio of gross advances 1.42% 1.24% 1.24%",
+  "raw_value": "1.42"
+ },
+ {
+  "id": "hdfc.kpi.gnpa.q4fy25",
+  "company": "hdfc",
+  "display": "1.33%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "GNPA, % of gross advances · standalone · period-end · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Total GNPA as a ratio of gross advances 1.33% 1.24% 1.15%",
+  "raw_value": "1.33"
+ },
+ {
+  "id": "hdfc.kpi.gnpa.q1fy26",
+  "company": "hdfc",
+  "display": "1.40%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "GNPA, % of gross advances · standalone · period-end · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Total GNPA as a ratio of gross advances 1.40% 1.15% 1.17%",
+  "raw_value": "1.40"
+ },
+ {
+  "id": "hdfc.kpi.gnpa.q2fy26",
+  "company": "hdfc",
+  "display": "1.24%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "GNPA, % of gross advances · standalone · period-end · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Total GNPA as a ratio of gross advances 1.42% 1.24% 1.24%",
+  "raw_value": "1.24"
+ },
+ {
+  "id": "hdfc.kpi.gnpa.q3fy26",
+  "company": "hdfc",
+  "display": "1.24%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "GNPA, % of gross advances · standalone · period-end · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Total GNPA as a ratio of gross advances 1.42% 1.24% 1.24%",
+  "raw_value": "1.24"
+ },
+ {
+  "id": "hdfc.kpi.gnpa.q4fy26",
+  "company": "hdfc",
+  "display": "1.15%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "GNPA, % of gross advances · standalone · period-end · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Total GNPA as a ratio of gross advances 1.33% 1.24% 1.15%",
+  "raw_value": "1.15"
+ },
+ {
+  "id": "hdfc.kpi.gnpa.q1fy27",
+  "company": "hdfc",
+  "display": "1.17%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "GNPA, % of gross advances · standalone · period-end · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Total GNPA as a ratio of gross advances 1.40% 1.15% 1.17%",
+  "raw_value": "1.17"
+ },
+ {
+  "id": "hdfc.kpi.gnpa_retail_exagri.q3fy25",
+  "company": "hdfc",
+  "display": "0.83%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "GNPA of retail advances excluding agri · period-end · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Retail advances (ex Agri) 0.83% 0.77% 0.73%",
+  "raw_value": "0.83"
+ },
+ {
+  "id": "hdfc.kpi.gnpa_retail_exagri.q4fy25",
+  "company": "hdfc",
+  "display": "0.80%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "GNPA of retail advances excluding agri · period-end · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Retail advances (ex Agri) 0.80% 0.73% 0.69%",
+  "raw_value": "0.80"
+ },
+ {
+  "id": "hdfc.kpi.gnpa_retail_exagri.q1fy26",
+  "company": "hdfc",
+  "display": "0.82%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "GNPA of retail advances excluding agri · period-end · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Retail advances (ex Agri) 0.82% 0.69% 0.67%",
+  "raw_value": "0.82"
+ },
+ {
+  "id": "hdfc.kpi.gnpa_retail_exagri.q2fy26",
+  "company": "hdfc",
+  "display": "0.77%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "GNPA of retail advances excluding agri · period-end · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Retail advances (ex Agri) 0.83% 0.77% 0.73%",
+  "raw_value": "0.77"
+ },
+ {
+  "id": "hdfc.kpi.gnpa_retail_exagri.q3fy26",
+  "company": "hdfc",
+  "display": "0.73%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "GNPA of retail advances excluding agri · period-end · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Retail advances (ex Agri) 0.83% 0.77% 0.73%",
+  "raw_value": "0.73"
+ },
+ {
+  "id": "hdfc.kpi.gnpa_retail_exagri.q4fy26",
+  "company": "hdfc",
+  "display": "0.69%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "GNPA of retail advances excluding agri · period-end · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Retail advances (ex Agri) 0.80% 0.73% 0.69%",
+  "raw_value": "0.69"
+ },
+ {
+  "id": "hdfc.kpi.gnpa_retail_exagri.q1fy27",
+  "company": "hdfc",
+  "display": "0.67%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "GNPA of retail advances excluding agri · period-end · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Retail advances (ex Agri) 0.82% 0.69% 0.67%",
+  "raw_value": "0.67"
+ },
+ {
+  "id": "hdfc.kpi.prov_adv.q3fy25",
+  "company": "hdfc",
+  "display": "2.39%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "total provisions (specific + floating + contingent + general), % of advances · period-end · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Total provisions as a % of advances 2.39% 2.61% 2.52%",
+  "raw_value": "2.39"
+ },
+ {
+  "id": "hdfc.kpi.prov_adv.q4fy25",
+  "company": "hdfc",
+  "display": "2.29%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "total provisions (specific + floating + contingent + general), % of advances · period-end · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Total provisions as a % of advances 2.29% 2.52% 2.42%",
+  "raw_value": "2.29"
+ },
+ {
+  "id": "hdfc.kpi.prov_adv.q1fy26",
+  "company": "hdfc",
+  "display": "2.71%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "total provisions (specific + floating + contingent + general), % of advances · period-end · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Total provisions as a % of advances 2.71% 2.42% 2.36%",
+  "raw_value": "2.71"
+ },
+ {
+  "id": "hdfc.kpi.prov_adv.q2fy26",
+  "company": "hdfc",
+  "display": "2.61%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "total provisions (specific + floating + contingent + general), % of advances · period-end · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Total provisions as a % of advances 2.39% 2.61% 2.52%",
+  "raw_value": "2.61"
+ },
+ {
+  "id": "hdfc.kpi.prov_adv.q3fy26",
+  "company": "hdfc",
+  "display": "2.52%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "total provisions (specific + floating + contingent + general), % of advances · period-end · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Total provisions as a % of advances 2.39% 2.61% 2.52%",
+  "raw_value": "2.52"
+ },
+ {
+  "id": "hdfc.kpi.prov_adv.q4fy26",
+  "company": "hdfc",
+  "display": "2.42%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "total provisions (specific + floating + contingent + general), % of advances · period-end · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Total provisions as a % of advances 2.29% 2.52% 2.42%",
+  "raw_value": "2.42"
+ },
+ {
+  "id": "hdfc.kpi.prov_adv.q1fy27",
+  "company": "hdfc",
+  "display": "2.36%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "total provisions (specific + floating + contingent + general), % of advances · period-end · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Total provisions as a % of advances 2.71% 2.42% 2.36%",
+  "raw_value": "2.36"
+ },
+ {
+  "id": "hdfc.kpi.prov_gnpa.q3fy25",
+  "company": "hdfc",
+  "display": "169%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "total provisions, % of GNPA · period-end · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Total provisions as a % of GNPA 169% 211% 204%",
+  "raw_value": "169"
+ },
+ {
+  "id": "hdfc.kpi.prov_gnpa.q4fy25",
+  "company": "hdfc",
+  "display": "172%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "total provisions, % of GNPA · period-end · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Total provisions as a % of GNPA 172% 204% 210%",
+  "raw_value": "172"
+ },
+ {
+  "id": "hdfc.kpi.prov_gnpa.q1fy26",
+  "company": "hdfc",
+  "display": "194%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "total provisions, % of GNPA · period-end · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Total provisions as a % of GNPA 194% 210% 202%",
+  "raw_value": "194"
+ },
+ {
+  "id": "hdfc.kpi.prov_gnpa.q2fy26",
+  "company": "hdfc",
+  "display": "211%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "total provisions, % of GNPA · period-end · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Total provisions as a % of GNPA 169% 211% 204%",
+  "raw_value": "211"
+ },
+ {
+  "id": "hdfc.kpi.prov_gnpa.q3fy26",
+  "company": "hdfc",
+  "display": "204%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "total provisions, % of GNPA · period-end · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Total provisions as a % of GNPA 169% 211% 204%",
+  "raw_value": "204"
+ },
+ {
+  "id": "hdfc.kpi.prov_gnpa.q4fy26",
+  "company": "hdfc",
+  "display": "210%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "total provisions, % of GNPA · period-end · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Total provisions as a % of GNPA 172% 204% 210%",
+  "raw_value": "210"
+ },
+ {
+  "id": "hdfc.kpi.prov_gnpa.q1fy27",
+  "company": "hdfc",
+  "display": "202%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "total provisions, % of GNPA · period-end · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Total provisions as a % of GNPA 194% 210% 202%",
+  "raw_value": "202"
+ },
+ {
+  "id": "hdfc.kpi.pcr.q3fy25",
+  "company": "hdfc",
+  "display": "68%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "specific provision coverage ratio · period-end · printed to whole % · Q3 FY25 (31 Dec 2024)",
+  "raw_match": "Specific PCR 68% 67% 66%",
+  "raw_value": "68"
+ },
+ {
+  "id": "hdfc.kpi.pcr.q4fy25",
+  "company": "hdfc",
+  "display": "68%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "specific provision coverage ratio · period-end · printed to whole % · Q4 FY25 (31 Mar 2025)",
+  "raw_match": "Specific PCR 68% 66% 67%",
+  "raw_value": "68"
+ },
+ {
+  "id": "hdfc.kpi.pcr.q1fy26",
+  "company": "hdfc",
+  "display": "67%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "specific provision coverage ratio · period-end · printed to whole % · Q1 FY26 (30 Jun 2025)",
+  "raw_match": "Specific PCR 67% 67% 66%",
+  "raw_value": "67"
+ },
+ {
+  "id": "hdfc.kpi.pcr.q2fy26",
+  "company": "hdfc",
+  "display": "67%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "specific provision coverage ratio · period-end · printed to whole % · Q2 FY26 (30 Sep 2025)",
+  "raw_match": "Specific PCR 68% 67% 66%",
+  "raw_value": "67"
+ },
+ {
+  "id": "hdfc.kpi.pcr.q3fy26",
+  "company": "hdfc",
+  "display": "66%",
+  "doc": "KPd",
+  "pdf_page": 2,
+  "basis": "specific provision coverage ratio · period-end · printed to whole % · Q3 FY26 (31 Dec 2025)",
+  "raw_match": "Specific PCR 68% 67% 66%",
+  "raw_value": "66"
+ },
+ {
+  "id": "hdfc.kpi.pcr.q4fy26",
+  "company": "hdfc",
+  "display": "67%",
+  "doc": "KPm",
+  "pdf_page": 2,
+  "basis": "specific provision coverage ratio · period-end · printed to whole % · Q4 FY26 (31 Mar 2026)",
+  "raw_match": "Specific PCR 68% 66% 67%",
+  "raw_value": "67"
+ },
+ {
+  "id": "hdfc.kpi.pcr.q1fy27",
+  "company": "hdfc",
+  "display": "66%",
+  "doc": "KPj",
+  "pdf_page": 2,
+  "basis": "specific provision coverage ratio · period-end · printed to whole % · Q1 FY27 (30 Jun 2026)",
+  "raw_match": "Specific PCR 67% 67% 66%",
+  "raw_value": "66"
+ },
+ {
+  "id": "hdfc.kpi.gross_adv.q2fy25",
+  "company": "hdfc",
+  "display": "25,19,000",
+  "doc": "KPd",
+  "pdf_page": 1,
+  "basis": "gross advances (net of IBPC/BRDS/securitisation) · standalone · period-end · Q2 FY25 (30 Sep 2024) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Gross Advances 25,190 25,426 26,435 26,532 27,692 28,446",
+  "raw_value": "25,190",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gross_adv.q3fy25",
+  "company": "hdfc",
+  "display": "25,42,600",
+  "doc": "KPm",
+  "pdf_page": 1,
+  "basis": "gross advances (net of IBPC/BRDS/securitisation) · standalone · period-end · Q3 FY25 (31 Dec 2024) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Gross Advances 25,426 26,435 26,532 27,692 28,446 29,600",
+  "raw_value": "25,426",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.aum.q3fy25",
+  "company": "hdfc",
+  "display": "26,83,900",
+  "doc": "KPm",
+  "pdf_page": 1,
+  "basis": "advances under management (gross advances + IBPC/BRDS/securitisation) · standalone · period-end · Q3 FY25 (31 Dec 2024) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Advances under management 26,839 27,733 27,820 28,688 29,460 30,573",
+  "raw_value": "26,839",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gross_adv.q4fy25",
+  "company": "hdfc",
+  "display": "26,43,500",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "gross advances (net of IBPC/BRDS/securitisation) · standalone · period-end · Q4 FY25 (31 Mar 2025) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Gross Advances 26,435 26,532 27,692 28,446 29,600 30,608",
+  "raw_value": "26,435",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.aum.q4fy25",
+  "company": "hdfc",
+  "display": "27,73,300",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "advances under management (gross advances + IBPC/BRDS/securitisation) · standalone · period-end · Q4 FY25 (31 Mar 2025) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Advances under management 27,733 27,820 28,688 29,460 30,573 31,272",
+  "raw_value": "27,733",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gross_adv.q1fy26",
+  "company": "hdfc",
+  "display": "26,53,200",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "gross advances (net of IBPC/BRDS/securitisation) · standalone · period-end · Q1 FY26 (30 Jun 2025) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Gross Advances 26,435 26,532 27,692 28,446 29,600 30,608",
+  "raw_value": "26,532",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.aum.q1fy26",
+  "company": "hdfc",
+  "display": "27,82,000",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "advances under management (gross advances + IBPC/BRDS/securitisation) · standalone · period-end · Q1 FY26 (30 Jun 2025) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Advances under management 27,733 27,820 28,688 29,460 30,573 31,272",
+  "raw_value": "27,820",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gross_adv.q2fy26",
+  "company": "hdfc",
+  "display": "27,69,200",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "gross advances (net of IBPC/BRDS/securitisation) · standalone · period-end · Q2 FY26 (30 Sep 2025) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Gross Advances 26,435 26,532 27,692 28,446 29,600 30,608",
+  "raw_value": "27,692",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.aum.q2fy26",
+  "company": "hdfc",
+  "display": "28,68,800",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "advances under management (gross advances + IBPC/BRDS/securitisation) · standalone · period-end · Q2 FY26 (30 Sep 2025) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Advances under management 27,733 27,820 28,688 29,460 30,573 31,272",
+  "raw_value": "28,688",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gross_adv.q3fy26",
+  "company": "hdfc",
+  "display": "28,44,600",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "gross advances (net of IBPC/BRDS/securitisation) · standalone · period-end · Q3 FY26 (31 Dec 2025) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Gross Advances 26,435 26,532 27,692 28,446 29,600 30,608",
+  "raw_value": "28,446",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.aum.q3fy26",
+  "company": "hdfc",
+  "display": "29,46,000",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "advances under management (gross advances + IBPC/BRDS/securitisation) · standalone · period-end · Q3 FY26 (31 Dec 2025) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Advances under management 27,733 27,820 28,688 29,460 30,573 31,272",
+  "raw_value": "29,460",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gross_adv.q4fy26",
+  "company": "hdfc",
+  "display": "29,60,000",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "gross advances (net of IBPC/BRDS/securitisation) · standalone · period-end · Q4 FY26 (31 Mar 2026) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Gross Advances 26,435 26,532 27,692 28,446 29,600 30,608",
+  "raw_value": "29,600",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.aum.q4fy26",
+  "company": "hdfc",
+  "display": "30,57,300",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "advances under management (gross advances + IBPC/BRDS/securitisation) · standalone · period-end · Q4 FY26 (31 Mar 2026) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Advances under management 27,733 27,820 28,688 29,460 30,573 31,272",
+  "raw_value": "30,573",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gross_adv.q1fy27",
+  "company": "hdfc",
+  "display": "30,60,800",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "gross advances (net of IBPC/BRDS/securitisation) · standalone · period-end · Q1 FY27 (30 Jun 2026) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Gross Advances 26,435 26,532 27,692 28,446 29,600 30,608",
+  "raw_value": "30,608",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.aum.q1fy27",
+  "company": "hdfc",
+  "display": "31,27,200",
+  "doc": "KPj",
+  "pdf_page": 1,
+  "basis": "advances under management (gross advances + IBPC/BRDS/securitisation) · standalone · period-end · Q1 FY27 (30 Jun 2026) · Rs crore; sheet prints Rs bn (x100)",
+  "raw_match": "Advances under management 27,733 27,820 28,688 29,460 30,573 31,272",
+  "raw_value": "31,272",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_adv.q3fy25",
+  "company": "hdfc",
+  "display": "25,18,200",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "net advances (balance sheet) · standalone · period-end · Q3 FY25 (31 Dec 2024) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net Advances 25,182 27,464 28,214 750 3,032",
+  "raw_value": "25,182",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.deposits.q3fy25",
+  "company": "hdfc",
+  "display": "25,63,800",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "total deposits · standalone · period-end · Q3 FY25 (31 Dec 2024) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Deposits 25,638 28,018 28,601 583 2,963",
+  "raw_value": "25,638",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.borrowings.q3fy25",
+  "company": "hdfc",
+  "display": "5,70,200",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "borrowings · standalone · period-end · Q3 FY25 (31 Dec 2024) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Borrowings 5,702 5,096 5,211 115 (491)",
+  "raw_value": "5,702",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.total_assets.q3fy25",
+  "company": "hdfc",
+  "display": "37,59,000",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "total assets · standalone · period-end · Q3 FY25 (31 Dec 2024) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Total assets 37,590 40,030 40,889 859 3,299",
+  "raw_value": "37,590",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_adv.q4fy25",
+  "company": "hdfc",
+  "display": "26,19,600",
+  "doc": "Q4D",
+  "pdf_page": 5,
+  "basis": "net advances (balance sheet) · standalone · period-end · Q4 FY25 (31 Mar 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net Advances 26,196 28,214 29,372 1,158 3,176",
+  "raw_value": "26,196",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.deposits.q4fy25",
+  "company": "hdfc",
+  "display": "27,14,700",
+  "doc": "Q4D",
+  "pdf_page": 5,
+  "basis": "total deposits · standalone · period-end · Q4 FY25 (31 Mar 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Deposits 27,147 28,601 31,053 2,452 3,906",
+  "raw_value": "27,147",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.borrowings.q4fy25",
+  "company": "hdfc",
+  "display": "5,47,900",
+  "doc": "Q4D",
+  "pdf_page": 5,
+  "basis": "borrowings · standalone · period-end · Q4 FY25 (31 Mar 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Borrowings 5,479 5,211 4,894 (317) (585)",
+  "raw_value": "5,479",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.total_assets.q4fy25",
+  "company": "hdfc",
+  "display": "39,10,200",
+  "doc": "Q4D",
+  "pdf_page": 5,
+  "basis": "total assets · standalone · period-end · Q4 FY25 (31 Mar 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Total assets 39,102 40,889 43,649 2,760 4,547",
+  "raw_value": "39,102",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_adv.q1fy26",
+  "company": "hdfc",
+  "display": "26,28,400",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "net advances (balance sheet) · standalone · period-end · Q1 FY26 (30 Jun 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net Advances 26,284 29,372 30,373 1,001 4,089",
+  "raw_value": "26,284",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.deposits.q1fy26",
+  "company": "hdfc",
+  "display": "27,64,100",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "total deposits · standalone · period-end · Q1 FY26 (30 Jun 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Deposits 27,641 31,053 31,708 655 4,067",
+  "raw_value": "27,641",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.borrowings.q1fy26",
+  "company": "hdfc",
+  "display": "5,10,100",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "borrowings · standalone · period-end · Q1 FY26 (30 Jun 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Borrowings 5,101 4,894 4,618 (276) (483)",
+  "raw_value": "5,101",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.total_assets.q1fy26",
+  "company": "hdfc",
+  "display": "39,54,100",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "total assets · standalone · period-end · Q1 FY26 (30 Jun 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Total assets 39,541 43,649 43,975 326 4,434",
+  "raw_value": "39,541",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_adv.q2fy26",
+  "company": "hdfc",
+  "display": "27,46,400",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "net advances (balance sheet) · standalone · period-end · Q2 FY26 (30 Sep 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net Advances 25,182 27,464 28,214 750 3,032",
+  "raw_value": "27,464",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.deposits.q2fy26",
+  "company": "hdfc",
+  "display": "28,01,800",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "total deposits · standalone · period-end · Q2 FY26 (30 Sep 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Deposits 25,638 28,018 28,601 583 2,963",
+  "raw_value": "28,018",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.borrowings.q2fy26",
+  "company": "hdfc",
+  "display": "5,09,600",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "borrowings · standalone · period-end · Q2 FY26 (30 Sep 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Borrowings 5,702 5,096 5,211 115 (491)",
+  "raw_value": "5,096",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.total_assets.q2fy26",
+  "company": "hdfc",
+  "display": "40,03,000",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "total assets · standalone · period-end · Q2 FY26 (30 Sep 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Total assets 37,590 40,030 40,889 859 3,299",
+  "raw_value": "40,030",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_adv.q3fy26",
+  "company": "hdfc",
+  "display": "28,21,400",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "net advances (balance sheet) · standalone · period-end · Q3 FY26 (31 Dec 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net Advances 25,182 27,464 28,214 750 3,032",
+  "raw_value": "28,214",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.deposits.q3fy26",
+  "company": "hdfc",
+  "display": "28,60,100",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "total deposits · standalone · period-end · Q3 FY26 (31 Dec 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Deposits 25,638 28,018 28,601 583 2,963",
+  "raw_value": "28,601",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.borrowings.q3fy26",
+  "company": "hdfc",
+  "display": "5,21,100",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "borrowings · standalone · period-end · Q3 FY26 (31 Dec 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Borrowings 5,702 5,096 5,211 115 (491)",
+  "raw_value": "5,211",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.total_assets.q3fy26",
+  "company": "hdfc",
+  "display": "40,88,900",
+  "doc": "Q3D",
+  "pdf_page": 5,
+  "basis": "total assets · standalone · period-end · Q3 FY26 (31 Dec 2025) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Total assets 37,590 40,030 40,889 859 3,299",
+  "raw_value": "40,889",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_adv.q4fy26",
+  "company": "hdfc",
+  "display": "29,37,200",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "net advances (balance sheet) · standalone · period-end · Q4 FY26 (31 Mar 2026) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net Advances 26,284 29,372 30,373 1,001 4,089",
+  "raw_value": "29,372",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.deposits.q4fy26",
+  "company": "hdfc",
+  "display": "31,05,300",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "total deposits · standalone · period-end · Q4 FY26 (31 Mar 2026) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Deposits 27,641 31,053 31,708 655 4,067",
+  "raw_value": "31,053",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.borrowings.q4fy26",
+  "company": "hdfc",
+  "display": "4,89,400",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "borrowings · standalone · period-end · Q4 FY26 (31 Mar 2026) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Borrowings 5,101 4,894 4,618 (276) (483)",
+  "raw_value": "4,894",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.total_assets.q4fy26",
+  "company": "hdfc",
+  "display": "43,64,900",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "total assets · standalone · period-end · Q4 FY26 (31 Mar 2026) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Total assets 39,541 43,649 43,975 326 4,434",
+  "raw_value": "43,649",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_adv.q1fy27",
+  "company": "hdfc",
+  "display": "30,37,300",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "net advances (balance sheet) · standalone · period-end · Q1 FY27 (30 Jun 2026) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net Advances 26,284 29,372 30,373 1,001 4,089",
+  "raw_value": "30,373",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.deposits.q1fy27",
+  "company": "hdfc",
+  "display": "31,70,800",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "total deposits · standalone · period-end · Q1 FY27 (30 Jun 2026) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Deposits 27,641 31,053 31,708 655 4,067",
+  "raw_value": "31,708",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.borrowings.q1fy27",
+  "company": "hdfc",
+  "display": "4,61,800",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "borrowings · standalone · period-end · Q1 FY27 (30 Jun 2026) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Borrowings 5,101 4,894 4,618 (276) (483)",
+  "raw_value": "4,618",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.total_assets.q1fy27",
+  "company": "hdfc",
+  "display": "43,97,500",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "total assets · standalone · period-end · Q1 FY27 (30 Jun 2026) · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Total assets 39,541 43,649 43,975 326 4,434",
+  "raw_value": "43,975",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_adv_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "1,00,100",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "net advances, change Mar-26 -> Jun-26 · standalone · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net Advances 26,284 29,372 30,373 1,001 4,089",
+  "raw_value": "1,001",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.deposits_qoq.q1fy27",
+  "company": "hdfc",
+  "display": "65,500",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "deposits, change Mar-26 -> Jun-26 · standalone · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Deposits 27,641 31,053 31,708 655 4,067",
+  "raw_value": "655",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_adv_yoy_abs.q1fy27",
+  "company": "hdfc",
+  "display": "4,08,900",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "net advances, change Jun-25 -> Jun-26 · standalone · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net Advances 26,284 29,372 30,373 1,001 4,089",
+  "raw_value": "4,089",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.deposits_yoy_abs.q1fy27",
+  "company": "hdfc",
+  "display": "4,06,700",
+  "doc": "Q1D",
+  "pdf_page": 5,
+  "basis": "deposits, change Jun-25 -> Jun-26 · standalone · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Deposits 27,641 31,053 31,708 655 4,067",
+  "raw_value": "4,067",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.nii.q3fy25",
+  "company": "hdfc",
+  "display": "30,650",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q3 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net interest income 306.5 315.5 326.2 3.4% 6.4%",
+  "raw_value": "306.5",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.other_inc.q3fy25",
+  "company": "hdfc",
+  "display": "11,450",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "non-interest (other) income · standalone · Q3 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Non-interest income 114.5 143.5 132.5 (7.7%) 15.7%",
+  "raw_value": "114.5",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_rev.q3fy25",
+  "company": "hdfc",
+  "display": "42,100",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "net revenue · standalone · Q3 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net revenue 421.0 459.0 458.7 (0.1%) 9.0%",
+  "raw_value": "421.0",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.opex.q3fy25",
+  "company": "hdfc",
+  "display": "17,110",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "operating expenses · standalone · Q3 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Operating expenses 171.1 179.8 179.7 (0.1%) 5.0%",
+  "raw_value": "171.1",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.prov.q3fy25",
+  "company": "hdfc",
+  "display": "3,150",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "provisions and contingencies · standalone · Q3 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Provisions 31.5 35.0 28.4 (18.9%) (10.0%)",
+  "raw_value": "31.5",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pbt.q3fy25",
+  "company": "hdfc",
+  "display": "21,850",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "profit before tax · standalone · Q3 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit before tax 218.5 244.2 242.6 (0.7%) 11.0%",
+  "raw_value": "218.5",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pat.q3fy25",
+  "company": "hdfc",
+  "display": "16,740",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "profit after tax, reported · standalone · Q3 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit after tax 167.4 186.4 186.5 0.1% 11.5%",
+  "raw_value": "167.4",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.nii.q4fy25",
+  "company": "hdfc",
+  "display": "32,070",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q4 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net interest income 320.7 326.2 330.8 1.4% 3.2%",
+  "raw_value": "320.7",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.other_inc.q4fy25",
+  "company": "hdfc",
+  "display": "12,030",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "non-interest (other) income · standalone · Q4 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Non-interest income 120.3 132.5 132.0 (0.4%) 9.7%",
+  "raw_value": "120.3",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_rev.q4fy25",
+  "company": "hdfc",
+  "display": "44,100",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "net revenue · standalone · Q4 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net revenue 441.0 458.7 462.8 0.9% 4.9%",
+  "raw_value": "441.0",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.opex.q4fy25",
+  "company": "hdfc",
+  "display": "17,560",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "operating expenses · standalone · Q4 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Operating expenses 175.6 187.7 184.8 (1.6%) 5.2%",
+  "raw_value": "175.6",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.prov.q4fy25",
+  "company": "hdfc",
+  "display": "3,190",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "provisions and contingencies · standalone · Q4 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Provisions 31.9 28.4 26.1 (8.1%) (18.2%)",
+  "raw_value": "31.9",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pbt.q4fy25",
+  "company": "hdfc",
+  "display": "23,350",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "profit before tax · standalone · Q4 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit before tax 233.5 242.6 251.9 3.8% 7.9%",
+  "raw_value": "233.5",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pat.q4fy25",
+  "company": "hdfc",
+  "display": "17,620",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "profit after tax, reported · standalone · Q4 FY25 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit after tax 176.2 186.5 192.2 3.1% 9.1%",
+  "raw_value": "176.2",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.nii.q1fy26",
+  "company": "hdfc",
+  "display": "31,440",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q1 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net interest income 314.4 330.8 335.3 1.4% 6.7%",
+  "raw_value": "314.4",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.other_inc.q1fy26",
+  "company": "hdfc",
+  "display": "21,730",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "non-interest (other) income · standalone · Q1 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Non-interest income 217.3 132.0 128.2 (2.9%) (41.0%)",
+  "raw_value": "217.3",
+  "scale": 100,
+  "note": "includes the Rs 91.3 bn HDB Financial Services IPO transaction gain (KPj p.2 footnote)"
+ },
+ {
+  "id": "hdfc.kpi.net_rev.q1fy26",
+  "company": "hdfc",
+  "display": "53,170",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "net revenue · standalone · Q1 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net revenue 531.7 462.8 463.6 0.2% (12.8%)",
+  "raw_value": "531.7",
+  "scale": 100,
+  "note": "includes the Rs 91.3 bn HDB IPO transaction gain"
+ },
+ {
+  "id": "hdfc.kpi.opex.q1fy26",
+  "company": "hdfc",
+  "display": "17,430",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "operating expenses · standalone · Q1 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Operating expenses 174.3 184.8 181.9 (1.6%) 4.3%",
+  "raw_value": "174.3",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.prov.q1fy26",
+  "company": "hdfc",
+  "display": "14,440",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "provisions and contingencies · standalone · Q1 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Provisions 144.4 26.1 30.6 17.2% (78.8%)",
+  "raw_value": "144.4",
+  "scale": 100,
+  "note": "includes Rs 90 bn floating and Rs 17 bn contingent provisions (Q1D p.19 footnote)"
+ },
+ {
+  "id": "hdfc.kpi.pbt.q1fy26",
+  "company": "hdfc",
+  "display": "21,290",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit before tax · standalone · Q1 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit before tax 212.9 251.9 251.1 (0.3%) 17.9%",
+  "raw_value": "212.9",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pat.q1fy26",
+  "company": "hdfc",
+  "display": "18,160",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit after tax, reported · standalone · Q1 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit after tax 181.6 192.2 190.6 (0.8%) 5.0%",
+  "raw_value": "181.6",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.nii.q2fy26",
+  "company": "hdfc",
+  "display": "31,550",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q2 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net interest income 306.5 315.5 326.2 3.4% 6.4%",
+  "raw_value": "315.5",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.other_inc.q2fy26",
+  "company": "hdfc",
+  "display": "14,350",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "non-interest (other) income · standalone · Q2 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Non-interest income 114.5 143.5 132.5 (7.7%) 15.7%",
+  "raw_value": "143.5",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_rev.q2fy26",
+  "company": "hdfc",
+  "display": "45,900",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "net revenue · standalone · Q2 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net revenue 421.0 459.0 458.7 (0.1%) 9.0%",
+  "raw_value": "459.0",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.opex.q2fy26",
+  "company": "hdfc",
+  "display": "17,980",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "operating expenses · standalone · Q2 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Operating expenses 171.1 179.8 179.7 (0.1%) 5.0%",
+  "raw_value": "179.8",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.prov.q2fy26",
+  "company": "hdfc",
+  "display": "3,500",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "provisions and contingencies · standalone · Q2 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Provisions 31.5 35.0 28.4 (18.9%) (10.0%)",
+  "raw_value": "35.0",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pbt.q2fy26",
+  "company": "hdfc",
+  "display": "24,420",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "profit before tax · standalone · Q2 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit before tax 218.5 244.2 242.6 (0.7%) 11.0%",
+  "raw_value": "244.2",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pat.q2fy26",
+  "company": "hdfc",
+  "display": "18,640",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "profit after tax, reported · standalone · Q2 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit after tax 167.4 186.4 186.5 0.1% 11.5%",
+  "raw_value": "186.4",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.nii.q3fy26",
+  "company": "hdfc",
+  "display": "32,620",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net interest income 320.7 326.2 330.8 1.4% 3.2%",
+  "raw_value": "326.2",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.other_inc.q3fy26",
+  "company": "hdfc",
+  "display": "13,250",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "non-interest (other) income · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Non-interest income 120.3 132.5 132.0 (0.4%) 9.7%",
+  "raw_value": "132.5",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_rev.q3fy26",
+  "company": "hdfc",
+  "display": "45,870",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "net revenue · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net revenue 441.0 458.7 462.8 0.9% 4.9%",
+  "raw_value": "458.7",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.opex.q3fy26",
+  "company": "hdfc",
+  "display": "18,770",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "operating expenses · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Operating expenses 175.6 187.7 184.8 (1.6%) 5.2%",
+  "raw_value": "187.7",
+  "scale": 100,
+  "note": "Q4D's restated Q3 FY26 opex, including the Rs 8.0 bn labour-code employee-benefit charge that Q3D p.4 shows on a separate line"
+ },
+ {
+  "id": "hdfc.kpi.prov.q3fy26",
+  "company": "hdfc",
+  "display": "2,840",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "provisions and contingencies · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Provisions 31.9 28.4 26.1 (8.1%) (18.2%)",
+  "raw_value": "28.4",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pbt.q3fy26",
+  "company": "hdfc",
+  "display": "24,260",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "profit before tax · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit before tax 233.5 242.6 251.9 3.8% 7.9%",
+  "raw_value": "242.6",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pat.q3fy26",
+  "company": "hdfc",
+  "display": "18,650",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "profit after tax, reported · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit after tax 176.2 186.5 192.2 3.1% 9.1%",
+  "raw_value": "186.5",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.nii.q4fy26",
+  "company": "hdfc",
+  "display": "33,080",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q4 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net interest income 314.4 330.8 335.3 1.4% 6.7%",
+  "raw_value": "330.8",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.other_inc.q4fy26",
+  "company": "hdfc",
+  "display": "13,200",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "non-interest (other) income · standalone · Q4 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Non-interest income 217.3 132.0 128.2 (2.9%) (41.0%)",
+  "raw_value": "132.0",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_rev.q4fy26",
+  "company": "hdfc",
+  "display": "46,280",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "net revenue · standalone · Q4 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net revenue 531.7 462.8 463.6 0.2% (12.8%)",
+  "raw_value": "462.8",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.opex.q4fy26",
+  "company": "hdfc",
+  "display": "18,480",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "operating expenses · standalone · Q4 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Operating expenses 174.3 184.8 181.9 (1.6%) 4.3%",
+  "raw_value": "184.8",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.prov.q4fy26",
+  "company": "hdfc",
+  "display": "2,610",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "provisions and contingencies · standalone · Q4 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Provisions 144.4 26.1 30.6 17.2% (78.8%)",
+  "raw_value": "26.1",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pbt.q4fy26",
+  "company": "hdfc",
+  "display": "25,190",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit before tax · standalone · Q4 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit before tax 212.9 251.9 251.1 (0.3%) 17.9%",
+  "raw_value": "251.9",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pat.q4fy26",
+  "company": "hdfc",
+  "display": "19,220",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit after tax, reported · standalone · Q4 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit after tax 181.6 192.2 190.6 (0.8%) 5.0%",
+  "raw_value": "192.2",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.nii.q1fy27",
+  "company": "hdfc",
+  "display": "33,530",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q1 FY27 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net interest income 314.4 330.8 335.3 1.4% 6.7%",
+  "raw_value": "335.3",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.other_inc.q1fy27",
+  "company": "hdfc",
+  "display": "12,820",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "non-interest (other) income · standalone · Q1 FY27 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Non-interest income 217.3 132.0 128.2 (2.9%) (41.0%)",
+  "raw_value": "128.2",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.net_rev.q1fy27",
+  "company": "hdfc",
+  "display": "46,360",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "net revenue · standalone · Q1 FY27 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Net revenue 531.7 462.8 463.6 0.2% (12.8%)",
+  "raw_value": "463.6",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.opex.q1fy27",
+  "company": "hdfc",
+  "display": "18,190",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "operating expenses · standalone · Q1 FY27 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Operating expenses 174.3 184.8 181.9 (1.6%) 4.3%",
+  "raw_value": "181.9",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.prov.q1fy27",
+  "company": "hdfc",
+  "display": "3,060",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "provisions and contingencies · standalone · Q1 FY27 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Provisions 144.4 26.1 30.6 17.2% (78.8%)",
+  "raw_value": "30.6",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pbt.q1fy27",
+  "company": "hdfc",
+  "display": "25,110",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit before tax · standalone · Q1 FY27 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit before tax 212.9 251.9 251.1 (0.3%) 17.9%",
+  "raw_value": "251.1",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pat.q1fy27",
+  "company": "hdfc",
+  "display": "19,060",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit after tax, reported · standalone · Q1 FY27 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit after tax 181.6 192.2 190.6 (0.8%) 5.0%",
+  "raw_value": "190.6",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.opex.q3fy26.exnlc",
+  "company": "hdfc",
+  "display": "17,970",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "operating expenses excluding the labour-code charge · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Operating expenses 171.1 179.8 179.7 (0.1%) 5.0%",
+  "raw_value": "179.7",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.nlc_charge.q3fy26",
+  "company": "hdfc",
+  "display": "800",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "provision for employee benefits under the new labour code · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Provisions - EB under NLC - - 8.0 nm nm",
+  "raw_value": "8.0",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.pat_adj.q1fy26",
+  "company": "hdfc",
+  "display": "17,370",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit after tax adjusted for the HDB transaction gain, certain provisions and tax credit · standalone · Q1 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "Profit after tax (Adjusted)* 173.7 192.2 190.6 (0.8%) 9.8%",
+  "raw_value": "173.7",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.ppop.q3fy25",
+  "company": "hdfc",
+  "display": "24,990",
+  "basis": "computed: pre-provision operating profit = net revenue - operating expenses · standalone · Q3 FY25 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.net_rev.q3fy25",
+   "hdfc.kpi.opex.q3fy25"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.kpi.ppop.q4fy25",
+  "company": "hdfc",
+  "display": "26,540",
+  "basis": "computed: pre-provision operating profit = net revenue - operating expenses · standalone · Q4 FY25 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.net_rev.q4fy25",
+   "hdfc.kpi.opex.q4fy25"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.kpi.ppop.q1fy26",
+  "company": "hdfc",
+  "display": "35,740",
+  "basis": "computed: pre-provision operating profit = net revenue - operating expenses · standalone · Q1 FY26 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.net_rev.q1fy26",
+   "hdfc.kpi.opex.q1fy26"
+  ],
+  "formula": "a - b",
+  "note": "includes the Rs 91.3 bn HDB IPO gain"
+ },
+ {
+  "id": "hdfc.kpi.ppop.q2fy26",
+  "company": "hdfc",
+  "display": "27,920",
+  "basis": "computed: pre-provision operating profit = net revenue - operating expenses · standalone · Q2 FY26 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.net_rev.q2fy26",
+   "hdfc.kpi.opex.q2fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.kpi.ppop.q3fy26",
+  "company": "hdfc",
+  "display": "27,100",
+  "basis": "computed: pre-provision operating profit = net revenue - operating expenses · standalone · Q3 FY26 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.net_rev.q3fy26",
+   "hdfc.kpi.opex.q3fy26"
+  ],
+  "formula": "a - b",
+  "note": "after the Rs 8.0 bn labour-code charge (Q4D restated opex)"
+ },
+ {
+  "id": "hdfc.kpi.ppop.q4fy26",
+  "company": "hdfc",
+  "display": "27,800",
+  "basis": "computed: pre-provision operating profit = net revenue - operating expenses · standalone · Q4 FY26 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.net_rev.q4fy26",
+   "hdfc.kpi.opex.q4fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.kpi.ppop.q1fy27",
+  "company": "hdfc",
+  "display": "28,170",
+  "basis": "computed: pre-provision operating profit = net revenue - operating expenses · standalone · Q1 FY27 · Rs crore",
+  "derived_from": [
+   "hdfc.kpi.net_rev.q1fy27",
+   "hdfc.kpi.opex.q1fy27"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "hdfc.kpi.pat_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "2%",
+  "doc": "Q4D",
+  "pdf_page": 20,
+  "basis": "profit after tax, reported · standalone · Q3 FY25 · YoY · chart label, whole %",
+  "raw_match": "YoY 2% 7% 12% 11% 12% 9%",
+  "raw_value": "2"
+ },
+ {
+  "id": "hdfc.kpi.pat_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "7%",
+  "doc": "Q1D",
+  "pdf_page": 20,
+  "basis": "profit after tax, reported · standalone · Q4 FY25 · YoY · chart label, whole %",
+  "raw_match": "YoY 7% 12% 11% 12% 9% 5%",
+  "raw_value": "7"
+ },
+ {
+  "id": "hdfc.kpi.pat_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "12%",
+  "doc": "Q1D",
+  "pdf_page": 20,
+  "basis": "profit after tax, reported · standalone · Q1 FY26 · YoY · chart label, whole %",
+  "raw_match": "YoY 7% 12% 11% 12% 9% 5%",
+  "raw_value": "12"
+ },
+ {
+  "id": "hdfc.kpi.pat_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "11%",
+  "doc": "Q1D",
+  "pdf_page": 20,
+  "basis": "profit after tax, reported · standalone · Q2 FY26 · YoY · chart label, whole %",
+  "raw_match": "YoY 7% 12% 11% 12% 9% 5%",
+  "raw_value": "11"
+ },
+ {
+  "id": "hdfc.kpi.pat_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "11.5%",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "profit after tax, reported · standalone · Q3 FY26 · YoY",
+  "raw_match": "Profit after tax 167.4 186.4 186.5 0.1% 11.5%",
+  "raw_value": "11.5"
+ },
+ {
+  "id": "hdfc.kpi.pat_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "9.1%",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "profit after tax, reported · standalone · Q4 FY26 · YoY",
+  "raw_match": "Profit after tax 176.2 186.5 192.2 3.1% 9.1%",
+  "raw_value": "9.1"
+ },
+ {
+  "id": "hdfc.kpi.pat_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "5.0%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "profit after tax, reported · standalone · Q1 FY27 · YoY",
+  "raw_match": "Profit after tax 181.6 192.2 190.6 (0.8%) 5.0%",
+  "raw_value": "5.0"
+ },
+ {
+  "id": "hdfc.kpi.nii_yoy.q3fy25",
+  "company": "hdfc",
+  "display": "8%",
+  "doc": "Q4D",
+  "pdf_page": 13,
+  "basis": "net interest income · standalone · Q3 FY25 · YoY · chart label, whole %",
+  "raw_match": "YoY 8% 10% 5% 5% 6% 3%",
+  "raw_value": "8"
+ },
+ {
+  "id": "hdfc.kpi.nii_yoy.q4fy25",
+  "company": "hdfc",
+  "display": "10%",
+  "doc": "Q1D",
+  "pdf_page": 13,
+  "basis": "net interest income · standalone · Q4 FY25 · YoY · chart label, whole %",
+  "raw_match": "YoY 10% 5% 5% 6% 3% 7%",
+  "raw_value": "10"
+ },
+ {
+  "id": "hdfc.kpi.nii_yoy.q1fy26",
+  "company": "hdfc",
+  "display": "5%",
+  "doc": "Q1D",
+  "pdf_page": 13,
+  "basis": "net interest income · standalone · Q1 FY26 · YoY · chart label, whole %",
+  "raw_match": "YoY 10% 5% 5% 6% 3% 7%",
+  "raw_value": "5"
+ },
+ {
+  "id": "hdfc.kpi.nii_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "5%",
+  "doc": "Q1D",
+  "pdf_page": 13,
+  "basis": "net interest income · standalone · Q2 FY26 · YoY · chart label, whole %",
+  "raw_match": "YoY 10% 5% 5% 6% 3% 7%",
+  "raw_value": "5"
+ },
+ {
+  "id": "hdfc.kpi.nii_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "6.4%",
+  "doc": "Q3D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q3 FY26 · YoY",
+  "raw_match": "Net interest income 306.5 315.5 326.2 3.4% 6.4%",
+  "raw_value": "6.4"
+ },
+ {
+  "id": "hdfc.kpi.nii_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "3.2%",
+  "doc": "Q4D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q4 FY26 · YoY",
+  "raw_match": "Net interest income 320.7 326.2 330.8 1.4% 3.2%",
+  "raw_value": "3.2"
+ },
+ {
+  "id": "hdfc.kpi.nii_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "6.7%",
+  "doc": "Q1D",
+  "pdf_page": 4,
+  "basis": "net interest income · standalone · Q1 FY27 · YoY",
+  "raw_match": "Net interest income 314.4 330.8 335.3 1.4% 6.7%",
+  "raw_value": "6.7"
+ },
+ {
+  "id": "hdfc.kpi.gross_adv_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "11.9%",
+  "doc": "Q3D",
+  "pdf_page": 10,
+  "basis": "gross advances · standalone · period-end · YoY · Q3 FY26",
+  "raw_match": "Gross Advances 25,426 27,692 28,446 2.7% 11.9%",
+  "raw_value": "11.9"
+ },
+ {
+  "id": "hdfc.kpi.gross_adv_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "12.0%",
+  "doc": "Q4D",
+  "pdf_page": 10,
+  "basis": "gross advances · standalone · period-end · YoY · Q4 FY26",
+  "raw_match": "Gross Advances 26,435 28,446 29,600 4.1% 12.0%",
+  "raw_value": "12.0"
+ },
+ {
+  "id": "hdfc.kpi.gross_adv_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "15.4%",
+  "doc": "Q1D",
+  "pdf_page": 10,
+  "basis": "gross advances · standalone · period-end · YoY · Q1 FY27",
+  "raw_match": "Gross Advances 26,532 29,600 30,608 3.4% 15.4%",
+  "raw_value": "15.4"
+ },
+ {
+  "id": "hdfc.kpi.gross_adv_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "9.9%",
+  "basis": "computed: gross advances Sep-25 / Sep-24 - 1 · period-end · standalone",
+  "derived_from": [
+   "hdfc.kpi.gross_adv.q2fy26",
+   "hdfc.kpi.gross_adv.q2fy25"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "hdfc.kpi.avg_dep.q2fy25",
+  "company": "hdfc",
+  "display": "23,54,000",
+  "doc": "Q3D",
+  "pdf_page": 7,
+  "basis": "average deposits · standalone · quarterly average · Q2 FY25 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "23,540 24,528 25,280 26,576 27,105 27,524",
+  "raw_value": "23,540",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_dep.q3fy25",
+  "company": "hdfc",
+  "display": "24,52,800",
+  "doc": "Q4D",
+  "pdf_page": 7,
+  "basis": "average deposits · standalone · quarterly average · Q3 FY25 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "24,528 25,280 26,576 27,105 27,524 28,511",
+  "raw_value": "24,528",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_dep.q4fy25",
+  "company": "hdfc",
+  "display": "25,28,000",
+  "doc": "Q1D",
+  "pdf_page": 7,
+  "basis": "average deposits · standalone · quarterly average · Q4 FY25 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "25,280 26,576 27,105 27,524 28,511 30,115",
+  "raw_value": "25,280",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_dep.q1fy26",
+  "company": "hdfc",
+  "display": "26,57,600",
+  "doc": "Q1D",
+  "pdf_page": 7,
+  "basis": "average deposits · standalone · quarterly average · Q1 FY26 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "25,280 26,576 27,105 27,524 28,511 30,115",
+  "raw_value": "26,576",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_dep.q2fy26",
+  "company": "hdfc",
+  "display": "27,10,500",
+  "doc": "Q1D",
+  "pdf_page": 7,
+  "basis": "average deposits · standalone · quarterly average · Q2 FY26 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "25,280 26,576 27,105 27,524 28,511 30,115",
+  "raw_value": "27,105",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_dep.q3fy26",
+  "company": "hdfc",
+  "display": "27,52,400",
+  "doc": "Q1D",
+  "pdf_page": 7,
+  "basis": "average deposits · standalone · quarterly average · Q3 FY26 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "25,280 26,576 27,105 27,524 28,511 30,115",
+  "raw_value": "27,524",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_dep.q4fy26",
+  "company": "hdfc",
+  "display": "28,51,100",
+  "doc": "Q1D",
+  "pdf_page": 7,
+  "basis": "average deposits · standalone · quarterly average · Q4 FY26 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "25,280 26,576 27,105 27,524 28,511 30,115",
+  "raw_value": "28,511",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_dep.q1fy27",
+  "company": "hdfc",
+  "display": "30,11,500",
+  "doc": "Q1D",
+  "pdf_page": 7,
+  "basis": "average deposits · standalone · quarterly average · Q1 FY27 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "25,280 26,576 27,105 27,524 28,511 30,115",
+  "raw_value": "30,115",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_aum.q2fy25",
+  "company": "hdfc",
+  "display": "25,63,900",
+  "doc": "Q3D",
+  "pdf_page": 8,
+  "basis": "average advances under management · standalone · quarterly average · Q2 FY25 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "25,639 26,276 26,955 27,423 27,946 28,641",
+  "raw_value": "25,639",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_aum.q3fy25",
+  "company": "hdfc",
+  "display": "26,27,600",
+  "doc": "Q4D",
+  "pdf_page": 8,
+  "basis": "average advances under management · standalone · quarterly average · Q3 FY25 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "26,276 26,955 27,423 27,946 28,641 29,644",
+  "raw_value": "26,276",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_aum.q4fy25",
+  "company": "hdfc",
+  "display": "26,95,500",
+  "doc": "Q1D",
+  "pdf_page": 8,
+  "basis": "average advances under management · standalone · quarterly average · Q4 FY25 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "26,955 27,423 27,946 28,641 29,644 30,386",
+  "raw_value": "26,955",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_aum.q1fy26",
+  "company": "hdfc",
+  "display": "27,42,300",
+  "doc": "Q1D",
+  "pdf_page": 8,
+  "basis": "average advances under management · standalone · quarterly average · Q1 FY26 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "26,955 27,423 27,946 28,641 29,644 30,386",
+  "raw_value": "27,423",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_aum.q2fy26",
+  "company": "hdfc",
+  "display": "27,94,600",
+  "doc": "Q1D",
+  "pdf_page": 8,
+  "basis": "average advances under management · standalone · quarterly average · Q2 FY26 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "26,955 27,423 27,946 28,641 29,644 30,386",
+  "raw_value": "27,946",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_aum.q3fy26",
+  "company": "hdfc",
+  "display": "28,64,100",
+  "doc": "Q1D",
+  "pdf_page": 8,
+  "basis": "average advances under management · standalone · quarterly average · Q3 FY26 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "26,955 27,423 27,946 28,641 29,644 30,386",
+  "raw_value": "28,641",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_aum.q4fy26",
+  "company": "hdfc",
+  "display": "29,64,400",
+  "doc": "Q1D",
+  "pdf_page": 8,
+  "basis": "average advances under management · standalone · quarterly average · Q4 FY26 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "26,955 27,423 27,946 28,641 29,644 30,386",
+  "raw_value": "29,644",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_aum.q1fy27",
+  "company": "hdfc",
+  "display": "30,38,600",
+  "doc": "Q1D",
+  "pdf_page": 8,
+  "basis": "average advances under management · standalone · quarterly average · Q1 FY27 · Rs crore; deck chart label in Rs bn (x100)",
+  "raw_match": "26,955 27,423 27,946 28,641 29,644 30,386",
+  "raw_value": "30,386",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.avg_dep_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "12.2%",
+  "doc": "Q3D",
+  "pdf_page": 3,
+  "basis": "average deposits · standalone · quarterly average · YoY · Q3 FY26",
+  "raw_match": [
+   "Average deposits at ₹ 27,524 bn",
+   "12.2% YoY"
+  ],
+  "raw_value": "12.2"
+ },
+ {
+  "id": "hdfc.kpi.avg_dep_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "12.8%",
+  "doc": "Q4D",
+  "pdf_page": 3,
+  "basis": "average deposits · standalone · quarterly average · YoY · Q4 FY26",
+  "raw_match": [
+   "Average deposits at ₹ 28,511 bn",
+   "12.8% YoY"
+  ],
+  "raw_value": "12.8"
+ },
+ {
+  "id": "hdfc.kpi.avg_dep_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "13.3%",
+  "doc": "Q1D",
+  "pdf_page": 3,
+  "basis": "average deposits · standalone · quarterly average · YoY · Q1 FY27",
+  "raw_match": [
+   "Average deposits at ₹ 30,115 bn",
+   "13.3% YoY"
+  ],
+  "raw_value": "13.3"
+ },
+ {
+  "id": "hdfc.kpi.avg_aum_yoy.q3fy26",
+  "company": "hdfc",
+  "display": "9.0%",
+  "doc": "Q3D",
+  "pdf_page": 3,
+  "basis": "average advances under management · standalone · quarterly average · YoY · Q3 FY26",
+  "raw_match": [
+   "management at ₹ 28,641 bn",
+   "9.0% YoY"
+  ],
+  "raw_value": "9.0"
+ },
+ {
+  "id": "hdfc.kpi.avg_aum_yoy.q4fy26",
+  "company": "hdfc",
+  "display": "10.0%",
+  "doc": "Q4D",
+  "pdf_page": 3,
+  "basis": "average advances under management · standalone · quarterly average · YoY · Q4 FY26",
+  "raw_match": [
+   "management at ₹ 29,644 bn",
+   "10.0% YoY"
+  ],
+  "raw_value": "10.0"
+ },
+ {
+  "id": "hdfc.kpi.avg_aum_yoy.q1fy27",
+  "company": "hdfc",
+  "display": "10.8%",
+  "doc": "Q1D",
+  "pdf_page": 3,
+  "basis": "average advances under management · standalone · quarterly average · YoY · Q1 FY27",
+  "raw_match": [
+   "management at ₹ 30,386 bn",
+   "10.8% YoY"
+  ],
+  "raw_value": "10.8"
+ },
+ {
+  "id": "hdfc.kpi.avg_dep_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "15.1%",
+  "basis": "computed: average deposits Q2 FY26 / Q2 FY25 - 1",
+  "derived_from": [
+   "hdfc.kpi.avg_dep.q2fy26",
+   "hdfc.kpi.avg_dep.q2fy25"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "hdfc.kpi.avg_aum_yoy.q2fy26",
+  "company": "hdfc",
+  "display": "9.0%",
+  "basis": "computed: average AUM Q2 FY26 / Q2 FY25 - 1",
+  "derived_from": [
+   "hdfc.kpi.avg_aum.q2fy26",
+   "hdfc.kpi.avg_aum.q2fy25"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "hdfc.kpi.ldr.q3fy25",
+  "company": "hdfc",
+  "display": "98.2%",
+  "basis": "computed: loan-to-deposit ratio = net advances / deposits, period-end, standalone · Q3 FY25",
+  "derived_from": [
+   "hdfc.kpi.net_adv.q3fy25",
+   "hdfc.kpi.deposits.q3fy25"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.kpi.ldr.q4fy25",
+  "company": "hdfc",
+  "display": "96.5%",
+  "basis": "computed: loan-to-deposit ratio = net advances / deposits, period-end, standalone · Q4 FY25",
+  "derived_from": [
+   "hdfc.kpi.net_adv.q4fy25",
+   "hdfc.kpi.deposits.q4fy25"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.kpi.ldr.q1fy26",
+  "company": "hdfc",
+  "display": "95.1%",
+  "basis": "computed: loan-to-deposit ratio = net advances / deposits, period-end, standalone · Q1 FY26",
+  "derived_from": [
+   "hdfc.kpi.net_adv.q1fy26",
+   "hdfc.kpi.deposits.q1fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.kpi.ldr.q2fy26",
+  "company": "hdfc",
+  "display": "98.0%",
+  "basis": "computed: loan-to-deposit ratio = net advances / deposits, period-end, standalone · Q2 FY26",
+  "derived_from": [
+   "hdfc.kpi.net_adv.q2fy26",
+   "hdfc.kpi.deposits.q2fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.kpi.ldr.q3fy26",
+  "company": "hdfc",
+  "display": "98.6%",
+  "basis": "computed: loan-to-deposit ratio = net advances / deposits, period-end, standalone · Q3 FY26",
+  "derived_from": [
+   "hdfc.kpi.net_adv.q3fy26",
+   "hdfc.kpi.deposits.q3fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.kpi.ldr.q4fy26",
+  "company": "hdfc",
+  "display": "94.6%",
+  "basis": "computed: loan-to-deposit ratio = net advances / deposits, period-end, standalone · Q4 FY26",
+  "derived_from": [
+   "hdfc.kpi.net_adv.q4fy26",
+   "hdfc.kpi.deposits.q4fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.kpi.ldr.q1fy27",
+  "company": "hdfc",
+  "display": "95.8%",
+  "basis": "computed: loan-to-deposit ratio = net advances / deposits, period-end, standalone · Q1 FY27",
+  "derived_from": [
+   "hdfc.kpi.net_adv.q1fy27",
+   "hdfc.kpi.deposits.q1fy27"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta2.q3fy26",
+  "company": "hdfc",
+  "display": "3.35%",
+  "doc": "Q3D",
+  "pdf_page": 3,
+  "basis": "NIM on total assets · standalone · Q3 FY26 · two decimals",
+  "raw_match": "(NIM) of 3.35%"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta2.q4fy26",
+  "company": "hdfc",
+  "display": "3.38%",
+  "doc": "Q4D",
+  "pdf_page": 3,
+  "basis": "NIM on total assets · standalone · Q4 FY26 · two decimals",
+  "raw_match": "(NIM) of 3.38%"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta2.q1fy27",
+  "company": "hdfc",
+  "display": "3.26%",
+  "doc": "Q1D",
+  "pdf_page": 3,
+  "basis": "NIM on total assets · standalone · Q1 FY27 · two decimals",
+  "raw_match": "(NIM) of 3.26%"
+ },
+ {
+  "id": "hdfc.kpi.nim_ta2.q4fy25.gj",
+  "company": "hdfc",
+  "display": "3.54%",
+  "doc": "GJ",
+  "pdf_page": 1,
+  "basis": "NIM · Q4 FY25 · as printed by Geojit (broker); basis not stated, the 3.38% it is compared with is the bank's total-assets NIM",
+  "raw_match": "3.38% YoY from 3.54% in Q4FY25",
+  "raw_value": "3.54"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea2.q3fy26.ax",
+  "company": "hdfc",
+  "display": "3.51%",
+  "doc": "AX",
+  "pdf_page": 1,
+  "basis": "NIM on interest-earning assets · standalone · Q3 FY26 · as printed by AxisDirect (broker)",
+  "raw_match": "NIMs (as % of IEA) stood at 3.53% vs 3.51% QoQ",
+  "raw_value": "3.51"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea2.q4fy26.ax",
+  "company": "hdfc",
+  "display": "3.53%",
+  "doc": "AX",
+  "pdf_page": 1,
+  "basis": "NIM on interest-earning assets · standalone · Q4 FY26 · as printed by AxisDirect (broker)",
+  "raw_match": "NIMs (as % of IEA) stood at 3.53% vs 3.51% QoQ",
+  "raw_value": "3.53"
+ },
+ {
+  "id": "hdfc.kpi.roa.q3fy26",
+  "company": "hdfc",
+  "display": "1.92%",
+  "doc": "Q3D",
+  "pdf_page": 2,
+  "basis": "return on assets, annualised · standalone · Q3 FY26",
+  "raw_match": "RoA of 1.92%"
+ },
+ {
+  "id": "hdfc.kpi.roe.q3fy26",
+  "company": "hdfc",
+  "display": "13.9%",
+  "doc": "Q3D",
+  "pdf_page": 2,
+  "basis": "return on equity, annualised · standalone · Q3 FY26",
+  "raw_match": "RoE of 13.9%"
+ },
+ {
+  "id": "hdfc.kpi.roa.q4fy26",
+  "company": "hdfc",
+  "display": "1.96%",
+  "doc": "Q4D",
+  "pdf_page": 2,
+  "basis": "return on assets, annualised · standalone · Q4 FY26",
+  "raw_match": "RoA of 1.96%"
+ },
+ {
+  "id": "hdfc.kpi.roe.q4fy26",
+  "company": "hdfc",
+  "display": "14.1%",
+  "doc": "Q4D",
+  "pdf_page": 2,
+  "basis": "return on equity, annualised · standalone · Q4 FY26",
+  "raw_match": "RoE of 14.1%"
+ },
+ {
+  "id": "hdfc.kpi.roa.q1fy27",
+  "company": "hdfc",
+  "display": "1.85%",
+  "doc": "Q1D",
+  "pdf_page": 2,
+  "basis": "return on assets, annualised · standalone · Q1 FY27",
+  "raw_match": "RoA of 1.85%"
+ },
+ {
+  "id": "hdfc.kpi.roe.q1fy27",
+  "company": "hdfc",
+  "display": "13.8%",
+  "doc": "Q1D",
+  "pdf_page": 2,
+  "basis": "return on equity, annualised · standalone · Q1 FY27",
+  "raw_match": "RoE of 13.8%"
+ },
+ {
+  "id": "hdfc.kpi.crar.q3fy25",
+  "company": "hdfc",
+  "display": "20.0%",
+  "doc": "Q4D",
+  "pdf_page": 6,
+  "basis": "capital adequacy ratio (total capital) · standalone · 31 Dec 2024 · chart label",
+  "raw_match": "20.0% 19.6% 19.9% 20.0% 19.9% 19.7% 18.0% 17.7% 17.8% 17.9% 17.8% 17.7%",
+  "raw_value": "20.0"
+ },
+ {
+  "id": "hdfc.kpi.tier1.q3fy25",
+  "company": "hdfc",
+  "display": "18.0%",
+  "doc": "Q4D",
+  "pdf_page": 6,
+  "basis": "Tier 1 capital ratio · standalone · 31 Dec 2024 · chart label",
+  "raw_match": "20.0% 19.6% 19.9% 20.0% 19.9% 19.7% 18.0% 17.7% 17.8% 17.9% 17.8% 17.7%",
+  "raw_value": "18.0"
+ },
+ {
+  "id": "hdfc.kpi.crar.q4fy25",
+  "company": "hdfc",
+  "display": "19.6%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "capital adequacy ratio (total capital) · standalone · 31 Mar 2025 · chart label",
+  "raw_match": "19.6% 19.9% 20.0% 19.9% 19.7% 19.6% 17.7% 17.8% 17.9% 17.8% 17.7% 17.8%",
+  "raw_value": "19.6"
+ },
+ {
+  "id": "hdfc.kpi.tier1.q4fy25",
+  "company": "hdfc",
+  "display": "17.7%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "Tier 1 capital ratio · standalone · 31 Mar 2025 · chart label",
+  "raw_match": "19.6% 19.9% 20.0% 19.9% 19.7% 19.6% 17.7% 17.8% 17.9% 17.8% 17.7% 17.8%",
+  "raw_value": "17.7"
+ },
+ {
+  "id": "hdfc.kpi.crar.q1fy26",
+  "company": "hdfc",
+  "display": "19.9%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "capital adequacy ratio (total capital) · standalone · 30 Jun 2025 · chart label",
+  "raw_match": "19.6% 19.9% 20.0% 19.9% 19.7% 19.6% 17.7% 17.8% 17.9% 17.8% 17.7% 17.8%",
+  "raw_value": "19.9"
+ },
+ {
+  "id": "hdfc.kpi.tier1.q1fy26",
+  "company": "hdfc",
+  "display": "17.8%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "Tier 1 capital ratio · standalone · 30 Jun 2025 · chart label",
+  "raw_match": "19.6% 19.9% 20.0% 19.9% 19.7% 19.6% 17.7% 17.8% 17.9% 17.8% 17.7% 17.8%",
+  "raw_value": "17.8"
+ },
+ {
+  "id": "hdfc.kpi.crar.q2fy26",
+  "company": "hdfc",
+  "display": "20.0%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "capital adequacy ratio (total capital) · standalone · 30 Sep 2025 · chart label",
+  "raw_match": "19.6% 19.9% 20.0% 19.9% 19.7% 19.6% 17.7% 17.8% 17.9% 17.8% 17.7% 17.8%",
+  "raw_value": "20.0"
+ },
+ {
+  "id": "hdfc.kpi.tier1.q2fy26",
+  "company": "hdfc",
+  "display": "17.9%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "Tier 1 capital ratio · standalone · 30 Sep 2025 · chart label",
+  "raw_match": "19.6% 19.9% 20.0% 19.9% 19.7% 19.6% 17.7% 17.8% 17.9% 17.8% 17.7% 17.8%",
+  "raw_value": "17.9"
+ },
+ {
+  "id": "hdfc.kpi.tier1.q3fy26",
+  "company": "hdfc",
+  "display": "17.8%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "Tier 1 capital ratio · standalone · 31 Dec 2025 · chart label",
+  "raw_match": "19.6% 19.9% 20.0% 19.9% 19.7% 19.6% 17.7% 17.8% 17.9% 17.8% 17.7% 17.8%",
+  "raw_value": "17.8"
+ },
+ {
+  "id": "hdfc.kpi.tier1.q4fy26",
+  "company": "hdfc",
+  "display": "17.7%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "Tier 1 capital ratio · standalone · 31 Mar 2026 · chart label",
+  "raw_match": "19.6% 19.9% 20.0% 19.9% 19.7% 19.6% 17.7% 17.8% 17.9% 17.8% 17.7% 17.8%",
+  "raw_value": "17.7"
+ },
+ {
+  "id": "hdfc.kpi.tier1.q1fy27",
+  "company": "hdfc",
+  "display": "17.8%",
+  "doc": "Q1D",
+  "pdf_page": 6,
+  "basis": "Tier 1 capital ratio · standalone · 30 Jun 2026 · chart label",
+  "raw_match": "19.6% 19.9% 20.0% 19.9% 19.7% 19.6% 17.7% 17.8% 17.9% 17.8% 17.7% 17.8%",
+  "raw_value": "17.8"
+ },
+ {
+  "id": "hdfc.kpi.crar.q3fy26",
+  "company": "hdfc",
+  "display": "19.9%",
+  "doc": "Q3D",
+  "pdf_page": 3,
+  "basis": "capital adequacy ratio · standalone · 31 Dec 2025",
+  "raw_match": "Capital adequacy ratio at 19.9%"
+ },
+ {
+  "id": "hdfc.kpi.cet1.q3fy26",
+  "company": "hdfc",
+  "display": "17.4%",
+  "doc": "Q3D",
+  "pdf_page": 3,
+  "basis": "CET1 ratio · standalone · 31 Dec 2025",
+  "raw_match": "of which CET1 at 17.4%"
+ },
+ {
+  "id": "hdfc.kpi.crar.q4fy26",
+  "company": "hdfc",
+  "display": "19.7%",
+  "doc": "Q4D",
+  "pdf_page": 3,
+  "basis": "capital adequacy ratio · standalone · 31 Mar 2026",
+  "raw_match": "Capital adequacy ratio at 19.7%"
+ },
+ {
+  "id": "hdfc.kpi.cet1.q4fy26",
+  "company": "hdfc",
+  "display": "17.3%",
+  "doc": "Q4D",
+  "pdf_page": 3,
+  "basis": "CET1 ratio · standalone · 31 Mar 2026",
+  "raw_match": "of which CET1 at 17.3%"
+ },
+ {
+  "id": "hdfc.kpi.crar.q1fy27",
+  "company": "hdfc",
+  "display": "19.6%",
+  "doc": "Q1D",
+  "pdf_page": 3,
+  "basis": "capital adequacy ratio · standalone · 30 Jun 2026",
+  "raw_match": "Capital adequacy ratio at 19.6%"
+ },
+ {
+  "id": "hdfc.kpi.cet1.q1fy27",
+  "company": "hdfc",
+  "display": "17.4%",
+  "doc": "Q1D",
+  "pdf_page": 3,
+  "basis": "CET1 ratio · standalone · 30 Jun 2026",
+  "raw_match": "of which CET1 at 17.4%"
+ },
+ {
+  "id": "hdfc.kpi.cet1.q4fy25",
+  "company": "hdfc",
+  "display": "17.23%",
+  "doc": "AR25",
+  "pdf_page": 359,
+  "basis": "CET1 ratio, Basel III · standalone · 31 Mar 2025",
+  "raw_match": "CET 1 17.23% 16.30%",
+  "raw_value": "17.23"
+ },
+ {
+  "id": "hdfc.kpi.cti.q3fy25",
+  "company": "hdfc",
+  "display": "40.6%",
+  "doc": "Q4D",
+  "pdf_page": 16,
+  "basis": "core cost-to-income ratio · standalone · Q3 FY25",
+  "raw_match": "40.6% 39.8% 39.6% 39.2% 39.2% 39.9%",
+  "raw_value": "40.6"
+ },
+ {
+  "id": "hdfc.kpi.cti.q4fy25",
+  "company": "hdfc",
+  "display": "39.8%",
+  "doc": "Q1D",
+  "pdf_page": 16,
+  "basis": "core cost-to-income ratio · standalone · Q4 FY25",
+  "raw_match": "39.8% 39.6% 39.2% 39.2% 39.9% 39.2%",
+  "raw_value": "39.8"
+ },
+ {
+  "id": "hdfc.kpi.cti.q1fy26",
+  "company": "hdfc",
+  "display": "39.6%",
+  "doc": "Q1D",
+  "pdf_page": 16,
+  "basis": "core cost-to-income ratio · standalone · Q1 FY26 · excludes the HDB transaction gain (32.8% including it, same page)",
+  "raw_match": "39.8% 39.6% 39.2% 39.2% 39.9% 39.2%",
+  "raw_value": "39.6"
+ },
+ {
+  "id": "hdfc.kpi.cti.q2fy26",
+  "company": "hdfc",
+  "display": "39.2%",
+  "doc": "Q1D",
+  "pdf_page": 16,
+  "basis": "core cost-to-income ratio · standalone · Q2 FY26",
+  "raw_match": "39.8% 39.6% 39.2% 39.2% 39.9% 39.2%",
+  "raw_value": "39.2"
+ },
+ {
+  "id": "hdfc.kpi.cti.q3fy26",
+  "company": "hdfc",
+  "display": "39.2%",
+  "doc": "Q1D",
+  "pdf_page": 16,
+  "basis": "core cost-to-income ratio · standalone · Q3 FY26 · excludes the labour-code employee-benefit charge",
+  "raw_match": "39.8% 39.6% 39.2% 39.2% 39.9% 39.2%",
+  "raw_value": "39.2"
+ },
+ {
+  "id": "hdfc.kpi.cti.q4fy26",
+  "company": "hdfc",
+  "display": "39.9%",
+  "doc": "Q1D",
+  "pdf_page": 16,
+  "basis": "core cost-to-income ratio · standalone · Q4 FY26",
+  "raw_match": "39.8% 39.6% 39.2% 39.2% 39.9% 39.2%",
+  "raw_value": "39.9"
+ },
+ {
+  "id": "hdfc.kpi.cti.q1fy27",
+  "company": "hdfc",
+  "display": "39.2%",
+  "doc": "Q1D",
+  "pdf_page": 16,
+  "basis": "core cost-to-income ratio · standalone · Q1 FY27",
+  "raw_match": "39.8% 39.6% 39.2% 39.2% 39.9% 39.2%",
+  "raw_value": "39.2"
+ },
+ {
+  "id": "hdfc.kpi.cti_incl_gain.q1fy26",
+  "company": "hdfc",
+  "display": "32.8%",
+  "doc": "Q1D",
+  "pdf_page": 16,
+  "basis": "cost-to-income including the HDB transaction gain · standalone · Q1 FY26",
+  "raw_match": "# including transaction gains cost to income would be 32.8%"
+ },
+ {
+  "id": "hdfc.kpi.branches.q3fy25",
+  "company": "hdfc",
+  "display": "9,143",
+  "doc": "Q4D",
+  "pdf_page": 11,
+  "basis": "branches · standalone · 31 Dec 2024",
+  "raw_match": "9,143 9,455 9,499 9,545 9,616 9,689",
+  "raw_value": "9,143"
+ },
+ {
+  "id": "hdfc.kpi.branches.q4fy25",
+  "company": "hdfc",
+  "display": "9,455",
+  "doc": "Q1D",
+  "pdf_page": 11,
+  "basis": "branches · standalone · 31 Mar 2025",
+  "raw_match": "9,455 9,499 9,545 9,616 9,689 9,694",
+  "raw_value": "9,455"
+ },
+ {
+  "id": "hdfc.kpi.branches.q1fy26",
+  "company": "hdfc",
+  "display": "9,499",
+  "doc": "Q1D",
+  "pdf_page": 11,
+  "basis": "branches · standalone · 30 Jun 2025",
+  "raw_match": "9,455 9,499 9,545 9,616 9,689 9,694",
+  "raw_value": "9,499"
+ },
+ {
+  "id": "hdfc.kpi.branches.q2fy26",
+  "company": "hdfc",
+  "display": "9,545",
+  "doc": "Q1D",
+  "pdf_page": 11,
+  "basis": "branches · standalone · 30 Sep 2025",
+  "raw_match": "9,455 9,499 9,545 9,616 9,689 9,694",
+  "raw_value": "9,545"
+ },
+ {
+  "id": "hdfc.kpi.branches.q3fy26",
+  "company": "hdfc",
+  "display": "9,616",
+  "doc": "Q1D",
+  "pdf_page": 11,
+  "basis": "branches · standalone · 31 Dec 2025",
+  "raw_match": "9,455 9,499 9,545 9,616 9,689 9,694",
+  "raw_value": "9,616"
+ },
+ {
+  "id": "hdfc.kpi.branches.q4fy26",
+  "company": "hdfc",
+  "display": "9,689",
+  "doc": "Q1D",
+  "pdf_page": 11,
+  "basis": "branches · standalone · 31 Mar 2026",
+  "raw_match": "9,455 9,499 9,545 9,616 9,689 9,694",
+  "raw_value": "9,689"
+ },
+ {
+  "id": "hdfc.kpi.branches.q1fy27",
+  "company": "hdfc",
+  "display": "9,694",
+  "doc": "Q1D",
+  "pdf_page": 11,
+  "basis": "branches · standalone · 30 Jun 2026",
+  "raw_match": "9,455 9,499 9,545 9,616 9,689 9,694",
+  "raw_value": "9,694"
+ },
+ {
+  "id": "hdfc.kpi.nnpa.q3fy25",
+  "company": "hdfc",
+  "display": "0.46%",
+  "doc": "DC",
+  "pdf_page": 2,
+  "basis": "net NPA ratio · standalone · Q3 FY25 · as printed in a DevenChoksey chart (broker, 'Source: Company')",
+  "raw_match": "0.31% 0.33% 0.39% 0.41% 0.46% 0.43% 0.47% 0.42% 0.42% 0.40%",
+  "raw_value": "0.46"
+ },
+ {
+  "id": "hdfc.kpi.nnpa.q4fy25",
+  "company": "hdfc",
+  "display": "0.43%",
+  "doc": "AR25",
+  "pdf_page": 380,
+  "basis": "net NPAs to net advances · standalone · 31 Mar 2025",
+  "raw_match": "Net non-performing assets2 to net advances3 0.43% 0.33%",
+  "raw_value": "0.43"
+ },
+ {
+  "id": "hdfc.kpi.nnpa.q1fy26",
+  "company": "hdfc",
+  "display": "0.47%",
+  "doc": "DC",
+  "pdf_page": 2,
+  "basis": "net NPA ratio · standalone · Q1 FY26 · DevenChoksey chart (broker)",
+  "raw_match": "0.31% 0.33% 0.39% 0.41% 0.46% 0.43% 0.47% 0.42% 0.42% 0.40%",
+  "raw_value": "0.47"
+ },
+ {
+  "id": "hdfc.kpi.nnpa.q2fy26",
+  "company": "hdfc",
+  "display": "0.42%",
+  "doc": "DC",
+  "pdf_page": 2,
+  "basis": "net NPA ratio · standalone · Q2 FY26 · DevenChoksey chart (broker)",
+  "raw_match": "0.31% 0.33% 0.39% 0.41% 0.46% 0.43% 0.47% 0.42% 0.42% 0.40%",
+  "raw_value": "0.42",
+  "note": "the same chart prints 0.40% for Q4 FY26 while DC p.1 and p.4 say 0.38%"
+ },
+ {
+  "id": "hdfc.kpi.nnpa.q3fy26",
+  "company": "hdfc",
+  "display": "0.42%",
+  "doc": "AX",
+  "pdf_page": 1,
+  "basis": "net NPA ratio · standalone · 31 Dec 2025 · as printed by AxisDirect",
+  "raw_match": "1.15/0.38% vs 1.24/0.42% QoQ",
+  "raw_value": "0.42"
+ },
+ {
+  "id": "hdfc.kpi.nnpa.q4fy26",
+  "company": "hdfc",
+  "display": "0.38%",
+  "doc": "AR26",
+  "pdf_page": 425,
+  "basis": "net NPAs to net advances · standalone · 31 Mar 2026",
+  "raw_match": "Net non-performing assets2 to net advances3 0.38% 0.43%",
+  "raw_value": "0.38"
+ },
+ {
+  "id": "hdfc.kpi.nnpa1.q3fy25",
+  "company": "hdfc",
+  "display": "0.5%",
+  "doc": "Q3D",
+  "pdf_page": 17,
+  "basis": "net NPA ratio · standalone · 31 Dec 2024 · bank chart, one decimal",
+  "raw_match": "1.4% 1.3% 1.4% 1.2% 1.2% 0.5% 0.4% 0.5% 0.4% 0.4%",
+  "raw_value": "0.5"
+ },
+ {
+  "id": "hdfc.kpi.nnpa1.q1fy26",
+  "company": "hdfc",
+  "display": "0.5%",
+  "doc": "Q1D",
+  "pdf_page": 17,
+  "basis": "net NPA ratio · standalone · 30 Jun 2025 · bank chart, one decimal",
+  "raw_match": "1.4% 1.2% 1.2% 1.2% 1.2% 0.5% 0.4% 0.4% 0.4% 0.4%",
+  "raw_value": "0.5"
+ },
+ {
+  "id": "hdfc.kpi.nnpa1.q2fy26",
+  "company": "hdfc",
+  "display": "0.4%",
+  "doc": "Q1D",
+  "pdf_page": 17,
+  "basis": "net NPA ratio · standalone · 30 Sep 2025 · bank chart, one decimal",
+  "raw_match": "1.4% 1.2% 1.2% 1.2% 1.2% 0.5% 0.4% 0.4% 0.4% 0.4%",
+  "raw_value": "0.4"
+ },
+ {
+  "id": "hdfc.kpi.nnpa.q1fy27",
+  "company": "hdfc",
+  "display": "0.4%",
+  "doc": "Q1D",
+  "pdf_page": 17,
+  "basis": "net NPA ratio · standalone · 30 Jun 2026 · bank chart, one decimal (no two-decimal figure in the corpus)",
+  "raw_match": "1.4% 1.2% 1.2% 1.2% 1.2% 0.5% 0.4% 0.4% 0.4% 0.4%",
+  "raw_value": "0.4"
+ },
+ {
+  "id": "hdfc.kpi.slippages.q2fy26",
+  "company": "hdfc",
+  "display": "7,400",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "gross slippages (additions to GNPA) · standalone · Q2 FY26 · Rs crore; waterfall prints Rs bn (x100)",
+  "raw_match": "343 74 68 33 370 GNPA as on Jun'25",
+  "raw_value": "74",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.slippages_exagri.q2fy26",
+  "company": "hdfc",
+  "display": "6,300",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "gross slippages excluding agri · standalone · Q2 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "(Ex-agri : 63 bn)",
+  "raw_value": "63",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.upgrades.q2fy26",
+  "company": "hdfc",
+  "display": "6,800",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "upgrades and recoveries · standalone · Q2 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "343 74 68 33 370 GNPA as on Jun'25",
+  "raw_value": "68",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.writeoffs.q2fy26",
+  "company": "hdfc",
+  "display": "3,300",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "write-offs · standalone · Q2 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "343 74 68 33 370 GNPA as on Jun'25",
+  "raw_value": "33",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gnpa_stock.q2fy26",
+  "company": "hdfc",
+  "display": "34,300",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "GNPA stock, closing · standalone · 30 Sep 2025 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "343 74 68 33 370 GNPA as on Jun'25",
+  "raw_value": "343",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gnpa_stock_open.q2fy26",
+  "company": "hdfc",
+  "display": "37,000",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "GNPA stock, opening (= 30 Jun 2025) · standalone · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "343 74 68 33 370 GNPA as on Jun'25",
+  "raw_value": "370",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.slippages.q3fy26",
+  "company": "hdfc",
+  "display": "8,600",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "gross slippages (additions to GNPA) · standalone · Q3 FY26 · Rs crore; waterfall prints Rs bn (x100)",
+  "raw_match": "352 86 45 32 343 GNPA as on Sep'25",
+  "raw_value": "86",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.slippages_exagri.q3fy26",
+  "company": "hdfc",
+  "display": "6,700",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "gross slippages excluding agri · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "(Ex-agri : 67 bn)",
+  "raw_value": "67",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.upgrades.q3fy26",
+  "company": "hdfc",
+  "display": "4,500",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "upgrades and recoveries · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "352 86 45 32 343 GNPA as on Sep'25",
+  "raw_value": "45",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.writeoffs.q3fy26",
+  "company": "hdfc",
+  "display": "3,200",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "write-offs · standalone · Q3 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "352 86 45 32 343 GNPA as on Sep'25",
+  "raw_value": "32",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gnpa_stock.q3fy26",
+  "company": "hdfc",
+  "display": "35,200",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "GNPA stock, closing · standalone · 31 Dec 2025 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "352 86 45 32 343 GNPA as on Sep'25",
+  "raw_value": "352",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gnpa_stock_open.q3fy26",
+  "company": "hdfc",
+  "display": "34,300",
+  "doc": "Q3D",
+  "pdf_page": 18,
+  "basis": "GNPA stock, opening (= 30 Sep 2025) · standalone · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "352 86 45 32 343 GNPA as on Sep'25",
+  "raw_value": "343",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.slippages.q4fy26",
+  "company": "hdfc",
+  "display": "6,200",
+  "doc": "Q4D",
+  "pdf_page": 18,
+  "basis": "gross slippages (additions to GNPA) · standalone · Q4 FY26 · Rs crore; waterfall prints Rs bn (x100)",
+  "raw_match": "341 62 46 27 352 GNPA as on Dec'25",
+  "raw_value": "62",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.slippages_exagri.q4fy26",
+  "company": "hdfc",
+  "display": "5,400",
+  "doc": "Q4D",
+  "pdf_page": 18,
+  "basis": "gross slippages excluding agri · standalone · Q4 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "(Ex-agri : 54 bn)",
+  "raw_value": "54",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.upgrades.q4fy26",
+  "company": "hdfc",
+  "display": "4,600",
+  "doc": "Q4D",
+  "pdf_page": 18,
+  "basis": "upgrades and recoveries · standalone · Q4 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "341 62 46 27 352 GNPA as on Dec'25",
+  "raw_value": "46",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.writeoffs.q4fy26",
+  "company": "hdfc",
+  "display": "2,700",
+  "doc": "Q4D",
+  "pdf_page": 18,
+  "basis": "write-offs · standalone · Q4 FY26 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "341 62 46 27 352 GNPA as on Dec'25",
+  "raw_value": "27",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gnpa_stock.q4fy26",
+  "company": "hdfc",
+  "display": "34,100",
+  "doc": "Q4D",
+  "pdf_page": 18,
+  "basis": "GNPA stock, closing · standalone · 31 Mar 2026 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "341 62 46 27 352 GNPA as on Dec'25",
+  "raw_value": "341",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gnpa_stock_open.q4fy26",
+  "company": "hdfc",
+  "display": "35,200",
+  "doc": "Q4D",
+  "pdf_page": 18,
+  "basis": "GNPA stock, opening (= 31 Dec 2025) · standalone · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "341 62 46 27 352 GNPA as on Dec'25",
+  "raw_value": "352",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.slippages.q1fy27",
+  "company": "hdfc",
+  "display": "8,000",
+  "doc": "Q1D",
+  "pdf_page": 18,
+  "basis": "gross slippages (additions to GNPA) · standalone · Q1 FY27 · Rs crore; waterfall prints Rs bn (x100)",
+  "raw_match": "358 80 40 23 341 GNPA as on Mar'26",
+  "raw_value": "80",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.slippages_exagri.q1fy27",
+  "company": "hdfc",
+  "display": "6,100",
+  "doc": "Q1D",
+  "pdf_page": 18,
+  "basis": "gross slippages excluding agri · standalone · Q1 FY27 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "(Ex-agri : 61 bn)",
+  "raw_value": "61",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.upgrades.q1fy27",
+  "company": "hdfc",
+  "display": "4,000",
+  "doc": "Q1D",
+  "pdf_page": 18,
+  "basis": "upgrades and recoveries · standalone · Q1 FY27 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "358 80 40 23 341 GNPA as on Mar'26",
+  "raw_value": "40",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.writeoffs.q1fy27",
+  "company": "hdfc",
+  "display": "2,300",
+  "doc": "Q1D",
+  "pdf_page": 18,
+  "basis": "write-offs · standalone · Q1 FY27 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "358 80 40 23 341 GNPA as on Mar'26",
+  "raw_value": "23",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gnpa_stock.q1fy27",
+  "company": "hdfc",
+  "display": "35,800",
+  "doc": "Q1D",
+  "pdf_page": 18,
+  "basis": "GNPA stock, closing · standalone · 30 Jun 2026 · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "358 80 40 23 341 GNPA as on Mar'26",
+  "raw_value": "358",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.gnpa_stock_open.q1fy27",
+  "company": "hdfc",
+  "display": "34,100",
+  "doc": "Q1D",
+  "pdf_page": 18,
+  "basis": "GNPA stock, opening (= 31 Mar 2026) · standalone · Rs crore; deck prints Rs bn (x100)",
+  "raw_match": "358 80 40 23 341 GNPA as on Mar'26",
+  "raw_value": "341",
+  "scale": 100
+ },
+ {
+  "id": "hdfc.kpi.nim_wf.fy24",
+  "company": "hdfc",
+  "display": "3.53%",
+  "doc": "AR24",
+  "pdf_page": 392,
+  "basis": "NIM = NII / working funds (daily average total assets) · standalone · full year · FY24",
+  "raw_match": "Net interest income2 as a percentage to working funds 3.53% 4.08%",
+  "raw_value": "3.53"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea.fy24",
+  "company": "hdfc",
+  "display": "3.74%",
+  "doc": "AR24",
+  "pdf_page": 392,
+  "basis": "NIM = NII / average interest-earning assets · standalone · full year · FY24",
+  "raw_match": "Net interest income as a percentage to average interest earning assets 3.74% 4.33%",
+  "raw_value": "3.74"
+ },
+ {
+  "id": "hdfc.kpi.cod.fy24",
+  "company": "hdfc",
+  "display": "4.87%",
+  "doc": "AR24",
+  "pdf_page": 392,
+  "basis": "cost of deposits = interest on deposits / daily average deposits · standalone · full year · FY24",
+  "raw_match": "Cost of Deposits3 4.87% 3.80%",
+  "raw_value": "4.87"
+ },
+ {
+  "id": "hdfc.kpi.ii_wf.fy24",
+  "company": "hdfc",
+  "display": "8.41%",
+  "doc": "AR24",
+  "pdf_page": 392,
+  "basis": "interest income / working funds · standalone · full year · FY24",
+  "raw_match": "Interest income as a percentage to working funds1 8.41% 7.60%",
+  "raw_value": "8.41"
+ },
+ {
+  "id": "hdfc.kpi.nonii_wf.fy24",
+  "company": "hdfc",
+  "display": "1.60%",
+  "doc": "AR24",
+  "pdf_page": 392,
+  "basis": "non-interest income / working funds · standalone · full year · FY24",
+  "raw_match": "Non-interest income as a percentage to working funds 1.60% 1.47%",
+  "raw_value": "1.60"
+ },
+ {
+  "id": "hdfc.kpi.opprofit_wf.fy24",
+  "company": "hdfc",
+  "display": "3.07%",
+  "doc": "AR24",
+  "pdf_page": 392,
+  "basis": "operating profit (pre-provision) / working funds · standalone · full year · FY24",
+  "raw_match": "Operating profit4 as a percentage to working funds 3.07% 3.31%",
+  "raw_value": "3.07"
+ },
+ {
+  "id": "hdfc.kpi.roa.fy24",
+  "company": "hdfc",
+  "display": "1.98%",
+  "doc": "AR24",
+  "pdf_page": 392,
+  "basis": "return on average assets · standalone · full year · FY24",
+  "raw_match": "Return on assets (average) 1.98% 2.07%",
+  "raw_value": "1.98"
+ },
+ {
+  "id": "hdfc.kpi.roe.fy24",
+  "company": "hdfc",
+  "display": "16.09%",
+  "doc": "AR24",
+  "pdf_page": 392,
+  "basis": "return on average equity · standalone · full year · FY24",
+  "raw_match": "Return on Equity Ratio8 16.09% 17.39%",
+  "raw_value": "16.09"
+ },
+ {
+  "id": "hdfc.kpi.nim_wf.fy25",
+  "company": "hdfc",
+  "display": "3.48%",
+  "doc": "AR25",
+  "pdf_page": 417,
+  "basis": "NIM = NII / working funds (daily average total assets) · standalone · full year · FY25",
+  "raw_match": "Net interest income2 as a percentage to working funds 3.48% 3.53%",
+  "raw_value": "3.48"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea.fy25",
+  "company": "hdfc",
+  "display": "3.67%",
+  "doc": "AR25",
+  "pdf_page": 417,
+  "basis": "NIM = NII / average interest-earning assets · standalone · full year · FY25",
+  "raw_match": "Net interest income as a percentage to average interest earning assets 3.67% 3.74%",
+  "raw_value": "3.67"
+ },
+ {
+  "id": "hdfc.kpi.cod.fy25",
+  "company": "hdfc",
+  "display": "5.21%",
+  "doc": "AR25",
+  "pdf_page": 417,
+  "basis": "cost of deposits = interest on deposits / daily average deposits · standalone · full year · FY25",
+  "raw_match": "Cost of Deposits3 5.21% 4.87%",
+  "raw_value": "5.21"
+ },
+ {
+  "id": "hdfc.kpi.ii_wf.fy25",
+  "company": "hdfc",
+  "display": "8.52%",
+  "doc": "AR25",
+  "pdf_page": 417,
+  "basis": "interest income / working funds · standalone · full year · FY25",
+  "raw_match": "Interest income as a percentage to working funds1 8.52% 8.41%",
+  "raw_value": "8.52"
+ },
+ {
+  "id": "hdfc.kpi.nonii_wf.fy25",
+  "company": "hdfc",
+  "display": "1.29%",
+  "doc": "AR25",
+  "pdf_page": 417,
+  "basis": "non-interest income / working funds · standalone · full year · FY25",
+  "raw_match": "Non-interest income as a percentage to working funds 1.29% 1.60%",
+  "raw_value": "1.29"
+ },
+ {
+  "id": "hdfc.kpi.opprofit_wf.fy25",
+  "company": "hdfc",
+  "display": "2.84%",
+  "doc": "AR25",
+  "pdf_page": 417,
+  "basis": "operating profit (pre-provision) / working funds · standalone · full year · FY25",
+  "raw_match": "Operating profit4 as a percentage to working funds 2.84% 3.07%",
+  "raw_value": "2.84"
+ },
+ {
+  "id": "hdfc.kpi.roa.fy25",
+  "company": "hdfc",
+  "display": "1.91%",
+  "doc": "AR25",
+  "pdf_page": 417,
+  "basis": "return on average assets · standalone · full year · FY25",
+  "raw_match": "Return on assets (average) 1.91% 1.98%",
+  "raw_value": "1.91"
+ },
+ {
+  "id": "hdfc.kpi.roe.fy25",
+  "company": "hdfc",
+  "display": "14.56%",
+  "doc": "AR25",
+  "pdf_page": 417,
+  "basis": "return on average equity · standalone · full year · FY25",
+  "raw_match": "Return on Equity Ratio8 14.56% 16.09%",
+  "raw_value": "14.56"
+ },
+ {
+  "id": "hdfc.kpi.nim_wf.fy26",
+  "company": "hdfc",
+  "display": "3.34%",
+  "doc": "AR26",
+  "pdf_page": 460,
+  "basis": "NIM = NII / working funds (daily average total assets) · standalone · full year · FY26",
+  "raw_match": "Net interest income2 as a percentage to working funds 3.34% 3.48%",
+  "raw_value": "3.34"
+ },
+ {
+  "id": "hdfc.kpi.nim_iea.fy26",
+  "company": "hdfc",
+  "display": "3.50%",
+  "doc": "AR26",
+  "pdf_page": 460,
+  "basis": "NIM = NII / average interest-earning assets · standalone · full year · FY26",
+  "raw_match": "Net interest income as a percentage to average interest earning assets 3.50% 3.67%",
+  "raw_value": "3.50"
+ },
+ {
+  "id": "hdfc.kpi.cod.fy26",
+  "company": "hdfc",
+  "display": "5.05%",
+  "doc": "AR26",
+  "pdf_page": 460,
+  "basis": "cost of deposits = interest on deposits / daily average deposits · standalone · full year · FY26",
+  "raw_match": "Cost of Deposits3 5.05% 5.21%",
+  "raw_value": "5.05"
+ },
+ {
+  "id": "hdfc.kpi.ii_wf.fy26",
+  "company": "hdfc",
+  "display": "7.98%",
+  "doc": "AR26",
+  "pdf_page": 460,
+  "basis": "interest income / working funds · standalone · full year · FY26",
+  "raw_match": "Interest income as a percentage to working funds1 7.98% 8.52%",
+  "raw_value": "7.98"
+ },
+ {
+  "id": "hdfc.kpi.nonii_wf.fy26",
+  "company": "hdfc",
+  "display": "1.62%",
+  "doc": "AR26",
+  "pdf_page": 460,
+  "basis": "non-interest income / working funds · standalone · full year · FY26",
+  "raw_match": "Non-interest income as a percentage to working funds 1.62% 1.29%",
+  "raw_value": "1.62"
+ },
+ {
+  "id": "hdfc.kpi.opprofit_wf.fy26",
+  "company": "hdfc",
+  "display": "3.07%",
+  "doc": "AR26",
+  "pdf_page": 460,
+  "basis": "operating profit (pre-provision) / working funds · standalone · full year · FY26",
+  "raw_match": "Operating profit4 as a percentage to working funds 3.07% 2.84%",
+  "raw_value": "3.07"
+ },
+ {
+  "id": "hdfc.kpi.roa.fy26",
+  "company": "hdfc",
+  "display": "1.94%",
+  "doc": "AR26",
+  "pdf_page": 460,
+  "basis": "return on average assets · standalone · full year · FY26",
+  "raw_match": "Return on assets (average) 1.94% 1.91%",
+  "raw_value": "1.94"
+ },
+ {
+  "id": "hdfc.kpi.roe.fy26",
+  "company": "hdfc",
+  "display": "14.29%",
+  "doc": "AR26",
+  "pdf_page": 460,
+  "basis": "return on average equity · standalone · full year · FY26",
+  "raw_match": "Return on Equity Ratio8 14.29% 14.56%",
+  "raw_value": "14.29"
+ },
+ {
+  "id": "hdfc.kpi.net_adv.fy24",
+  "company": "hdfc",
+  "display": "24,84,862",
+  "doc": "AR24",
+  "pdf_page": 236,
+  "basis": "advances (net) · standalone · 31 Mar 2024 · Rs crore",
+  "raw_match": "Total Advances : 24,84,862 crore (YoY: 55.2 per cent)",
+  "raw_value": "24,84,862"
+ },
+ {
+  "id": "hdfc.kpi.net_adv_yoy.fy24",
+  "company": "hdfc",
+  "display": "55.2%",
+  "doc": "AR24",
+  "pdf_page": 236,
+  "basis": "advances growth FY24 · standalone · inflated by the 1 Jul 2023 merger with HDFC Ltd",
+  "raw_match": "Total Advances : 24,84,862 crore (YoY: 55.2 per cent)",
+  "raw_value": "55.2"
+ },
+ {
+  "id": "hdfc.kpi.net_adv.fy25",
+  "company": "hdfc",
+  "display": "26,19,608.6",
+  "doc": "AR25",
+  "pdf_page": 222,
+  "basis": "advances (net) · standalone · 31 Mar 2025 · Rs crore",
+  "raw_match": "H 26,19,608.6 crore (YoY: Up 5.4 per cent)",
+  "raw_value": "26,19,608.6"
+ },
+ {
+  "id": "hdfc.kpi.net_adv_yoy.fy25",
+  "company": "hdfc",
+  "display": "5.4%",
+  "doc": "AR25",
+  "pdf_page": 222,
+  "basis": "advances growth FY25 · standalone",
+  "raw_match": "H 26,19,608.6 crore (YoY: Up 5.4 per cent)",
+  "raw_value": "5.4"
+ },
+ {
+  "id": "hdfc.kpi.net_adv.fy26",
+  "company": "hdfc",
+  "display": "29,37,166.3",
+  "doc": "AR26",
+  "pdf_page": 273,
+  "basis": "advances (net) · standalone · 31 Mar 2026 · Rs crore",
+  "raw_match": "H 29,37,166.3 crore (YoY: Up 12.1 per cent)",
+  "raw_value": "29,37,166.3"
+ },
+ {
+  "id": "hdfc.kpi.net_adv_yoy.fy26",
+  "company": "hdfc",
+  "display": "12.1%",
+  "doc": "AR26",
+  "pdf_page": 272,
+  "basis": "advances growth FY26 · standalone",
+  "raw_match": "Advances grew by 12.1 per cent"
+ },
+ {
+  "id": "hdfc.kpi.deposits.fy24",
+  "company": "hdfc",
+  "display": "23,79,786",
+  "doc": "AR24",
+  "pdf_page": 236,
+  "basis": "total deposits · standalone · 31 Mar 2024 · Rs crore",
+  "raw_match": "Total Deposits : 23,79,786 crore (YoY: 26.4 per cent)",
+  "raw_value": "23,79,786"
+ },
+ {
+  "id": "hdfc.kpi.deposits_yoy.fy24",
+  "company": "hdfc",
+  "display": "26.4%",
+  "doc": "AR24",
+  "pdf_page": 236,
+  "basis": "deposit growth FY24 · standalone · merger year",
+  "raw_match": "Total Deposits : 23,79,786 crore (YoY: 26.4 per cent)",
+  "raw_value": "26.4"
+ },
+ {
+  "id": "hdfc.kpi.deposits.fy25",
+  "company": "hdfc",
+  "display": "27,14,714.9",
+  "doc": "AR25",
+  "pdf_page": 222,
+  "basis": "total deposits · standalone · 31 Mar 2025 · Rs crore",
+  "raw_match": "H 27,14,714.9 crore (YoY: Up 14.1 per cent)",
+  "raw_value": "27,14,714.9"
+ },
+ {
+  "id": "hdfc.kpi.deposits_yoy.fy25",
+  "company": "hdfc",
+  "display": "14.1%",
+  "doc": "AR25",
+  "pdf_page": 222,
+  "basis": "deposit growth FY25 · standalone",
+  "raw_match": "H 27,14,714.9 crore (YoY: Up 14.1 per cent)",
+  "raw_value": "14.1"
+ },
+ {
+  "id": "hdfc.kpi.deposits.fy26",
+  "company": "hdfc",
+  "display": "31,05,250.5",
+  "doc": "AR26",
+  "pdf_page": 273,
+  "basis": "total deposits · standalone · 31 Mar 2026 · Rs crore",
+  "raw_match": "H 31,05,250.5 crore (YoY: Up 14.4 per cent)",
+  "raw_value": "31,05,250.5"
+ },
+ {
+  "id": "hdfc.kpi.deposits_yoy.fy26",
+  "company": "hdfc",
+  "display": "14.4%",
+  "doc": "AR26",
+  "pdf_page": 272,
+  "basis": "deposit growth FY26 · standalone",
+  "raw_match": "Deposits grew by 14.4 per cent"
+ },
+ {
+  "id": "hdfc.kpi.casa.fy24",
+  "company": "hdfc",
+  "display": "38.2%",
+  "doc": "AR24",
+  "pdf_page": 242,
+  "basis": "CASA ratio · standalone · 31 Mar 2024",
+  "raw_match": "accounted for 38.2 per cent of Total Deposits"
+ },
+ {
+  "id": "hdfc.kpi.casa.fy25",
+  "company": "hdfc",
+  "display": "34.8%",
+  "doc": "AR25",
+  "pdf_page": 228,
+  "basis": "CASA ratio · standalone · 31 Mar 2025",
+  "raw_match": "accounted for 34.8 per cent of Total Deposits"
+ },
+ {
+  "id": "hdfc.kpi.casa.fy26",
+  "company": "hdfc",
+  "display": "34.1%",
+  "doc": "AR26",
+  "pdf_page": 280,
+  "basis": "CASA ratio · standalone · 31 Mar 2026",
+  "raw_match": "accounted for 34.1 per cent of Total Deposits"
+ },
+ {
+  "id": "hdfc.kpi.ldr.fy24",
+  "company": "hdfc",
+  "display": "104.4%",
+  "basis": "computed: loan-to-deposit ratio = net advances / deposits · standalone · 31 Mar 2024",
+  "derived_from": [
+   "hdfc.kpi.net_adv.fy24",
+   "hdfc.kpi.deposits.fy24"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.kpi.ldr.fy25",
+  "company": "hdfc",
+  "display": "96.5%",
+  "basis": "computed: loan-to-deposit ratio = net advances / deposits · standalone · 31 Mar 2025",
+  "derived_from": [
+   "hdfc.kpi.net_adv.fy25",
+   "hdfc.kpi.deposits.fy25"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.kpi.ldr.fy26",
+  "company": "hdfc",
+  "display": "94.6%",
+  "basis": "computed: loan-to-deposit ratio = net advances / deposits · standalone · 31 Mar 2026",
+  "derived_from": [
+   "hdfc.kpi.net_adv.fy26",
+   "hdfc.kpi.deposits.fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "hdfc.kpi.ldr_printed.fy25",
+  "company": "hdfc",
+  "display": "96%",
+  "doc": "AR25",
+  "pdf_page": 33,
+  "basis": "credit-deposit ratio as printed by the bank · 31 Mar 2025",
+  "raw_match": "96 per cent as on March 31, 2025"
+ },
+ {
+  "id": "hdfc.kpi.nim_avgassets.fy26.p279",
+  "company": "hdfc",
+  "display": "3.34%",
+  "doc": "AR26",
+  "pdf_page": 279,
+  "basis": "NIM as percentage of average assets · standalone · FY26 (directors' report)",
+  "raw_match": "(as percentage of average assets) was at 3.34 per cent"
+ },
+ {
+  "id": "hdfc.kpi.gnpa.fy24",
+  "company": "hdfc",
+  "display": "1.24%",
+  "doc": "AR24",
+  "pdf_page": 355,
+  "basis": "GNPA, % of gross advances · standalone · 31 Mar 2024",
+  "raw_match": "Gross non-performing assets to gross advances1 1.24% 1.12%",
+  "raw_value": "1.24"
+ },
+ {
+  "id": "hdfc.kpi.nnpa.fy24",
+  "company": "hdfc",
+  "display": "0.33%",
+  "doc": "AR24",
+  "pdf_page": 355,
+  "basis": "net NPAs to net advances · standalone · 31 Mar 2024",
+  "raw_match": "Net non-performing assets2 to net advances3 0.33% 0.27%",
+  "raw_value": "0.33"
+ },
+ {
+  "id": "hdfc.kpi.pcr.fy24",
+  "company": "hdfc",
+  "display": "74.04%",
+  "doc": "AR24",
+  "pdf_page": 355,
+  "basis": "specific provision coverage ratio (excludes write-offs) · standalone · 31 Mar 2024",
+  "raw_match": "Provision coverage ratio4 74.04% 75.76%",
+  "raw_value": "74.04"
+ },
+ {
+  "id": "hdfc.kpi.gnpa.fy25",
+  "company": "hdfc",
+  "display": "1.33%",
+  "doc": "AR25",
+  "pdf_page": 380,
+  "basis": "GNPA, % of gross advances · standalone · 31 Mar 2025",
+  "raw_match": "Gross non-performing assets to gross advances1 1.33% 1.24%",
+  "raw_value": "1.33"
+ },
+ {
+  "id": "hdfc.kpi.pcr.fy25",
+  "company": "hdfc",
+  "display": "67.86%",
+  "doc": "AR25",
+  "pdf_page": 380,
+  "basis": "specific provision coverage ratio · standalone · 31 Mar 2025",
+  "raw_match": "Provision coverage ratio4 67.86% 74.04%",
+  "raw_value": "67.86"
+ },
+ {
+  "id": "hdfc.kpi.gnpa.fy26",
+  "company": "hdfc",
+  "display": "1.15%",
+  "doc": "AR26",
+  "pdf_page": 425,
+  "basis": "GNPA, % of gross advances · standalone · 31 Mar 2026",
+  "raw_match": "Gross non-performing assets to gross advances1 1.15% 1.33%",
+  "raw_value": "1.15"
+ },
+ {
+  "id": "hdfc.kpi.pcr.fy26",
+  "company": "hdfc",
+  "display": "67.21%",
+  "doc": "AR26",
+  "pdf_page": 425,
+  "basis": "specific provision coverage ratio · standalone · 31 Mar 2026",
+  "raw_match": "Provision coverage ratio4 67.21% 67.86%",
+  "raw_value": "67.21"
+ },
+ {
+  "id": "hdfc.kpi.floating_prov.fy24",
+  "company": "hdfc",
+  "display": "12,351.28",
+  "doc": "AR24",
+  "pdf_page": 355,
+  "basis": "floating provisions held (in other liabilities) · standalone · 31 Mar 2024 · Rs crore",
+  "raw_match": "Closing balance 12,351.28 1,451.28",
+  "raw_value": "12,351.28"
+ },
+ {
+  "id": "hdfc.kpi.floating_prov.fy25",
+  "company": "hdfc",
+  "display": "12,351.28",
+  "doc": "AR25",
+  "pdf_page": 380,
+  "basis": "floating provisions held (in other liabilities) · standalone · 31 Mar 2025 · Rs crore",
+  "raw_match": "Closing balance 12,351.28 12,351.28",
+  "raw_value": "12,351.28"
+ },
+ {
+  "id": "hdfc.kpi.floating_prov.fy26",
+  "company": "hdfc",
+  "display": "21,351.28",
+  "doc": "AR26",
+  "pdf_page": 425,
+  "basis": "floating provisions held (in other liabilities) · standalone · 31 Mar 2026 · Rs crore",
+  "raw_match": "Closing balance 21,351.28 12,351.28",
+  "raw_value": "21,351.28"
+ },
+ {
+  "id": "hdfc.kpi.cet1.fy24",
+  "company": "hdfc",
+  "display": "16.30%",
+  "doc": "AR24",
+  "pdf_page": 336,
+  "basis": "CET1 ratio, Basel III · standalone · 31 Mar 2024",
+  "raw_match": "CET 1 16.30% 16.40%",
+  "raw_value": "16.30"
+ },
+ {
+  "id": "hdfc.kpi.tier1.fy24",
+  "company": "hdfc",
+  "display": "16.79%",
+  "doc": "AR24",
+  "pdf_page": 336,
+  "basis": "Tier 1 ratio, Basel III · standalone · 31 Mar 2024",
+  "raw_match": "Tier 1 16.79% 17.13%",
+  "raw_value": "16.79"
+ },
+ {
+  "id": "hdfc.kpi.crar.fy24",
+  "company": "hdfc",
+  "display": "18.80%",
+  "doc": "AR24",
+  "pdf_page": 336,
+  "basis": "capital adequacy ratio (total), Basel III · standalone · 31 Mar 2024",
+  "raw_match": "Total 18.80% 19.26%",
+  "raw_value": "18.80"
+ },
+ {
+  "id": "hdfc.kpi.tier1.fy25",
+  "company": "hdfc",
+  "display": "17.69%",
+  "doc": "AR25",
+  "pdf_page": 359,
+  "basis": "Tier 1 ratio, Basel III · standalone · 31 Mar 2025",
+  "raw_match": "Tier 1 17.69% 16.79%",
+  "raw_value": "17.69"
+ },
+ {
+  "id": "hdfc.kpi.crar.fy25",
+  "company": "hdfc",
+  "display": "19.55%",
+  "doc": "AR25",
+  "pdf_page": 359,
+  "basis": "capital adequacy ratio (total), Basel III · standalone · 31 Mar 2025",
+  "raw_match": "Total 19.55% 18.80%",
+  "raw_value": "19.55"
+ },
+ {
+  "id": "hdfc.kpi.cet1.fy26",
+  "company": "hdfc",
+  "display": "17.28%",
+  "doc": "AR26",
+  "pdf_page": 403,
+  "basis": "CET1 ratio, Basel III · standalone · 31 Mar 2026",
+  "raw_match": "CET 1 17.28% 17.23%",
+  "raw_value": "17.28"
+ },
+ {
+  "id": "hdfc.kpi.tier1.fy26",
+  "company": "hdfc",
+  "display": "17.73%",
+  "doc": "AR26",
+  "pdf_page": 403,
+  "basis": "Tier 1 ratio, Basel III · standalone · 31 Mar 2026",
+  "raw_match": "Tier 1 17.73% 17.69%",
+  "raw_value": "17.73"
+ },
+ {
+  "id": "hdfc.kpi.crar.fy26",
+  "company": "hdfc",
+  "display": "19.71%",
+  "doc": "AR26",
+  "pdf_page": 403,
+  "basis": "capital adequacy ratio (total), Basel III · standalone · 31 Mar 2026",
+  "raw_match": "Total 19.71% 19.55%",
+  "raw_value": "19.71"
+ },
+ {
+  "id": "hdfc.kpi.nii.fy24",
+  "company": "hdfc",
+  "display": "1,08,532.5",
+  "doc": "AR24",
+  "pdf_page": 58,
+  "basis": "net interest income · standalone · FY24 · Rs crore",
+  "raw_match": "H1,08,532.5 crore",
+  "raw_value": "1,08,532.5",
+  "anchor": "Net Interest Income",
+  "note": "the text layer prints the rupee sign as H; H1 would read as a half-year token, so raw_value carries the figure"
+ },
+ {
+  "id": "hdfc.kpi.nii.fy25",
+  "company": "hdfc",
+  "display": "1,22,670.1",
+  "doc": "AR25",
+  "pdf_page": 228,
+  "basis": "net interest income · standalone · FY25 · Rs crore",
+  "raw_match": "1,22,670.1 crore"
+ },
+ {
+  "id": "hdfc.kpi.nii.fy26",
+  "company": "hdfc",
+  "display": "1,28,686.0",
+  "doc": "AR26",
+  "pdf_page": 279,
+  "basis": "net interest income · standalone · FY26 · Rs crore",
+  "raw_match": "1,28,686.0 crore"
+ },
+ {
+  "id": "hdfc.kpi.other_inc.fy24",
+  "company": "hdfc",
+  "display": "49,241.0",
+  "doc": "AR24",
+  "pdf_page": 242,
+  "basis": "other income · standalone · FY24 · Rs crore",
+  "raw_match": "49,241.0 crore",
+  "anchor": "Other Income grew by 57.7 per cent"
+ },
+ {
+  "id": "hdfc.kpi.other_inc.fy25",
+  "company": "hdfc",
+  "display": "45,632.3",
+  "doc": "AR25",
+  "pdf_page": 228,
+  "basis": "other income · standalone · FY25 · Rs crore (FY24 base held Rs 7,341.42 cr of HDFC Credila stake-sale gains)",
+  "raw_match": "Other Income fell by 7.33 per cent to ' 45,632.3 crore",
+  "raw_value": "45,632.3"
+ },
+ {
+  "id": "hdfc.kpi.other_inc.fy26",
+  "company": "hdfc",
+  "display": "62,532.6",
+  "doc": "AR26",
+  "pdf_page": 279,
+  "basis": "other income · standalone · FY26 · Rs crore, includes the HDB transaction gain",
+  "raw_match": "Other Income grew by 37.0 per cent to '62,532.6 crore",
+  "raw_value": "62,532.6"
+ },
+ {
+  "id": "hdfc.kpi.credila_gain.fy24",
+  "company": "hdfc",
+  "display": "7,341.42",
+  "doc": "AR25",
+  "pdf_page": 228,
+  "basis": "transaction gains from the HDFC Credila stake sale, booked in FY24 · standalone · Rs crore",
+  "raw_match": "transaction gains of ' 7,341.42 crore",
+  "raw_value": "7,341.42"
+ },
+ {
+  "id": "hdfc.kpi.hdb_gain.fy26",
+  "company": "hdfc",
+  "display": "9,179.4",
+  "doc": "AR26",
+  "pdf_page": 279,
+  "basis": "transaction gains from the HDB Financial Services stake sale (IPO), FY26 · standalone · Rs crore",
+  "raw_match": "transaction gains of '9,179.4 crore",
+  "raw_value": "9,179.4",
+  "note": "KPj p.2 footnotes Q1 FY26 net revenue as excluding a Rs 91.3 bn gain (= Rs 9,130 cr); the AR's full-year figure is Rs 49.4 cr higher"
+ },
+ {
+  "id": "hdfc.kpi.wo_recoveries.fy26",
+  "company": "hdfc",
+  "display": "4,014.4",
+  "doc": "AR26",
+  "pdf_page": 279,
+  "basis": "recoveries from written-off accounts (in other income) · standalone · FY26 · Rs crore",
+  "raw_match": "recoveries from written-off accounts were '4,014.4 crore",
+  "raw_value": "4,014.4"
+ },
+ {
+  "id": "hdfc.kpi.net_rev.fy24",
+  "company": "hdfc",
+  "display": "1,57,773.5",
+  "doc": "AR24",
+  "pdf_page": 58,
+  "basis": "net revenue (NII + other income) · standalone · FY24 · Rs crore",
+  "raw_match": "Total Net Revenue - H1,57,773.5 crore",
+  "raw_value": "1,57,773.5"
+ },
+ {
+  "id": "hdfc.kpi.net_rev.fy25",
+  "company": "hdfc",
+  "display": "1,68,302.4",
+  "doc": "AR25",
+  "pdf_page": 222,
+  "basis": "net revenue · standalone · FY25 · Rs crore",
+  "raw_match": "Net Revenue: H 1,68,302.4 crore",
+  "raw_value": "1,68,302.4"
+ },
+ {
+  "id": "hdfc.kpi.net_rev.fy26",
+  "company": "hdfc",
+  "display": "1,91,218.6",
+  "doc": "AR26",
+  "pdf_page": 279,
+  "basis": "net revenue · standalone · FY26 · Rs crore",
+  "raw_match": "rising 13.6 per cent to '1,91,218.6 crore",
+  "raw_value": "1,91,218.6"
+ },
+ {
+  "id": "hdfc.kpi.opex.fy24",
+  "company": "hdfc",
+  "display": "63,386.0",
+  "doc": "AR24",
+  "pdf_page": 242,
+  "basis": "operating expenses · standalone · FY24 · Rs crore",
+  "raw_match": "Expenses rose to ' 63,386.0 crore",
+  "raw_value": "63,386.0"
+ },
+ {
+  "id": "hdfc.kpi.opex.fy25",
+  "company": "hdfc",
+  "display": "68,174.9",
+  "doc": "AR25",
+  "pdf_page": 228,
+  "basis": "operating expenses · standalone · FY25 · Rs crore",
+  "raw_match": "Expenses rose to ' 68,174.9 crore",
+  "raw_value": "68,174.9"
+ },
+ {
+  "id": "hdfc.kpi.opex.fy26",
+  "company": "hdfc",
+  "display": "72,660.3",
+  "doc": "AR26",
+  "pdf_page": 279,
+  "basis": "operating expenses · standalone · FY26 · Rs crore (includes the labour-code gratuity provision)",
+  "raw_match": "Expenses rose to '72,660.3 crore",
+  "raw_value": "72,660.3"
+ },
+ {
+  "id": "hdfc.kpi.prov.fy24",
+  "company": "hdfc",
+  "display": "23,492.2",
+  "doc": "AR24",
+  "pdf_page": 242,
+  "basis": "provisions and contingencies · standalone · FY24 · Rs crore (includes Rs 10,900 cr floating)",
+  "raw_match": "Total Provisions and Contingencies were ' 23,492.2 crore",
+  "raw_value": "23,492.2"
+ },
+ {
+  "id": "hdfc.kpi.prov.fy25",
+  "company": "hdfc",
+  "display": "11,649.4",
+  "doc": "AR25",
+  "pdf_page": 228,
+  "basis": "provisions and contingencies · standalone · FY25 · Rs crore",
+  "raw_match": "Total Provisions and Contingencies were ' 11,649.4 crore",
+  "raw_value": "11,649.4"
+ },
+ {
+  "id": "hdfc.kpi.prov.fy26",
+  "company": "hdfc",
+  "display": "23,389.6",
+  "doc": "AR26",
+  "pdf_page": 279,
+  "basis": "provisions and contingencies · standalone · FY26 · Rs crore (includes Rs 9,000 cr floating)",
+  "raw_match": "Total Provisions and Contingencies were '23,389.6 crore",
+  "raw_value": "23,389.6"
+ },
+ {
+  "id": "hdfc.kpi.pat.fy24",
+  "company": "hdfc",
+  "display": "60,812.3",
+  "doc": "AR24",
+  "pdf_page": 242,
+  "basis": "profit after tax · standalone · FY24 · Rs crore",
+  "raw_match": "60,812.3 crore from",
+  "raw_value": "60,812.3"
+ },
+ {
+  "id": "hdfc.kpi.pat.fy25",
+  "company": "hdfc",
+  "display": "67,347.4",
+  "doc": "AR25",
+  "pdf_page": 222,
+  "basis": "profit after tax · standalone · FY25 · Rs crore",
+  "raw_match": "Net Profit: H 67,347.4 crore (YoY: Up 10.7 per cent)",
+  "raw_value": "67,347.4"
+ },
+ {
+  "id": "hdfc.kpi.pat.fy26",
+  "company": "hdfc",
+  "display": "74,671.3",
+  "doc": "AR26",
+  "pdf_page": 273,
+  "basis": "profit after tax · standalone · FY26 · Rs crore",
+  "raw_match": "Net Profit: H 74,671.3 crore (YoY: Up 10.9 per cent)",
+  "raw_value": "74,671.3"
+ },
+ {
+  "id": "hdfc.kpi.cti.fy24",
+  "company": "hdfc",
+  "display": "40.2%",
+  "doc": "AR24",
+  "pdf_page": 242,
+  "basis": "cost-to-income ratio, reported · standalone · FY24",
+  "raw_match": "Cost to Income Ratio was 40.2 per cent"
+ },
+ {
+  "id": "hdfc.kpi.cti.fy25",
+  "company": "hdfc",
+  "display": "40.5%",
+  "doc": "AR25",
+  "pdf_page": 228,
+  "basis": "cost-to-income ratio, reported · standalone · FY25",
+  "raw_match": "Cost to Income Ratio was 40.5 per cent"
+ },
+ {
+  "id": "hdfc.kpi.cti.fy26",
+  "company": "hdfc",
+  "display": "38.0%",
+  "doc": "AR26",
+  "pdf_page": 69,
+  "basis": "cost-to-income ratio, reported · standalone · FY26 · includes the HDB transaction gain in revenue",
+  "raw_match": "Cost to Income Ratio decreased to 38.0 per cent"
+ },
+ {
+  "id": "hdfc.kpi.cti_exgain.fy26",
+  "company": "hdfc",
+  "display": "39.9%",
+  "basis": "computed: opex / (net revenue - HDB transaction gain) · standalone · FY26",
+  "derived_from": [
+   "hdfc.kpi.opex.fy26",
+   "hdfc.kpi.net_rev.fy26",
+   "hdfc.kpi.hdb_gain.fy26"
+  ],
+  "formula": "a / (b - c) * 100"
+ },
+ {
+  "id": "hdfc.kpi.other_inc_yoy_exgain.fy26",
+  "company": "hdfc",
+  "display": "16.9%",
+  "basis": "computed: (other income FY26 - HDB gain) / other income FY25 - 1 · standalone (the AR prints 16.9 per cent, AR26 p.279)",
+  "derived_from": [
+   "hdfc.kpi.other_inc.fy26",
+   "hdfc.kpi.hdb_gain.fy26",
+   "hdfc.kpi.other_inc.fy25"
+  ],
+  "formula": "((a - b) / c - 1) * 100"
+ },
+ {
+  "id": "hdfc.kpi.branches.fy24",
+  "company": "hdfc",
+  "display": "8,738",
+  "doc": "AR24",
+  "pdf_page": 52,
+  "basis": "branches · standalone · 31 Mar 2024",
+  "raw_match": "extensive reach across our 8,738"
+ },
+ {
+  "id": "hdfc.kpi.branches.fy25",
+  "company": "hdfc",
+  "display": "9,455",
+  "doc": "AR25",
+  "pdf_page": 56,
+  "basis": "branches · standalone · 31 Mar 2025",
+  "raw_match": "across 9,455 branches"
+ },
+ {
+  "id": "hdfc.kpi.branches.fy26",
+  "company": "hdfc",
+  "display": "9,689",
+  "doc": "AR26",
+  "pdf_page": 647,
+  "basis": "branches · standalone · 31 Mar 2026",
+  "raw_match": "had 9,689 branches"
+ },
+ {
+  "id": "hdfc.kpi.employees.fy24",
+  "company": "hdfc",
+  "display": "2,13,527",
+  "doc": "AR24",
+  "pdf_page": 33,
+  "basis": "total employees · standalone · 31 Mar 2024",
+  "raw_match": "2,13,527 Total employees",
+  "raw_value": "2,13,527"
+ },
+ {
+  "id": "hdfc.kpi.employees.fy26",
+  "company": "hdfc",
+  "display": "2,11,178",
+  "doc": "AR26",
+  "pdf_page": 33,
+  "basis": "total employees · standalone · 31 Mar 2026",
+  "raw_match": "2,11,178 TOTAL EMPLOYEES",
+  "raw_value": "2,11,178"
+ },
+ {
+  "id": "hdfc.kpi.borrowings.fy24",
+  "company": "hdfc",
+  "display": "6,62,153.1",
+  "doc": "AR24",
+  "pdf_page": 58,
+  "basis": "borrowings · standalone · 31 Mar 2024 · Rs crore",
+  "raw_match": "Borrowings - H6,62,153.1 crore",
+  "raw_value": "6,62,153.1"
+ }
+]

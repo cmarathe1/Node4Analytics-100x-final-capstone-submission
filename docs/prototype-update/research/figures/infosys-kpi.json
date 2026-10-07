@@ -1,0 +1,4171 @@
+[
+ {
+  "id": "infosys.kpi.rev_usd.q3fy25",
+  "company": "infosys",
+  "display": "4,939",
+  "doc": "FS3",
+  "pdf_page": 3,
+  "basis": "revenue · US$ mn · consolidated IFRS · Q3 FY25 (comparative column)",
+  "raw_match": "5,099 4,939 3.2% 5,076 0.5%",
+  "raw_value": "4,939",
+  "anchor": "Revenues"
+ },
+ {
+  "id": "infosys.kpi.rev_usd.q2fy26",
+  "company": "infosys",
+  "display": "5,076",
+  "doc": "FS3",
+  "pdf_page": 3,
+  "basis": "revenue · US$ mn · consolidated IFRS · Q2 FY26",
+  "raw_match": "5,099 4,939 3.2% 5,076 0.5%",
+  "raw_value": "5,076",
+  "anchor": "Revenues"
+ },
+ {
+  "id": "infosys.kpi.rev_usd.q3fy26",
+  "company": "infosys",
+  "display": "5,099",
+  "doc": "FS3",
+  "pdf_page": 3,
+  "basis": "revenue · US$ mn · consolidated IFRS · Q3 FY26",
+  "raw_match": "5,099 4,939 3.2% 5,076 0.5%",
+  "raw_value": "5,099",
+  "anchor": "Revenues"
+ },
+ {
+  "id": "infosys.kpi.rev_usd.9mfy26",
+  "company": "infosys",
+  "display": "15,117",
+  "doc": "FS3",
+  "pdf_page": 3,
+  "basis": "revenue · US$ mn · consolidated IFRS · 9M FY26 (Apr–Dec 2025)",
+  "raw_match": "15,117 14,547 3.9%",
+  "raw_value": "15,117",
+  "anchor": "nine months ended"
+ },
+ {
+  "id": "infosys.kpi.rev_usd.q4fy25",
+  "company": "infosys",
+  "display": "4,730",
+  "doc": "FS4",
+  "pdf_page": 3,
+  "basis": "revenue · US$ mn · consolidated IFRS · Q4 FY25 (comparative column)",
+  "raw_match": "5,040 4,730 6.6% 5,099 -1.2%",
+  "raw_value": "4,730",
+  "anchor": "Revenues"
+ },
+ {
+  "id": "infosys.kpi.rev_usd.q4fy26",
+  "company": "infosys",
+  "display": "5,040",
+  "doc": "FS4",
+  "pdf_page": 3,
+  "basis": "revenue · US$ mn · consolidated IFRS · Q4 FY26",
+  "raw_match": "5,040 4,730 6.6% 5,099 -1.2%",
+  "raw_value": "5,040",
+  "anchor": "Revenues"
+ },
+ {
+  "id": "infosys.kpi.rev_usd.q1fy26",
+  "company": "infosys",
+  "display": "4,942",
+  "basis": "derived: revenue · US$ mn · Q1 FY26 = 9M FY26 − Q3 FY26 − Q2 FY26 (FS3 p.3; FS3 note 3 warns quarters may not add exactly to 9M)",
+  "derived_from": [
+   "infosys.kpi.rev_usd.9mfy26",
+   "infosys.kpi.rev_usd.q3fy26",
+   "infosys.kpi.rev_usd.q2fy26"
+  ],
+  "formula": "a - b - c"
+ },
+ {
+  "id": "infosys.kpi.rev_usd.q1fy27",
+  "company": "infosys",
+  "display": "5,082",
+  "doc": "C-Jul26",
+  "pdf_page": 30,
+  "basis": "revenue · US$ mn · consolidated · Q1 FY27 · CFO on the call (no Q1 FY27 factsheet in the corpus)",
+  "raw_match": "Q1 revenues were at $5,082 mn"
+ },
+ {
+  "id": "infosys.kpi.rev_inr.q3fy25",
+  "company": "infosys",
+  "display": "41,764",
+  "doc": "FS3",
+  "pdf_page": 4,
+  "basis": "revenue · ₹ crore · consolidated IFRS · Q3 FY25 (comparative column)",
+  "raw_match": "Revenues 45,479 41,764 8.9% 44,490 2.2%",
+  "raw_value": "41,764"
+ },
+ {
+  "id": "infosys.kpi.rev_inr.q2fy26",
+  "company": "infosys",
+  "display": "44,490",
+  "doc": "FS3",
+  "pdf_page": 4,
+  "basis": "revenue · ₹ crore · consolidated IFRS · Q2 FY26",
+  "raw_match": "Revenues 45,479 41,764 8.9% 44,490 2.2%",
+  "raw_value": "44,490"
+ },
+ {
+  "id": "infosys.kpi.rev_inr.q3fy26",
+  "company": "infosys",
+  "display": "45,479",
+  "doc": "FS3",
+  "pdf_page": 4,
+  "basis": "revenue · ₹ crore · consolidated IFRS · Q3 FY26",
+  "raw_match": "Revenues 45,479 41,764 8.9% 44,490 2.2%",
+  "raw_value": "45,479"
+ },
+ {
+  "id": "infosys.kpi.rev_inr.9mfy26",
+  "company": "infosys",
+  "display": "1,32,248",
+  "doc": "FS3",
+  "pdf_page": 5,
+  "basis": "revenue · ₹ crore · consolidated IFRS · 9M FY26",
+  "raw_match": "132,248 122,064 8.3%",
+  "raw_value": "132,248",
+  "note": "printed with Western grouping 132,248"
+ },
+ {
+  "id": "infosys.kpi.rev_inr.q4fy25",
+  "company": "infosys",
+  "display": "40,925",
+  "doc": "FS4",
+  "pdf_page": 5,
+  "basis": "revenue · ₹ crore · consolidated IFRS · Q4 FY25 (comparative column)",
+  "raw_match": "Revenues 46,402 40,925 13.4% 45,479 2.0%",
+  "raw_value": "40,925"
+ },
+ {
+  "id": "infosys.kpi.rev_inr.q4fy26",
+  "company": "infosys",
+  "display": "46,402",
+  "doc": "FS4",
+  "pdf_page": 5,
+  "basis": "revenue · ₹ crore · consolidated IFRS · Q4 FY26",
+  "raw_match": "Revenues 46,402 40,925 13.4% 45,479 2.0%",
+  "raw_value": "46,402"
+ },
+ {
+  "id": "infosys.kpi.rev_inr.q1fy26",
+  "company": "infosys",
+  "display": "42,279",
+  "basis": "derived: revenue · ₹ crore · Q1 FY26 = 9M FY26 − Q3 FY26 − Q2 FY26 (FS3 p.4–5)",
+  "derived_from": [
+   "infosys.kpi.rev_inr.9mfy26",
+   "infosys.kpi.rev_inr.q3fy26",
+   "infosys.kpi.rev_inr.q2fy26"
+  ],
+  "formula": "a - b - c"
+ },
+ {
+  "id": "infosys.kpi.cc_qoq.q3fy25",
+  "company": "infosys",
+  "display": "1.7",
+  "doc": "C-Jan25",
+  "pdf_page": 23,
+  "basis": "revenue growth · QoQ · CC · Q3 FY25 · CEO",
+  "raw_match": "Our revenue grew 1.7% quarter-on-quarter and 6.1% year-on-year in constant currency terms",
+  "raw_value": "1.7%"
+ },
+ {
+  "id": "infosys.kpi.cc_yoy.q3fy25",
+  "company": "infosys",
+  "display": "6.1",
+  "doc": "C-Jan25",
+  "pdf_page": 23,
+  "basis": "revenue growth · YoY · CC · Q3 FY25 · CEO",
+  "raw_match": "Our revenue grew 1.7% quarter-on-quarter and 6.1% year-on-year in constant currency terms",
+  "raw_value": "6.1%"
+ },
+ {
+  "id": "infosys.kpi.cc_qoq.q4fy25",
+  "company": "infosys",
+  "display": "−3.5",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "revenue growth · QoQ · CC · Q4 FY25 · CFO (decline)",
+  "raw_match": "revenue declined by 3.5% in constant currency terms"
+ },
+ {
+  "id": "infosys.kpi.cc_yoy.q4fy25",
+  "company": "infosys",
+  "display": "4.8",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "revenue growth · YoY · CC · Q4 FY25 · CFO",
+  "raw_match": "Revenue increased by 4.8% on a year-on-year basis in constant currency terms"
+ },
+ {
+  "id": "infosys.kpi.cc_qoq.q1fy26",
+  "company": "infosys",
+  "display": "2.6",
+  "doc": "C-Jul25",
+  "pdf_page": 18,
+  "basis": "revenue growth · QoQ · CC · Q1 FY26 · CEO (incl. 0.4% acquisitions, C-Jul25 p.20)",
+  "raw_match": "Our revenues grew 2.6% sequentially and 3.8% year-on-year in constant currency terms",
+  "raw_value": "2.6%"
+ },
+ {
+  "id": "infosys.kpi.cc_yoy.q1fy26",
+  "company": "infosys",
+  "display": "3.8",
+  "doc": "C-Jul25",
+  "pdf_page": 18,
+  "basis": "revenue growth · YoY · CC · Q1 FY26 · CEO",
+  "raw_match": "Our revenues grew 2.6% sequentially and 3.8% year-on-year in constant currency terms",
+  "raw_value": "3.8%"
+ },
+ {
+  "id": "infosys.kpi.cc_qoq.q2fy26",
+  "company": "infosys",
+  "display": "2.2",
+  "doc": "C-Oct25",
+  "pdf_page": 18,
+  "basis": "revenue growth · QoQ · CC · Q2 FY26 · CEO",
+  "raw_match": "grew 2.2% sequentially and 2.9% year-on-year in constant currency terms",
+  "raw_value": "2.2%"
+ },
+ {
+  "id": "infosys.kpi.cc_yoy.q2fy26",
+  "company": "infosys",
+  "display": "2.9",
+  "doc": "C-Oct25",
+  "pdf_page": 18,
+  "basis": "revenue growth · YoY · CC · Q2 FY26 · CEO",
+  "raw_match": "grew 2.2% sequentially and 2.9% year-on-year in constant currency terms",
+  "raw_value": "2.9%"
+ },
+ {
+  "id": "infosys.kpi.rep_qoq.q3fy26",
+  "company": "infosys",
+  "display": "0.5",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "revenue growth · QoQ · reported US$ · Q3 FY26",
+  "raw_match": "Reported CC 0.5% 0.6% 3.2% 1.7%",
+  "raw_value": "0.5%"
+ },
+ {
+  "id": "infosys.kpi.cc_qoq.q3fy26",
+  "company": "infosys",
+  "display": "0.6",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "revenue growth · QoQ · CC · Q3 FY26",
+  "raw_match": "Reported CC 0.5% 0.6% 3.2% 1.7%",
+  "raw_value": "0.6%"
+ },
+ {
+  "id": "infosys.kpi.rep_yoy.q3fy26",
+  "company": "infosys",
+  "display": "3.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "revenue growth · YoY · reported US$ · Q3 FY26",
+  "raw_match": "Reported CC 0.5% 0.6% 3.2% 1.7%",
+  "raw_value": "3.2%"
+ },
+ {
+  "id": "infosys.kpi.cc_yoy.q3fy26",
+  "company": "infosys",
+  "display": "1.7",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "revenue growth · YoY · CC · Q3 FY26",
+  "raw_match": "Reported CC 0.5% 0.6% 3.2% 1.7%",
+  "raw_value": "1.7%"
+ },
+ {
+  "id": "infosys.kpi.rep_qoq.q4fy26",
+  "company": "infosys",
+  "display": "−1.2",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "revenue growth · QoQ · reported US$ · Q4 FY26",
+  "raw_match": "Reported CC -1.2% -1.3% 6.6% 4.1%",
+  "raw_value": "-1.2%"
+ },
+ {
+  "id": "infosys.kpi.cc_qoq.q4fy26",
+  "company": "infosys",
+  "display": "−1.3",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "revenue growth · QoQ · CC · Q4 FY26",
+  "raw_match": "Reported CC -1.2% -1.3% 6.6% 4.1%",
+  "raw_value": "-1.3%"
+ },
+ {
+  "id": "infosys.kpi.rep_yoy.q4fy26",
+  "company": "infosys",
+  "display": "6.6",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "revenue growth · YoY · reported US$ · Q4 FY26",
+  "raw_match": "Reported CC -1.2% -1.3% 6.6% 4.1%",
+  "raw_value": "6.6%"
+ },
+ {
+  "id": "infosys.kpi.cc_yoy.q4fy26",
+  "company": "infosys",
+  "display": "4.1",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "revenue growth · YoY · CC · Q4 FY26",
+  "raw_match": "Reported CC -1.2% -1.3% 6.6% 4.1%",
+  "raw_value": "4.1%"
+ },
+ {
+  "id": "infosys.kpi.cc_qoq.q1fy27",
+  "company": "infosys",
+  "display": "1",
+  "doc": "C-Jul26",
+  "pdf_page": 29,
+  "basis": "revenue growth · QoQ · CC · Q1 FY27 · CEO (incl. ~1.1% from acquisitions, CFO p.30)",
+  "raw_match": "2.4% Y-on-Y and 1% Q-on-Q in constant currency terms",
+  "raw_value": "1%"
+ },
+ {
+  "id": "infosys.kpi.cc_yoy.q1fy27",
+  "company": "infosys",
+  "display": "2.4",
+  "doc": "C-Jul26",
+  "pdf_page": 29,
+  "basis": "revenue growth · YoY · CC · Q1 FY27 · CEO",
+  "raw_match": "2.4% Y-on-Y and 1% Q-on-Q in constant currency terms",
+  "raw_value": "2.4%"
+ },
+ {
+  "id": "infosys.kpi.acq_qoq.q1fy27",
+  "company": "infosys",
+  "display": "1.1",
+  "doc": "C-Jul26",
+  "pdf_page": 30,
+  "basis": "acquisitions' contribution to QoQ growth · Q1 FY27 · CFO",
+  "raw_match": "Acquisitions contributed approximately 1.1% sequentially"
+ },
+ {
+  "id": "infosys.kpi.rep_qoq.q4fy25",
+  "company": "infosys",
+  "display": "−4.2",
+  "basis": "derived: revenue growth · QoQ · reported US$ · Q4 FY25 = 4,730 / 4,939 − 1",
+  "derived_from": [
+   "infosys.kpi.rev_usd.q4fy25",
+   "infosys.kpi.rev_usd.q3fy25"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "infosys.kpi.rep_qoq.q1fy26",
+  "company": "infosys",
+  "display": "4.5",
+  "basis": "derived: revenue growth · QoQ · reported US$ · Q1 FY26 = derived 4,942 / 4,730 − 1",
+  "derived_from": [
+   "infosys.kpi.rev_usd.q1fy26",
+   "infosys.kpi.rev_usd.q4fy25"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "infosys.kpi.rep_qoq.q2fy26",
+  "company": "infosys",
+  "display": "2.7",
+  "basis": "derived: revenue growth · QoQ · reported US$ · Q2 FY26 = 5,076 / derived 4,942 − 1",
+  "derived_from": [
+   "infosys.kpi.rev_usd.q2fy26",
+   "infosys.kpi.rev_usd.q1fy26"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "infosys.kpi.rep_qoq.q1fy27",
+  "company": "infosys",
+  "display": "0.8",
+  "basis": "derived: revenue growth · QoQ · reported US$ · Q1 FY27 = 5,082 (call) / 5,040 − 1",
+  "derived_from": [
+   "infosys.kpi.rev_usd.q1fy27",
+   "infosys.kpi.rev_usd.q4fy26"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "infosys.kpi.rep_yoy.q1fy27",
+  "company": "infosys",
+  "display": "2.8",
+  "basis": "derived: revenue growth · YoY · reported US$ · Q1 FY27 = 5,082 (call) / derived 4,942 − 1",
+  "derived_from": [
+   "infosys.kpi.rev_usd.q1fy27",
+   "infosys.kpi.rev_usd.q1fy26"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "infosys.kpi.opm.q3fy25",
+  "company": "infosys",
+  "display": "21.3",
+  "doc": "FS3",
+  "pdf_page": 3,
+  "basis": "operating margin % · reported IFRS · Q3 FY25 (no adjustment that quarter)",
+  "raw_match": "18.4 21.3 -2.9% 21.0 -2.6%",
+  "raw_value": "21.3",
+  "anchor": "Operating Margin %"
+ },
+ {
+  "id": "infosys.kpi.opm.q2fy26",
+  "company": "infosys",
+  "display": "21.0",
+  "doc": "FS3",
+  "pdf_page": 3,
+  "basis": "operating margin % · reported IFRS · Q2 FY26",
+  "raw_match": "18.4 21.3 -2.9% 21.0 -2.6%",
+  "raw_value": "21.0",
+  "anchor": "Operating Margin %"
+ },
+ {
+  "id": "infosys.kpi.opm.q4fy25",
+  "company": "infosys",
+  "display": "21.0",
+  "doc": "FS4",
+  "pdf_page": 3,
+  "basis": "operating margin % · reported IFRS · Q4 FY25 (US$ statement; ₹ statement also 21.0, FS4 p.5)",
+  "raw_match": "20.9 21.0 -0.1% 18.4 2.5%",
+  "raw_value": "21.0",
+  "anchor": "Operating Margin %"
+ },
+ {
+  "id": "infosys.kpi.opm.q1fy26",
+  "company": "infosys",
+  "display": "20.8",
+  "doc": "C-Jul25",
+  "pdf_page": 18,
+  "basis": "operating margin % · reported · Q1 FY26 · CEO (no factsheet)",
+  "raw_match": "Our operating margin was 20.8%"
+ },
+ {
+  "id": "infosys.kpi.opm.q3fy26",
+  "company": "infosys",
+  "display": "18.4",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "operating margin % · reported IFRS · Q3 FY26 (after ₹1,289 cr Labour Codes charge)",
+  "raw_match": "18.4% Reported 21.2% Adjusted",
+  "raw_value": "18.4%"
+ },
+ {
+  "id": "infosys.kpi.opm_adj.q3fy26",
+  "company": "infosys",
+  "display": "21.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "operating margin % · adjusted non-IFRS (ex Labour Codes) · Q3 FY26",
+  "raw_match": "18.4% Reported 21.2% Adjusted",
+  "raw_value": "21.2%"
+ },
+ {
+  "id": "infosys.kpi.opm.q4fy26",
+  "company": "infosys",
+  "display": "20.9",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "operating margin % · reported IFRS · US$ statement · Q4 FY26 (no adjustment)",
+  "raw_match": "20.9% Q4"
+ },
+ {
+  "id": "infosys.kpi.opm_inr.q4fy26",
+  "company": "infosys",
+  "display": "21.0",
+  "doc": "FS4",
+  "pdf_page": 5,
+  "basis": "operating margin % · reported IFRS · ₹ statement · Q4 FY26 (differs from 20.9% on US$)",
+  "raw_match": "Operating Margin % 21.0 21.0 0.0% 18.4 2.6%",
+  "raw_value": "21.0"
+ },
+ {
+  "id": "infosys.kpi.opm.q1fy27",
+  "company": "infosys",
+  "display": "21.1",
+  "doc": "C-Jul26",
+  "pdf_page": 29,
+  "basis": "operating margin % · reported · Q1 FY27 · CEO (no factsheet)",
+  "raw_match": "Our operating margin was 21.1%"
+ },
+ {
+  "id": "infosys.kpi.tcv.q3fy25",
+  "company": "infosys",
+  "display": "2.5",
+  "doc": "C-Jan25",
+  "pdf_page": 25,
+  "basis": "large-deal TCV · US$ bn · Q3 FY25 · CFO",
+  "raw_match": "Large deal TCV for the quarter was at $2.5 bn, 63% of this being net new",
+  "raw_value": "$2.5 bn"
+ },
+ {
+  "id": "infosys.kpi.tcv_nn.q3fy25",
+  "company": "infosys",
+  "display": "63",
+  "doc": "C-Jan25",
+  "pdf_page": 25,
+  "basis": "large-deal TCV net-new share % · Q3 FY25",
+  "raw_match": "Large deal TCV for the quarter was at $2.5 bn, 63% of this being net new",
+  "raw_value": "63%"
+ },
+ {
+  "id": "infosys.kpi.tcv.q4fy25",
+  "company": "infosys",
+  "display": "2.6",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "large-deal TCV · US$ bn · Q4 FY25 · CFO (24 deals)",
+  "raw_match": "We closed 24 large deals in Q4 with a TCV of $2.6 bn, 63% of this was net new",
+  "raw_value": "$2.6 bn"
+ },
+ {
+  "id": "infosys.kpi.tcv_nn.q4fy25",
+  "company": "infosys",
+  "display": "63",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "large-deal TCV net-new share % · Q4 FY25",
+  "raw_match": "We closed 24 large deals in Q4 with a TCV of $2.6 bn, 63% of this was net new",
+  "raw_value": "63%"
+ },
+ {
+  "id": "infosys.kpi.tcv.q1fy26",
+  "company": "infosys",
+  "display": "3.8",
+  "doc": "C-Jul25",
+  "pdf_page": 20,
+  "basis": "large-deal TCV · US$ bn · Q1 FY26 · CFO (28 deals)",
+  "raw_match": "28 deals with a TCV of $3.8 bn, including 55% net",
+  "raw_value": "$3.8 bn"
+ },
+ {
+  "id": "infosys.kpi.tcv_nn.q1fy26",
+  "company": "infosys",
+  "display": "55",
+  "doc": "C-Jul25",
+  "pdf_page": 20,
+  "basis": "large-deal TCV net-new share % · Q1 FY26",
+  "raw_match": "28 deals with a TCV of $3.8 bn, including 55% net",
+  "raw_value": "55%"
+ },
+ {
+  "id": "infosys.kpi.tcv.q2fy26",
+  "company": "infosys",
+  "display": "3.1",
+  "doc": "C-Oct25",
+  "pdf_page": 20,
+  "basis": "large-deal TCV · US$ bn · Q2 FY26 · CFO (excl. the US$1.6 bn NHS deal announced after quarter-end)",
+  "raw_match": "Large deal TCV for Q2 was at $3.1 bn, which is with 67% net new",
+  "raw_value": "$3.1 bn"
+ },
+ {
+  "id": "infosys.kpi.tcv_nn.q2fy26",
+  "company": "infosys",
+  "display": "67",
+  "doc": "C-Oct25",
+  "pdf_page": 20,
+  "basis": "large-deal TCV net-new share % · Q2 FY26",
+  "raw_match": "Large deal TCV for Q2 was at $3.1 bn, which is with 67% net new",
+  "raw_value": "67%"
+ },
+ {
+  "id": "infosys.kpi.tcv.q3fy26",
+  "company": "infosys",
+  "display": "4.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "large-deal TCV · US$ bn · Q3 FY26",
+  "raw_match": "$4.8 Bn Large Deal TCV (57% Net New)",
+  "raw_value": "$4.8 Bn"
+ },
+ {
+  "id": "infosys.kpi.tcv_nn.q3fy26",
+  "company": "infosys",
+  "display": "57",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "large-deal TCV net-new share % · Q3 FY26",
+  "raw_match": "$4.8 Bn Large Deal TCV (57% Net New)",
+  "raw_value": "57%"
+ },
+ {
+  "id": "infosys.kpi.tcv.q4fy26",
+  "company": "infosys",
+  "display": "3.2",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "large-deal TCV · US$ bn · Q4 FY26 (net-new share not printed)",
+  "raw_match": "$3.2 Bn Q4"
+ },
+ {
+  "id": "infosys.kpi.tcv.q1fy27",
+  "company": "infosys",
+  "display": "3.6",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "large-deal TCV · US$ bn · Q1 FY27 · CFO (22 deals)",
+  "raw_match": "Large deal wins were strong at $3.6 bn with high net new of 61%",
+  "raw_value": "$3.6 bn"
+ },
+ {
+  "id": "infosys.kpi.tcv_nn.q1fy27",
+  "company": "infosys",
+  "display": "61",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "large-deal TCV net-new share % · Q1 FY27",
+  "raw_match": "Large deal wins were strong at $3.6 bn with high net new of 61%",
+  "raw_value": "61%"
+ },
+ {
+  "id": "infosys.kpi.hc.q3fy25",
+  "company": "infosys",
+  "display": "3,23,379",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "total employees · period-end · Q3 FY25",
+  "raw_match": "337,034 331,991 323,379",
+  "raw_value": "323,379",
+  "anchor": "Total employees"
+ },
+ {
+  "id": "infosys.kpi.hc.q2fy26",
+  "company": "infosys",
+  "display": "3,31,991",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "total employees · period-end · Q2 FY26",
+  "raw_match": "337,034 331,991 323,379",
+  "raw_value": "331,991",
+  "anchor": "Total employees"
+ },
+ {
+  "id": "infosys.kpi.hc.q3fy26",
+  "company": "infosys",
+  "display": "3,37,034",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "total employees · period-end · Q3 FY26",
+  "raw_match": "337,034 331,991 323,379",
+  "raw_value": "337,034",
+  "anchor": "Total employees"
+ },
+ {
+  "id": "infosys.kpi.hc.q4fy25",
+  "company": "infosys",
+  "display": "3,23,578",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "total employees · period-end · Q4 FY25",
+  "raw_match": "328,594 337,034 323,578",
+  "raw_value": "323,578",
+  "anchor": "Total employees"
+ },
+ {
+  "id": "infosys.kpi.hc.q4fy26",
+  "company": "infosys",
+  "display": "3,28,594",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "total employees · period-end · Q4 FY26",
+  "raw_match": "328,594 337,034 323,578",
+  "raw_value": "328,594",
+  "anchor": "Total employees"
+ },
+ {
+  "id": "infosys.kpi.hc.q1fy26",
+  "company": "infosys",
+  "display": "3,23,788",
+  "doc": "C-Jul25",
+  "pdf_page": 20,
+  "basis": "total employees · period-end · Q1 FY26 · CFO",
+  "raw_match": "Headcount at the end of the quarter was 323,788"
+ },
+ {
+  "id": "infosys.kpi.hc_chg.q3fy25",
+  "company": "infosys",
+  "display": "+5,591",
+  "doc": "C-Jan25",
+  "pdf_page": 25,
+  "basis": "net headcount change · QoQ · Q3 FY25 · CFO",
+  "raw_match": "We added 5,591 employees this quarter"
+ },
+ {
+  "id": "infosys.kpi.hc_chg.q4fy25",
+  "company": "infosys",
+  "display": "+199",
+  "basis": "derived: net headcount change · Q4 FY25 = 3,23,578 − 3,23,379",
+  "derived_from": [
+   "infosys.kpi.hc.q4fy25",
+   "infosys.kpi.hc.q3fy25"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "infosys.kpi.hc_chg.q1fy26",
+  "company": "infosys",
+  "display": "+210",
+  "basis": "derived: net headcount change · Q1 FY26 = 3,23,788 − 3,23,578",
+  "derived_from": [
+   "infosys.kpi.hc.q1fy26",
+   "infosys.kpi.hc.q4fy25"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "infosys.kpi.hc_chg.q2fy26",
+  "company": "infosys",
+  "display": "+8,203",
+  "basis": "derived: net headcount change · Q2 FY26 = 3,31,991 − 3,23,788",
+  "derived_from": [
+   "infosys.kpi.hc.q2fy26",
+   "infosys.kpi.hc.q1fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "infosys.kpi.hc_chg.q3fy26",
+  "company": "infosys",
+  "display": "+5,043",
+  "basis": "derived: net headcount change · Q3 FY26 = 3,37,034 − 3,31,991",
+  "derived_from": [
+   "infosys.kpi.hc.q3fy26",
+   "infosys.kpi.hc.q2fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "infosys.kpi.hc_chg.q4fy26",
+  "company": "infosys",
+  "display": "−8,440",
+  "basis": "derived: net headcount change · Q4 FY26 = 3,28,594 − 3,37,034",
+  "derived_from": [
+   "infosys.kpi.hc.q4fy26",
+   "infosys.kpi.hc.q3fy26"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "infosys.kpi.hc_chg.q1fy27",
+  "company": "infosys",
+  "display": "−500",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "net headcount change · Q1 FY27 · CFO, approximate (after adding over 2,000 from acquisitions); period-end count n/f",
+  "raw_match": "Headcount reduced by 500 employees after adding over 2,000 employees from acquisitions",
+  "raw_value": "500"
+ },
+ {
+  "id": "infosys.kpi.util.q3fy25",
+  "company": "infosys",
+  "display": "86.0",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "utilisation % · excluding trainees · IT services · Q3 FY25",
+  "raw_match": "84.1 85.1 86.0",
+  "raw_value": "86.0",
+  "anchor": "Excluding trainees"
+ },
+ {
+  "id": "infosys.kpi.util.q2fy26",
+  "company": "infosys",
+  "display": "85.1",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "utilisation % · excluding trainees · Q2 FY26",
+  "raw_match": "84.1 85.1 86.0",
+  "raw_value": "85.1",
+  "anchor": "Excluding trainees"
+ },
+ {
+  "id": "infosys.kpi.util.q3fy26",
+  "company": "infosys",
+  "display": "84.1",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "utilisation % · excluding trainees · Q3 FY26",
+  "raw_match": "84.1 85.1 86.0",
+  "raw_value": "84.1",
+  "anchor": "Excluding trainees"
+ },
+ {
+  "id": "infosys.kpi.util.q4fy25",
+  "company": "infosys",
+  "display": "84.9",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "utilisation % · excluding trainees · Q4 FY25",
+  "raw_match": "83.0 84.1 84.9",
+  "raw_value": "84.9",
+  "anchor": "Excluding trainees"
+ },
+ {
+  "id": "infosys.kpi.util.q4fy26",
+  "company": "infosys",
+  "display": "83.0",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "utilisation % · excluding trainees · Q4 FY26",
+  "raw_match": "83.0 84.1 84.9",
+  "raw_value": "83.0",
+  "anchor": "Excluding trainees"
+ },
+ {
+  "id": "infosys.kpi.util.q1fy26",
+  "company": "infosys",
+  "display": "85.2",
+  "doc": "C-Jul25",
+  "pdf_page": 20,
+  "basis": "utilisation % · excluding trainees · Q1 FY26 · CFO",
+  "raw_match": "went up 30 basis points QoQ at 85.2%"
+ },
+ {
+  "id": "infosys.kpi.util.q1fy27",
+  "company": "infosys",
+  "display": "84.9",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "utilisation % · excluding trainees · Q1 FY27 · CFO (+1.9 pp QoQ)",
+  "raw_match": "improving by 1.9% to 84.9%",
+  "raw_value": "84.9%"
+ },
+ {
+  "id": "infosys.kpi.attr.q3fy25",
+  "company": "infosys",
+  "display": "13.7",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "voluntary attrition % · LTM · IT services · Q3 FY25",
+  "raw_match": "12.3% 14.3% 13.7%",
+  "raw_value": "13.7%",
+  "anchor": "Voluntary Attrition"
+ },
+ {
+  "id": "infosys.kpi.attr.q2fy26",
+  "company": "infosys",
+  "display": "14.3",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "voluntary attrition % · LTM · Q2 FY26",
+  "raw_match": "12.3% 14.3% 13.7%",
+  "raw_value": "14.3%",
+  "anchor": "Voluntary Attrition"
+ },
+ {
+  "id": "infosys.kpi.attr.q3fy26",
+  "company": "infosys",
+  "display": "12.3",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "voluntary attrition % · LTM · Q3 FY26",
+  "raw_match": "12.3% 14.3% 13.7%",
+  "raw_value": "12.3%",
+  "anchor": "Voluntary Attrition"
+ },
+ {
+  "id": "infosys.kpi.attr.q4fy25",
+  "company": "infosys",
+  "display": "14.1",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "voluntary attrition % · LTM · Q4 FY25",
+  "raw_match": "12.6% 12.3% 14.1%",
+  "raw_value": "14.1%",
+  "anchor": "Voluntary Attrition"
+ },
+ {
+  "id": "infosys.kpi.attr.q4fy26",
+  "company": "infosys",
+  "display": "12.6",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "voluntary attrition % · LTM · Q4 FY26",
+  "raw_match": "12.6% 12.3% 14.1%",
+  "raw_value": "12.6%",
+  "anchor": "Voluntary Attrition"
+ },
+ {
+  "id": "infosys.kpi.attr.q1fy26",
+  "company": "infosys",
+  "display": "14.4",
+  "doc": "C-Jul25",
+  "pdf_page": 20,
+  "basis": "attrition % · LTM · Q1 FY26 · CFO",
+  "raw_match": "Attrition increased marginally to 14.4%"
+ },
+ {
+  "id": "infosys.kpi.attr.q1fy27",
+  "company": "infosys",
+  "display": "13",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "attrition % · LTM · Q1 FY27 · CFO",
+  "raw_match": "Attrition increased slightly to 13% versus 12.6%",
+  "raw_value": "13%"
+ },
+ {
+  "id": "infosys.kpi.fcf.q3fy25",
+  "company": "infosys",
+  "display": "1,263",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "free cash flow · US$ mn · IFRS · Q3 FY25 (incl. tax refunds; ex-refunds US$996 mn, C-Jan25 p.26)",
+  "raw_match": "915 1,101 1,263",
+  "raw_value": "1,263",
+  "anchor": "Adjusted FCF"
+ },
+ {
+  "id": "infosys.kpi.fcf.q2fy26",
+  "company": "infosys",
+  "display": "1,101",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "free cash flow · US$ mn · Q2 FY26 (bolstered by tax refunds, C-Oct25 p.20)",
+  "raw_match": "915 1,101 1,263",
+  "raw_value": "1,101",
+  "anchor": "Adjusted FCF"
+ },
+ {
+  "id": "infosys.kpi.fcf.q3fy26",
+  "company": "infosys",
+  "display": "915",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "free cash flow · US$ mn · reported · Q3 FY26 (after US$50 mn Labour Codes payments)",
+  "raw_match": "915 1,101 1,263",
+  "raw_value": "915",
+  "anchor": "Adjusted FCF"
+ },
+ {
+  "id": "infosys.kpi.fcf_adj.q3fy26",
+  "company": "infosys",
+  "display": "965",
+  "doc": "FS3",
+  "pdf_page": 2,
+  "basis": "free cash flow · US$ mn · adjusted (ex Labour Codes payments) · Q3 FY26",
+  "raw_match": "965 1,101 1,263 3,917",
+  "raw_value": "965",
+  "anchor": "Adjusted FCF"
+ },
+ {
+  "id": "infosys.kpi.fcf.q4fy25",
+  "company": "infosys",
+  "display": "892",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "free cash flow · US$ mn · Q4 FY25",
+  "raw_match": "833 915 892",
+  "raw_value": "892",
+  "anchor": "Consolidated cash and investments"
+ },
+ {
+  "id": "infosys.kpi.fcf.q4fy26",
+  "company": "infosys",
+  "display": "833",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "free cash flow · US$ mn · Q4 FY26 (includes US$49 mn Labour Codes payments, FS4 p.2 note 2)",
+  "raw_match": "833 915 892",
+  "raw_value": "833",
+  "anchor": "Consolidated cash and investments"
+ },
+ {
+  "id": "infosys.kpi.fcf.q1fy26",
+  "company": "infosys",
+  "display": "884",
+  "doc": "C-Jul25",
+  "pdf_page": 20,
+  "basis": "free cash flow · US$ mn · Q1 FY26 · CFO (109% of net profit)",
+  "raw_match": "free cash flows of $884 mn"
+ },
+ {
+  "id": "infosys.kpi.fcf.q1fy27",
+  "company": "infosys",
+  "display": "955",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "free cash flow · US$ mn · Q1 FY27 · CFO (116.5% of net profit)",
+  "raw_match": "Free cash flow was strong at $955 mn at 116.5% of net profit",
+  "raw_value": "$955 mn"
+ },
+ {
+  "id": "infosys.kpi.fcf_np.q1fy27",
+  "company": "infosys",
+  "display": "116.5",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "free cash flow as % of net profit · Q1 FY27 · CFO",
+  "raw_match": "Free cash flow was strong at $955 mn at 116.5% of net profit",
+  "raw_value": "116.5%"
+ },
+ {
+  "id": "infosys.kpi.eps.q3fy25",
+  "company": "infosys",
+  "display": "16.43",
+  "doc": "FS3",
+  "pdf_page": 4,
+  "basis": "basic EPS · ₹ · consolidated IFRS · Q3 FY25",
+  "raw_match": "Basic EPS (₹) 16.17 16.43 -1.6% 17.76 -9.0%",
+  "raw_value": "16.43"
+ },
+ {
+  "id": "infosys.kpi.eps.q2fy26",
+  "company": "infosys",
+  "display": "17.76",
+  "doc": "FS3",
+  "pdf_page": 4,
+  "basis": "basic EPS · ₹ · Q2 FY26 (the C-Oct25 transcript says ₹17.6 — use the factsheet)",
+  "raw_match": "Basic EPS (₹) 16.17 16.43 -1.6% 17.76 -9.0%",
+  "raw_value": "17.76"
+ },
+ {
+  "id": "infosys.kpi.eps.q3fy26",
+  "company": "infosys",
+  "display": "16.17",
+  "doc": "FS3",
+  "pdf_page": 4,
+  "basis": "basic EPS · ₹ · reported · Q3 FY26 (after Labour Codes)",
+  "raw_match": "Basic EPS (₹) 16.17 16.43 -1.6% 17.76 -9.0%",
+  "raw_value": "16.17"
+ },
+ {
+  "id": "infosys.kpi.eps_adj.q3fy26",
+  "company": "infosys",
+  "display": "18.53",
+  "doc": "FS3",
+  "pdf_page": 4,
+  "basis": "basic EPS · ₹ · adjusted (ex Labour Codes) · Q3 FY26",
+  "raw_match": "16.17 2.36 18.53 16.43",
+  "raw_value": "18.53"
+ },
+ {
+  "id": "infosys.kpi.eps.9mfy26",
+  "company": "infosys",
+  "display": "50.64",
+  "doc": "FS3",
+  "pdf_page": 5,
+  "basis": "basic EPS · ₹ · 9M FY26",
+  "raw_match": "50.64 47.52 6.6%",
+  "raw_value": "50.64"
+ },
+ {
+  "id": "infosys.kpi.eps.q1fy26",
+  "company": "infosys",
+  "display": "16.71",
+  "basis": "derived: basic EPS · ₹ · Q1 FY26 = 9M − Q2 − Q3 (approximate: weighted share counts differ by period, and the Dec-2025 buyback falls inside 9M)",
+  "derived_from": [
+   "infosys.kpi.eps.9mfy26",
+   "infosys.kpi.eps.q2fy26",
+   "infosys.kpi.eps.q3fy26"
+  ],
+  "formula": "a - b - c"
+ },
+ {
+  "id": "infosys.kpi.eps.q4fy25",
+  "company": "infosys",
+  "display": "16.98",
+  "doc": "FS4",
+  "pdf_page": 5,
+  "basis": "basic EPS · ₹ · Q4 FY25",
+  "raw_match": "Basic EPS (₹) 21.01 16.98 23.8% 16.17 29.9%",
+  "raw_value": "16.98"
+ },
+ {
+  "id": "infosys.kpi.eps.q4fy26",
+  "company": "infosys",
+  "display": "21.01",
+  "doc": "FS4",
+  "pdf_page": 5,
+  "basis": "basic EPS · ₹ · reported · Q4 FY26 (includes ₹774 cr tax-provision reversal)",
+  "raw_match": "Basic EPS (₹) 21.01 16.98 23.8% 16.17 29.9%",
+  "raw_value": "21.01"
+ },
+ {
+  "id": "infosys.kpi.eps.q1fy27",
+  "company": "infosys",
+  "display": "19.19",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "basic EPS (as stated) · ₹ · Q1 FY27 · CFO, up ~15% YoY",
+  "raw_match": "EPS for the quarter stood at INR19.19"
+ },
+ {
+  "id": "infosys.kpi.dso.q3fy25",
+  "company": "infosys",
+  "display": "74",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "days sales outstanding · LTM revenue basis · Q3 FY25",
+  "raw_match": "35.0% 35.2% 34.2% 74 71 74",
+  "raw_value": "74",
+  "anchor": "Days Sales Outstanding"
+ },
+ {
+  "id": "infosys.kpi.dso.q2fy26",
+  "company": "infosys",
+  "display": "71",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "days sales outstanding · Q2 FY26",
+  "raw_match": "35.0% 35.2% 34.2% 74 71 74",
+  "raw_value": "71",
+  "anchor": "Days Sales Outstanding"
+ },
+ {
+  "id": "infosys.kpi.dso.q3fy26",
+  "company": "infosys",
+  "display": "74",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "days sales outstanding · Q3 FY26",
+  "raw_match": "35.0% 35.2% 34.2% 74 71 74",
+  "raw_value": "74",
+  "anchor": "Days Sales Outstanding"
+ },
+ {
+  "id": "infosys.kpi.dso.q4fy25",
+  "company": "infosys",
+  "display": "69",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "days sales outstanding · Q4 FY25",
+  "raw_match": "34.5% 35.0% 34.8% 67 74 69",
+  "raw_value": "69",
+  "anchor": "Days Sales Outstanding"
+ },
+ {
+  "id": "infosys.kpi.dso.q4fy26",
+  "company": "infosys",
+  "display": "67",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "days sales outstanding · Q4 FY26",
+  "raw_match": "34.5% 35.0% 34.8% 67 74 69",
+  "raw_value": "67",
+  "anchor": "Days Sales Outstanding"
+ },
+ {
+  "id": "infosys.kpi.dso.q1fy27",
+  "company": "infosys",
+  "display": "63",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "days sales outstanding · Q1 FY27 · CFO (−4 days QoQ)",
+  "raw_match": "DSO reduced by 4 days sequentially to 63"
+ },
+ {
+  "id": "infosys.kpi.c50.q3fy26",
+  "company": "infosys",
+  "display": "84",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$50 mn (LTM revenue) · q3fy26",
+  "raw_match": "84 85 89 41 41 41",
+  "raw_value": "84",
+  "anchor": "50 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c50.q2fy26",
+  "company": "infosys",
+  "display": "85",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$50 mn (LTM revenue) · q2fy26",
+  "raw_match": "84 85 89 41 41 41",
+  "raw_value": "85",
+  "anchor": "50 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c50.q3fy25",
+  "company": "infosys",
+  "display": "89",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$50 mn (LTM revenue) · q3fy25",
+  "raw_match": "84 85 89 41 41 41",
+  "raw_value": "89",
+  "anchor": "50 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c100.q3fy26",
+  "company": "infosys",
+  "display": "41",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$100 mn (LTM revenue) · q3fy26",
+  "raw_match": "84 85 89 41 41 41",
+  "raw_value": "41",
+  "anchor": "100 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c100.q2fy26",
+  "company": "infosys",
+  "display": "41",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$100 mn (LTM revenue) · q2fy26",
+  "raw_match": "84 85 89 41 41 41",
+  "raw_value": "41",
+  "anchor": "100 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c100.q3fy25",
+  "company": "infosys",
+  "display": "41",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$100 mn (LTM revenue) · q3fy25",
+  "raw_match": "84 85 89 41 41 41",
+  "raw_value": "41",
+  "anchor": "100 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c50.q4fy26",
+  "company": "infosys",
+  "display": "88",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "clients above US$50 mn · Q4 FY26",
+  "raw_match": "88 84 85 41 41 39",
+  "raw_value": "88",
+  "anchor": "50 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c50.q4fy25",
+  "company": "infosys",
+  "display": "85",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "clients above US$50 mn · Q4 FY25",
+  "raw_match": "88 84 85 41 41 39",
+  "raw_value": "85",
+  "anchor": "50 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c100.q4fy26",
+  "company": "infosys",
+  "display": "41",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "clients above US$100 mn · Q4 FY26",
+  "raw_match": "88 84 85 41 41 39",
+  "raw_value": "41",
+  "anchor": "100 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c100.q4fy25",
+  "company": "infosys",
+  "display": "39",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "clients above US$100 mn · Q4 FY25",
+  "raw_match": "88 84 85 41 41 39",
+  "raw_value": "39",
+  "anchor": "100 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.top5.q3fy26",
+  "company": "infosys",
+  "display": "12.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Top 5 clients share of revenue % · Q3 FY26",
+  "raw_match": "12.8% 13.0% 12.7%",
+  "raw_value": "12.8%",
+  "anchor": "Top 5 clients"
+ },
+ {
+  "id": "infosys.kpi.top5.q2fy26",
+  "company": "infosys",
+  "display": "13.0",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Top 5 clients share of revenue % · Q2 FY26",
+  "raw_match": "12.8% 13.0% 12.7%",
+  "raw_value": "13.0%",
+  "anchor": "Top 5 clients"
+ },
+ {
+  "id": "infosys.kpi.top5.q3fy25",
+  "company": "infosys",
+  "display": "12.7",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Top 5 clients share of revenue % · Q3 FY25",
+  "raw_match": "12.8% 13.0% 12.7%",
+  "raw_value": "12.7%",
+  "anchor": "Top 5 clients"
+ },
+ {
+  "id": "infosys.kpi.top5.q4fy26",
+  "company": "infosys",
+  "display": "12.6",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Top 5 clients share of revenue % · Q4 FY26",
+  "raw_match": "12.6% 12.8% 13.1%",
+  "raw_value": "12.6%",
+  "anchor": "Top 5 clients"
+ },
+ {
+  "id": "infosys.kpi.top5.q4fy25",
+  "company": "infosys",
+  "display": "13.1",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Top 5 clients share of revenue % · Q4 FY25",
+  "raw_match": "12.6% 12.8% 13.1%",
+  "raw_value": "13.1%",
+  "anchor": "Top 5 clients"
+ },
+ {
+  "id": "infosys.kpi.top10.q3fy26",
+  "company": "infosys",
+  "display": "20.6",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Top 10 clients share of revenue % · Q3 FY26",
+  "raw_match": "20.6% 20.7% 19.9%",
+  "raw_value": "20.6%",
+  "anchor": "Top 10 clients"
+ },
+ {
+  "id": "infosys.kpi.top10.q2fy26",
+  "company": "infosys",
+  "display": "20.7",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Top 10 clients share of revenue % · Q2 FY26",
+  "raw_match": "20.6% 20.7% 19.9%",
+  "raw_value": "20.7%",
+  "anchor": "Top 10 clients"
+ },
+ {
+  "id": "infosys.kpi.top10.q3fy25",
+  "company": "infosys",
+  "display": "19.9",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Top 10 clients share of revenue % · Q3 FY25",
+  "raw_match": "20.6% 20.7% 19.9%",
+  "raw_value": "19.9%",
+  "anchor": "Top 10 clients"
+ },
+ {
+  "id": "infosys.kpi.top10.q4fy26",
+  "company": "infosys",
+  "display": "20.2",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Top 10 clients share of revenue % · Q4 FY26",
+  "raw_match": "20.2% 20.6% 20.7%",
+  "raw_value": "20.2%",
+  "anchor": "Top 10 clients"
+ },
+ {
+  "id": "infosys.kpi.top10.q4fy25",
+  "company": "infosys",
+  "display": "20.7",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Top 10 clients share of revenue % · Q4 FY25",
+  "raw_match": "20.2% 20.6% 20.7%",
+  "raw_value": "20.7%",
+  "anchor": "Top 10 clients"
+ },
+ {
+  "id": "infosys.kpi.top25.q3fy26",
+  "company": "infosys",
+  "display": "35.0",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Top 25 clients share of revenue % · Q3 FY26",
+  "raw_match": "35.0% 35.2% 34.2%",
+  "raw_value": "35.0%",
+  "anchor": "Top 25 clients"
+ },
+ {
+  "id": "infosys.kpi.top25.q2fy26",
+  "company": "infosys",
+  "display": "35.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Top 25 clients share of revenue % · Q2 FY26",
+  "raw_match": "35.0% 35.2% 34.2%",
+  "raw_value": "35.2%",
+  "anchor": "Top 25 clients"
+ },
+ {
+  "id": "infosys.kpi.top25.q3fy25",
+  "company": "infosys",
+  "display": "34.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Top 25 clients share of revenue % · Q3 FY25",
+  "raw_match": "35.0% 35.2% 34.2%",
+  "raw_value": "34.2%",
+  "anchor": "Top 25 clients"
+ },
+ {
+  "id": "infosys.kpi.top25.q4fy26",
+  "company": "infosys",
+  "display": "34.5",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Top 25 clients share of revenue % · Q4 FY26",
+  "raw_match": "34.5% 35.0% 34.8%",
+  "raw_value": "34.5%",
+  "anchor": "Top 25 clients"
+ },
+ {
+  "id": "infosys.kpi.top25.q4fy25",
+  "company": "infosys",
+  "display": "34.8",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Top 25 clients share of revenue % · Q4 FY25",
+  "raw_match": "34.5% 35.0% 34.8%",
+  "raw_value": "34.8%",
+  "anchor": "Top 25 clients"
+ },
+ {
+  "id": "infosys.kpi.ai_share.q1fy27",
+  "company": "infosys",
+  "display": "8.2",
+  "doc": "C-Jul26",
+  "pdf_page": 29,
+  "basis": "AI services revenue as % of revenue · Q1 FY27 · CEO (5.5% in Q3 FY26, CFO p.41)",
+  "raw_match": "Our AI services revenue was 8.2% of overall revenue"
+ },
+ {
+  "id": "infosys.kpi.guide_low.fy27_jul",
+  "company": "infosys",
+  "display": "1.5",
+  "doc": "C-Jul26",
+  "pdf_page": 29,
+  "basis": "FY27 revenue guidance, revised 23 Jul 2026 · YoY CC · low end",
+  "raw_match": "revenue growth guidance to 1.5% to 3% Y-on-Y growth",
+  "raw_value": "1.5%"
+ },
+ {
+  "id": "infosys.kpi.guide_high.fy27_jul",
+  "company": "infosys",
+  "display": "3",
+  "doc": "C-Jul26",
+  "pdf_page": 29,
+  "basis": "FY27 revenue guidance, revised 23 Jul 2026 · YoY CC · high end",
+  "raw_match": "revenue growth guidance to 1.5% to 3% Y-on-Y growth",
+  "raw_value": "3%"
+ },
+ {
+  "id": "infosys.kpi.guide_high.fy27_apr",
+  "company": "infosys",
+  "display": "3.5",
+  "doc": "C-Jul26",
+  "pdf_page": 34,
+  "basis": "FY27 revenue guidance as given in April 2026 · high end · confirmed by the CFO",
+  "raw_match": "which was 1.5% to 3.5%",
+  "raw_value": "3.5%"
+ },
+ {
+  "id": "infosys.kpi.guide_acq.fy27",
+  "company": "infosys",
+  "display": "1.7",
+  "doc": "C-Jul26",
+  "pdf_page": 33,
+  "basis": "acquisitions (Optimum Healthcare, Stratus) inside the revised FY27 guide · pp",
+  "raw_match": "approximately 1.7% contribution from recently closed acquisitions"
+ },
+ {
+  "id": "infosys.kpi.guide_org_low.fy27",
+  "company": "infosys",
+  "display": "−0.2",
+  "basis": "derived: FY27 guide ex-acquisitions, low end = 1.5 − 1.7 (N4A arithmetic)",
+  "derived_from": [
+   "infosys.kpi.guide_low.fy27_jul",
+   "infosys.kpi.guide_acq.fy27"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "infosys.kpi.guide_org_high.fy27",
+  "company": "infosys",
+  "display": "1.3",
+  "basis": "derived: FY27 guide ex-acquisitions, high end = 3 − 1.7 (N4A arithmetic)",
+  "derived_from": [
+   "infosys.kpi.guide_high.fy27_jul",
+   "infosys.kpi.guide_acq.fy27"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "infosys.kpi.guide_lfl.fy27",
+  "company": "infosys",
+  "display": "0.8",
+  "doc": "C-Jul26",
+  "pdf_page": 34,
+  "basis": "FY27 guide midpoint like-for-like (ex the new acquisitions), per BNP analyst, confirmed 'Yes' by CFO",
+  "raw_match": "it would be about 0.8% sort of a number"
+ },
+ {
+  "id": "infosys.kpi.guide_prior_mid.fy27",
+  "company": "infosys",
+  "display": "2.2",
+  "doc": "C-Jul26",
+  "pdf_page": 34,
+  "basis": "April FY27 guide midpoint as the CFO restates it (Stratus 20 bps already inside)",
+  "raw_match": "the last quarter midpoint would be around 2.2%"
+ },
+ {
+  "id": "infosys.kpi.guide_margin.fy27",
+  "company": "infosys",
+  "display": "20",
+  "doc": "C-Jul26",
+  "pdf_page": 29,
+  "basis": "FY27 operating margin guidance · low end (20%–22%, unchanged)",
+  "raw_match": "Our operating margin guidance remains the same at 20% to 22%",
+  "raw_value": "20%"
+ },
+ {
+  "id": "infosys.kpi.ai_share.q3fy26",
+  "company": "infosys",
+  "display": "5.5",
+  "doc": "C-Jul26",
+  "pdf_page": 41,
+  "basis": "AI revenue as % of revenue · Q3 FY26 · CFO recalling the February Investor AI Day figure",
+  "raw_match": "our AI revenue, which was 5.5% for Q3"
+ },
+ {
+  "id": "infosys.kpi.eps_yoy.q1fy27",
+  "company": "infosys",
+  "display": "14.8",
+  "basis": "derived: basic EPS growth YoY · Q1 FY27 = 19.19 (call) / derived Q1 FY26 16.71 − 1 (CFO says 'approximately 15%', C-Jul26 p.31)",
+  "derived_from": [
+   "infosys.kpi.eps.q1fy27",
+   "infosys.kpi.eps.q1fy26"
+  ],
+  "formula": "(a / b - 1) * 100"
+ },
+ {
+  "id": "infosys.kpi.share_fs.q3fy26",
+  "company": "infosys",
+  "display": "28.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Financial services · share of revenue % · q3fy26",
+  "raw_match": "Financial services 28.2 27.7 27.8 4.8 3.9",
+  "raw_value": "28.2"
+ },
+ {
+  "id": "infosys.kpi.share_fs.q2fy26",
+  "company": "infosys",
+  "display": "27.7",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Financial services · share of revenue % · q2fy26",
+  "raw_match": "Financial services 28.2 27.7 27.8 4.8 3.9",
+  "raw_value": "27.7"
+ },
+ {
+  "id": "infosys.kpi.share_fs.q3fy25",
+  "company": "infosys",
+  "display": "27.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Financial services · share of revenue % · q3fy25",
+  "raw_match": "Financial services 28.2 27.7 27.8 4.8 3.9",
+  "raw_value": "27.8"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_fs.q3fy26",
+  "company": "infosys",
+  "display": "4.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Financial services · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "Financial services 28.2 27.7 27.8 4.8 3.9",
+  "raw_value": "4.8"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_fs.q3fy26",
+  "company": "infosys",
+  "display": "3.9",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Financial services · YoY growth % · CC · Q3 FY26",
+  "raw_match": "Financial services 28.2 27.7 27.8 4.8 3.9",
+  "raw_value": "3.9"
+ },
+ {
+  "id": "infosys.kpi.share_mfg.q3fy26",
+  "company": "infosys",
+  "display": "16.7",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Manufacturing · share of revenue % · q3fy26",
+  "raw_match": "Manufacturing 16.7 16.5 15.5 10.8 6.6",
+  "raw_value": "16.7"
+ },
+ {
+  "id": "infosys.kpi.share_mfg.q2fy26",
+  "company": "infosys",
+  "display": "16.5",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Manufacturing · share of revenue % · q2fy26",
+  "raw_match": "Manufacturing 16.7 16.5 15.5 10.8 6.6",
+  "raw_value": "16.5"
+ },
+ {
+  "id": "infosys.kpi.share_mfg.q3fy25",
+  "company": "infosys",
+  "display": "15.5",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Manufacturing · share of revenue % · q3fy25",
+  "raw_match": "Manufacturing 16.7 16.5 15.5 10.8 6.6",
+  "raw_value": "15.5"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_mfg.q3fy26",
+  "company": "infosys",
+  "display": "10.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Manufacturing · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "Manufacturing 16.7 16.5 15.5 10.8 6.6",
+  "raw_value": "10.8"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_mfg.q3fy26",
+  "company": "infosys",
+  "display": "6.6",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Manufacturing · YoY growth % · CC · Q3 FY26",
+  "raw_match": "Manufacturing 16.7 16.5 15.5 10.8 6.6",
+  "raw_value": "6.6"
+ },
+ {
+  "id": "infosys.kpi.share_eurs.q3fy26",
+  "company": "infosys",
+  "display": "13.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Energy, Utilities, Resources & Services · share of revenue % · q3fy26",
+  "raw_match": "Energy, Utilities, Resources & Services 13.2 13.4 13.5 1.3 0.5",
+  "raw_value": "13.2"
+ },
+ {
+  "id": "infosys.kpi.share_eurs.q2fy26",
+  "company": "infosys",
+  "display": "13.4",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Energy, Utilities, Resources & Services · share of revenue % · q2fy26",
+  "raw_match": "Energy, Utilities, Resources & Services 13.2 13.4 13.5 1.3 0.5",
+  "raw_value": "13.4"
+ },
+ {
+  "id": "infosys.kpi.share_eurs.q3fy25",
+  "company": "infosys",
+  "display": "13.5",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Energy, Utilities, Resources & Services · share of revenue % · q3fy25",
+  "raw_match": "Energy, Utilities, Resources & Services 13.2 13.4 13.5 1.3 0.5",
+  "raw_value": "13.5"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_eurs.q3fy26",
+  "company": "infosys",
+  "display": "1.3",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Energy, Utilities, Resources & Services · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "Energy, Utilities, Resources & Services 13.2 13.4 13.5 1.3 0.5",
+  "raw_value": "1.3"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_eurs.q3fy26",
+  "company": "infosys",
+  "display": "0.5",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Energy, Utilities, Resources & Services · YoY growth % · CC · Q3 FY26",
+  "raw_match": "Energy, Utilities, Resources & Services 13.2 13.4 13.5 1.3 0.5",
+  "raw_value": "0.5"
+ },
+ {
+  "id": "infosys.kpi.share_retail.q3fy26",
+  "company": "infosys",
+  "display": "12.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Retail · share of revenue % · q3fy26",
+  "raw_match": "Retail 12.8 12.7 13.8 (3.8) (5.5)",
+  "raw_value": "12.8"
+ },
+ {
+  "id": "infosys.kpi.share_retail.q2fy26",
+  "company": "infosys",
+  "display": "12.7",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Retail · share of revenue % · q2fy26",
+  "raw_match": "Retail 12.8 12.7 13.8 (3.8) (5.5)",
+  "raw_value": "12.7"
+ },
+ {
+  "id": "infosys.kpi.share_retail.q3fy25",
+  "company": "infosys",
+  "display": "13.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Retail · share of revenue % · q3fy25",
+  "raw_match": "Retail 12.8 12.7 13.8 (3.8) (5.5)",
+  "raw_value": "13.8"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_retail.q3fy26",
+  "company": "infosys",
+  "display": "−3.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Retail · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "Retail 12.8 12.7 13.8 (3.8) (5.5)",
+  "raw_value": "(3.8)"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_retail.q3fy26",
+  "company": "infosys",
+  "display": "−5.5",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Retail · YoY growth % · CC · Q3 FY26",
+  "raw_match": "Retail 12.8 12.7 13.8 (3.8) (5.5)",
+  "raw_value": "(5.5)"
+ },
+ {
+  "id": "infosys.kpi.share_comm.q3fy26",
+  "company": "infosys",
+  "display": "12.1",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Communication · share of revenue % · q3fy26",
+  "raw_match": "Communication 12.1 12.1 11.2 11.6 9.9",
+  "raw_value": "12.1"
+ },
+ {
+  "id": "infosys.kpi.share_comm.q2fy26",
+  "company": "infosys",
+  "display": "12.1",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Communication · share of revenue % · q2fy26",
+  "raw_match": "Communication 12.1 12.1 11.2 11.6 9.9",
+  "raw_value": "12.1"
+ },
+ {
+  "id": "infosys.kpi.share_comm.q3fy25",
+  "company": "infosys",
+  "display": "11.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Communication · share of revenue % · q3fy25",
+  "raw_match": "Communication 12.1 12.1 11.2 11.6 9.9",
+  "raw_value": "11.2"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_comm.q3fy26",
+  "company": "infosys",
+  "display": "11.6",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Communication · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "Communication 12.1 12.1 11.2 11.6 9.9",
+  "raw_value": "11.6"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_comm.q3fy26",
+  "company": "infosys",
+  "display": "9.9",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Communication · YoY growth % · CC · Q3 FY26",
+  "raw_match": "Communication 12.1 12.1 11.2 11.6 9.9",
+  "raw_value": "9.9"
+ },
+ {
+  "id": "infosys.kpi.share_hitech.q3fy26",
+  "company": "infosys",
+  "display": "7.4",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Hi-Tech · share of revenue % · q3fy26",
+  "raw_match": "Hi-Tech 7.4 8.3 7.9 (2.6) (2.2)",
+  "raw_value": "7.4"
+ },
+ {
+  "id": "infosys.kpi.share_hitech.q2fy26",
+  "company": "infosys",
+  "display": "8.3",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Hi-Tech · share of revenue % · q2fy26",
+  "raw_match": "Hi-Tech 7.4 8.3 7.9 (2.6) (2.2)",
+  "raw_value": "8.3"
+ },
+ {
+  "id": "infosys.kpi.share_hitech.q3fy25",
+  "company": "infosys",
+  "display": "7.9",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Hi-Tech · share of revenue % · q3fy25",
+  "raw_match": "Hi-Tech 7.4 8.3 7.9 (2.6) (2.2)",
+  "raw_value": "7.9"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_hitech.q3fy26",
+  "company": "infosys",
+  "display": "−2.6",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Hi-Tech · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "Hi-Tech 7.4 8.3 7.9 (2.6) (2.2)",
+  "raw_value": "(2.6)"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_hitech.q3fy26",
+  "company": "infosys",
+  "display": "−2.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Hi-Tech · YoY growth % · CC · Q3 FY26",
+  "raw_match": "Hi-Tech 7.4 8.3 7.9 (2.6) (2.2)",
+  "raw_value": "(2.2)"
+ },
+ {
+  "id": "infosys.kpi.share_ls.q3fy26",
+  "company": "infosys",
+  "display": "7.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Life Sciences · share of revenue % · q3fy26",
+  "raw_match": "Life Sciences 7.2 6.4 7.6 (3.1) (5.4)",
+  "raw_value": "7.2"
+ },
+ {
+  "id": "infosys.kpi.share_ls.q2fy26",
+  "company": "infosys",
+  "display": "6.4",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Life Sciences · share of revenue % · q2fy26",
+  "raw_match": "Life Sciences 7.2 6.4 7.6 (3.1) (5.4)",
+  "raw_value": "6.4"
+ },
+ {
+  "id": "infosys.kpi.share_ls.q3fy25",
+  "company": "infosys",
+  "display": "7.6",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Life Sciences · share of revenue % · q3fy25",
+  "raw_match": "Life Sciences 7.2 6.4 7.6 (3.1) (5.4)",
+  "raw_value": "7.6"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_ls.q3fy26",
+  "company": "infosys",
+  "display": "−3.1",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Life Sciences · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "Life Sciences 7.2 6.4 7.6 (3.1) (5.4)",
+  "raw_value": "(3.1)"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_ls.q3fy26",
+  "company": "infosys",
+  "display": "−5.4",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Life Sciences · YoY growth % · CC · Q3 FY26",
+  "raw_match": "Life Sciences 7.2 6.4 7.6 (3.1) (5.4)",
+  "raw_value": "(5.4)"
+ },
+ {
+  "id": "infosys.kpi.share_others.q3fy26",
+  "company": "infosys",
+  "display": "2.4",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Others · share of revenue % · q3fy26",
+  "raw_match": "Others 2.4 2.9 2.7 (10.4) (9.3)",
+  "raw_value": "2.4"
+ },
+ {
+  "id": "infosys.kpi.share_others.q2fy26",
+  "company": "infosys",
+  "display": "2.9",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Others · share of revenue % · q2fy26",
+  "raw_match": "Others 2.4 2.9 2.7 (10.4) (9.3)",
+  "raw_value": "2.9"
+ },
+ {
+  "id": "infosys.kpi.share_others.q3fy25",
+  "company": "infosys",
+  "display": "2.7",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Others · share of revenue % · q3fy25",
+  "raw_match": "Others 2.4 2.9 2.7 (10.4) (9.3)",
+  "raw_value": "2.7"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_others.q3fy26",
+  "company": "infosys",
+  "display": "−10.4",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Others · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "Others 2.4 2.9 2.7 (10.4) (9.3)",
+  "raw_value": "(10.4)"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_others.q3fy26",
+  "company": "infosys",
+  "display": "−9.3",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Others · YoY growth % · CC · Q3 FY26",
+  "raw_match": "Others 2.4 2.9 2.7 (10.4) (9.3)",
+  "raw_value": "(9.3)"
+ },
+ {
+  "id": "infosys.kpi.share_na.q3fy26",
+  "company": "infosys",
+  "display": "55.9",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "North America · share of revenue % · q3fy26",
+  "raw_match": "55.9 56.3 58.4 (1.2) (1.0)",
+  "raw_value": "55.9",
+  "anchor": "North America"
+ },
+ {
+  "id": "infosys.kpi.share_na.q2fy26",
+  "company": "infosys",
+  "display": "56.3",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "North America · share of revenue % · q2fy26",
+  "raw_match": "55.9 56.3 58.4 (1.2) (1.0)",
+  "raw_value": "56.3",
+  "anchor": "North America"
+ },
+ {
+  "id": "infosys.kpi.share_na.q3fy25",
+  "company": "infosys",
+  "display": "58.4",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "North America · share of revenue % · q3fy25",
+  "raw_match": "55.9 56.3 58.4 (1.2) (1.0)",
+  "raw_value": "58.4",
+  "anchor": "North America"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_na.q3fy26",
+  "company": "infosys",
+  "display": "−1.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "North America · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "55.9 56.3 58.4 (1.2) (1.0)",
+  "raw_value": "(1.2)",
+  "anchor": "North America"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_na.q3fy26",
+  "company": "infosys",
+  "display": "−1.0",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "North America · YoY growth % · CC · Q3 FY26",
+  "raw_match": "55.9 56.3 58.4 (1.2) (1.0)",
+  "raw_value": "(1.0)",
+  "anchor": "North America"
+ },
+ {
+  "id": "infosys.kpi.share_europe.q3fy26",
+  "company": "infosys",
+  "display": "32.7",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Europe · share of revenue % · q3fy26",
+  "raw_match": "32.7 31.7 29.8 13.3 7.2",
+  "raw_value": "32.7",
+  "anchor": "Europe"
+ },
+ {
+  "id": "infosys.kpi.share_europe.q2fy26",
+  "company": "infosys",
+  "display": "31.7",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Europe · share of revenue % · q2fy26",
+  "raw_match": "32.7 31.7 29.8 13.3 7.2",
+  "raw_value": "31.7",
+  "anchor": "Europe"
+ },
+ {
+  "id": "infosys.kpi.share_europe.q3fy25",
+  "company": "infosys",
+  "display": "29.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Europe · share of revenue % · q3fy25",
+  "raw_match": "32.7 31.7 29.8 13.3 7.2",
+  "raw_value": "29.8",
+  "anchor": "Europe"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_europe.q3fy26",
+  "company": "infosys",
+  "display": "13.3",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Europe · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "32.7 31.7 29.8 13.3 7.2",
+  "raw_value": "13.3",
+  "anchor": "Europe"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_europe.q3fy26",
+  "company": "infosys",
+  "display": "7.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Europe · YoY growth % · CC · Q3 FY26",
+  "raw_match": "32.7 31.7 29.8 13.3 7.2",
+  "raw_value": "7.2",
+  "anchor": "Europe"
+ },
+ {
+  "id": "infosys.kpi.share_row.q3fy26",
+  "company": "infosys",
+  "display": "8.6",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Rest of the world · share of revenue % · q3fy26",
+  "raw_match": "8.6 8.9 8.7 2.4 2.5",
+  "raw_value": "8.6",
+  "anchor": "Rest of the world"
+ },
+ {
+  "id": "infosys.kpi.share_row.q2fy26",
+  "company": "infosys",
+  "display": "8.9",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Rest of the world · share of revenue % · q2fy26",
+  "raw_match": "8.6 8.9 8.7 2.4 2.5",
+  "raw_value": "8.9",
+  "anchor": "Rest of the world"
+ },
+ {
+  "id": "infosys.kpi.share_row.q3fy25",
+  "company": "infosys",
+  "display": "8.7",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Rest of the world · share of revenue % · q3fy25",
+  "raw_match": "8.6 8.9 8.7 2.4 2.5",
+  "raw_value": "8.7",
+  "anchor": "Rest of the world"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_row.q3fy26",
+  "company": "infosys",
+  "display": "2.4",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Rest of the world · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "8.6 8.9 8.7 2.4 2.5",
+  "raw_value": "2.4",
+  "anchor": "Rest of the world"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_row.q3fy26",
+  "company": "infosys",
+  "display": "2.5",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "Rest of the world · YoY growth % · CC · Q3 FY26",
+  "raw_match": "8.6 8.9 8.7 2.4 2.5",
+  "raw_value": "2.5",
+  "anchor": "Rest of the world"
+ },
+ {
+  "id": "infosys.kpi.share_india.q3fy26",
+  "company": "infosys",
+  "display": "2.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "India · share of revenue % · q3fy26",
+  "raw_match": "2.8 3.1 3.1 (6.2) (1.8)",
+  "raw_value": "2.8",
+  "anchor": "India"
+ },
+ {
+  "id": "infosys.kpi.share_india.q2fy26",
+  "company": "infosys",
+  "display": "3.1",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "India · share of revenue % · q2fy26",
+  "raw_match": "2.8 3.1 3.1 (6.2) (1.8)",
+  "raw_value": "3.1",
+  "anchor": "India"
+ },
+ {
+  "id": "infosys.kpi.share_india.q3fy25",
+  "company": "infosys",
+  "display": "3.1",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "India · share of revenue % · q3fy25",
+  "raw_match": "2.8 3.1 3.1 (6.2) (1.8)",
+  "raw_value": "3.1",
+  "anchor": "India"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_india.q3fy26",
+  "company": "infosys",
+  "display": "−6.2",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "India · YoY growth % · reported US$ · Q3 FY26",
+  "raw_match": "2.8 3.1 3.1 (6.2) (1.8)",
+  "raw_value": "(6.2)",
+  "anchor": "India"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_india.q3fy26",
+  "company": "infosys",
+  "display": "−1.8",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "India · YoY growth % · CC · Q3 FY26",
+  "raw_match": "2.8 3.1 3.1 (6.2) (1.8)",
+  "raw_value": "(1.8)",
+  "anchor": "India"
+ },
+ {
+  "id": "infosys.kpi.share_fs.q4fy26",
+  "company": "infosys",
+  "display": "28.0",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Financial services · share of revenue % · q4fy26",
+  "raw_match": "Financial services 28.0 28.2 28.4 5.0 2.9",
+  "raw_value": "28.0"
+ },
+ {
+  "id": "infosys.kpi.share_fs.q4fy25",
+  "company": "infosys",
+  "display": "28.4",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Financial services · share of revenue % · q4fy25",
+  "raw_match": "Financial services 28.0 28.2 28.4 5.0 2.9",
+  "raw_value": "28.4"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_fs.q4fy26",
+  "company": "infosys",
+  "display": "5.0",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Financial services · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "Financial services 28.0 28.2 28.4 5.0 2.9",
+  "raw_value": "5.0"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_fs.q4fy26",
+  "company": "infosys",
+  "display": "2.9",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Financial services · YoY growth % · CC · Q4 FY26",
+  "raw_match": "Financial services 28.0 28.2 28.4 5.0 2.9",
+  "raw_value": "2.9"
+ },
+ {
+  "id": "infosys.kpi.share_mfg.q4fy26",
+  "company": "infosys",
+  "display": "15.9",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Manufacturing · share of revenue % · q4fy26",
+  "raw_match": "Manufacturing 15.9 16.7 15.9 5.9 1.3",
+  "raw_value": "15.9"
+ },
+ {
+  "id": "infosys.kpi.share_mfg.q4fy25",
+  "company": "infosys",
+  "display": "15.9",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Manufacturing · share of revenue % · q4fy25",
+  "raw_match": "Manufacturing 15.9 16.7 15.9 5.9 1.3",
+  "raw_value": "15.9"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_mfg.q4fy26",
+  "company": "infosys",
+  "display": "5.9",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Manufacturing · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "Manufacturing 15.9 16.7 15.9 5.9 1.3",
+  "raw_value": "5.9"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_mfg.q4fy26",
+  "company": "infosys",
+  "display": "1.3",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Manufacturing · YoY growth % · CC · Q4 FY26",
+  "raw_match": "Manufacturing 15.9 16.7 15.9 5.9 1.3",
+  "raw_value": "1.3"
+ },
+ {
+  "id": "infosys.kpi.share_eurs.q4fy26",
+  "company": "infosys",
+  "display": "13.2",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Energy, Utilities, Resources & Services · share of revenue % · q4fy26",
+  "raw_match": "Energy, Utilities, Resources & Services 13.2 13.2 13.0 8.3 6.7",
+  "raw_value": "13.2"
+ },
+ {
+  "id": "infosys.kpi.share_eurs.q4fy25",
+  "company": "infosys",
+  "display": "13.0",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Energy, Utilities, Resources & Services · share of revenue % · q4fy25",
+  "raw_match": "Energy, Utilities, Resources & Services 13.2 13.2 13.0 8.3 6.7",
+  "raw_value": "13.0"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_eurs.q4fy26",
+  "company": "infosys",
+  "display": "8.3",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Energy, Utilities, Resources & Services · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "Energy, Utilities, Resources & Services 13.2 13.2 13.0 8.3 6.7",
+  "raw_value": "8.3"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_eurs.q4fy26",
+  "company": "infosys",
+  "display": "6.7",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Energy, Utilities, Resources & Services · YoY growth % · CC · Q4 FY26",
+  "raw_match": "Energy, Utilities, Resources & Services 13.2 13.2 13.0 8.3 6.7",
+  "raw_value": "6.7"
+ },
+ {
+  "id": "infosys.kpi.share_retail.q4fy26",
+  "company": "infosys",
+  "display": "12.8",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Retail · share of revenue % · q4fy26",
+  "raw_match": "Retail 12.8 12.8 13.3 2.9 0.5",
+  "raw_value": "12.8"
+ },
+ {
+  "id": "infosys.kpi.share_retail.q4fy25",
+  "company": "infosys",
+  "display": "13.3",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Retail · share of revenue % · q4fy25",
+  "raw_match": "Retail 12.8 12.8 13.3 2.9 0.5",
+  "raw_value": "13.3"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_retail.q4fy26",
+  "company": "infosys",
+  "display": "2.9",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Retail · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "Retail 12.8 12.8 13.3 2.9 0.5",
+  "raw_value": "2.9"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_retail.q4fy26",
+  "company": "infosys",
+  "display": "0.5",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Retail · YoY growth % · CC · Q4 FY26",
+  "raw_match": "Retail 12.8 12.8 13.3 2.9 0.5",
+  "raw_value": "0.5"
+ },
+ {
+  "id": "infosys.kpi.share_comm.q4fy26",
+  "company": "infosys",
+  "display": "12.4",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Communication · share of revenue % · q4fy26",
+  "raw_match": "Communication 12.4 12.1 11.7 12.6 9.0",
+  "raw_value": "12.4"
+ },
+ {
+  "id": "infosys.kpi.share_comm.q4fy25",
+  "company": "infosys",
+  "display": "11.7",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Communication · share of revenue % · q4fy25",
+  "raw_match": "Communication 12.4 12.1 11.7 12.6 9.0",
+  "raw_value": "11.7"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_comm.q4fy26",
+  "company": "infosys",
+  "display": "12.6",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Communication · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "Communication 12.4 12.1 11.7 12.6 9.0",
+  "raw_value": "12.6"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_comm.q4fy26",
+  "company": "infosys",
+  "display": "9.0",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Communication · YoY growth % · CC · Q4 FY26",
+  "raw_match": "Communication 12.4 12.1 11.7 12.6 9.0",
+  "raw_value": "9.0"
+ },
+ {
+  "id": "infosys.kpi.share_hitech.q4fy26",
+  "company": "infosys",
+  "display": "7.7",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Hi-Tech · share of revenue % · q4fy26",
+  "raw_match": "Hi-Tech 7.7 7.4 8.3 (1.5) (1.2)",
+  "raw_value": "7.7"
+ },
+ {
+  "id": "infosys.kpi.share_hitech.q4fy25",
+  "company": "infosys",
+  "display": "8.3",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Hi-Tech · share of revenue % · q4fy25",
+  "raw_match": "Hi-Tech 7.7 7.4 8.3 (1.5) (1.2)",
+  "raw_value": "8.3"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_hitech.q4fy26",
+  "company": "infosys",
+  "display": "−1.5",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Hi-Tech · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "Hi-Tech 7.7 7.4 8.3 (1.5) (1.2)",
+  "raw_value": "(1.5)"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_hitech.q4fy26",
+  "company": "infosys",
+  "display": "−1.2",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Hi-Tech · YoY growth % · CC · Q4 FY26",
+  "raw_match": "Hi-Tech 7.7 7.4 8.3 (1.5) (1.2)",
+  "raw_value": "(1.2)"
+ },
+ {
+  "id": "infosys.kpi.share_ls.q4fy26",
+  "company": "infosys",
+  "display": "7.3",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Life Sciences · share of revenue % · q4fy26",
+  "raw_match": "Life Sciences 7.3 7.2 6.8 15.5 11.6",
+  "raw_value": "7.3"
+ },
+ {
+  "id": "infosys.kpi.share_ls.q4fy25",
+  "company": "infosys",
+  "display": "6.8",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Life Sciences · share of revenue % · q4fy25",
+  "raw_match": "Life Sciences 7.3 7.2 6.8 15.5 11.6",
+  "raw_value": "6.8"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_ls.q4fy26",
+  "company": "infosys",
+  "display": "15.5",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Life Sciences · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "Life Sciences 7.3 7.2 6.8 15.5 11.6",
+  "raw_value": "15.5"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_ls.q4fy26",
+  "company": "infosys",
+  "display": "11.6",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Life Sciences · YoY growth % · CC · Q4 FY26",
+  "raw_match": "Life Sciences 7.3 7.2 6.8 15.5 11.6",
+  "raw_value": "11.6"
+ },
+ {
+  "id": "infosys.kpi.share_others.q4fy26",
+  "company": "infosys",
+  "display": "2.7",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Others · share of revenue % · q4fy26",
+  "raw_match": "Others 2.7 2.4 2.6 13.0 14.0",
+  "raw_value": "2.7"
+ },
+ {
+  "id": "infosys.kpi.share_others.q4fy25",
+  "company": "infosys",
+  "display": "2.6",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Others · share of revenue % · q4fy25",
+  "raw_match": "Others 2.7 2.4 2.6 13.0 14.0",
+  "raw_value": "2.6"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_others.q4fy26",
+  "company": "infosys",
+  "display": "13.0",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Others · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "Others 2.7 2.4 2.6 13.0 14.0",
+  "raw_value": "13.0"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_others.q4fy26",
+  "company": "infosys",
+  "display": "14.0",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Others · YoY growth % · CC · Q4 FY26",
+  "raw_match": "Others 2.7 2.4 2.6 13.0 14.0",
+  "raw_value": "14.0"
+ },
+ {
+  "id": "infosys.kpi.share_na.q4fy26",
+  "company": "infosys",
+  "display": "55.7",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "North America · share of revenue % · q4fy26",
+  "raw_match": "55.7 55.9 57.1 4.1 4.1",
+  "raw_value": "55.7",
+  "anchor": "North America"
+ },
+ {
+  "id": "infosys.kpi.share_na.q4fy25",
+  "company": "infosys",
+  "display": "57.1",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "North America · share of revenue % · q4fy25",
+  "raw_match": "55.7 55.9 57.1 4.1 4.1",
+  "raw_value": "57.1",
+  "anchor": "North America"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_na.q4fy26",
+  "company": "infosys",
+  "display": "4.1",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "North America · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "55.7 55.9 57.1 4.1 4.1",
+  "raw_value": "4.1",
+  "anchor": "North America"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_na.q4fy26",
+  "company": "infosys",
+  "display": "4.1",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "North America · YoY growth % · CC · Q4 FY26",
+  "raw_match": "55.7 55.9 57.1 4.1 4.1",
+  "raw_value": "4.1",
+  "anchor": "North America"
+ },
+ {
+  "id": "infosys.kpi.share_europe.q4fy26",
+  "company": "infosys",
+  "display": "32.6",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Europe · share of revenue % · q4fy26",
+  "raw_match": "32.6 32.7 31.2 11.4 4.1",
+  "raw_value": "32.6",
+  "anchor": "Europe"
+ },
+ {
+  "id": "infosys.kpi.share_europe.q4fy25",
+  "company": "infosys",
+  "display": "31.2",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Europe · share of revenue % · q4fy25",
+  "raw_match": "32.6 32.7 31.2 11.4 4.1",
+  "raw_value": "31.2",
+  "anchor": "Europe"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_europe.q4fy26",
+  "company": "infosys",
+  "display": "11.4",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Europe · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "32.6 32.7 31.2 11.4 4.1",
+  "raw_value": "11.4",
+  "anchor": "Europe"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_europe.q4fy26",
+  "company": "infosys",
+  "display": "4.1",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Europe · YoY growth % · CC · Q4 FY26",
+  "raw_match": "32.6 32.7 31.2 11.4 4.1",
+  "raw_value": "4.1",
+  "anchor": "Europe"
+ },
+ {
+  "id": "infosys.kpi.share_row.q4fy26",
+  "company": "infosys",
+  "display": "9.1",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Rest of the world · share of revenue % · q4fy26",
+  "raw_match": "9.1 8.6 8.8 9.3 5.0",
+  "raw_value": "9.1",
+  "anchor": "Rest of the world"
+ },
+ {
+  "id": "infosys.kpi.share_row.q4fy25",
+  "company": "infosys",
+  "display": "8.8",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Rest of the world · share of revenue % · q4fy25",
+  "raw_match": "9.1 8.6 8.8 9.3 5.0",
+  "raw_value": "8.8",
+  "anchor": "Rest of the world"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_row.q4fy26",
+  "company": "infosys",
+  "display": "9.3",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Rest of the world · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "9.1 8.6 8.8 9.3 5.0",
+  "raw_value": "9.3",
+  "anchor": "Rest of the world"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_row.q4fy26",
+  "company": "infosys",
+  "display": "5.0",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "Rest of the world · YoY growth % · CC · Q4 FY26",
+  "raw_match": "9.1 8.6 8.8 9.3 5.0",
+  "raw_value": "5.0",
+  "anchor": "Rest of the world"
+ },
+ {
+  "id": "infosys.kpi.share_india.q4fy26",
+  "company": "infosys",
+  "display": "2.6",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "India · share of revenue % · q4fy26",
+  "raw_match": "2.6 2.8 2.9 (5.2) 0.0",
+  "raw_value": "2.6",
+  "anchor": "India"
+ },
+ {
+  "id": "infosys.kpi.share_india.q4fy25",
+  "company": "infosys",
+  "display": "2.9",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "India · share of revenue % · q4fy25",
+  "raw_match": "2.6 2.8 2.9 (5.2) 0.0",
+  "raw_value": "2.9",
+  "anchor": "India"
+ },
+ {
+  "id": "infosys.kpi.yoy_rep_india.q4fy26",
+  "company": "infosys",
+  "display": "−5.2",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "India · YoY growth % · reported US$ · Q4 FY26",
+  "raw_match": "2.6 2.8 2.9 (5.2) 0.0",
+  "raw_value": "(5.2)",
+  "anchor": "India"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_india.q4fy26",
+  "company": "infosys",
+  "display": "0.0",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "India · YoY growth % · CC · Q4 FY26",
+  "raw_match": "2.6 2.8 2.9 (5.2) 0.0",
+  "raw_value": "0.0",
+  "anchor": "India"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_na.q3fy25",
+  "company": "infosys",
+  "display": "4.8",
+  "doc": "C-Jan25",
+  "pdf_page": 25,
+  "basis": "North America · YoY growth % · CC · Q3 FY25 · CFO",
+  "raw_match": "North America returned to positive growth trajectory after 4 quarters, growing at 4.8%",
+  "raw_value": "4.8%"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_europe.q3fy25",
+  "company": "infosys",
+  "display": "12.2",
+  "doc": "C-Jan25",
+  "pdf_page": 25,
+  "basis": "Europe · YoY growth % · CC · Q3 FY25 · CFO",
+  "raw_match": "Europe grew at 12.2% YoY in constant currency terms"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_europe.q4fy25",
+  "company": "infosys",
+  "display": "15",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "Europe · YoY growth % · CC · Q4 FY25 · CFO (Europe ~30% of revenue)",
+  "raw_match": "Europe grew 3x of the company rate at 15% in constant currency terms",
+  "raw_value": "15%"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_fs.q4fy25",
+  "company": "infosys",
+  "display": "12.6",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "Financial Services · YoY growth % · CC · Q4 FY25 · CFO",
+  "raw_match": "Financial Services and Manufacturing grew double digit year-on-year at 12.6% and 14%",
+  "raw_value": "12.6%"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_mfg.q4fy25",
+  "company": "infosys",
+  "display": "14",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "Manufacturing · YoY growth % · CC · Q4 FY25 · CFO",
+  "raw_match": "Financial Services and Manufacturing grew double digit year-on-year at 12.6% and 14%",
+  "raw_value": "14%"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_fs_eurs.q1fy26",
+  "company": "infosys",
+  "display": "≈5",
+  "doc": "C-Jul25",
+  "pdf_page": 20,
+  "basis": "Financial Services and EURS · YoY growth % · CC · Q1 FY26 · CFO ('about 5%'; Manufacturing 'double digits')",
+  "raw_match": "Manufacturing grew in double digits and FS and EURS grew about 5% year-on-year in constant currency terms",
+  "raw_value": "5%"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_europe.q1fy26",
+  "company": "infosys",
+  "display": "12.3",
+  "doc": "C-Jul25",
+  "pdf_page": 20,
+  "basis": "Europe · YoY growth % · CC · Q1 FY26 · CFO",
+  "raw_match": "On a year-on-year basis, Europe grew 12.3%"
+ },
+ {
+  "id": "infosys.kpi.qoq_cc_na.q1fy26",
+  "company": "infosys",
+  "display": "2.9",
+  "doc": "C-Jul25",
+  "pdf_page": 20,
+  "basis": "North America · QoQ growth % · CC · Q1 FY26 · CFO (QoQ, not YoY)",
+  "raw_match": "North America grew ahead of the company at 2.9% sequentially in CC"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_fs_mfg.q2fy26",
+  "company": "infosys",
+  "display": ">5",
+  "doc": "C-Oct25",
+  "pdf_page": 20,
+  "basis": "Financial Services and Manufacturing · YoY growth % · CC · Q2 FY26 · CFO ('above 5%', both Q2 and H1)",
+  "raw_match": "Financial Services and Manufacturing grew above 5% year-on-year in constant currency",
+  "raw_value": "5%"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_europe.q2fy26",
+  "company": "infosys",
+  "display": ">5",
+  "doc": "C-Oct25",
+  "pdf_page": 20,
+  "basis": "Europe · YoY growth % · CC · Q2 FY26 · CFO ('greater than 5%')",
+  "raw_match": "Europe also grew greater than 5% year-on-year in constant currency terms",
+  "raw_value": "5%"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_fs_cfo.q3fy26",
+  "company": "infosys",
+  "display": "3.9",
+  "doc": "C-Jan26",
+  "pdf_page": 21,
+  "basis": "Financial Services · YoY growth % · CC · Q3 FY26 · CFO (matches FS3 p.1)",
+  "raw_match": "Momentum in Financial Services continues with 3.9% year-on-year growth in constant currency"
+ },
+ {
+  "id": "infosys.kpi.fs_9m.q3fy26",
+  "company": "infosys",
+  "display": "≈5",
+  "doc": "C-Jan26",
+  "pdf_page": 23,
+  "basis": "Financial Services · growth over the last 9 months · CFO ('approximately 5%')",
+  "raw_match": "approximately 5% growth in last 9 months",
+  "raw_value": "5%"
+ },
+ {
+  "id": "infosys.kpi.mfg_cc.q1fy27",
+  "company": "infosys",
+  "display": "1",
+  "doc": "C-Jul26",
+  "pdf_page": 15,
+  "basis": "Manufacturing · CC growth % · Q1 FY27 · CFO said 'close to 1.5%', transcript editor corrects to 1%; YoY vs QoQ not stated",
+  "raw_match": "(Editor's comment: CC growth 1%)",
+  "raw_value": "1%"
+ },
+ {
+  "id": "infosys.kpi.fs_nn_tcv.q1fy27",
+  "company": "infosys",
+  "display": "≈1",
+  "doc": "C-Jul26",
+  "pdf_page": 32,
+  "basis": "Financial Services · large-deal net-new TCV · US$ bn · Q1 FY27 · CFO ('approximately $1 bn')",
+  "raw_match": "approximately $1 bn in large deal net new TCV",
+  "raw_value": "$1 bn"
+ },
+ {
+  "id": "infosys.kpi.hc_share_ls_nhs.q3fy26",
+  "company": "infosys",
+  "display": "44",
+  "doc": "C-Jan26",
+  "pdf_page": 27,
+  "basis": "healthcare · incremental revenue · US$ mn · Q3 FY26 · Ambit analyst's figure (not management's); CFO confirms NHS contributed",
+  "raw_match": "almost $44 mn of incremental revenues",
+  "raw_value": "$44 mn"
+ },
+ {
+  "id": "infosys.kpi.nhs_quote.q3fy26",
+  "company": "infosys",
+  "display": "healthcare did benefit from the contribution from the NHS deal",
+  "doc": "C-Jan26",
+  "pdf_page": 27,
+  "basis": "CFO quote · Q3 FY26 · NHS deal contributed to healthcare revenue",
+  "raw_match": "healthcare did benefit from the contribution from the NHS deal",
+  "kind": "quote"
+ },
+ {
+  "id": "infosys.kpi.yoy_cc_europe_cfo.q3fy26",
+  "company": "infosys",
+  "display": "7.2",
+  "doc": "C-Jan26",
+  "pdf_page": 21,
+  "basis": "Europe · YoY growth % · CC · Q3 FY26 · CFO (matches FS3 p.1)",
+  "raw_match": "Europe continued to lead the growth by 7.2% year-on-year"
+ },
+ {
+  "id": "infosys.kpi.share_europe_cfo.q4fy25",
+  "company": "infosys",
+  "display": "30",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "Europe · share of revenue % · Q4 FY25 · CFO, rounded (FS4 p.1 prints 31.2)",
+  "raw_match": "Europe now accounts for 30% of our revenues",
+  "raw_value": "30%"
+ },
+ {
+  "id": "infosys.kpi.ls_swing.q4fy26",
+  "company": "infosys",
+  "display": "17.0",
+  "basis": "derived: Life Sciences YoY CC growth swing, Q3 FY26 → Q4 FY26 = 11.6 − (−5.4), in pp",
+  "derived_from": [
+   "infosys.kpi.yoy_cc_ls.q4fy26",
+   "infosys.kpi.yoy_cc_ls.q3fy26"
+  ],
+  "formula": "a + b"
+ },
+ {
+  "id": "infosys.kpi.mb_ccy.q3fy25",
+  "company": "infosys",
+  "display": "+40",
+  "doc": "C-Jan25",
+  "pdf_page": 25,
+  "basis": "margin bridge Q3 FY25 · currency · bps (tailwind)",
+  "raw_match": "40 bps from currency movements"
+ },
+ {
+  "id": "infosys.kpi.mb_max.q3fy25",
+  "company": "infosys",
+  "display": "+30",
+  "doc": "C-Jan25",
+  "pdf_page": 25,
+  "basis": "margin bridge Q3 FY25 · Project Maximus · bps (tailwind)",
+  "raw_match": "30 bps from Project Maximus"
+ },
+ {
+  "id": "infosys.kpi.mb_prov.q3fy25",
+  "company": "infosys",
+  "display": "+20",
+  "doc": "C-Jan25",
+  "pdf_page": 25,
+  "basis": "margin bridge Q3 FY25 · lower post-sales support and credit-loss provisions, net of higher third-party costs · bps",
+  "raw_match": "20 bps from lower costs relating to provisions for post-sales customer support"
+ },
+ {
+  "id": "infosys.kpi.mb_furl.q3fy25",
+  "company": "infosys",
+  "display": "−70",
+  "doc": "C-Jan25",
+  "pdf_page": 26,
+  "basis": "margin bridge Q3 FY25 · furloughs and lower working days, net of higher leave utilisation · bps (headwind)",
+  "raw_match": "70 bps from furloughs and lower working days"
+ },
+ {
+  "id": "infosys.kpi.mb_net.q3fy25",
+  "company": "infosys",
+  "display": "+20",
+  "doc": "C-Jan25",
+  "pdf_page": 25,
+  "basis": "margin bridge Q3 FY25 · net QoQ change · bps (to 21.3%)",
+  "raw_match": "which is an increase of 20 bps sequentially",
+  "raw_value": "20 bps"
+ },
+ {
+  "id": "infosys.kpi.mb_sum.q3fy25",
+  "company": "infosys",
+  "display": "+20",
+  "basis": "derived: sum of the Q3 FY25 bridge components = 40 + 30 + 20 − 70",
+  "derived_from": [
+   "infosys.kpi.mb_ccy.q3fy25",
+   "infosys.kpi.mb_max.q3fy25",
+   "infosys.kpi.mb_prov.q3fy25",
+   "infosys.kpi.mb_furl.q3fy25"
+  ],
+  "formula": "a + b + c - d"
+ },
+ {
+  "id": "infosys.kpi.mb_comp.q4fy25",
+  "company": "infosys",
+  "display": "−140",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "margin bridge Q4 FY25 · compensation-related costs · bps (headwind)",
+  "raw_match": "140 basis points from compensation-related costs"
+ },
+ {
+  "id": "infosys.kpi.mb_acq.q4fy25",
+  "company": "infosys",
+  "display": "−40",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "margin bridge Q4 FY25 · acquisitions, mainly amortisation of intangibles · bps (headwind; one-off per CFO, p.41)",
+  "raw_match": "40 basis points impact from acquisition"
+ },
+ {
+  "id": "infosys.kpi.mb_pss.q4fy25",
+  "company": "infosys",
+  "display": "+80",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "margin bridge Q4 FY25 · lower post-sale customer support · bps",
+  "raw_match": "80 basis points from lower post-sale customer support"
+ },
+ {
+  "id": "infosys.kpi.mb_max.q4fy25",
+  "company": "infosys",
+  "display": "+30",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "margin bridge Q4 FY25 · Project Maximus · bps",
+  "raw_match": "30 basis points from Maximus"
+ },
+ {
+  "id": "infosys.kpi.mb_ccy.q4fy25",
+  "company": "infosys",
+  "display": "+20",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "margin bridge Q4 FY25 · currency · bps",
+  "raw_match": "20 basis points from currency movement and"
+ },
+ {
+  "id": "infosys.kpi.mb_3p.q4fy25",
+  "company": "infosys",
+  "display": "+20",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "margin bridge Q4 FY25 · lower third-party costs · bps",
+  "raw_match": "20 basis points from lower third-party costs"
+ },
+ {
+  "id": "infosys.kpi.mb_net.q4fy25",
+  "company": "infosys",
+  "display": "−30",
+  "doc": "C-Apr25",
+  "pdf_page": 26,
+  "basis": "margin bridge Q4 FY25 · net QoQ change · bps (to 21.0%)",
+  "raw_match": "Operating margin for Q4 was at 21%, a decline of 30 basis points sequentially",
+  "raw_value": "30 basis points"
+ },
+ {
+  "id": "infosys.kpi.mb_sum.q4fy25",
+  "company": "infosys",
+  "display": "−30",
+  "basis": "derived: sum of the Q4 FY25 bridge components = −140 − 40 + 80 + 30 + 20 + 20 (travel/visa offset by other costs, p.27)",
+  "derived_from": [
+   "infosys.kpi.mb_comp.q4fy25",
+   "infosys.kpi.mb_acq.q4fy25",
+   "infosys.kpi.mb_pss.q4fy25",
+   "infosys.kpi.mb_max.q4fy25",
+   "infosys.kpi.mb_ccy.q4fy25",
+   "infosys.kpi.mb_3p.q4fy25"
+  ],
+  "formula": "-a - b + c + d + e + f"
+ },
+ {
+  "id": "infosys.kpi.mb_comp.q1fy26",
+  "company": "infosys",
+  "display": "−100",
+  "doc": "C-Jul25",
+  "pdf_page": 21,
+  "basis": "margin bridge Q1 FY26 · compensation increase and higher variable pay, partly offset by other salary items · bps",
+  "raw_match": "100 basis points from compensation increase"
+ },
+ {
+  "id": "infosys.kpi.mb_ccy.q1fy26",
+  "company": "infosys",
+  "display": "−30",
+  "doc": "C-Jul25",
+  "pdf_page": 21,
+  "basis": "margin bridge Q1 FY26 · currency · bps (headwind)",
+  "raw_match": "30 basis points from currency movement"
+ },
+ {
+  "id": "infosys.kpi.mb_sales.q1fy26",
+  "company": "infosys",
+  "display": "−20",
+  "doc": "C-Jul25",
+  "pdf_page": 21,
+  "basis": "margin bridge Q1 FY26 · sales investments · bps (headwind)",
+  "raw_match": "20 basis points from sales investments"
+ },
+ {
+  "id": "infosys.kpi.mb_max.q1fy26",
+  "company": "infosys",
+  "display": "+70",
+  "doc": "C-Jul25",
+  "pdf_page": 21,
+  "basis": "margin bridge Q1 FY26 · realisation from Maximus AND seasonality (not Maximus alone) · bps",
+  "raw_match": "70 basis points from increase in realization due to Maximus and seasonality"
+ },
+ {
+  "id": "infosys.kpi.mb_amort.q1fy26",
+  "company": "infosys",
+  "display": "+40",
+  "doc": "C-Jul25",
+  "pdf_page": 21,
+  "basis": "margin bridge Q1 FY26 · lower amortisation of intangibles (reversal of the Q4 FY25 one-off) · bps",
+  "raw_match": "40 basis points on account of lower amortization cost on intangibles"
+ },
+ {
+  "id": "infosys.kpi.mb_3p.q1fy26",
+  "company": "infosys",
+  "display": "+20",
+  "doc": "C-Jul25",
+  "pdf_page": 21,
+  "basis": "margin bridge Q1 FY26 · lower third-party costs · bps",
+  "raw_match": "20 basis points from lower third-party costs"
+ },
+ {
+  "id": "infosys.kpi.mb_net.q1fy26",
+  "company": "infosys",
+  "display": "−20",
+  "doc": "C-Jul25",
+  "pdf_page": 21,
+  "basis": "margin bridge Q1 FY26 · net QoQ change · bps (to 20.8%)",
+  "raw_match": "leading to 20 basis point drop in operating margin sequentially"
+ },
+ {
+  "id": "infosys.kpi.mb_sum.q1fy26",
+  "company": "infosys",
+  "display": "−20",
+  "basis": "derived: sum of the Q1 FY26 bridge components = −100 − 30 − 20 + 70 + 40 + 20",
+  "derived_from": [
+   "infosys.kpi.mb_comp.q1fy26",
+   "infosys.kpi.mb_ccy.q1fy26",
+   "infosys.kpi.mb_sales.q1fy26",
+   "infosys.kpi.mb_max.q1fy26",
+   "infosys.kpi.mb_amort.q1fy26",
+   "infosys.kpi.mb_3p.q1fy26"
+  ],
+  "formula": "-a - b - c + d + e + f"
+ },
+ {
+  "id": "infosys.kpi.mb_ccy.q2fy26",
+  "company": "infosys",
+  "display": "+60",
+  "doc": "C-Oct25",
+  "pdf_page": 20,
+  "basis": "margin bridge Q2 FY26 · currency · bps",
+  "raw_match": "60 basis points from currency movement"
+ },
+ {
+  "id": "infosys.kpi.mb_max.q2fy26",
+  "company": "infosys",
+  "display": "+30",
+  "doc": "C-Oct25",
+  "pdf_page": 21,
+  "basis": "margin bridge Q2 FY26 · Project Maximus (pricing, lean/automation, net of higher subcon and lower onsite utilisation) · bps",
+  "raw_match": "30 basis points from Project Maximus emanating from RPP increase"
+ },
+ {
+  "id": "infosys.kpi.mb_pss.q2fy26",
+  "company": "infosys",
+  "display": "−70",
+  "doc": "C-Oct25",
+  "pdf_page": 21,
+  "basis": "margin bridge Q2 FY26 · higher post-sale customer support and other expenses · bps (headwind)",
+  "raw_match": "70 basis points of impact from higher post-sale customer support"
+ },
+ {
+  "id": "infosys.kpi.mb_net.q2fy26",
+  "company": "infosys",
+  "display": "+20",
+  "doc": "C-Oct25",
+  "pdf_page": 20,
+  "basis": "margin bridge Q2 FY26 · net QoQ change · bps (to 21.0%)",
+  "raw_match": "Operating margin expanded by 20 bps sequentially to 21%",
+  "raw_value": "20 bps"
+ },
+ {
+  "id": "infosys.kpi.mb_sum.q2fy26",
+  "company": "infosys",
+  "display": "+20",
+  "basis": "derived: sum of the Q2 FY26 bridge components = 60 + 30 − 70",
+  "derived_from": [
+   "infosys.kpi.mb_ccy.q2fy26",
+   "infosys.kpi.mb_max.q2fy26",
+   "infosys.kpi.mb_pss.q2fy26"
+  ],
+  "formula": "a + b - c"
+ },
+ {
+  "id": "infosys.kpi.mb_ccy.q3fy26",
+  "company": "infosys",
+  "display": "+40",
+  "doc": "C-Jan26",
+  "pdf_page": 22,
+  "basis": "margin bridge Q3 FY26 (adjusted) · currency · bps",
+  "raw_match": "40 basis points from currency movement"
+ },
+ {
+  "id": "infosys.kpi.mb_max.q3fy26",
+  "company": "infosys",
+  "display": "+40",
+  "doc": "C-Jan26",
+  "pdf_page": 22,
+  "basis": "margin bridge Q3 FY26 (adjusted) · Project Maximus · bps — earnings call",
+  "raw_match": "40 basis points from Maximus comprising primarily of value-based selling"
+ },
+ {
+  "id": "infosys.kpi.mb_max_press.q3fy26",
+  "company": "infosys",
+  "display": "+50",
+  "doc": "C-Jan26",
+  "pdf_page": 5,
+  "basis": "margin bridge Q3 FY26 · Project Maximus · bps — the SAME CFO at the press conference the same day says 50",
+  "raw_match": "50 basis points came from the Project Maximus"
+ },
+ {
+  "id": "infosys.kpi.mb_furl.q3fy26",
+  "company": "infosys",
+  "display": "−70",
+  "doc": "C-Jan26",
+  "pdf_page": 23,
+  "basis": "margin bridge Q3 FY26 (adjusted) · furloughs and lower working days · bps (headwind)",
+  "raw_match": "70 basis point impact from furloughs and lower working days"
+ },
+ {
+  "id": "infosys.kpi.mb_net.q3fy26",
+  "company": "infosys",
+  "display": "+20",
+  "doc": "C-Jan26",
+  "pdf_page": 22,
+  "basis": "margin bridge Q3 FY26 · net QoQ change in ADJUSTED margin · bps (to 21.2%)",
+  "raw_match": "Adjusted operating margins increased by 20 basis points sequentially to 21.2%",
+  "raw_value": "20 basis points"
+ },
+ {
+  "id": "infosys.kpi.mb_sum.q3fy26",
+  "company": "infosys",
+  "display": "+10",
+  "basis": "derived: sum of the quantified Q3 FY26 components = 40 + 40 − 70; the other +10 is 'higher variable pay partly offset by one-off benefits' (unquantified, p.23)",
+  "derived_from": [
+   "infosys.kpi.mb_ccy.q3fy26",
+   "infosys.kpi.mb_max.q3fy26",
+   "infosys.kpi.mb_furl.q3fy26"
+  ],
+  "formula": "a + b - c"
+ },
+ {
+  "id": "infosys.kpi.mb_net_adj.q4fy26",
+  "company": "infosys",
+  "display": "−30",
+  "basis": "derived: Q4 FY26 margin change vs Q3 FY26 ADJUSTED = 20.9 − 21.2, in bps (no bridge in the corpus: no Q4 FY26 call)",
+  "derived_from": [
+   "infosys.kpi.opm.q4fy26",
+   "infosys.kpi.opm_adj.q3fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.kpi.mb_net_rep.q4fy26",
+  "company": "infosys",
+  "display": "+250",
+  "basis": "derived: Q4 FY26 margin change vs Q3 FY26 REPORTED = 20.9 − 18.4, in bps (FS4 p.3 prints +2.5 points)",
+  "derived_from": [
+   "infosys.kpi.opm.q4fy26",
+   "infosys.kpi.opm.q3fy26"
+  ],
+  "formula": "(a - b) * 100"
+ },
+ {
+  "id": "infosys.kpi.mb_ccy.q1fy27",
+  "company": "infosys",
+  "display": "+70",
+  "doc": "C-Jul26",
+  "pdf_page": 30,
+  "basis": "margin bridge Q1 FY27 · rupee depreciation · bps",
+  "raw_match": "70 bps from rupee depreciation"
+ },
+ {
+  "id": "infosys.kpi.mb_max.q1fy27",
+  "company": "infosys",
+  "display": "+20",
+  "doc": "C-Jul26",
+  "pdf_page": 30,
+  "basis": "margin bridge Q1 FY27 · Project Maximus · bps",
+  "raw_match": "20 bps from Project Maximus"
+ },
+ {
+  "id": "infosys.kpi.mb_amort.q1fy27",
+  "company": "infosys",
+  "display": "+10",
+  "doc": "C-Jul26",
+  "pdf_page": 30,
+  "basis": "margin bridge Q1 FY27 · net benefit: amortisation of intangibles costs incurred in Q4 FY26, offset by new acquisitions · bps",
+  "raw_match": "10 bps (Editor's comment) net benefit due to amortization of costs on intangibles incurred in Q4",
+  "raw_value": "10 bps"
+ },
+ {
+  "id": "infosys.kpi.mb_aism.q1fy27",
+  "company": "infosys",
+  "display": "−50",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "margin bridge Q1 FY27 · investment in AI sales and marketing · bps (headwind)",
+  "raw_match": "50 bps from investment in AI sales and marketing"
+ },
+ {
+  "id": "infosys.kpi.mb_term.q1fy27",
+  "company": "infosys",
+  "display": "−40",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "margin bridge Q1 FY27 · one-time revenue impact of an EURS programme termination · bps (headwind)",
+  "raw_match": "40 bps from onetime revenue impact arising out of program termination"
+ },
+ {
+  "id": "infosys.kpi.mb_onetime.q1fy27",
+  "company": "infosys",
+  "display": "+30",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "margin bridge Q1 FY27 · one-time cost benefit, approximately · bps",
+  "raw_match": "onetime cost benefit of approximately 30 bps",
+  "raw_value": "30 bps"
+ },
+ {
+  "id": "infosys.kpi.mb_other.q1fy27",
+  "company": "infosys",
+  "display": "−20",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "margin bridge Q1 FY27 · increase in various other expenses · bps (headwind)",
+  "raw_match": "offset by 20 bps due to increase in various other expenses",
+  "raw_value": "20 bps"
+ },
+ {
+  "id": "infosys.kpi.mb_net.q1fy27",
+  "company": "infosys",
+  "display": "+20",
+  "doc": "C-Jul26",
+  "pdf_page": 30,
+  "basis": "margin bridge Q1 FY27 · net QoQ change · bps (to 21.1%)",
+  "raw_match": "Operating margin improved by 20 bps sequentially to 21.1%",
+  "raw_value": "20 bps"
+ },
+ {
+  "id": "infosys.kpi.gm_chg.q1fy27",
+  "company": "infosys",
+  "display": "+60",
+  "doc": "C-Jul26",
+  "pdf_page": 30,
+  "basis": "gross margin change QoQ · Q1 FY27 · bps",
+  "raw_match": "gross margins improved by 60 bps sequentially",
+  "raw_value": "60 bps"
+ },
+ {
+  "id": "infosys.kpi.mb_sum.q1fy27",
+  "company": "infosys",
+  "display": "+20",
+  "basis": "derived: sum of the Q1 FY27 bridge components = 70 + 20 + 10 − 50 − 40 + 30 − 20",
+  "derived_from": [
+   "infosys.kpi.mb_ccy.q1fy27",
+   "infosys.kpi.mb_max.q1fy27",
+   "infosys.kpi.mb_amort.q1fy27",
+   "infosys.kpi.mb_aism.q1fy27",
+   "infosys.kpi.mb_term.q1fy27",
+   "infosys.kpi.mb_onetime.q1fy27",
+   "infosys.kpi.mb_other.q1fy27"
+  ],
+  "formula": "a + b + c - d - e + f - g"
+ },
+ {
+  "id": "infosys.kpi.max_sum.fy26",
+  "company": "infosys",
+  "display": "+140",
+  "basis": "derived: Maximus as quoted Q1–Q3 FY26 = 70 (incl. seasonality) + 30 + 40 (earnings-call figure); Q4 FY26 n/f",
+  "derived_from": [
+   "infosys.kpi.mb_max.q1fy26",
+   "infosys.kpi.mb_max.q2fy26",
+   "infosys.kpi.mb_max.q3fy26"
+  ],
+  "formula": "a + b + c"
+ },
+ {
+  "id": "infosys.kpi.ccy_sens.fy27",
+  "company": "infosys",
+  "display": "15",
+  "doc": "C-Jul26",
+  "pdf_page": 18,
+  "basis": "margin sensitivity · bps per 1% rupee depreciation · CFO ('15 to 17 bps'; ~45% of revenue is non-US, partly offsetting)",
+  "raw_match": "anywhere between 15 to 17 bps on margin",
+  "raw_value": "15"
+ },
+ {
+  "id": "infosys.kpi.acq_margin.fy27",
+  "company": "infosys",
+  "display": "50",
+  "doc": "C-Jul26",
+  "pdf_page": 33,
+  "basis": "FY27 margin headwind from the Optimum Healthcare and Stratus acquisitions · bps",
+  "raw_match": "50 basis point impact from acquisitions of Optimum Healthcare and Stratus",
+  "raw_value": "50 basis point"
+ },
+ {
+  "id": "infosys.kpi.sm_9m.q3fy26",
+  "company": "infosys",
+  "display": "50",
+  "doc": "C-Jan26",
+  "pdf_page": 22,
+  "basis": "S&M investment impact on 9M FY26 margin · bps ('approximately 50')",
+  "raw_match": "impacting margins by approximately 50 basis points",
+  "raw_value": "50 basis points"
+ },
+ {
+  "id": "infosys.kpi.active.q3fy26",
+  "company": "infosys",
+  "display": "1,949",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "active clients · q3fy26",
+  "raw_match": "1,949 1,896 1,876",
+  "raw_value": "1,949",
+  "anchor": "Active"
+ },
+ {
+  "id": "infosys.kpi.active.q2fy26",
+  "company": "infosys",
+  "display": "1,896",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "active clients · q2fy26",
+  "raw_match": "1,949 1,896 1,876",
+  "raw_value": "1,896",
+  "anchor": "Active"
+ },
+ {
+  "id": "infosys.kpi.active.q3fy25",
+  "company": "infosys",
+  "display": "1,876",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "active clients · q3fy25",
+  "raw_match": "1,949 1,896 1,876",
+  "raw_value": "1,876",
+  "anchor": "Active"
+ },
+ {
+  "id": "infosys.kpi.added.q3fy26",
+  "company": "infosys",
+  "display": "121",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients added in the quarter (gross) · q3fy26",
+  "raw_match": "121 118 101",
+  "raw_value": "121",
+  "anchor": "Added during the period (gross)"
+ },
+ {
+  "id": "infosys.kpi.added.q2fy26",
+  "company": "infosys",
+  "display": "118",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients added in the quarter (gross) · q2fy26",
+  "raw_match": "121 118 101",
+  "raw_value": "118",
+  "anchor": "Added during the period (gross)"
+ },
+ {
+  "id": "infosys.kpi.added.q3fy25",
+  "company": "infosys",
+  "display": "101",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients added in the quarter (gross) · q3fy25",
+  "raw_match": "121 118 101",
+  "raw_value": "101",
+  "anchor": "Added during the period (gross)"
+ },
+ {
+  "id": "infosys.kpi.c1.q3fy26",
+  "company": "infosys",
+  "display": "1,012",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$1 mn (LTM) · q3fy26",
+  "raw_match": "1,012 1,012 997",
+  "raw_value": "1,012",
+  "anchor": "1 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c1.q2fy26",
+  "company": "infosys",
+  "display": "1,012",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$1 mn (LTM) · q2fy26",
+  "raw_match": "1,012 1,012 997",
+  "raw_value": "1,012",
+  "anchor": "1 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c1.q3fy25",
+  "company": "infosys",
+  "display": "997",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$1 mn (LTM) · q3fy25",
+  "raw_match": "1,012 1,012 997",
+  "raw_value": "997",
+  "anchor": "1 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c10.q3fy26",
+  "company": "infosys",
+  "display": "326",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$10 mn (LTM) · q3fy26",
+  "raw_match": "326 322 301",
+  "raw_value": "326",
+  "anchor": "10 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c10.q2fy26",
+  "company": "infosys",
+  "display": "322",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$10 mn (LTM) · q2fy26",
+  "raw_match": "326 322 301",
+  "raw_value": "322",
+  "anchor": "10 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c10.q3fy25",
+  "company": "infosys",
+  "display": "301",
+  "doc": "FS3",
+  "pdf_page": 1,
+  "basis": "clients above US$10 mn (LTM) · q3fy25",
+  "raw_match": "326 322 301",
+  "raw_value": "301",
+  "anchor": "10 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.active.q4fy26",
+  "company": "infosys",
+  "display": "1,965",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "active clients · q4fy26",
+  "raw_match": "1,965 1,949 1,869",
+  "raw_value": "1,965",
+  "anchor": "Active"
+ },
+ {
+  "id": "infosys.kpi.active.q4fy25",
+  "company": "infosys",
+  "display": "1,869",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "active clients · q4fy25",
+  "raw_match": "1,965 1,949 1,869",
+  "raw_value": "1,869",
+  "anchor": "Active"
+ },
+ {
+  "id": "infosys.kpi.added.q4fy26",
+  "company": "infosys",
+  "display": "111",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "clients added in the quarter (gross) · q4fy26",
+  "raw_match": "111 121 91",
+  "raw_value": "111",
+  "anchor": "Added during the period (gross)"
+ },
+ {
+  "id": "infosys.kpi.added.q4fy25",
+  "company": "infosys",
+  "display": "91",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "clients added in the quarter (gross) · q4fy25",
+  "raw_match": "111 121 91",
+  "raw_value": "91",
+  "anchor": "Added during the period (gross)"
+ },
+ {
+  "id": "infosys.kpi.c1.q4fy26",
+  "company": "infosys",
+  "display": "1,018",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "clients above US$1 mn (LTM) · q4fy26",
+  "raw_match": "1,018 1,012 992",
+  "raw_value": "1,018",
+  "anchor": "1 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c1.q4fy25",
+  "company": "infosys",
+  "display": "992",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "clients above US$1 mn (LTM) · q4fy25",
+  "raw_match": "1,018 1,012 992",
+  "raw_value": "992",
+  "anchor": "1 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c10.q4fy26",
+  "company": "infosys",
+  "display": "328",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "clients above US$10 mn (LTM) · q4fy26",
+  "raw_match": "328 326 309",
+  "raw_value": "328",
+  "anchor": "10 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c10.q4fy25",
+  "company": "infosys",
+  "display": "309",
+  "doc": "FS4",
+  "pdf_page": 1,
+  "basis": "clients above US$10 mn (LTM) · q4fy25",
+  "raw_match": "328 326 309",
+  "raw_value": "309",
+  "anchor": "10 Million dollar +"
+ },
+ {
+  "id": "infosys.kpi.c50_chg.q3fy25",
+  "company": "infosys",
+  "display": "+7",
+  "doc": "C-Jan25",
+  "pdf_page": 25,
+  "basis": "change in clients above US$50 mn · QoQ · Q3 FY25 · CFO",
+  "raw_match": "Our $50 mn clients increased by 7"
+ },
+ {
+  "id": "infosys.kpi.c50_ar.fy26",
+  "company": "infosys",
+  "display": "88",
+  "doc": "AR26",
+  "pdf_page": 17,
+  "basis": "clients above US$50 mn · FY26 end · annual report key trends",
+  "raw_match": "31.6% 88 21.0% 48.0",
+  "raw_value": "88",
+  "anchor": "Number of US$50"
+ },
+ {
+  "id": "infosys.kpi.c50_ar_chg.fy26",
+  "company": "infosys",
+  "display": "+3",
+  "doc": "AR26",
+  "pdf_page": 17,
+  "basis": "change in clients above US$50 mn · YoY · FY26 · annual report",
+  "raw_match": "increase of 3 clients Y-o-Y"
+ },
+ {
+  "id": "infosys.kpi.c50_yoy.fy26",
+  "company": "infosys",
+  "display": "+3",
+  "basis": "derived: clients above US$50 mn, Q4 FY26 − Q4 FY25 = 88 − 85 (AR26 p.17 says +3)",
+  "derived_from": [
+   "infosys.kpi.c50.q4fy26",
+   "infosys.kpi.c50.q4fy25"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "infosys.kpi.top5_chg.fy26",
+  "company": "infosys",
+  "display": "−0.5",
+  "basis": "derived: top-5 client share change, Q4 FY25 → Q4 FY26 = 12.6 − 13.1, pp",
+  "derived_from": [
+   "infosys.kpi.top5.q4fy26",
+   "infosys.kpi.top5.q4fy25"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "infosys.kpi.top25_chg.fy26",
+  "company": "infosys",
+  "display": "−0.3",
+  "basis": "derived: top-25 client share change, Q4 FY25 → Q4 FY26 = 34.5 − 34.8, pp",
+  "derived_from": [
+   "infosys.kpi.top25.q4fy26",
+   "infosys.kpi.top25.q4fy25"
+  ],
+  "formula": "a - b"
+ },
+ {
+  "id": "infosys.kpi.cr_div_paid.fy26",
+  "company": "infosys",
+  "display": "18,653",
+  "doc": "CFS4",
+  "pdf_page": 7,
+  "basis": "dividends paid · ₹ crore · FY26 cash flow (FY25 final ₹22 + FY26 interim ₹23) · consolidated",
+  "raw_match": "Payment of dividends (18,653) (20,287)",
+  "raw_value": "18,653"
+ },
+ {
+  "id": "infosys.kpi.cr_div_paid.fy25",
+  "company": "infosys",
+  "display": "20,287",
+  "doc": "CFS4",
+  "pdf_page": 7,
+  "basis": "dividends paid · ₹ crore · FY25 cash flow (incl. FY24 special ₹8) · consolidated",
+  "raw_match": "Payment of dividends (18,653) (20,287)",
+  "raw_value": "20,287"
+ },
+ {
+  "id": "infosys.kpi.cr_bb_paid.fy26",
+  "company": "infosys",
+  "display": "18,058",
+  "doc": "CFS4",
+  "pdf_page": 7,
+  "basis": "buyback paid incl. transaction costs · ₹ crore · FY26 cash flow · consolidated",
+  "raw_match": "Buyback of equity shares including transaction costs (18,058)",
+  "raw_value": "18,058"
+ },
+ {
+  "id": "infosys.kpi.cr_bb_paid_ar.fy26",
+  "company": "infosys",
+  "display": "18,058",
+  "doc": "AR26",
+  "pdf_page": 296,
+  "basis": "buyback paid incl. transaction costs · ₹ crore · FY26 · consolidated cash-flow statement in the annual report",
+  "raw_match": "Buyback of equity shares including transaction costs (18,058)",
+  "raw_value": "18,058"
+ },
+ {
+  "id": "infosys.kpi.cr_div_paid_ar.fy26",
+  "company": "infosys",
+  "display": "18,653",
+  "doc": "AR26",
+  "pdf_page": 296,
+  "basis": "dividends paid · ₹ crore · FY26 · consolidated cash-flow statement in the annual report",
+  "raw_match": "Payment of dividends (18,653)",
+  "raw_value": "18,653"
+ },
+ {
+  "id": "infosys.kpi.cr_cash.fy26",
+  "company": "infosys",
+  "display": "36,711",
+  "basis": "derived: cash returned IN FY26 = dividends paid 18,653 + buyback incl. costs 18,058 (CFS4 p.7)",
+  "derived_from": [
+   "infosys.kpi.cr_div_paid.fy26",
+   "infosys.kpi.cr_bb_paid.fy26"
+  ],
+  "formula": "a + b"
+ },
+ {
+  "id": "infosys.kpi.bb_amt.fy26",
+  "company": "infosys",
+  "display": "18,000",
+  "doc": "CFS4",
+  "pdf_page": 23,
+  "basis": "buyback amount · ₹ crore · excl. transaction costs",
+  "raw_match": "The buyback resulted in cash outflow of ₹18,000 crore (excluding transaction costs)",
+  "raw_value": "18,000"
+ },
+ {
+  "id": "infosys.kpi.bb_price.fy26",
+  "company": "infosys",
+  "display": "1,800",
+  "doc": "CFS4",
+  "pdf_page": 23,
+  "basis": "buyback price · ₹ per share · tender offer",
+  "raw_match": "of ₹1,800 per Equity share",
+  "raw_value": "1,800"
+ },
+ {
+  "id": "infosys.kpi.bb_shares.fy26",
+  "company": "infosys",
+  "display": "10 crore",
+  "doc": "CFS4",
+  "pdf_page": 23,
+  "basis": "shares bought back and extinguished (10,00,00,000 ≈ 2.41% of paid-up capital at 30 Jun 2025, standalone)",
+  "raw_match": "10,00,00,000 equity shares were bought back and extinguished",
+  "raw_value": "10,00,00,000",
+  "scale": 1e-07
+ },
+ {
+  "id": "infosys.kpi.bb_pct.fy26",
+  "company": "infosys",
+  "display": "2.41",
+  "doc": "CFS4",
+  "pdf_page": 23,
+  "basis": "buyback as % of paid-up equity capital (standalone, 30 Jun 2025)",
+  "raw_match": "approximately 2.41% of the total paid-up equity share capital",
+  "raw_value": "2.41%"
+ },
+ {
+  "id": "infosys.kpi.bb_date.fy26",
+  "company": "infosys",
+  "display": "concluded the buyback procedures on December 4, 2025",
+  "doc": "CFS4",
+  "pdf_page": 23,
+  "basis": "buyback completion date: 4 Dec 2025",
+  "raw_match": "concluded the buyback procedures on December 4, 2025",
+  "kind": "quote"
+ },
+ {
+  "id": "infosys.kpi.bb_txn_net.fy26",
+  "company": "infosys",
+  "display": "44",
+  "doc": "CFS4",
+  "pdf_page": 5,
+  "basis": "buyback transaction costs · ₹ crore · net of tax (equity statement)",
+  "raw_match": [
+   "Transaction cost relating to buyback",
+   "(44)"
+  ],
+  "raw_value": "(44)"
+ },
+ {
+  "id": "infosys.kpi.bb_txn_gross.fy26",
+  "company": "infosys",
+  "display": "58",
+  "doc": "AR26",
+  "pdf_page": 39,
+  "basis": "buyback transaction costs · ₹ crore · gross (the cash-flow line 18,058 = 18,000 + 58)",
+  "raw_match": "Excludes buyback transaction cost of `58 crore",
+  "raw_value": "58"
+ },
+ {
+  "id": "infosys.kpi.bb_chk.fy26",
+  "company": "infosys",
+  "display": "18,058",
+  "basis": "derived: 18,000 buyback + 58 gross transaction costs = the cash-flow line",
+  "derived_from": [
+   "infosys.kpi.bb_amt.fy26",
+   "infosys.kpi.bb_txn_gross.fy26"
+  ],
+  "formula": "a + b"
+ },
+ {
+  "id": "infosys.kpi.bb_announce.q2fy26",
+  "company": "infosys",
+  "display": "18,000",
+  "doc": "C-Oct25",
+  "pdf_page": 21,
+  "basis": "buyback announced Q2 FY26 · ₹ crore · tender at ₹1,800 · CFO",
+  "raw_match": "Rs. 18,000 crores buyback through tender route at Rs. 1,800 per share",
+  "raw_value": "18,000"
+ },
+ {
+  "id": "infosys.kpi.bb_done.q3fy26",
+  "company": "infosys",
+  "display": "18,000",
+  "doc": "C-Jan26",
+  "pdf_page": 22,
+  "basis": "buyback completed in Q3 FY26 · ₹ crore · CFO",
+  "raw_match": "returning INR18,000 crores to our shareholders",
+  "raw_value": "18,000"
+ },
+ {
+  "id": "infosys.kpi.cr_q3_usd.q3fy26",
+  "company": "infosys",
+  "display": "3",
+  "doc": "C-Jan26",
+  "pdf_page": 23,
+  "basis": "cash returned in Q3 FY26 (dividend + buyback) · US$ bn · CFO",
+  "raw_match": "after returning $3 bn to the shareholders in the form of dividend and buyback",
+  "raw_value": "$3 bn"
+ },
+ {
+  "id": "infosys.kpi.dps_int.fy26",
+  "company": "infosys",
+  "display": "23",
+  "doc": "AR26",
+  "pdf_page": 39,
+  "basis": "interim dividend per share · ₹ · FY26 (paid in FY26)",
+  "raw_match": "Interim dividend 23.00 9,534 21.00 8,698",
+  "raw_value": "23.00"
+ },
+ {
+  "id": "infosys.kpi.div_int.fy26",
+  "company": "infosys",
+  "display": "9,534",
+  "doc": "AR26",
+  "pdf_page": 39,
+  "basis": "interim dividend payout · ₹ crore · FY26",
+  "raw_match": "Interim dividend 23.00 9,534 21.00 8,698",
+  "raw_value": "9,534"
+ },
+ {
+  "id": "infosys.kpi.div_int.fy25",
+  "company": "infosys",
+  "display": "8,698",
+  "doc": "AR26",
+  "pdf_page": 39,
+  "basis": "interim dividend payout · ₹ crore · FY25",
+  "raw_match": "Interim dividend 23.00 9,534 21.00 8,698",
+  "raw_value": "8,698"
+ },
+ {
+  "id": "infosys.kpi.dps_fin.fy26",
+  "company": "infosys",
+  "display": "25",
+  "doc": "AR26",
+  "pdf_page": 39,
+  "basis": "final dividend per share · ₹ · FY26 (recommended 23 Apr 2026; paid 25 Jun 2026 = Q1 FY27)",
+  "raw_match": "Final dividend 25.00(1) 10,117(1) 22.00 9,116",
+  "raw_value": "25.00"
+ },
+ {
+  "id": "infosys.kpi.div_fin.fy26",
+  "company": "infosys",
+  "display": "10,117",
+  "doc": "AR26",
+  "pdf_page": 39,
+  "basis": "final dividend payout · ₹ crore · FY26 (approximate, excl. treasury shares)",
+  "raw_match": "Final dividend 25.00(1) 10,117(1) 22.00 9,116",
+  "raw_value": "10,117"
+ },
+ {
+  "id": "infosys.kpi.div_fin.fy25",
+  "company": "infosys",
+  "display": "9,116",
+  "doc": "AR26",
+  "pdf_page": 39,
+  "basis": "final dividend payout · ₹ crore · FY25 (paid in FY26)",
+  "raw_match": "Final dividend 25.00(1) 10,117(1) 22.00 9,116",
+  "raw_value": "9,116"
+ },
+ {
+  "id": "infosys.kpi.div_fin_cfs.fy26",
+  "company": "infosys",
+  "display": "10,117",
+  "doc": "CFS4",
+  "pdf_page": 23,
+  "basis": "final dividend FY26 · ₹ crore · 'approximately', subject to AGM 23 Jun 2026",
+  "raw_match": "net cash outflow of approximately ₹10,117 crore",
+  "raw_value": "10,117"
+ },
+ {
+  "id": "infosys.kpi.payout.fy26",
+  "company": "infosys",
+  "display": "113.9",
+  "doc": "AR26",
+  "pdf_page": 39,
+  "basis": "payout ratio FY26 (buyback + interim + final dividend) as % of FCF (IFRS) · issuer",
+  "raw_match": "Payout ratio (Buyback, interim and final dividend)* 113.9%(2) 51.6%",
+  "raw_value": "113.9%"
+ },
+ {
+  "id": "infosys.kpi.payout.fy25",
+  "company": "infosys",
+  "display": "51.6",
+  "doc": "AR26",
+  "pdf_page": 39,
+  "basis": "payout ratio FY25 as % of FCF (IFRS) · issuer",
+  "raw_match": "Payout ratio (Buyback, interim and final dividend)* 113.9%(2) 51.6%",
+  "raw_value": "51.6%"
+ },
+ {
+  "id": "infosys.kpi.cr_decl.fy26",
+  "company": "infosys",
+  "display": "37,651",
+  "basis": "derived: returned FOR fiscal 2026 = interim 9,534 + final 10,117 + buyback 18,000 (AR26 p.39)",
+  "derived_from": [
+   "infosys.kpi.div_int.fy26",
+   "infosys.kpi.div_fin.fy26",
+   "infosys.kpi.bb_amt.fy26"
+  ],
+  "formula": "a + b + c"
+ },
+ {
+  "id": "infosys.kpi.cr_decl_txn.fy26",
+  "company": "infosys",
+  "display": "37,709",
+  "basis": "derived: returned FOR fiscal 2026 incl. ₹58 cr buyback costs = 9,534 + 10,117 + 18,000 + 58 (the basis of the issuer's 113.9% and 55,523)",
+  "derived_from": [
+   "infosys.kpi.div_int.fy26",
+   "infosys.kpi.div_fin.fy26",
+   "infosys.kpi.bb_amt.fy26",
+   "infosys.kpi.bb_txn_gross.fy26"
+  ],
+  "formula": "a + b + c + d"
+ },
+ {
+  "id": "infosys.kpi.payout_chk.fy26",
+  "company": "infosys",
+  "display": "113.9",
+  "basis": "derived: 37,709 / FY26 FCF 33,097 — reproduces the issuer's 113.9%",
+  "derived_from": [
+   "infosys.kpi.cr_decl_txn.fy26",
+   "infosys.kpi.fcf_inr.fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "infosys.kpi.cum_chk.fy2526",
+  "company": "infosys",
+  "display": "55,523",
+  "basis": "derived: FY25 interim 8,698 + FY25 final 9,116 + FY26 37,709 — reproduces the issuer's ₹55,523 cr",
+  "derived_from": [
+   "infosys.kpi.div_int.fy25",
+   "infosys.kpi.div_fin.fy25",
+   "infosys.kpi.cr_decl_txn.fy26"
+  ],
+  "formula": "a + b + c"
+ },
+ {
+  "id": "infosys.kpi.divpaid_chk.fy26",
+  "company": "infosys",
+  "display": "18,650",
+  "basis": "derived: FY25 final 9,116 + FY26 interim 9,534 = 18,650 vs 18,653 paid (₹3 cr gap: payout figures are approximate / treasury shares)",
+  "derived_from": [
+   "infosys.kpi.div_fin.fy25",
+   "infosys.kpi.div_int.fy26"
+  ],
+  "formula": "a + b"
+ },
+ {
+  "id": "infosys.kpi.fcf_inr.fy26",
+  "company": "infosys",
+  "display": "33,097",
+  "doc": "AR26",
+  "pdf_page": 17,
+  "basis": "free cash flow · ₹ crore · FY26 · IFRS (op. cash flow less capex)",
+  "raw_match": "33,097 cr"
+ },
+ {
+  "id": "infosys.kpi.fcf_np.fy26",
+  "company": "infosys",
+  "display": "112.3",
+  "doc": "AR26",
+  "pdf_page": 17,
+  "basis": "FCF as % of net profit · FY26",
+  "raw_match": "112.3% of net profit"
+ },
+ {
+  "id": "infosys.kpi.np.fy26",
+  "company": "infosys",
+  "display": "29,440",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "net profit after NCI · ₹ crore · FY26 · consolidated IFRS",
+  "raw_match": "29,440 26,713 10.2%",
+  "raw_value": "29,440"
+ },
+ {
+  "id": "infosys.kpi.np.fy25",
+  "company": "infosys",
+  "display": "26,713",
+  "doc": "FS4",
+  "pdf_page": 6,
+  "basis": "net profit after NCI · ₹ crore · FY25 · consolidated IFRS",
+  "raw_match": "29,440 26,713 10.2%",
+  "raw_value": "26,713"
+ },
+ {
+  "id": "infosys.kpi.cr_cash_fcf.fy26",
+  "company": "infosys",
+  "display": "110.9",
+  "basis": "derived: cash returned in FY26 36,711 / FCF 33,097, %",
+  "derived_from": [
+   "infosys.kpi.cr_cash.fy26",
+   "infosys.kpi.fcf_inr.fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "infosys.kpi.cr_cash_np.fy26",
+  "company": "infosys",
+  "display": "124.7",
+  "basis": "derived: cash returned in FY26 36,711 / net profit 29,440, %",
+  "derived_from": [
+   "infosys.kpi.cr_cash.fy26",
+   "infosys.kpi.np.fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "infosys.kpi.cr_decl_np.fy26",
+  "company": "infosys",
+  "display": "128.1",
+  "basis": "derived: returned for fiscal 2026 incl. costs 37,709 / net profit 29,440, %",
+  "derived_from": [
+   "infosys.kpi.cr_decl_txn.fy26",
+   "infosys.kpi.np.fy26"
+  ],
+  "formula": "a / b * 100"
+ },
+ {
+  "id": "infosys.kpi.policy.fy25_29",
+  "company": "infosys",
+  "display": "85",
+  "doc": "AR26",
+  "pdf_page": 37,
+  "basis": "capital allocation policy: ~85% of FCF cumulatively over 5 years from FY25 (dividends + buyback incl. taxes)",
+  "raw_match": "returning approximately 85% of the",
+  "raw_value": "85%"
+ },
+ {
+  "id": "infosys.kpi.cum_ret.fy2526",
+  "company": "infosys",
+  "display": "55,523",
+  "doc": "AR26",
+  "pdf_page": 37,
+  "basis": "returned for FY25 + FY26 incl. the FY26 final dividend · ₹ crore",
+  "raw_match": "approximately `55,523 crore, which is 82.1% of the free cash flow",
+  "raw_value": "55,523"
+ },
+ {
+  "id": "infosys.kpi.cum_pct.fy2526",
+  "company": "infosys",
+  "display": "82.1",
+  "doc": "AR26",
+  "pdf_page": 37,
+  "basis": "returned as % of cumulative FCF, FY25 + FY26",
+  "raw_match": "approximately `55,523 crore, which is 82.1% of the free cash flow",
+  "raw_value": "82.1%"
+ },
+ {
+  "id": "infosys.kpi.cum_pct_ar39.fy2526",
+  "company": "infosys",
+  "display": "82.1",
+  "doc": "AR26",
+  "pdf_page": 39,
+  "basis": "returned as % of cumulative FCF, FY25 + FY26 (dividend table note)",
+  "raw_match": "Company has returned 82.1% of the cumulative free cash flow",
+  "raw_value": "82.1%"
+ },
+ {
+  "id": "infosys.kpi.ceo_ret.fy26",
+  "company": "infosys",
+  "display": "US$4 bn",
+  "doc": "AR26",
+  "pdf_page": 19,
+  "basis": "CEO letter: 'over US$4 billion' returned · cash basis (FY26 dividends paid + buyback)",
+  "raw_match": "enabling us to return over US$4 billion to",
+  "raw_value": "4"
+ },
+ {
+  "id": "infosys.kpi.ceo_div.fy26",
+  "company": "infosys",
+  "display": "US$2.1 bn",
+  "doc": "AR26",
+  "pdf_page": 19,
+  "basis": "CEO letter: dividends · US$ bn",
+  "raw_match": "dividends (US$2.1 billion)",
+  "raw_value": "2.1"
+ },
+ {
+  "id": "infosys.kpi.ceo_bb.fy26",
+  "company": "infosys",
+  "display": "US$2 bn",
+  "doc": "AR26",
+  "pdf_page": 19,
+  "basis": "CEO letter: share buybacks · US$ bn",
+  "raw_match": "buybacks (US$2 billion)",
+  "raw_value": "2"
+ },
+ {
+  "id": "infosys.kpi.ceo_fcf.fy26",
+  "company": "infosys",
+  "display": "US$3.7 bn",
+  "doc": "AR26",
+  "pdf_page": 19,
+  "basis": "CEO letter: FY26 free cash flow · US$ bn",
+  "raw_match": "US$3.7 billion",
+  "raw_value": "3.7"
+ },
+ {
+  "id": "infosys.kpi.ar_ret.fy26",
+  "company": "infosys",
+  "display": "37,500",
+  "doc": "AR26",
+  "pdf_page": 27,
+  "basis": "annual report: 'Over ₹37,500 crore has been returned to shareholders for fiscal 2026' · declared basis",
+  "raw_match": "Over ₹ 37,500 crore has been returned to shareholders",
+  "raw_value": "37,500"
+ },
+ {
+  "id": "infosys.kpi.sahi_ret.fy26",
+  "company": "infosys",
+  "display": "37,500",
+  "doc": "Sahi",
+  "pdf_page": 2,
+  "basis": "Sahi news: 'returned over ₹37,500 crore to shareholders in FY26' (says 'in FY26'; the figure is the issuer's FOR-fiscal-2026 number, incl. a final dividend paid in Q1 FY27)",
+  "raw_match": "Infosys returned over ₹37,500 crore to shareholders in FY26",
+  "raw_value": "37,500"
+ },
+ {
+  "id": "infosys.kpi.cr_div.q1fy27",
+  "company": "infosys",
+  "display": "US$1 bn",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "dividends paid in Q1 FY27 (the FY26 final dividend) · US$ bn, 'more than' · CFO",
+  "raw_match": "returning more than $1 bn to the shareholders through dividends",
+  "raw_value": "$1 bn"
+ },
+ {
+  "id": "infosys.kpi.cash.q1fy27",
+  "company": "infosys",
+  "display": "3.9",
+  "doc": "C-Jul26",
+  "pdf_page": 31,
+  "basis": "consolidated cash and cash equivalents · US$ bn · end Q1 FY27 · CFO",
+  "raw_match": "Consolidated cash and cash equivalents were at $3.9 bn",
+  "raw_value": "$3.9 bn"
+ },
+ {
+  "id": "infosys.kpi.cash_usd.q4fy26",
+  "company": "infosys",
+  "display": "4,542",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "consolidated cash and investments · US$ mn · end Q4 FY26",
+  "raw_match": "833 915 892 4,542 3,917 5,562",
+  "raw_value": "4,542"
+ },
+ {
+  "id": "infosys.kpi.cash_inr.q4fy26",
+  "company": "infosys",
+  "display": "43,075",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "consolidated cash and investments · ₹ crore · end Q4 FY26",
+  "raw_match": "7,711 8,176 7,737 43,075 35,206 47,549",
+  "raw_value": "43,075"
+ },
+ {
+  "id": "infosys.kpi.cash_inr.q4fy25",
+  "company": "infosys",
+  "display": "47,549",
+  "doc": "FS4",
+  "pdf_page": 2,
+  "basis": "consolidated cash and investments · ₹ crore · end Q4 FY25",
+  "raw_match": "7,711 8,176 7,737 43,075 35,206 47,549",
+  "raw_value": "47,549"
+ }
+]

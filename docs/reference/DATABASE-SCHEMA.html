@@ -1,0 +1,2169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N4A — Database Schema</title>
+<style>
+  /* ─────────────────────────────────────────────────────────────────────────
+     Token layer first (DESIGN-SYSTEM.md §0–1). Zero one-off hex below this
+     block except #fff on accent fills — the documented exception.
+     ───────────────────────────────────────────────────────────────────────── */
+  :root {
+    --accent:#6C4CF1; --accent-2:#8E73FF; --accent-soft:#EFEBFE;
+    --up:#15976A; --up-soft:#E4F4ED;
+    --down:#DB4F3D; --down-soft:#FBE9E6;
+    --amber:#C98A1A; --amber-soft:#FBF1DD;
+    --bg:#FAFAFB; --panel:#FFFFFF; --panel-2:#F5F5F7; --panel-3:#EFEFF2;
+    --border:#EAEAEF; --border-2:#E0E0E6;
+    --text:#17171C; --muted:#6C6C78; --faint:#9A9AA6;
+    --canvas:#F1F1F4;
+    /* Categorical layer palette — shared L/C, hue only varies (§1.1). */
+    --l0:oklch(0.56 0.15 252); --l0-soft:oklch(0.955 0.028 252);
+    --l1:oklch(0.58 0.11 192); --l1-soft:oklch(0.955 0.028 192);
+    --l2:oklch(0.58 0.13 232); --l2-soft:oklch(0.955 0.030 232);
+    --l3:oklch(0.55 0.20 285); --l3-soft:oklch(0.955 0.030 285);
+    --ui:oklch(0.64 0.14 64);  --ui-soft:oklch(0.955 0.034 70);
+    --shadow-s:0 1px 2px rgba(16,16,24,.06), 0 1px 1px rgba(16,16,24,.04);
+    --shadow-m:0 4px 16px rgba(16,16,24,.07);
+    --ease-mech:cubic-bezier(0.2, 0, 0, 1);
+    --font-display:"Instrument Serif",   ui-serif, Georgia, "Times New Roman", serif;
+    --font-sans:"Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  :root[data-theme="dark"] {
+    --accent:#8B6BFF; --accent-2:#A78BFF; --accent-soft:#241C46;
+    --up:#34C892; --up-soft:#14271F;
+    --down:#FF6B57; --down-soft:#2A1714;
+    --amber:#E0A93B; --amber-soft:#2A2113;
+    --bg:#08080B; --panel:#141419; --panel-2:#1B1B22; --panel-3:#23232B;
+    --border:#26262F; --border-2:#32323C;
+    --text:#F2F2F6; --muted:#9A9AAA; --faint:#62626E;
+    --canvas:#0B0B0F;
+    --l0:oklch(0.70 0.13 252); --l0-soft:oklch(0.28 0.05 252);
+    --l1:oklch(0.72 0.10 192); --l1-soft:oklch(0.28 0.04 192);
+    --l2:oklch(0.72 0.11 232); --l2-soft:oklch(0.28 0.05 232);
+    --l3:oklch(0.70 0.16 285); --l3-soft:oklch(0.28 0.06 285);
+    --ui:oklch(0.76 0.12 64);  --ui-soft:oklch(0.28 0.05 70);
+    --shadow-s:0 1px 2px rgba(0,0,0,.5); --shadow-m:0 4px 16px rgba(0,0,0,.55);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --accent:#8B6BFF; --accent-2:#A78BFF; --accent-soft:#241C46;
+      --up:#34C892; --up-soft:#14271F;
+      --down:#FF6B57; --down-soft:#2A1714;
+      --amber:#E0A93B; --amber-soft:#2A2113;
+      --bg:#08080B; --panel:#141419; --panel-2:#1B1B22; --panel-3:#23232B;
+      --border:#26262F; --border-2:#32323C;
+      --text:#F2F2F6; --muted:#9A9AAA; --faint:#62626E;
+      --canvas:#0B0B0F;
+      --l0:oklch(0.70 0.13 252); --l0-soft:oklch(0.28 0.05 252);
+      --l1:oklch(0.72 0.10 192); --l1-soft:oklch(0.28 0.04 192);
+      --l2:oklch(0.72 0.11 232); --l2-soft:oklch(0.28 0.05 232);
+      --l3:oklch(0.70 0.16 285); --l3-soft:oklch(0.28 0.06 285);
+      --ui:oklch(0.76 0.12 64);  --ui-soft:oklch(0.28 0.05 70);
+      --shadow-s:0 1px 2px rgba(0,0,0,.5); --shadow-m:0 4px 16px rgba(0,0,0,.55);
+    }
+  }
+
+  *,*::before,*::after { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:76px; }
+  body {
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:var(--font-sans); font-size:14px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── Top bar ─────────────────────────────────────────────────────────── */
+  .topbar {
+    position:sticky; top:0; z-index:50;
+    display:flex; align-items:center; gap:14px;
+    padding:11px 22px; background:var(--panel);
+    border-bottom:1px solid var(--border); box-shadow:var(--shadow-s);
+  }
+  .brand { font-family:var(--font-mono); font-size:12px; font-weight:700; letter-spacing:.08em;
+           color:var(--accent); text-transform:uppercase; }
+  .brand span { color:var(--faint); font-weight:500; }
+  .topbar .spacer { flex:1; }
+  #filter {
+    width:min(300px, 42vw); height:32px; padding:0 11px;
+    background:var(--panel-2); border:1px solid var(--border); border-radius:9px;
+    color:var(--text); font-family:inherit; font-size:13px; outline:none;
+    transition:border-color .15s var(--ease-mech);
+  }
+  #filter:focus { border-color:var(--accent); }
+  #filter::placeholder { color:var(--faint); }
+  .tbtn {
+    height:32px; padding:0 12px; background:var(--panel-2);
+    border:1px solid var(--border); border-radius:9px; color:var(--muted);
+    font-family:var(--font-mono); font-size:11px; font-weight:600; cursor:pointer;
+    transition:border-color .15s var(--ease-mech), color .15s var(--ease-mech);
+  }
+  .tbtn:hover { border-color:var(--border-2); color:var(--text); }
+
+  /* ── Shell ───────────────────────────────────────────────────────────── */
+  .shell { display:grid; grid-template-columns:236px minmax(0,1fr); gap:32px;
+           max-width:1500px; margin:0 auto; padding:28px 22px 96px; }
+  nav.toc { position:sticky; top:76px; align-self:start; max-height:calc(100vh - 100px); overflow-y:auto; }
+  nav.toc h4 { font-family:var(--font-mono); font-size:9px; font-weight:700; letter-spacing:.1em;
+               text-transform:uppercase; color:var(--faint); margin:16px 0 7px; }
+  nav.toc h4:first-child { margin-top:0; }
+  nav.toc a { display:block; padding:4px 9px; border-radius:7px; color:var(--muted);
+              text-decoration:none; font-size:12.5px; transition:background .12s var(--ease-mech); }
+  nav.toc a:hover { background:var(--panel-2); color:var(--text); }
+  nav.toc a .n { font-family:var(--font-mono); font-size:10px; color:var(--faint); float:right; }
+  main { min-width:0; }
+
+  /* ── Type voices (§1.2): serif ≥18px only, sans body, mono for identifiers ─ */
+  h1 { font-family:var(--font-display); font-weight:400; font-size:38px; line-height:1.1;
+       letter-spacing:-.01em; margin:0 0 10px; }
+  h2 { font-family:var(--font-display); font-weight:400; font-size:27px; line-height:1.2;
+       margin:52px 0 6px; padding-top:14px; border-top:1px solid var(--border); }
+  h2:first-of-type { border-top:none; padding-top:0; }
+  h3 { font-family:var(--font-display); font-weight:400; font-size:20px; margin:34px 0 8px; }
+  h4 { font-size:13px; font-weight:700; margin:22px 0 6px; }
+  p  { margin:0 0 12px; color:var(--muted); max-width:78ch; }
+  p.lede { font-size:15.5px; color:var(--text); max-width:74ch; }
+  code, .mono { font-family:var(--font-mono); font-size:.88em; }
+  p code, li code, td code, .note code {
+    background:var(--panel-2); border:1px solid var(--border);
+    border-radius:5px; padding:1px 5px; color:var(--text); white-space:nowrap;
+  }
+  a { color:var(--accent); }
+  ul { margin:0 0 12px; padding-left:20px; color:var(--muted); max-width:78ch; }
+  li { margin:3px 0; }
+  strong { color:var(--text); font-weight:650; }
+
+  /* ── Layer badges ────────────────────────────────────────────────────── */
+  .badge {
+    display:inline-flex; align-items:center; gap:5px;
+    font-family:var(--font-mono); font-size:9.5px; font-weight:700; letter-spacing:.06em;
+    text-transform:uppercase; padding:2px 7px; border-radius:6px; white-space:nowrap;
+  }
+  .b-l0 { background:var(--l0-soft); color:var(--l0); }
+  .b-l1 { background:var(--l1-soft); color:var(--l1); }
+  .b-l2 { background:var(--l2-soft); color:var(--l2); }
+  .b-l3 { background:var(--l3-soft); color:var(--l3); }
+  .b-ui { background:var(--ui-soft); color:var(--ui); }
+  .b-view { background:var(--accent-soft); color:var(--accent); }
+
+  /* ── Hero pipeline diagram ───────────────────────────────────────────── */
+  .diagram {
+    background:var(--canvas); border:1px solid var(--border); border-radius:14px;
+    padding:20px; margin:22px 0 8px; overflow-x:auto;
+  }
+  .diagram svg { display:block; min-width:940px; width:100%; height:auto; }
+  .dg-cap { font-size:12px; color:var(--faint); margin:8px 2px 0; max-width:none; }
+  svg text { font-family:var(--font-mono); }
+  svg .lbl  { font-size:11px; font-weight:600; }
+  svg .sub  { font-size:9px; letter-spacing:.05em; text-transform:uppercase; }
+  svg .stage{ font-size:9.5px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
+
+  /* ── Table cards ─────────────────────────────────────────────────────── */
+  .tbl {
+    background:var(--panel); border:1px solid var(--border); border-radius:12px;
+    box-shadow:var(--shadow-s); margin:16px 0; overflow:hidden;
+    scroll-margin-top:82px;
+  }
+  .tbl > header {
+    display:flex; align-items:center; gap:9px; flex-wrap:wrap;
+    padding:11px 15px; background:var(--panel-2); border-bottom:1px solid var(--border);
+  }
+  .tbl > header .name { font-family:var(--font-mono); font-size:13.5px; font-weight:700; color:var(--text); }
+  .tbl > header .pk {
+    font-family:var(--font-mono); font-size:10px; color:var(--faint); margin-left:auto;
+  }
+  .tbl > header .pk b { color:var(--muted); font-weight:600; }
+  .tbl .purpose { padding:11px 15px 3px; font-size:12.5px; color:var(--muted); max-width:none; margin:0; }
+  .cols { width:100%; border-collapse:collapse; font-size:12.5px; }
+  .cols th {
+    text-align:left; padding:7px 15px; font-family:var(--font-mono); font-size:9px;
+    font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--faint);
+    border-bottom:1px solid var(--border);
+  }
+  .cols td { padding:6px 15px; border-bottom:1px solid var(--border); vertical-align:top; color:var(--muted); }
+  .cols tr:last-child td { border-bottom:none; }
+  .cols td.c { font-family:var(--font-mono); font-size:12px; color:var(--text); white-space:nowrap; }
+  .cols td.t { font-family:var(--font-mono); font-size:10.5px; color:var(--faint); white-space:nowrap; }
+  .cols td.n { font-size:12px; line-height:1.5; }
+  .cols tr.key td.c { color:var(--accent); font-weight:700; }
+  .cols tr.fk  td.c::after { content:"→"; color:var(--l3); margin-left:5px; font-weight:400; }
+  .tbl .foot {
+    padding:9px 15px; background:var(--panel-2); border-top:1px solid var(--border);
+    font-size:11.5px; color:var(--faint);
+  }
+  .tbl .foot b { color:var(--muted); font-weight:600; font-family:var(--font-mono); font-size:10px;
+                 letter-spacing:.05em; text-transform:uppercase; }
+
+  /* ── Notes / callouts ────────────────────────────────────────────────── */
+  .note {
+    border-left:2px solid var(--accent); background:var(--accent-soft);
+    padding:11px 15px; border-radius:0 9px 9px 0; margin:16px 0;
+    font-size:13px; color:var(--text);
+  }
+  .note.warn { border-left-color:var(--amber); background:var(--amber-soft); }
+  .note.good { border-left-color:var(--up);    background:var(--up-soft); }
+  .note p:last-child { margin-bottom:0; }
+  .note p { color:inherit; }
+  .note .tag {
+    display:block; font-family:var(--font-mono); font-size:9px; font-weight:700;
+    letter-spacing:.1em; text-transform:uppercase; margin-bottom:4px; opacity:.75;
+  }
+
+  /* ── Generic reference tables ────────────────────────────────────────── */
+  .wrap { overflow-x:auto; margin:14px 0; border:1px solid var(--border);
+          border-radius:12px; background:var(--panel); box-shadow:var(--shadow-s); }
+  table.ref { width:100%; border-collapse:collapse; font-size:12.5px; min-width:520px; }
+  table.ref th {
+    text-align:left; padding:9px 14px; background:var(--panel-2);
+    font-family:var(--font-mono); font-size:9px; font-weight:700; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--faint); border-bottom:1px solid var(--border);
+    white-space:nowrap;
+  }
+  table.ref td { padding:7px 14px; border-bottom:1px solid var(--border); color:var(--muted); vertical-align:top; }
+  table.ref tr:last-child td { border-bottom:none; }
+  table.ref td.m { font-family:var(--font-mono); font-size:11.5px; color:var(--text); white-space:nowrap; }
+
+  .stats { display:flex; flex-wrap:wrap; gap:9px; margin:20px 0 6px; }
+  .stat {
+    flex:1 1 128px; background:var(--panel); border:1px solid var(--border);
+    border-radius:11px; padding:11px 14px; box-shadow:var(--shadow-s);
+  }
+  .stat .v { font-family:var(--font-mono); font-size:23px; font-weight:700; color:var(--text); line-height:1.1; }
+  .stat .k { font-family:var(--font-mono); font-size:9px; font-weight:700; letter-spacing:.09em;
+             text-transform:uppercase; color:var(--faint); margin-top:3px; }
+
+  .hidden { display:none !important; }
+  .nores { padding:26px; text-align:center; color:var(--faint); font-size:13px; }
+
+  @media (max-width:1040px) {
+    .shell { grid-template-columns:1fr; gap:0; }
+    nav.toc { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">N4A <span>/ database schema</span></div>
+  <div class="spacer"></div>
+  <input id="filter" type="search" placeholder="Filter tables &amp; columns…" autocomplete="off">
+  <button class="tbtn" id="theme">THEME</button>
+</div>
+
+<div class="shell">
+
+<nav class="toc">
+  <h4>Orientation</h4>
+  <a href="#overview">Overview</a>
+  <a href="#pipeline">The pipeline</a>
+  <a href="#conventions">Conventions</a>
+  <a href="#substrate">The run substrate</a>
+  <h4>L0 · Raw</h4>
+  <a href="#d-l0">Artifacts &amp; pages <span class="n">2</span></a>
+  <h4>L1 · Record</h4>
+  <a href="#d-doc">Documents &amp; parse <span class="n">5</span></a>
+  <a href="#d-spine">Resolution spines <span class="n">3</span></a>
+  <a href="#d-concept">Concept registry <span class="n">6</span></a>
+  <h4>L3 · Graph</h4>
+  <a href="#d-runs">Run substrate <span class="n">3</span></a>
+  <a href="#d-claims">Claims <span class="n">4</span></a>
+  <a href="#d-rel">Connection layer <span class="n">3</span></a>
+  <a href="#d-review">Analyst review <span class="n">4</span></a>
+  <h4>Product surfaces</h4>
+  <a href="#d-dash">Dashboard &amp; facts <span class="n">4</span></a>
+  <a href="#d-canvas">Canvas &amp; workbooks <span class="n">6</span></a>
+  <h4>Reference</h4>
+  <a href="#views">The three views</a>
+  <a href="#fks">Foreign-key map</a>
+  <a href="#vocab">Vocabularies</a>
+  <a href="#obs">Observations</a>
+</nav>
+
+<main>
+
+<h1>N4A database schema</h1>
+<p class="lede">
+  One Postgres 16 store, modelled as four derivation layers. <strong>51 tables, 7 views</strong>, all
+  defined in a single idempotent file — <code>services/ai/app/db/schema.sql</code> — applied by
+  <code>app.db.apply_schema</code> before the first write. No migration tool; a clean run is
+  <code>docker compose … down -v &amp;&amp; up -d</code>.
+</p>
+
+<div class="stats">
+  <div class="stat"><div class="v">40</div><div class="k">Tables</div></div>
+  <div class="stat"><div class="v">3</div><div class="k">Views</div></div>
+  <div class="stat"><div class="v">4</div><div class="k">Layers L0–L3</div></div>
+  <div class="stat"><div class="v">47</div><div class="k">Foreign keys</div></div>
+  <div class="stat"><div class="v">5433</div><div class="k">Host port</div></div>
+</div>
+
+<h2 id="overview">Overview — one store, four layers</h2>
+<p>
+  The four layers are <strong>not parallel stores</strong>. They are four depths of one corpus, each
+  lower layer more derived and less authoritative. Everything hangs off <code>sources</code>, the L0
+  root, and <code>ON DELETE CASCADE</code> chains all the way down — so deleting one PDF tears out its
+  entire derived footprint. That is invariant&nbsp;#7 (<em>derived layers are rebuildable</em>)
+  enforced by foreign keys rather than by convention.
+</p>
+
+<div class="wrap">
+<table class="ref">
+  <thead><tr><th>Layer</th><th>Holds</th><th>Authority</th><th>Rebuildable?</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><span class="badge b-l0">L0 raw</span></td>
+      <td>Artifact pointers + sha256, per-page parsed text</td>
+      <td>Ground truth — every citation resolves down to here</td>
+      <td>No — this <em>is</em> the truth</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-l1">L1 record</span></td>
+      <td>Documents, parse elements, chunks, the two spines, the concept registry, numeric facts</td>
+      <td>Normalized facts; the relational backbone</td>
+      <td>No — authoritative</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-l2">L2 index</span></td>
+      <td><code>chunks.embedding</code> (pgvector) + <code>chunks.text_search</code> (tsvector)</td>
+      <td>A similarity index <em>over</em> L1</td>
+      <td>Yes — re-embed</td>
+    </tr>
+    <tr>
+      <td><span class="badge b-l3">L3 graph</span></td>
+      <td>Entities, typed claims, typed relations — all with provenance</td>
+      <td>A projection of L1 via LLM extraction</td>
+      <td>Yes — re-extract</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="note">
+  <span class="tag">The most important structural fact</span>
+  <p>
+    <strong>L2 is not a table.</strong> It is two generated/derived columns living on the
+    <code>chunks</code> row: a <code>vector(1536)</code> written by the embed stage and a
+    <code>tsvector</code> Postgres regenerates automatically from <code>text</code>. There is no
+    separate vector store to drift out of sync — which is why re-ingest can never desync the lexical
+    index from the chunk.
+  </p>
+</div>
+
+<div class="note warn">
+  <span class="tag">L3 is relational — Apache AGE is provisioned but unused</span>
+  <p>
+    The Docker image bundles Apache AGE, and <code>schema.sql</code> keeps <code>ag_catalog</code>
+    first on the <code>search_path</code> in anticipation of it. But <strong>nothing in the codebase
+    runs <code>CREATE EXTENSION age</code> or a single Cypher query.</strong> Every "graph" object
+    below is an ordinary table with foreign keys; the graph the UI renders is assembled by SQL in
+    <code>app/graph/assemble.py</code> at request time. This is deliberate — ADR 0019: at demo scale
+    AGE buys nothing, and because the graph is a rebuildable projection, standing it up later is a
+    projection build, not a migration.
+  </p>
+</div>
+
+<h2 id="pipeline">The pipeline — how a PDF becomes a cited claim</h2>
+<p>
+  Read the diagram left to right; that is the derivation direction and also the cascade direction.
+  Solid arrows are foreign keys. The two run tables in the middle are the load-bearing idea — see
+  <a href="#substrate">the run substrate</a> below.
+</p>
+
+<div class="diagram">
+<svg viewBox="0 0 1180 470" role="img" aria-label="N4A ingestion and extraction pipeline, left to right: sources to pages to documents to elements to chunks, then extraction runs to mentions, then resolution runs to versions, then the active views.">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--faint)"/>
+    </marker>
+    <marker id="ar-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent)"/>
+    </marker>
+  </defs>
+
+  <!-- stage rails -->
+  <g class="stage" fill="var(--faint)">
+    <text x="14"  y="20">L0 · raw</text>
+    <text x="212" y="20">L1 · record</text>
+    <text x="470" y="20">L1 · vocabulary</text>
+    <text x="700" y="20">L3 · extraction</text>
+    <text x="946" y="20">L3 · read surface</text>
+  </g>
+  <g stroke="var(--border)" stroke-width="1">
+    <line x1="196" y1="34" x2="196" y2="450"/>
+    <line x1="454" y1="34" x2="454" y2="450"/>
+    <line x1="684" y1="34" x2="684" y2="450"/>
+    <line x1="930" y1="34" x2="930" y2="450"/>
+  </g>
+
+  <!-- L0 -->
+  <g>
+    <rect x="14" y="46" width="168" height="42" rx="9" fill="var(--l0-soft)" stroke="var(--l0)" stroke-width="1.5"/>
+    <text class="lbl" x="26" y="65" fill="var(--l0)">sources</text>
+    <text class="sub" x="26" y="79" fill="var(--l0)" opacity=".75">sha256 · local_path</text>
+
+    <rect x="14" y="102" width="168" height="42" rx="9" fill="var(--l0-soft)" stroke="var(--l0)" stroke-width="1.5"/>
+    <text class="lbl" x="26" y="121" fill="var(--l0)">pages</text>
+    <text class="sub" x="26" y="135" fill="var(--l0)" opacity=".75">per-page text</text>
+  </g>
+
+  <!-- L1 record -->
+  <g>
+    <rect x="212" y="46" width="176" height="42" rx="9" fill="var(--l1-soft)" stroke="var(--l1)" stroke-width="1.5"/>
+    <text class="lbl" x="224" y="65" fill="var(--l1)">documents</text>
+    <text class="sub" x="224" y="79" fill="var(--l1)" opacity=".75">the source passport</text>
+
+    <rect x="212" y="102" width="176" height="42" rx="9" fill="var(--l1-soft)" stroke="var(--l1)" stroke-width="1.5"/>
+    <text class="lbl" x="224" y="121" fill="var(--l1)">elements</text>
+    <text class="sub" x="224" y="135" fill="var(--l1)" opacity=".75">typed parse units</text>
+
+    <rect x="212" y="158" width="176" height="52" rx="9" fill="var(--l2-soft)" stroke="var(--l2)" stroke-width="1.5"/>
+    <text class="lbl" x="224" y="177" fill="var(--l2)">chunks</text>
+    <text class="sub" x="224" y="191" fill="var(--l2)" opacity=".75">+ embedding (L2)</text>
+    <text class="sub" x="224" y="203" fill="var(--l2)" opacity=".75">+ text_search (L2)</text>
+
+    <rect x="212" y="224" width="176" height="38" rx="9" fill="var(--l1-soft)" stroke="var(--l1)" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text class="lbl" x="224" y="248" fill="var(--l1)">document_roles</text>
+  </g>
+
+  <!-- L1 vocabulary -->
+  <g>
+    <rect x="470" y="46" width="176" height="42" rx="9" fill="var(--l1-soft)" stroke="var(--l1)" stroke-width="1.5"/>
+    <text class="lbl" x="482" y="65" fill="var(--l1)">entities</text>
+    <text class="sub" x="482" y="79" fill="var(--l1)" opacity=".75">entity spine</text>
+
+    <rect x="470" y="102" width="176" height="42" rx="9" fill="var(--l1-soft)" stroke="var(--l1)" stroke-width="1.5"/>
+    <text class="lbl" x="482" y="121" fill="var(--l1)">attributes_coarse</text>
+    <text class="sub" x="482" y="135" fill="var(--l1)" opacity=".75">the contestation lens</text>
+
+    <rect x="470" y="158" width="176" height="42" rx="9" fill="var(--l1-soft)" stroke="var(--l1)" stroke-width="1.5"/>
+    <text class="lbl" x="482" y="177" fill="var(--l1)">attributes_fine</text>
+    <text class="sub" x="482" y="191" fill="var(--l1)" opacity=".75">derived drivers</text>
+
+    <rect x="470" y="214" width="176" height="42" rx="9" fill="var(--ui-soft)" stroke="var(--ui)" stroke-width="1.5"/>
+    <text class="lbl" x="482" y="233" fill="var(--ui)">concepts</text>
+    <text class="sub" x="482" y="247" fill="var(--ui)" opacity=".75">typed registry (1E)</text>
+
+    <rect x="470" y="278" width="176" height="42" rx="9" fill="var(--l3-soft)" stroke="var(--l3)" stroke-width="1.5"/>
+    <text class="lbl" x="482" y="297" fill="var(--l3)">spine_snapshots</text>
+    <text class="sub" x="482" y="311" fill="var(--l3)" opacity=".75">content-addressed</text>
+  </g>
+
+  <!-- L3 extraction -->
+  <g>
+    <rect x="700" y="46" width="176" height="42" rx="9" fill="var(--l3-soft)" stroke="var(--l3)" stroke-width="1.5"/>
+    <text class="lbl" x="712" y="65" fill="var(--l3)">extraction_runs</text>
+    <text class="sub" x="712" y="79" fill="var(--l3)" opacity=".75">expensive · LLM</text>
+
+    <rect x="700" y="102" width="176" height="42" rx="9" fill="var(--l3-soft)" stroke="var(--l3)" stroke-width="1.5"/>
+    <text class="lbl" x="712" y="121" fill="var(--l3)">claim_mentions</text>
+    <text class="sub" x="712" y="135" fill="var(--l3)" opacity=".75">immutable · kept+rejected</text>
+
+    <rect x="700" y="158" width="176" height="42" rx="9" fill="var(--l3-soft)" stroke="var(--l3)" stroke-width="1.5"/>
+    <text class="lbl" x="712" y="177" fill="var(--l3)">relation_mentions</text>
+    <text class="sub" x="712" y="191" fill="var(--l3)" opacity=".75">immutable · harvest</text>
+
+    <rect x="700" y="224" width="176" height="42" rx="9" fill="var(--l3-soft)" stroke="var(--l3)" stroke-width="2.5"/>
+    <text class="lbl" x="712" y="243" fill="var(--l3)">resolution_runs</text>
+    <text class="sub" x="712" y="257" fill="var(--l3)" opacity=".75">cheap · zero LLM calls</text>
+
+    <rect x="700" y="280" width="176" height="42" rx="9" fill="var(--l3-soft)" stroke="var(--l3)" stroke-width="1.5"/>
+    <text class="lbl" x="712" y="299" fill="var(--l3)">claim_versions</text>
+    <text class="sub" x="712" y="313" fill="var(--l3)" opacity=".75">resolved projection</text>
+
+    <rect x="700" y="336" width="176" height="42" rx="9" fill="var(--l3-soft)" stroke="var(--l3)" stroke-width="1.5"/>
+    <text class="lbl" x="712" y="355" fill="var(--l3)">relation_versions</text>
+    <text class="sub" x="712" y="369" fill="var(--l3)" opacity=".75">resolved edges</text>
+
+    <rect x="700" y="392" width="176" height="42" rx="9" fill="var(--l1-soft)" stroke="var(--l1)" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text class="lbl" x="712" y="411" fill="var(--l1)">entity_relations</text>
+    <text class="sub" x="712" y="425" fill="var(--l1)" opacity=".75">curated seeds only</text>
+  </g>
+
+  <!-- read surface -->
+  <g>
+    <rect x="946" y="280" width="200" height="46" rx="9" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+    <text class="lbl" x="960" y="300" fill="var(--accent)">active_claims</text>
+    <text class="sub" x="960" y="315" fill="var(--accent)" opacity=".8">VIEW · the only read path</text>
+
+    <rect x="946" y="356" width="200" height="46" rx="9" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+    <text class="lbl" x="960" y="376" fill="var(--accent)">active_relations</text>
+    <text class="sub" x="960" y="391" fill="var(--accent)" opacity=".8">VIEW · seeds ∪ harvest</text>
+
+    <rect x="946" y="46" width="200" height="74" rx="9" fill="var(--panel-2)" stroke="var(--border-2)" stroke-width="1.5"/>
+    <text class="lbl" x="960" y="66" fill="var(--muted)">Consumers</text>
+    <text class="sub" x="960" y="82" fill="var(--faint)">Ask · graph assembly</text>
+    <text class="sub" x="960" y="95" fill="var(--faint)">signals · eval · Canvas</text>
+    <text class="sub" x="960" y="108" fill="var(--faint)">never the run tables</text>
+  </g>
+
+  <!-- edges -->
+  <g fill="none" stroke="var(--faint)" stroke-width="1.4" marker-end="url(#ar)">
+    <path d="M 98 88 L 98 102"/>                                  <!-- sources→pages -->
+    <path d="M 182 67 L 212 67"/>                                 <!-- sources→documents -->
+    <path d="M 182 123 C 196 123, 198 123, 212 123"/>             <!-- pages→elements -->
+    <path d="M 300 144 L 300 158"/>                               <!-- elements→chunks -->
+    <path d="M 300 88 C 340 92, 344 96, 340 224 L 316 224"/>      <!-- documents→document_roles -->
+    <path d="M 388 246 C 428 246, 434 67, 470 67"/>               <!-- document_roles→entities -->
+    <path d="M 388 184 C 600 184, 620 60, 700 60"/>               <!-- chunks→extraction_runs -->
+    <path d="M 300 46 C 300 30, 690 30, 700 46"/>                 <!-- documents→extraction_runs -->
+    <path d="M 788 88 L 788 102"/>                                <!-- run→claim_mentions -->
+    <path d="M 788 144 L 788 158"/>                               <!-- →relation_mentions -->
+    <path d="M 788 200 L 788 224"/>                               <!-- →resolution_runs -->
+    <path d="M 788 266 L 788 280"/>                               <!-- →claim_versions -->
+    <path d="M 788 322 L 788 336"/>                               <!-- →relation_versions -->
+    <path d="M 646 299 C 670 299, 676 246, 700 246"/>             <!-- spine_snapshots→resolution_runs -->
+    <path d="M 646 67 C 664 67, 676 290, 700 296"/>               <!-- entities→claim_versions -->
+    <path d="M 646 123 C 668 123, 678 292, 700 300"/>             <!-- coarse→claim_versions -->
+  </g>
+  <g fill="none" stroke="var(--accent)" stroke-width="1.8" marker-end="url(#ar-a)">
+    <path d="M 876 301 L 946 303"/>
+    <path d="M 876 357 C 910 357, 916 377, 946 379"/>
+    <path d="M 876 413 C 906 413, 914 385, 946 383"/>
+    <path d="M 1046 280 L 1046 120"/>
+  </g>
+</svg>
+</div>
+<p class="dg-cap">
+  Dashed borders = curated/seeded rather than extracted. The thick violet boxes are the two objects
+  every consumer actually reads.
+</p>
+
+<h2 id="conventions">Cross-cutting conventions</h2>
+<p>Five patterns repeat across almost every table. Learn these once and the tables read quickly.</p>
+
+<h4>1 · Workspace isolation is structural, not conventional</h4>
+<p>
+  Nearly every table carries <code>workspace_id</code>, and where ids are human-readable slugs
+  (<code>'infosys'</code>, <code>'operating_margin'</code>) the <strong>primary key is the composite
+  <code>(workspace_id, id)</code></strong>, with composite foreign keys to match. A bare-id PK would
+  let one workspace's seed silently overwrite another's. This makes it structurally impossible for a
+  claim in one workspace to reference an entity in another.
+</p>
+
+<h4>2 · Provenance is a CHECK constraint, not a code convention</h4>
+<p>
+  Invariant #1 ("provenance or it doesn't ship") is enforced by the database. Five tables carry a
+  <code>jsonb_array_length(provenance) &gt;= 1</code> CHECK, and two more make it conditional on
+  origin — an AI-derived row must cite a passage; a user-authored seed need not.
+</p>
+
+<h4>3 · Append-only versioning over destructive updates</h4>
+<p>
+  Analyst decisions, concept mutations and resolution outputs are all <em>appended</em>, never
+  overwritten — a decision is evidence. Tables ending in <code>_versions</code> or
+  <code>_mutations</code> follow this, with latest-wins or an <code>active</code> flag on read.
+</p>
+
+<h4>4 · Honest states everywhere</h4>
+<p>
+  Run tables distinguish <code>done</code> from <code>done_zero</code> from <code>failed</code>, and
+  rejected rows are <em>persisted with their reason</em> rather than dropped. A zero-result run is
+  auditable ("14 mentions, here is why each died") instead of indistinguishable from a run that never
+  looked. Several columns are deliberately nullable so an unpopulated facet reads as an honest
+  zero rather than a defaulted value.
+</p>
+
+<h4>5 · Idempotent schema, no migration tool</h4>
+<p>
+  Everything is <code>CREATE … IF NOT EXISTS</code> plus named
+  <code>DROP CONSTRAINT IF EXISTS</code> → <code>ADD CONSTRAINT</code> pairs, so
+  <code>apply_schema</code> is safe to run on every startup against a fresh or existing database.
+  The trade-off: <strong>file order matters</strong> — a later re-add wins. See
+  <a href="#obs">Observations</a>.
+</p>
+
+<h2 id="substrate">The run substrate — the schema's load-bearing idea</h2>
+<p>
+  This is the pattern worth understanding before reading any individual table. LLM extraction is
+  expensive and non-deterministic; resolving an extracted mention against the spine is cheap and
+  deterministic. The schema splits them into <strong>two run tables with different lifecycles</strong>:
+</p>
+
+<div class="wrap">
+<table class="ref">
+  <thead><tr><th></th><th>Extraction run</th><th>Resolution run</th></tr></thead>
+  <tbody>
+    <tr><td class="m">Owns</td><td class="m">claim_mentions · relation_mentions</td><td class="m">claim_versions · relation_versions</td></tr>
+    <tr><td class="m">Cost</td><td>One LLM call per passage</td><td><strong>Zero provider calls</strong></td></tr>
+    <tr><td class="m">Mutability</td><td>Immutable — the durable asset</td><td>Rebuildable projection</td></tr>
+    <tr><td class="m">Keyed on</td><td>(doc, layer, attempt)</td><td>one extraction run × one spine snapshot</td></tr>
+    <tr><td class="m">Lifetime</td><td>Life of the document</td><td>Superseded by the next resolution</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>
+  The payoff is concrete: when the spine changes — an entity is merged, an attribute is retyped — the
+  system re-resolves every saved mention under a new <code>resolution_runs</code> row and flips
+  <code>active</code> in one transaction. <strong>No document is re-read and no model is re-called.</strong>
+  A partial unique index guarantees at most one active resolution run per <code>(doc, layer)</code>,
+  and the swap happens under a per-document advisory lock.
+</p>
+
+<div class="note good">
+  <span class="tag">Three identities, deliberately never conflated</span>
+  <p>
+    <code>raw_mention_id</code> is stable across re-resolutions · <code>claim_version_id</code> is one
+    run's resolved output · the <strong>contestation key</strong>
+    <code>(subject, attribute, period, polarity)</code> lives as ordinary columns so signals are a
+    <code>GROUP BY</code>, not a graph traversal. Conflicts are <em>computed</em>, never LLM-guessed
+    (invariant #9).
+  </p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="d-l0">L0 · Raw artifacts <span class="badge b-l0">L0</span></h2>
+<p>
+  The bytes stay on disk. These two tables record the pointer and content hash — never the bytes
+  themselves. <code>sources</code> is the cascade root for the entire database.
+</p>
+
+<div class="tbl" id="t-sources">
+  <header><span class="name">sources</span><span class="badge b-l0">L0</span>
+    <span class="pk"><b>PK</b> doc_id</span></header>
+  <p class="purpose">Raw-artifact lineage. <code>sha256</code> is the L0 identity in the lineage spine.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">doc_id</td><td class="t">TEXT PK</td><td class="n">uuid5 over (workspace, sha) for artifact-backed sources</td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n">Tenant scope</td></tr>
+      <tr><td class="c">source_uri</td><td class="t">TEXT</td><td class="n">Origin: <code>upload://</code>, <code>yfinance://</code>, http…</td></tr>
+      <tr><td class="c">local_path</td><td class="t">TEXT</td><td class="n">Where the L0 bytes live on disk</td></tr>
+      <tr><td class="c">media_type</td><td class="t">TEXT</td><td class="n">MIME type</td></tr>
+      <tr><td class="c">sha256</td><td class="t">TEXT</td><td class="n">Content identity — what makes two renamed uploads one artifact</td></tr>
+      <tr><td class="c">page_count</td><td class="t">INTEGER</td><td class="n"></td></tr>
+      <tr><td class="c">pages_with_text</td><td class="t">INTEGER</td><td class="n">Text-coverage signal (drives the OCR flag)</td></tr>
+      <tr><td class="c">char_count</td><td class="t">INTEGER</td><td class="n"></td></tr>
+      <tr><td class="c">fetched_at</td><td class="t">TIMESTAMPTZ</td><td class="n">IST instant (invariant #5)</td></tr>
+      <tr><td class="c">parse_report</td><td class="t">JSONB</td><td class="n">The honest parse receipt: coverage, tables detected, warnings, <code>ocr_required</code>, section map</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-pages">
+  <header><span class="name">pages</span><span class="badge b-l0">L0</span>
+    <span class="pk"><b>PK</b> (doc_id, number)</span></header>
+  <p class="purpose">Per-page parsed text — the provenance anchor a locator like "AR FY24 p.42" resolves to.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key fk"><td class="c">doc_id</td><td class="t">TEXT</td><td class="n"><code>sources</code> · CASCADE</td></tr>
+      <tr class="key"><td class="c">number</td><td class="t">INTEGER</td><td class="n">1-based page number — the locator anchor</td></tr>
+      <tr><td class="c">text</td><td class="t">TEXT</td><td class="n">Markdown conversion of the page</td></tr>
+      <tr><td class="c">char_count</td><td class="t">INTEGER</td><td class="n"></td></tr>
+      <tr><td class="c">has_text</td><td class="t">BOOLEAN</td><td class="n">False on image-only pages</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="d-doc">L1 · Documents &amp; parse <span class="badge b-l1">L1</span></h2>
+<p>
+  <code>all_documents</code> is the widest table in the schema because it carries the <strong>source
+  passport</strong> — the acquisition-time truth that fixes a source's kind, class and authority
+  deterministically from the section it entered through. Since rung 17c it also holds the
+  <strong>canvas files</strong> (ADR 0149): a file dropped on a canvas is a document of the workspace
+  with <code>standing = 'canvas'</code> — same tables, same L0 file, same id — read by the canvas steps
+  wired to it and by nothing else. The name every reader uses, <code>documents</code>, is the
+  <a href="#v-documents">view</a> of the Library's documents: a reader that does nothing cannot see a
+  canvas file. A store created before 17c had the table under the old name; the schema renames it
+  once, and every foreign key follows the table.
+</p>
+
+<div class="tbl" id="t-all_documents">
+  <header><span class="name">all_documents</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> id · <b>UNIQUE</b> (workspace_id, artifact_sha256)</span></header>
+  <p class="purpose">The frozen Document + its source passport. Authority lives here and nowhere else.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key fk"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"><code>sources.doc_id</code> · CASCADE</td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">title</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">source_type</td><td class="t">TEXT</td><td class="n">Display label, derived from <code>document_kind</code>. <strong>Zero authority semantics.</strong></td></tr>
+      <tr><td class="c">doc_kind</td><td class="t">TEXT</td><td class="n">Detected from filename; drives per-type boilerplate filtering only — never authority</td></tr>
+      <tr><td class="c">status</td><td class="t">TEXT</td><td class="n">processing · ready · ready_partial · error</td></tr>
+      <tr><td class="c">stages</td><td class="t">JSONB</td><td class="n">Ingestion progress list: parse · chunk · identify · embed · extract · resolve · harvest</td></tr>
+      <tr><td class="c">uploaded_at</td><td class="t">TEXT</td><td class="n">IST ISO-8601, kept as TEXT so what shipped is what the analyst sees</td></tr>
+      <tr><td class="c">published_at</td><td class="t">TEXT</td><td class="n">The PDF's export stamp (<code>creationDate</code>/<code>modDate</code>) unless an analyst asserted the date on the passport; never drawn as a release date (ADR 0126 D1)</td></tr>
+      <tr><td class="c">issuer_name</td><td class="t">TEXT</td><td class="n">Filer detected from the document's own front matter, not the filename</td></tr>
+      <tr><td class="c">locator_prefix</td><td class="t">TEXT</td><td class="n">Citation prefix, e.g. "AR FY24"</td></tr>
+      <tr><td class="c">error</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">section</td><td class="t">TEXT</td><td class="n">CHECK · the typed section it entered through — <strong>the one input that fixes the rest</strong></td></tr>
+      <tr><td class="c">document_kind</td><td class="t">TEXT</td><td class="n">CHECK · 12 values. The passport truth</td></tr>
+      <tr><td class="c">source_class</td><td class="t">TEXT</td><td class="n">CHECK · primary_statutory … internal_derived</td></tr>
+      <tr><td class="c">authority_tier</td><td class="t">TEXT</td><td class="n">CHECK · 12 tiers. <strong>The only authority source in the system</strong></td></tr>
+      <tr><td class="c">artifact_sha256</td><td class="t">TEXT</td><td class="n">Mirrors <code>sources.sha256</code>; UNIQUE per workspace (duplicate detection)</td></tr>
+      <tr class="fk"><td class="c">issuer_entity_id</td><td class="t">TEXT</td><td class="n"><code>entities</code> · SET NULL — a spine delete can't strand a dangling id</td></tr>
+      <tr><td class="c">lineage_id</td><td class="t">TEXT</td><td class="n">Same-voice atom: an AR and its investor deck are <em>one</em> voice, not two sources</td></tr>
+      <tr class="fk"><td class="c">derived_from_doc_id</td><td class="t">TEXT</td><td class="n"><code>all_documents</code> · SET NULL</td></tr>
+      <tr><td class="c">metadata_confidence</td><td class="t">TEXT</td><td class="n">CHECK · verified · section_asserted · needs_confirmation</td></tr>
+      <tr><td class="c">passport_rev</td><td class="t">INTEGER</td><td class="n">Monotonic; runs snapshot it so a passport edit mid-run is detectable</td></tr>
+      <tr><td class="c">published_at_asserted</td><td class="t">BOOLEAN</td><td class="n">TRUE only when a passport PATCH carried <code>publishedAt</code> &mdash; the one case the Timeline draws <code>published_at</code> as an analyst-confirmed date (ADR 0126)</td></tr>
+      <tr><td class="c">standing</td><td class="t">TEXT</td><td class="n">CHECK · <code>library</code> (listed, read, speaking) · <code>canvas</code> (a canvas file: read where wired, speaks nowhere — ADR 0149 D1). Landing never moves it; only arrival and <em>Add to Library</em> do</td></tr>
+      <tr class="fk"><td class="c">origin_canvas_id</td><td class="t">TEXT</td><td class="n"><code>canvases</code> · SET NULL — the canvas a canvas file arrived on; deleting it leaves the file (D6)</td></tr>
+      <tr><td class="c">read_ticket</td><td class="t">TEXT</td><td class="n">NULL · the fencing ticket of the read this row was reserved for (ADR 0153 D1): that read lands, and records a failure, only into a row still holding it — a delete or a re-arrival fences it out. NULL for a row no door reserved (the CLI seed path)</td></tr>
+      <tr><td class="c">frame_consolidation<br>frame_accounting_standard<br>frame_denomination_currency</td><td class="t">TEXT</td><td class="n">The measurement frame's <strong>weakest tier</strong> — what the artifact itself declares, inherited by any figure whose own cell/table/section is silent. Read from front matter, title and parsed section headings by <code>ingestion/backfill_frames.py</code>. <strong>Unanimity required:</strong> HDFC's annual report carries both <code>CONSOLIDATED BALANCE SHEET</code> and <code>STANDALONE BALANCE SHEET</code>, so it declares NEITHER and each figure resolves on its own section. No <code>adjustment</code> or <code>currency_basis</code> here by constraint (ADR 0085)</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Why lineage matters</b> — independence is counted by <em>voice</em>, not by document. Two filings from one issuer corroborate nothing.</div>
+
+<div class="tbl" id="v-documents">
+  <header><span class="name">documents</span><span class="badge b-view">VIEW</span></header>
+  <p class="purpose"><strong>The Library</strong> — the one rule that keeps a canvas file silent (ADR 0149 D3). The ~86 readers of documents (brief, leads, Graph, findings, facts, story, timeline, counts) all read this name, so none of them can reach a canvas file by doing nothing. The readers that legitimately need one name <code>all_documents</code>, on an allow-list <code>canvas_files_probe</code> greps: the ingestion lifecycle, reads ADDRESSED by id inside a workspace (chunk, file, preview, pages, the evidence passage, a citation's title), a canvas step's wired read, and <code>app/canvas_files/</code>.</p>
+  <div class="foot" style="border-top:none">
+    <code>SELECT * FROM all_documents WHERE standing = 'library' WITH LOCAL CHECK OPTION</code> — a write through the view that would leave its row invisible (a canvas file's stage update, an insert with standing <code>canvas</code>, a Library upsert landing on a canvas file's id) is an ERROR, not a silent no-op. <code>SELECT *</code> is expanded when the view is created, so every <code>ADD COLUMN</code> on <code>all_documents</code> sits above it (<code>test_canvas_files</code> pins the parity).
+  </div>
+</div>
+</div>
+
+<div class="tbl" id="t-elements">
+  <header><span class="name">elements</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (doc_id, id)</span></header>
+  <p class="purpose">Typed parse units a chunk is a view over. Delete-then-insert on every re-ingest, so persisted elements always match the live parse.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key fk"><td class="c">doc_id</td><td class="t">TEXT</td><td class="n"><code>sources</code> · CASCADE</td></tr>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT</td><td class="n">Run-scoped element id (<code>p0001-e000</code>)</td></tr>
+      <tr><td class="c">page_number</td><td class="t">INTEGER</td><td class="n"></td></tr>
+      <tr><td class="c">ordering</td><td class="t">INTEGER</td><td class="n">Reading order within the page ("order" is reserved SQL)</td></tr>
+      <tr><td class="c">type</td><td class="t">TEXT</td><td class="n">heading · paragraph · table · transcript_turn · caption · list_item …</td></tr>
+      <tr><td class="c">literal</td><td class="t">TEXT</td><td class="n">Exact extracted span — the field-grounding target for numeric verification</td></tr>
+      <tr><td class="c">text</td><td class="t">TEXT</td><td class="n">Normalized form for retrieval/display</td></tr>
+      <tr><td class="c">bbox</td><td class="t">JSONB</td><td class="n">[x0, y0, x1, y1] page coordinates</td></tr>
+      <tr><td class="c">level</td><td class="t">INTEGER</td><td class="n">Heading level 1–3</td></tr>
+      <tr><td class="c">speaker</td><td class="t">TEXT</td><td class="n">Literal speaker label on a transcript turn</td></tr>
+      <tr><td class="c">speaker_role</td><td class="t">TEXT</td><td class="n">Resolved role — joins <code>transcript_speakers</code>; NULL on a turn parsed before the speaker object</td></tr>
+      <tr><td class="c">event_seq</td><td class="t">INTEGER</td><td class="n">Which announced event the turn falls in — joins <code>transcript_events</code>; NULL = no event structure detected</td></tr>
+      <tr><td class="c">parent_id</td><td class="t">TEXT</td><td class="n">list item → heading, caption → table</td></tr>
+      <tr><td class="c">continues_id</td><td class="t">TEXT</td><td class="n">Cross-boundary continuation</td></tr>
+      <tr><td class="c">rows</td><td class="t">JSONB</td><td class="n">Table cell grid, row-major</td></tr>
+      <tr><td class="c">meta</td><td class="t">JSONB</td><td class="n">Table findability metadata: title/class/basis/unit &middot; <strong>the segment note&rsquo;s COLUMN AXIS</strong> (rung 6d): <code>columnLabels</code> / <code>valueColumns</code> / <code>headerNotes</code>, reconstructed from word geometry because x-positions die at this boundary &mdash; plus <code>axisGrid</code>, a fingerprint of the <code>rows</code> the axis was read over. An element id is a POSITION, so a re-parse leaves it identical while the cells move; the producer refuses <code>segment_axis_stale</code> and the backfill reports <code>GRID MOVED</code> rather than labelling cells that have shifted (ADR 0117 D10). These five keys are OWNED by that backfill: it DELETES them before each write and re-writes what the parse proved, because a jsonb merge left a refused note reading through a stale axis, and <code>headerNotes</code> is written even when empty &mdash; every key here is an input the SEGMENT reader consumes, and a citation's interpretation receipt (<code>CellRef.reading</code>) is checked by RE-RUNNING that reader over this element, so an absent key and an empty one mean opposite things (ADR 0118 D3/D6, 0119 D1). The same migration removes them all where a fresh parse no longer calls the table a segment note (0119 D5)</td></tr>
+      <tr><td class="c">warnings</td><td class="t">JSONB</td><td class="n">Element-scoped parse anomalies</td></tr>
+      <tr><td class="c">parser_source</td><td class="t">TEXT</td><td class="n">Which adapter emitted it</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>No sibling table</b> — the prev/next graph is exactly <code>ORDER BY page_number, ordering</code> within a <code>parent_id</code>. Ordered rows <em>are</em> the sibling graph.</div>
+</div>
+
+<div class="tbl" id="t-transcript-speakers">
+  <header><span class="name">transcript_speakers</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (doc_id, label)</span></header>
+  <p class="purpose">Who each literal transcript label <em>is</em>. Parse gives the label the page printed; this gives its role, the firm the document stated, and what kind of questioner that makes it. Fully deterministic — no model call — so it rebuilds from L0 with the elements it describes.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key fk"><td class="c">doc_id</td><td class="t">TEXT</td><td class="n"><code>sources</code> · CASCADE</td></tr>
+      <tr class="key"><td class="c">label</td><td class="t">TEXT</td><td class="n">The literal label — joins <code>elements.speaker</code></td></tr>
+      <tr><td class="c">role</td><td class="t">TEXT</td><td class="n">host · management · questioner · unknown. Host is found by phrase family, never by a literal label; management is derived by elimination, not a title lexicon</td></tr>
+      <tr><td class="c">firm</td><td class="t">TEXT</td><td class="n">The <em>stated</em> affiliation, verbatim. NULL when the document named none — never inferred from a person's name, never carried across documents</td></tr>
+      <tr><td class="c">questioner_type</td><td class="t">TEXT</td><td class="n">analyst · journalist · retail · unknown — typed from the stated firm only</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Invariant 9's independence key.</b> Only a questioner with a positively resolved firm is a distinct originating voice, and origins count <em>firms</em>, not speakers — two analysts from one house are one origin. An unresolved firm never counts, because counting unknowns as independent is how a corroboration count becomes a lie.</div>
+</div>
+
+<div class="tbl" id="t-transcript-events">
+  <header><span class="name">transcript_events</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (doc_id, seq)</span></header>
+  <p class="purpose">The events a transcript file <em>announces</em>. One file routinely carries two — a press conference and an analyst call — whose questions pool journalists with sell-side analysts unless the turns are separated.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key fk"><td class="c">doc_id</td><td class="t">TEXT</td><td class="n"><code>sources</code> · CASCADE</td></tr>
+      <tr class="key"><td class="c">seq</td><td class="t">INTEGER</td><td class="n">0-based, in turn order — joins <code>elements.event_seq</code></td></tr>
+      <tr><td class="c">kind</td><td class="t">TEXT</td><td class="n">analyst_call · press_conference · investor_day · unknown</td></tr>
+      <tr><td class="c">first_element_id</td><td class="t">TEXT</td><td class="n">The turn element the event opens on</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Absence is a real answer.</b> A file that announces no event has <em>no rows</em>, and its turns carry <code>elements.event_seq IS NULL</code> — "no event structure detected", which is a different fact from "this is one analyst call". Detection requires an announcement frame beside the event name, so a passing mention of last quarter's call cannot fragment a normal single-event transcript.</div>
+</div>
+
+<div class="tbl" id="t-chunks">
+  <header><span class="name">chunks</span><span class="badge b-l1">L1</span><span class="badge b-l2">L2 lives here</span>
+    <span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">Locator-tagged retrieval units. Both semantic indexes are columns on this row — there is no separate vector store.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">doc_id</td><td class="t">TEXT</td><td class="n"><code>all_documents</code> · CASCADE</td></tr>
+      <tr><td class="c">seq</td><td class="t">INTEGER</td><td class="n">Preserves document order</td></tr>
+      <tr><td class="c">text</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">locator</td><td class="t">TEXT</td><td class="n">Human-readable citation target</td></tr>
+      <tr><td class="c">page_number / page_end</td><td class="t">INTEGER</td><td class="n">Page <em>range</em> as data — nothing parses the locator string</td></tr>
+      <tr><td class="c">envelope</td><td class="t">JSONB</td><td class="n">Inherited context: issuer, kind, section path + class, basis, speakers, table metadata</td></tr>
+      <tr><td class="c">edges</td><td class="t">JSONB</td><td class="n">Element-graph face: element ids, caption→table parents, Q→A pairs, continuation links</td></tr>
+      <tr><td class="c">embedding_dim</td><td class="t">INTEGER</td><td class="n">Records the producing model's dimension on the row</td></tr>
+      <tr><td class="c">embedding</td><td class="t">vector(1536)</td><td class="n"><span class="badge b-l2">L2</span> HNSW / cosine index. NULL until the embed stage</td></tr>
+      <tr><td class="c">text_search</td><td class="t">tsvector</td><td class="n"><span class="badge b-l2">L2</span> <strong>GENERATED ALWAYS</strong> from <code>text</code> · GIN index. Cannot desync</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Hybrid retrieval</b> — the semantic route fuses the vector leg and the lexical leg by reciprocal-rank fusion, so a strong literal match ("operating margin") is not lost to pure-vector fuzziness.</div>
+</div>
+
+<div class="tbl" id="t-document_roles">
+  <header><span class="name">document_roles</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (workspace_id, doc_id, role, ordinal)</span></header>
+  <p class="purpose">Replaces one overloaded "issuer" scalar with typed, multi-bearer roles.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key fk"><td class="c">(workspace_id, doc_id)</td><td class="t">TEXT</td><td class="n"><code>all_documents</code> · CASCADE</td></tr>
+      <tr class="key"><td class="c">role</td><td class="t">TEXT</td><td class="n">CHECK · <code>filing</code> (authored it) · <code>publisher</code> (put it into the world) · <code>covered</code> (who it is about)</td></tr>
+      <tr class="key"><td class="c">ordinal</td><td class="t">INTEGER</td><td class="n">Only <code>covered</code> is list-valued</td></tr>
+      <tr><td class="c">name</td><td class="t">TEXT</td><td class="n">The asserted name — outlives the spine row</td></tr>
+      <tr class="fk"><td class="c">entity_id</td><td class="t">TEXT</td><td class="n"><code>entities</code> · SET NULL</td></tr>
+      <tr><td class="c">lineage_id</td><td class="t">TEXT</td><td class="n">Voice atom: filing/covered → <code>::primary</code>, publisher → <code>::publisher</code></td></tr>
+      <tr><td class="c">source</td><td class="t">TEXT</td><td class="n">CHECK · derived (deterministic) · user (analyst assertion, survives re-ingest)</td></tr>
+      <tr><td class="c">confirmed</td><td class="t">BOOLEAN</td><td class="n"></td></tr>
+      <tr><td class="c">updated_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>The lie this fixed</b> — a news article <em>about</em> HDFC Bank used to carry lineage <code>hdfc-bank::publisher</code>: the covered company mislabelled as the publishing voice. A partial unique index now makes filing/publisher single-bearer structurally.</div>
+</div>
+
+<div class="tbl" id="t-acquisitions">
+  <header><span class="name">acquisitions</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> id (identity)</span></header>
+  <p class="purpose">One immutable artifact, many acquisition records — the trail of where the bytes kept coming from.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">BIGINT IDENTITY</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">doc_id</td><td class="t">TEXT</td><td class="n"><code>all_documents</code> · CASCADE</td></tr>
+      <tr><td class="c">source_uri</td><td class="t">TEXT</td><td class="n">The origin of <em>this attempt</em></td></tr>
+      <tr><td class="c">filename</td><td class="t">TEXT</td><td class="n">The name the user's copy carried</td></tr>
+      <tr><td class="c">section</td><td class="t">TEXT</td><td class="n">Which section this attempt filed into</td></tr>
+      <tr><td class="c">outcome</td><td class="t">TEXT</td><td class="n">CHECK · ingested · retry_reingest · duplicate</td></tr>
+      <tr><td class="c">acquired_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Why it exists</b> — duplicates must never count as independent evidence (that stays keyed on the one doc id), but the fact that an artifact arrived three times from three places is durable provenance, not noise to discard with the HTTP response.</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="d-spine">L1 · The two resolution spines <span class="badge b-l1">L1</span></h2>
+<p>
+  These are the normalization layer every claim resolves against, and they are seeded
+  <strong>before</strong> any claim is extracted. Without them the contested/corroborated signals
+  silently fail: two claims that disagree only land on the same key if "operating margin" and "EBIT
+  margin" first canonicalize to the same attribute id.
+</p>
+
+<div class="note">
+  <span class="tag">Attributes are not dimensions</span>
+  <p>
+    The coarse spine holds <em>attributes</em> — predicates a claim is about (margin, attrition). It
+    must never hold <em>dimensions</em>: segment and geography qualify the <strong>subject</strong>,
+    not the attribute. Mixing them corrupts the shared contestation key.
+  </p>
+</div>
+
+<div class="tbl" id="t-entities">
+  <header><span class="name">entities</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">Entity spine — the canonical companies / segments / geographies / clients a mention resolves to.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, id</td><td class="t">TEXT</td><td class="n">Stable slug, e.g. <code>'infosys'</code> — used as the claim subject id</td></tr>
+      <tr><td class="c">type</td><td class="t">TEXT</td><td class="n">CHECK · 10 values. <strong>6 produced</strong> (company, segment, geography, client, product_service, regulator); 4 documented-reserved (theme, risk, person, deal) so nothing is silently dead</td></tr>
+      <tr><td class="c">label</td><td class="t">TEXT</td><td class="n">Canonical display label</td></tr>
+      <tr><td class="c">aliases</td><td class="t">TEXT[]</td><td class="n">Surface forms incl. ticker variants</td></tr>
+      <tr><td class="c">ticker</td><td class="t">TEXT</td><td class="n">NSE/BSE ticker (invariant #5) · indexed</td></tr>
+      <tr><td class="c">definition</td><td class="t">TEXT</td><td class="n">Short NL definition — resolution context</td></tr>
+      <tr><td class="c">origin</td><td class="t">TEXT</td><td class="n">CHECK · seed (user-curated) · derived · proposed</td></tr>
+      <tr><td class="c">sector</td><td class="t">TEXT</td><td class="n">Scopes which fine drivers apply</td></tr>
+      <tr><td class="c">sector_source</td><td class="t">TEXT</td><td class="n">CHECK · inferred · analyst. NULL = the seeded record's own sector. <code>inferred</code> = the upload read it from the filing (sector may stay NULL: it looked and was not sure) — shown as inferred, correctable; <code>analyst</code> is final (ADR 0132)</td></tr>
+      <tr><td class="c">embedding</td><td class="t">vector(1536)</td><td class="n">Resolution index — no HNSW; the spine is small enough to seq-scan</td></tr>
+      <tr><td class="c">embedding_model</td><td class="t">TEXT</td><td class="n"><strong>Space guard</strong> — prevents silently comparing vectors from different models</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>A subsidiary is a company</b> — so its own filing later graduates the <em>same</em> node rather than minting a second one.</div>
+</div>
+
+<div class="tbl" id="t-attributes_coarse">
+  <header><span class="name">attributes_coarse</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">The small, stable, user-curated analytical vocabulary — since rung 4, <strong>16 roles in 5 landmark groups</strong> (ADR 0059/0076), plus any deferred or retired predecessor kept for the claims that still reference it. This is the label every claim carries and the axis the brief is organised by, so its reproducibility matters most.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, id</td><td class="t">TEXT</td><td class="n"><code>'operating_margin'</code></td></tr>
+      <tr><td class="c">label</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">definition</td><td class="t">TEXT</td><td class="n">One line — the matching target for resolution</td></tr>
+      <tr><td class="c">polarity_hint</td><td class="t">TEXT</td><td class="n"><code>'higher'</code> | <code>'lower'</code> — what "improving" means <em>neutrally</em>, so direction maps to polarity without a good/bad judgement</td></tr>
+      <tr><td class="c">aliases</td><td class="t">TEXT[]</td><td class="n"></td></tr>
+      <tr><td class="c">display_order</td><td class="t">INTEGER</td><td class="n"></td></tr>
+      <tr><td class="c">role_group</td><td class="t">TEXT</td><td class="n">The landmark GROUP this role sits under (ADR 0059/0076) — <code>market</code> · <code>delivery</code> · <code>resilience</code> · <code>owner</code> · <code>trust</code>. Groups are the brief’s page landmarks, roles are the claim label: <strong>one stored vocabulary at two levels</strong>. <code>''</code> = the pre-rung-4 flat lens; <code>deferred</code> parks a role deliberately out of scope</td></tr>
+      <tr><td class="c">retired_at</td><td class="t">TIMESTAMPTZ</td><td class="n"><strong>NULL = live.</strong> A superseded role is RETIRED, never deleted — <code>claim_versions.attribute_coarse</code> is <code>ON DELETE CASCADE</code>, so dropping a bucket would destroy every claim still pointing at it, with no drop-ledger entry and no failing test. The spine loader filters <code>retired_at IS NULL</code>, so a retired role can never win another resolution while its existing claims stay valid — which is what makes a vocabulary migration reversible instead of destructive</td></tr>
+      <tr><td class="c">embedding / embedding_model</td><td class="t">vector · TEXT</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-attributes_fine">
+  <header><span class="name">attributes_fine</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">Citation-detail metrics derived bottom-up from the corpus and mapped under a coarse bucket.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, id</td><td class="t">TEXT</td><td class="n"><code>'operating_margin__ebit_margin'</code></td></tr>
+      <tr class="fk"><td class="c">coarse_id</td><td class="t">TEXT</td><td class="n"><code>attributes_coarse</code> · CASCADE. <strong>NULL = unmapped proposal</strong> awaiting review — a possible lens gap</td></tr>
+      <tr><td class="c">label / definition / aliases</td><td class="t">TEXT · TEXT[]</td><td class="n"></td></tr>
+      <tr><td class="c">origin</td><td class="t">TEXT</td><td class="n">CHECK · seed · derived · proposed</td></tr>
+      <tr><td class="c">provenance</td><td class="t">JSONB</td><td class="n"><strong>CHECK: seed OR ≥1 citation</strong> — an AI-derived spine entry must resolve to a passage</td></tr>
+      <tr><td class="c">map_method</td><td class="t">TEXT</td><td class="n">alias · embedding · llm — <em>how</em> it mapped, so review verifies the resolution not just the result</td></tr>
+      <tr><td class="c">map_score</td><td class="t">REAL</td><td class="n">The cosine at mapping time (audit trail)</td></tr>
+      <tr><td class="c">sector</td><td class="t">TEXT</td><td class="n">NULL ⇒ universal</td></tr>
+      <tr><td class="c">polarity_hint</td><td class="t">TEXT</td><td class="n">Overrides the coarse hint when a driver moves opposite</td></tr>
+      <tr><td class="c">concept_family</td><td class="t">TEXT</td><td class="n">Registry projection metadata (see below)</td></tr>
+      <tr><td class="c">concept_origin</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">pack_ids</td><td class="t">TEXT[]</td><td class="n"></td></tr>
+      <tr><td class="c">applicable_entity_ids</td><td class="t">TEXT[]</td><td class="n">Frozen into snapshots so a run's candidate set is reproducible</td></tr>
+      <tr><td class="c">embedding / embedding_model</td><td class="t">vector · TEXT</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="d-concept">L1 · The typed concept registry <span class="badge b-ui">1E</span></h2>
+<p>
+  A governance layer above the spines. <code>concepts</code> is the authority for identity, family,
+  lifecycle and applicability; <code>entities</code> and <code>attributes_fine</code> are deliberately
+  retained as <strong>rebuildable canonical projections</strong> because the claim and graph resolvers
+  already consume them.
+</p>
+
+<div class="note good">
+  <span class="tag">A product rule enforced by the database</span>
+  <p>
+    A <strong>provisional</strong> concept has a durable row here but <em>no</em> row in either
+    resolver projection. That makes "visible for review, never resolves / contests / default-graphs"
+    a structural guarantee rather than a code convention.
+  </p>
+</div>
+
+<div class="tbl" id="t-concepts">
+  <header><span class="name">concepts</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">Ontology-independent concept identity, with lifecycle and typed family.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, id</td><td class="t">TEXT</td><td class="n">Opaque id — a label change can never rewrite it</td></tr>
+      <tr><td class="c">family</td><td class="t">TEXT</td><td class="n">CHECK · measure · mechanism · business_object · event_state · analytical_frame</td></tr>
+      <tr><td class="c">label / aliases</td><td class="t">TEXT · TEXT[]</td><td class="n"></td></tr>
+      <tr><td class="c">lifecycle</td><td class="t">TEXT</td><td class="n">CHECK · provisional · canonical</td></tr>
+      <tr><td class="c">origin</td><td class="t">TEXT</td><td class="n">CHECK · seed · pack · issuer_overlay · user · derived · proposed</td></tr>
+      <tr><td class="c">packs</td><td class="t">TEXT[]</td><td class="n">Business-model packs it belongs to</td></tr>
+      <tr><td class="c">frame_id / sector / polarity_hint</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">entity_type</td><td class="t">TEXT</td><td class="n">CHECK · <strong>required when family = business_object</strong></td></tr>
+      <tr><td class="c">map_method / map_score</td><td class="t">TEXT · REAL</td><td class="n"></td></tr>
+      <tr><td class="c">deprecated_at</td><td class="t">TIMESTAMPTZ</td><td class="n">Retirement is a SELECT filter, never a physical DELETE — historical claims survive</td></tr>
+      <tr><td class="c">created_at / updated_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-concept_definitions">
+  <header><span class="name">concept_definitions</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (workspace_id, concept_id, ordinal)</span></header>
+  <p class="purpose">Append-only definitions — separate objects so mutating a definition can never change the concept id.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key fk"><td class="c">(workspace_id, concept_id)</td><td class="t">TEXT</td><td class="n"><code>concepts</code> · CASCADE</td></tr>
+      <tr class="key"><td class="c">ordinal</td><td class="t">INTEGER</td><td class="n"></td></tr>
+      <tr><td class="c">signature</td><td class="t">TEXT</td><td class="n">Comparability signature</td></tr>
+      <tr><td class="c">text / formula</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">numerator / denominator</td><td class="t">TEXT</td><td class="n">Makes two "margins" provably the same or provably different</td></tr>
+      <tr><td class="c">unit_family</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">stock_or_flow</td><td class="t">TEXT</td><td class="n">A stock and a flow are never the same measure</td></tr>
+      <tr><td class="c">period_grain / regime</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">bases_defined_on</td><td class="t">TEXT[]</td><td class="n">consolidated / standalone</td></tr>
+      <tr><td class="c">hard_negatives</td><td class="t">TEXT[]</td><td class="n">Explicit near-misses this concept is <em>not</em></td></tr>
+      <tr><td class="c">effective_from / effective_to</td><td class="t">TEXT</td><td class="n">A definition can change over time</td></tr>
+      <tr><td class="c">grounded</td><td class="t">BOOLEAN</td><td class="n"></td></tr>
+      <tr><td class="c">provenance</td><td class="t">JSONB</td><td class="n"></td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-entity_pack_applicability">
+  <header><span class="name">entity_pack_applicability</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (workspace_id, entity_id, pack_id)</span></header>
+  <p class="purpose">Which business-model packs apply to an entity. Many-to-one and user-confirmable — deliberately <em>not</em> a document/passport field. <strong>Tri-state</strong> since ADR 0096: a curated default, an explicit application, or an explicit <em>exclusion</em>.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key fk"><td class="c">(workspace_id, entity_id)</td><td class="t">TEXT</td><td class="n"><code>entities</code> · CASCADE</td></tr>
+      <tr class="key"><td class="c">pack_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">source</td><td class="t">TEXT</td><td class="n">CHECK · curated · user · inferred (the upload's business-model reading — applied, unconfirmed, ADR 0132)</td></tr>
+      <tr><td class="c">confirmed</td><td class="t">BOOLEAN</td><td class="n">a HUMAN ratified it; FALSE on every curated default</td></tr>
+      <tr><td class="c">applies</td><td class="t">BOOLEAN</td><td class="n">FALSE = an explicit exclusion. Removal used to DELETE, and the reader then restored the sector default while the next seed re-inserted the row — three paths undoing one decision (ADR 0096 §5)</td></tr>
+      <tr><td class="c">updated_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-concept_discovery_runs">
+  <header><span class="name">concept_discovery_runs</span><span class="badge b-l3">run</span>
+    <span class="pk"><b>PK</b> id · <b>UNIQUE</b> (workspace_id, id)</span></header>
+  <p class="purpose">One ontology-independent discovery attempt, with an honest coverage receipt.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">scope_doc_ids</td><td class="t">TEXT[]</td><td class="n"></td></tr>
+      <tr><td class="c">plan_version / model / reasoning_effort</td><td class="t">TEXT</td><td class="n">Everything needed to reproduce the run</td></tr>
+      <tr><td class="c">status</td><td class="t">TEXT</td><td class="n">CHECK · running · done · <strong>done_zero</strong> · skipped_no_provider · failed</td></tr>
+      <tr><td class="c">coverage</td><td class="t">JSONB</td><td class="n"><strong>The honest receipt</strong> — selected/available chunks by document × section class, plus omissions. Makes a zero-candidate run distinguishable from a run that never looked</td></tr>
+      <tr><td class="c">raw_count / kept_count / rejected_count / malformed_count</td><td class="t">INTEGER</td><td class="n"></td></tr>
+      <tr><td class="c">error</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">started_at / finished_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-concept_mentions">
+  <header><span class="name">concept_mentions</span><span class="badge b-l3">L3</span>
+    <span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">Immutable concept occurrences. Rejected candidates are retained verbatim with their reason. <strong>Not claim_mentions</strong> — no subject/value/period assertion is implied.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">discovery_run_id</td><td class="t">TEXT</td><td class="n"><code>concept_discovery_runs</code> · CASCADE (composite)</td></tr>
+      <tr class="fk"><td class="c">(workspace_id, doc_id)</td><td class="t">TEXT</td><td class="n"><code>all_documents</code> · CASCADE — composite so an evidence atom cannot name another workspace's document</td></tr>
+      <tr><td class="c">chunk_id / ordinal / section_class</td><td class="t">TEXT · INT</td><td class="n"></td></tr>
+      <tr><td class="c">label / definition</td><td class="t">TEXT</td><td class="n">As the model returned them</td></tr>
+      <tr><td class="c">family / entity_type</td><td class="t">TEXT</td><td class="n">CHECK on family</td></tr>
+      <tr><td class="c">lineage_id</td><td class="t">TEXT</td><td class="n">Voice atom — no misleading scalar "independent source count" is stored</td></tr>
+      <tr><td class="c">role</td><td class="t">TEXT</td><td class="n">CHECK · covered · publisher · author</td></tr>
+      <tr><td class="c">quote / citation</td><td class="t">TEXT · JSONB</td><td class="n"></td></tr>
+      <tr><td class="c">status</td><td class="t">TEXT</td><td class="n">CHECK · kept · rejected</td></tr>
+      <tr><td class="c">reject_reason</td><td class="t">TEXT</td><td class="n"><strong>CHECK: required when rejected</strong></td></tr>
+      <tr class="fk"><td class="c">concept_id</td><td class="t">TEXT</td><td class="n"><code>concepts</code> · SET NULL. <strong>CHECK: required when kept</strong></td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-concept_mutations">
+  <header><span class="name">concept_mutations</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">Append-only typed governance events. A high-blast-radius merge/split becomes explainable and reproducible rather than an opaque row update.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">(workspace_id, concept_id)</td><td class="t">TEXT</td><td class="n"><code>concepts</code> · <strong>RESTRICT</strong> — history blocks deletion</td></tr>
+      <tr><td class="c">kind</td><td class="t">TEXT</td><td class="n">CHECK · 12 values: created, alias_added, definition_changed, evidence_added, merged, split, applicability_changed, retyped, deprecated, effective_date_changed, promoted, merge_blocked</td></tr>
+      <tr><td class="c">summary</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">affected_concept_ids</td><td class="t">TEXT[]</td><td class="n">Blast radius</td></tr>
+      <tr><td class="c">requires_resweep</td><td class="t">BOOLEAN</td><td class="n">Does this force a re-resolution?</td></tr>
+      <tr><td class="c">deterministic</td><td class="t">BOOLEAN</td><td class="n"><strong>Reversibility class</strong> — deterministic ops may auto-apply; model-inferred ones need review</td></tr>
+      <tr><td class="c">reviewer</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">preview</td><td class="t">JSONB</td><td class="n">Captured <em>before</em> applying</td></tr>
+      <tr><td class="c">receipt</td><td class="t">JSONB</td><td class="n">The actual projection/sweep delta <em>afterwards</em></td></tr>
+      <tr><td class="c">status</td><td class="t">TEXT</td><td class="n">CHECK · previewed · applied · rejected</td></tr>
+      <tr><td class="c">created_at / applied_at</td><td class="t">TIMESTAMPTZ</td><td class="n"><code>clock_timestamp()</code> — distinct within one transaction</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-concept_mention_versions">
+  <header><span class="name">concept_mention_versions</span><span class="badge b-l3">L3</span>
+    <span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">Mapping is a rebuildable version, not a mutable field on the immutable mention. The same expensive/cheap split claims use.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">(workspace_id, mention_id)</td><td class="t">TEXT</td><td class="n"><code>concept_mentions</code> · CASCADE</td></tr>
+      <tr class="fk"><td class="c">(workspace_id, concept_id)</td><td class="t">TEXT</td><td class="n"><code>concepts</code> · RESTRICT</td></tr>
+      <tr><td class="c">run_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">(workspace_id, mutation_id)</td><td class="t">TEXT</td><td class="n"><code>concept_mutations</code> · SET NULL — which sweep produced this mapping</td></tr>
+      <tr><td class="c">active</td><td class="t">BOOLEAN</td><td class="n"><strong>Partial unique index: one active version per mention</strong></td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Read via</b> <code>active_concept_mentions</code> — never this table directly.</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="d-runs">L3 · The run substrate <span class="badge b-l3">L3</span></h2>
+
+<div class="tbl" id="t-spine_snapshots">
+  <header><span class="name">spine_snapshots</span><span class="badge b-l3">L3</span>
+    <span class="pk"><b>PK</b> (workspace_id, hash)</span></header>
+  <p class="purpose">The whole spine, content-addressed. Identical spines dedupe to one row; any old run reconstructs its exact vocabulary by reading one blob — no replay, no versioned rows.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, hash</td><td class="t">TEXT</td><td class="n">sha256 over the canonical snapshot JSON — the content id</td></tr>
+      <tr><td class="c">snapshot</td><td class="t">JSONB</td><td class="n">The full serialized spine (no vectors)</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Why content-addressing</b> — an old resolution run stays fully explainable after the live spine mutates. Reproducing it needs one hash lookup, not an event replay.</div>
+</div>
+
+<div class="tbl" id="t-extraction_runs">
+  <header><span class="name">extraction_runs</span><span class="badge b-l3">L3 · expensive</span>
+    <span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">One LLM extraction attempt for one (doc, layer). No <code>active</code> flag — an extraction run is active iff a resolution run over it is active.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">doc_id</td><td class="t">TEXT</td><td class="n"><code>all_documents</code> · CASCADE</td></tr>
+      <tr><td class="c">layer</td><td class="t">TEXT</td><td class="n">CHECK · claims · harvest · spine_derive</td></tr>
+      <tr><td class="c">model / prompt_version / parser_version</td><td class="t">TEXT</td><td class="n">Full reproducibility triple</td></tr>
+      <tr><td class="c">passport</td><td class="t">JSONB</td><td class="n">Snapshots what the prompt consumed + <code>passport_rev</code>, so a cosmetic edit is distinguishable from one that contaminated the prompt</td></tr>
+      <tr><td class="c">state</td><td class="t">TEXT</td><td class="n">CHECK · running · done · done_zero · failed · stale</td></tr>
+      <tr><td class="c">error</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">produced</td><td class="t">INTEGER</td><td class="n">Mentions kept past the extraction gate</td></tr>
+      <tr><td class="c">rejected</td><td class="t">INTEGER</td><td class="n">Persisted as rejected, with reasons</td></tr>
+      <tr><td class="c">malformed</td><td class="t">INTEGER</td><td class="n">Replies that failed schema parsing. <strong>Zero kept + malformed &gt; 0 ⇒ FAILED, never done_zero</strong> — a parser failure is not "the document contained zero claims"</td></tr>
+      <tr><td class="c">repaired</td><td class="t">INTEGER</td><td class="n">Recovered by the one bounded repair attempt</td></tr>
+      <tr><td class="c">review_required</td><td class="t">INTEGER</td><td class="n">Withheld for analyst review</td></tr>
+      <tr><td class="c">started_at / finished_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-resolution_runs">
+  <header><span class="name">resolution_runs</span><span class="badge b-l3">L3 · cheap</span>
+    <span class="pk"><b>PK</b> id · <b>UNIQUE</b> (workspace_id, doc_id, layer) WHERE active</span></header>
+  <p class="purpose">One rebuildable derivation over one extraction run × one spine snapshot. Re-resolution makes <strong>zero</strong> extraction-provider calls.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id / doc_id</td><td class="t">TEXT</td><td class="n"><code>doc_id</code> denormalized from the extraction run to serve the active index</td></tr>
+      <tr><td class="c">layer</td><td class="t">TEXT</td><td class="n">CHECK · claims · harvest</td></tr>
+      <tr class="fk"><td class="c">extraction_run_id</td><td class="t">TEXT</td><td class="n"><code>extraction_runs</code> · CASCADE</td></tr>
+      <tr class="fk"><td class="c">(workspace_id, spine_snapshot_hash)</td><td class="t">TEXT</td><td class="n"><code>spine_snapshots</code></td></tr>
+      <tr><td class="c">embedding_model</td><td class="t">TEXT</td><td class="n">Which vector space resolution ran in</td></tr>
+      <tr><td class="c">accept / margin</td><td class="t">REAL</td><td class="n">The thresholds this run used — recorded, not assumed</td></tr>
+      <tr><td class="c">state</td><td class="t">TEXT</td><td class="n">CHECK · running · done · done_zero · failed · stale</td></tr>
+      <tr><td class="c">error</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">active</td><td class="t">BOOLEAN</td><td class="n"><strong>CHECK: a failed or running run can never be active.</strong> <code>stale</code> stays active on purpose — its data is served, just flagged</td></tr>
+      <tr><td class="c">sweep_id</td><td class="t">TEXT</td><td class="n">Groups the runs of one spine-mutation sweep into one receipt</td></tr>
+      <tr><td class="c">drops</td><td class="t">JSONB</td><td class="n">Per-mention resolution verdicts: <code>{raw_mention_id: reason}</code> (out_of_lens, generic_subject)</td></tr>
+      <tr><td class="c">receipt</td><td class="t">JSONB</td><td class="n">The added/revised/removed diff, stored at activation so receipts survive pruning</td></tr>
+      <tr><td class="c">passport</td><td class="t">JSONB</td><td class="n">What the resolve leg consumed — compared at activation so a correction landing mid-run is never overwritten</td></tr>
+      <tr><td class="c">created_at / activated_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>The structural invariant</b> — the partial unique index is the backstop no writer can bypass. It is probed by a two-parallel-retries concurrency test.</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="d-claims">L3 · Claims <span class="badge b-l3">L3</span></h2>
+
+<div class="tbl" id="t-claim_mentions">
+  <header><span class="name">claim_mentions</span><span class="badge b-l3">immutable</span>
+    <span class="pk"><b>PK</b> id (raw_mention_id)</span></header>
+  <p class="purpose">The whole raw claim envelope as the model returned it, plus the extraction-time gate decision. Lives for the life of the document.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"><code>uuid5(run | atom_id | ordinal)</code> — stable across re-resolution</td></tr>
+      <tr class="fk"><td class="c">extraction_run_id</td><td class="t">TEXT</td><td class="n"><code>extraction_runs</code> · CASCADE</td></tr>
+      <tr><td class="c">workspace_id / doc_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">atom_id / ordinal</td><td class="t">TEXT · INT</td><td class="n">Source atomic unit (parent chunk + ordinal)</td></tr>
+      <tr><td class="c">subject / subject_type</td><td class="t">TEXT</td><td class="n"><strong>Verbatim, pre-resolution</strong></td></tr>
+      <tr><td class="c">attribute</td><td class="t">TEXT</td><td class="n">Verbatim, pre-resolution</td></tr>
+      <tr><td class="c">period</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">direction</td><td class="t">TEXT</td><td class="n">CHECK · up/down/flat. <strong>NULL = a level with no observed movement</strong> — not the same as flat. Carries <strong>observed movement only, and is the sole input to contestation</strong> (ADR 0068)</td></tr>
+      <tr><td class="c">assessment</td><td class="t">TEXT</td><td class="n">CHECK · favorable · unfavorable · mixed · neutral. The speaker’s <em>stance</em> — shown, never compared. Held apart from <code>direction</code> so good/bad language cannot manufacture a contest (invariant #9)</td></tr>
+      <tr><td class="c">modality</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">quant_kind</td><td class="t">TEXT</td><td class="n">CHECK · point · bounded_range. <strong>Tags which value columns are authoritative</strong>, so no reader has to guess (ADR 0068)</td></tr>
+      <tr><td class="c">value / value_low / value_high / unit</td><td class="t">DOUBLE · TEXT</td><td class="n"><strong>CHECK <code>claim_mentions_quant_shape</code></strong> — point ⇒ <code>value</code> only; bounded_range ⇒ <code>value_low</code>+<code>value_high</code> with <code>low &lt;= high</code>; NULL kind ⇒ all NULL. “A point that also has a high” is <em>unrepresentable</em>. Before this a band spilled its upper bound into <code>unit</code> (<code>value=2</code>, <code>unit='% to 3% …'</code>), which broke unit canonicalization, flagged the frame, and D45 then suppressed the relation entirely</td></tr>
+      <tr><td class="c">body</td><td class="t">TEXT</td><td class="n">The claim as stated</td></tr>
+      <tr><td class="c">citation</td><td class="t">JSONB</td><td class="n">The exact evidence Citation (invariant #1)</td></tr>
+      <tr><td class="c">status</td><td class="t">TEXT</td><td class="n">CHECK · kept · rejected · review_required</td></tr>
+      <tr><td class="c">reject_reason</td><td class="t">TEXT</td><td class="n"><strong>CHECK: required unless kept.</strong> Makes a <code>done_zero</code> run auditable</td></tr>
+      <tr><td class="c">voice</td><td class="t">TEXT</td><td class="n">CHECK · management · company · analyst · journalist · unknown</td></tr>
+      <tr><td class="c">speaker / speaker_role</td><td class="t">TEXT</td><td class="n">Verbatim</td></tr>
+      <tr><td class="c">originator_mention</td><td class="t">TEXT</td><td class="n">The <em>originating</em> voice, verbatim. "Jefferies noted…" in an Upstox article has publisher Upstox but originator Jefferies — and no other column can reconstruct that</td></tr>
+      <tr><td class="c">originator_affiliation</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">attribution_status</td><td class="t">TEXT</td><td class="n">CHECK · direct · quoted · paraphrased · unknown</td></tr>
+      <tr><td class="c">object_kind</td><td class="t">TEXT</td><td class="n">CHECK · observation · assertion · estimate · event · relationship · mechanism_hypothesis</td></tr>
+      <tr><td class="c">causal_origin</td><td class="t">TEXT</td><td class="n">CHECK · arithmetic · source_asserted · empirically_inferred · ai_proposed · analyst_authored</td></tr>
+      <tr><td class="c">period_source</td><td class="t">TEXT</td><td class="n">CHECK · stated · inferred · defaulted</td></tr>
+      <tr><td class="c">basis</td><td class="t">TEXT</td><td class="n">consolidated · standalone · …</td></tr>
+      <tr><td class="c">comparator</td><td class="t">TEXT</td><td class="n">level · yoy · qoq · vs_guidance · vs_estimate</td></tr>
+      <tr><td class="c">scenario</td><td class="t">TEXT</td><td class="n">The condition a guidance rests on</td></tr>
+      <tr><td class="c">qualifiers</td><td class="t">TEXT</td><td class="n">Material scope caveats — a mismatch blocks comparison</td></tr>
+      <tr><td class="c">section_class</td><td class="t">TEXT</td><td class="n">Persisted on the <em>mention</em> so evidence-level authority is derivable without re-reading the model</td></tr>
+      <tr><td class="c">frame_consolidation<br>frame_consolidation_tier</td><td class="t">TEXT</td><td class="n">CHECK · consolidated · standalone. <strong>INHERITED, not extracted</strong> (ADR 0085): <strong>0 of 559</strong> basis-empty claims carry a basis word in the claim BODY — it is in the table header, the section, or the document's front matter</td></tr>
+      <tr><td class="c">frame_adjustment<br>frame_adjustment_tier<br>frame_adjustment_item</td><td class="t">TEXT</td><td class="n">CHECK · reported · adjusted, plus WHAT was excluded (&ldquo;labor codes&rdquo;). <strong>Tier may never be <code>document</code></strong> — letting an artifact-level &ldquo;adjusted&rdquo; wash over every figure in it is the manufactured basis the governing rule forbids</td></tr>
+      <tr><td class="c">frame_accounting_standard<br>frame_accounting_standard_tier</td><td class="t">TEXT</td><td class="n">CHECK · ind_as · ifrs · us_gaap · other</td></tr>
+      <tr><td class="c">frame_denomination_currency<br>frame_denomination_currency_tier</td><td class="t">TEXT</td><td class="n">CHECK · ISO-4217 <code>^[A-Z]{3}$</code>. Split out at 0085 because 9.6% rupee growth and 4.6% dollar growth differ ONLY here and <em>both</em> stored <code>INR</code> before</td></tr>
+      <tr><td class="c">frame_currency_basis<br>frame_currency_basis_tier</td><td class="t">TEXT</td><td class="n">CHECK · reported · constant. Also never <code>document</code>-tiered. Declared <strong>sector-bounded</strong> (constant currency normalises foreign-revenue translation — an exporter's problem), with a falsifier the probe re-runs</td></tr>
+      <tr><td class="c">frame_averaging<br>frame_averaging_tier</td><td class="t">TEXT</td><td class="n">CHECK · period_end · average. Average deposits vs EOP deposits are different measurements of one label</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Value and tier travel together</b> — six CHECK constraints per table enforce <code>(value IS NULL) = (tier IS NULL)</code>, the value enum, and a <em>per-dimension tier allowlist</em>, so an analyst override or 6b's fact writer inherits the same refusals as the producer. <b>Only <code>inline</code>/<code>table</code>/<code>section</code> count as STATED</b>: a <code>document</code> value may BLOCK a comparison but may never CLEAR one — a brake may fire on weak evidence, a verdict may not (ADR 0086).</div>
+  <div class="foot"><b>Every facet column is nullable on purpose</b> — NULL means the extractor did not emit it. No silent default may stand in for a missing value, or a gate asking "is this actually populated on real evidence?" could never see an honest zero.</div>
+</div>
+
+<div class="tbl" id="t-claim_versions">
+  <header><span class="name">claim_versions</span><span class="badge b-l3">projection</span>
+    <span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">A resolved claim — one resolution run's output. Mirrors the frozen <code>Claim</code> contract field-for-field.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, id</td><td class="t">TEXT</td><td class="n">Bare UUID — the TS-contract id shape</td></tr>
+      <tr class="fk"><td class="c">run_id</td><td class="t">TEXT</td><td class="n"><code>resolution_runs</code> · CASCADE. <strong>NULL = a documented non-run producer</strong> (the Dashboard lens bridge), always active</td></tr>
+      <tr class="fk"><td class="c">raw_mention_id</td><td class="t">TEXT</td><td class="n"><code>claim_mentions</code> · CASCADE. <strong>CHECK: required when run_id is set</strong></td></tr>
+      <tr><td class="c">resolution_method / resolution_score</td><td class="t">TEXT · REAL</td><td class="n">alias · embedding · llm_verify · bridge</td></tr>
+      <tr class="fk"><td class="c">subject</td><td class="t">TEXT</td><td class="n"><code>entities</code> · CASCADE — <strong>spine-before-claims is structural</strong></td></tr>
+      <tr class="fk"><td class="c">attribute_coarse</td><td class="t">TEXT</td><td class="n"><code>attributes_coarse</code> · CASCADE</td></tr>
+      <tr class="fk"><td class="c">attribute_fine</td><td class="t">TEXT</td><td class="n"><code>attributes_fine</code> · SET NULL</td></tr>
+      <tr><td class="c">period_kind</td><td class="t">TEXT</td><td class="n">CHECK · fiscal_year · quarter · date · range</td></tr>
+      <tr><td class="c">period_value</td><td class="t">TEXT</td><td class="n">Indian FY (invariant #5)</td></tr>
+      <tr><td class="c">period_is_estimate / period_stated</td><td class="t">BOOLEAN</td><td class="n"></td></tr>
+      <tr><td class="c">period_source</td><td class="t">TEXT</td><td class="n">CHECK · stated · inferred · defaulted</td></tr>
+      <tr><td class="c">asserted_at</td><td class="t">TEXT</td><td class="n"><strong>Assertion time</strong> — the second half of the bitemporal model</td></tr>
+      <tr><td class="c">polarity</td><td class="t">TEXT</td><td class="n">CHECK · improving · deteriorating · stable. <em>Directional, not good/bad</em></td></tr>
+      <tr><td class="c">modality</td><td class="t">TEXT</td><td class="n">CHECK · reported · guidance · opinion · estimate</td></tr>
+      <tr><td class="c">quant</td><td class="t">JSONB</td><td class="n">The <strong>tagged</strong> quantity — <code>{kind:point, value, unit}</code> XOR <code>{kind:bounded_range, low, high, unit}</code>, NULL when nothing was quantified. Was <code>{direction, value, unit}</code>, which could not hold a band and forced an empty carrier to be minted for every movement-without-a-figure claim</td></tr>
+      <tr><td class="c">direction</td><td class="t">TEXT</td><td class="n">CHECK · up/down/flat. Lifted <em>out</em> of <code>quant</code> (ADR 0068): a claim may assert movement with no figure, or carry a figure with no movement</td></tr>
+      <tr><td class="c">assessment</td><td class="t">TEXT</td><td class="n">CHECK · favorable · unfavorable · mixed · neutral. Projected from the mention; never an input to contestation</td></tr>
+      <tr><td class="c">source_doc_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">authority_tier</td><td class="t">TEXT</td><td class="n">CHECK · the 12-tier vocabulary</td></tr>
+      <tr><td class="c">speaker</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">body</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">provenance</td><td class="t">JSONB</td><td class="n"><strong>CHECK: ≥ 1 citation, always</strong></td></tr>
+      <tr><td class="c">supersedes</td><td class="t">TEXT</td><td class="n">Same-lineage revision/restatement</td></tr>
+      <tr><td class="c">voice / speaker_role / attribution_status</td><td class="t">TEXT</td><td class="n">CHECKed enums, projected from the mention</td></tr>
+      <tr><td class="c">originator_entity_id</td><td class="t">TEXT</td><td class="n">Spine id of the originating voice, once resolved</td></tr>
+      <tr><td class="c">origin_lineage_id</td><td class="t">TEXT</td><td class="n">A quoted CFO resolves to <code>::primary</code></td></tr>
+      <tr><td class="c">publisher_lineage_id</td><td class="t">TEXT</td><td class="n">The publishing artifact's atom (outlet/broker)</td></tr>
+      <tr><td class="c">object_kind / causal_origin</td><td class="t">TEXT</td><td class="n">CHECKed enums</td></tr>
+      <tr><td class="c">basis / comparator / scenario / qualifiers</td><td class="t">TEXT</td><td class="n">Comparability facets</td></tr>
+      <tr><td class="c">section_class</td><td class="t">TEXT</td><td class="n">Evidence-level authority on the read surface</td></tr>
+      <tr><td class="c">frame_consolidation<br>frame_consolidation_tier</td><td class="t">TEXT</td><td class="n">CHECK · consolidated · standalone. <strong>INHERITED, not extracted</strong> (ADR 0085): <strong>0 of 559</strong> basis-empty claims carry a basis word in the claim BODY — it is in the table header, the section, or the document's front matter</td></tr>
+      <tr><td class="c">frame_adjustment<br>frame_adjustment_tier<br>frame_adjustment_item</td><td class="t">TEXT</td><td class="n">CHECK · reported · adjusted, plus WHAT was excluded (&ldquo;labor codes&rdquo;). <strong>Tier may never be <code>document</code></strong> — letting an artifact-level &ldquo;adjusted&rdquo; wash over every figure in it is the manufactured basis the governing rule forbids</td></tr>
+      <tr><td class="c">frame_accounting_standard<br>frame_accounting_standard_tier</td><td class="t">TEXT</td><td class="n">CHECK · ind_as · ifrs · us_gaap · other</td></tr>
+      <tr><td class="c">frame_denomination_currency<br>frame_denomination_currency_tier</td><td class="t">TEXT</td><td class="n">CHECK · ISO-4217 <code>^[A-Z]{3}$</code>. Split out at 0085 because 9.6% rupee growth and 4.6% dollar growth differ ONLY here and <em>both</em> stored <code>INR</code> before</td></tr>
+      <tr><td class="c">frame_currency_basis<br>frame_currency_basis_tier</td><td class="t">TEXT</td><td class="n">CHECK · reported · constant. Also never <code>document</code>-tiered. Declared <strong>sector-bounded</strong> (constant currency normalises foreign-revenue translation — an exporter's problem), with a falsifier the probe re-runs</td></tr>
+      <tr><td class="c">frame_averaging<br>frame_averaging_tier</td><td class="t">TEXT</td><td class="n">CHECK · period_end · average. Average deposits vs EOP deposits are different measurements of one label</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Indexed on the shared key</b> — <code>(workspace_id, subject, attribute_coarse, attribute_fine, period_value)</code>. Contestation is a GROUP BY over this index, not a traversal.</div>
+</div>
+
+<div class="tbl" id="t-resolve_verdict_memo">
+  <header><span class="name">resolve_verdict_memo</span><span class="badge b-l3">L3</span>
+    <span class="pk"><b>PK</b> (workspace_id, raw_mention_id, candidate_set_hash)</span></header>
+  <p class="purpose">Memoized ambiguous-band LLM verdicts — the one non-deterministic resolution step.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key fk"><td class="c">raw_mention_id</td><td class="t">TEXT</td><td class="n"><code>claim_mentions</code> · CASCADE</td></tr>
+      <tr class="key"><td class="c">candidate_set_hash</td><td class="t">TEXT</td><td class="n">A spine bump that doesn't change the candidate set reuses the cached verdict</td></tr>
+      <tr><td class="c">verdict</td><td class="t">TEXT</td><td class="n"><strong>NULL = the model answered 'none'</strong> — distinct from no row, which means never asked</td></tr>
+      <tr><td class="c">model / created_at</td><td class="t">TEXT · TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Effect</b> — re-resolve sweeps are near-free and run-to-run flutter disappears.</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="d-rel">L3 · The connection layer <span class="badge b-l3">L3</span></h2>
+<p>
+  Entity↔entity structural relations — the business-model map. Since the run-substrate rework,
+  <code>entity_relations</code> holds <strong>only curated seeds</strong>; harvested relations live on
+  the run substrate and every consumer reads the merged <code>active_relations</code> view.
+</p>
+
+<div class="tbl" id="t-entity_relations">
+  <header><span class="name">entity_relations</span><span class="badge b-l1">seeds only</span>
+    <span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">Curated analyst knowledge. Both endpoint FKs cascade, so the graph can never reference a non-existent node.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">source_entity</td><td class="t">TEXT</td><td class="n"><code>entities</code> · CASCADE</td></tr>
+      <tr class="fk"><td class="c">target_entity</td><td class="t">TEXT</td><td class="n"><code>entities</code> · CASCADE</td></tr>
+      <tr><td class="c">relation_type</td><td class="t">TEXT</td><td class="n">CHECK — see <a href="#obs">Observations</a> for a narrowing issue</td></tr>
+      <tr><td class="c">weight</td><td class="t">REAL</td><td class="n">Seeds only</td></tr>
+      <tr><td class="c">origin</td><td class="t">TEXT</td><td class="n">CHECK · seed · high_confidence</td></tr>
+      <tr><td class="c">provenance</td><td class="t">JSONB</td><td class="n"><strong>CHECK: seed OR ≥1 citation</strong> — a seed is analyst knowledge, not corpus-derived</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-relation_mentions">
+  <header><span class="name">relation_mentions</span><span class="badge b-l3">immutable</span>
+    <span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">The verbatim <code>{name, kind, quote}</code> the model returned, plus the text-only grounding gate's verdict.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"><code>uuid5(run | locator | ordinal)</code></td></tr>
+      <tr class="fk"><td class="c">extraction_run_id</td><td class="t">TEXT</td><td class="n"><code>extraction_runs</code> · CASCADE</td></tr>
+      <tr><td class="c">workspace_id / doc_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">label</td><td class="t">TEXT</td><td class="n">The external entity name, verbatim from the passage</td></tr>
+      <tr><td class="c">kind</td><td class="t">TEXT</td><td class="n">CHECK · client · competitor · geography · segment · product_service · regulator · subsidiary · partner. <strong>Asked of every issuer</strong> — precision comes from evidence guardrails, never a sector allow-list</td></tr>
+      <tr><td class="c">quote</td><td class="t">TEXT</td><td class="n">The verbatim relationship sentence — both the gate and the evidence</td></tr>
+      <tr><td class="c">confidence</td><td class="t">REAL</td><td class="n"></td></tr>
+      <tr><td class="c">citation</td><td class="t">JSONB</td><td class="n"></td></tr>
+      <tr><td class="c">status / reject_reason</td><td class="t">TEXT</td><td class="n">CHECK: reason required unless kept</td></tr>
+      <tr><td class="c">evidence_label</td><td class="t">TEXT</td><td class="n"><strong>Computed, not asserted</strong> · reported (deterministic disclosure lane) · explicit · co-mentioned. Doubles as the reversibility class: <code>reported</code> auto-applies</td></tr>
+      <tr><td class="c">purpose</td><td class="t">TEXT</td><td class="n">CHECK · commercial · social. <strong>NULL = not classified</strong>, and is never read as commercial — the default is applied on the read side, where it is a display decision rather than a recorded fact</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-relation_versions">
+  <header><span class="name">relation_versions</span><span class="badge b-l3">projection</span>
+    <span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">One resolution run's resolved edges for one document.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, id</td><td class="t">TEXT</td><td class="n"><code>uuid5(run | edge_id)</code> — one row per run per edge</td></tr>
+      <tr class="fk"><td class="c">run_id</td><td class="t">TEXT</td><td class="n"><code>resolution_runs</code> · CASCADE</td></tr>
+      <tr><td class="c">edge_id</td><td class="t">TEXT</td><td class="n">Deterministic <code>connection_edge_id(ws, src, tgt, type)</code> — the cross-document aggregation key</td></tr>
+      <tr class="fk"><td class="c">source_entity / target_entity</td><td class="t">TEXT</td><td class="n"><code>entities</code> · CASCADE</td></tr>
+      <tr><td class="c">relation_type</td><td class="t">TEXT</td><td class="n">CHECK · 9 types incl. <code>offers</code>, <code>regulated_by</code></td></tr>
+      <tr><td class="c">mention_ids</td><td class="t">TEXT[]</td><td class="n">Chains each edge back to the mentions that built it</td></tr>
+      <tr><td class="c">provenance</td><td class="t">JSONB</td><td class="n"><strong>CHECK: ≥1 citation</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="note warn" style="margin:0 15px 14px">
+    <span class="tag">A deliberate deletion: there is no <code>weight</code> column</span>
+    <p>
+      It used to hold the extractor model's own self-reported confidence, and <code>MAX()</code>-ing
+      it across runs made <em>a language model's opinion of its own output</em> the graph's edge
+      weight — a physics and visual input that reads calibrated and isn't. An edge now exposes its
+      <strong>atoms</strong>, and display strength is a deterministic consequence of one atom
+      (<code>best_evidence_label</code>). The schema drops the column idempotently and never re-adds it.
+    </p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="d-review">Analyst review — judgment as first-class data</h2>
+<p>
+  Invariant #6 says the user's judgment is first-class. These four tables are all <strong>append-only
+  with latest-wins on read</strong>: a decision is evidence, never an overwrite. Three of them
+  deliberately carry <strong>no foreign key</strong> — the ids they reference are stable across
+  re-resolution, so a judgment survives a re-harvest that rebuilds every underlying row.
+</p>
+
+<div class="tbl" id="t-claim_review_versions">
+  <header><span class="name">claim_review_versions</span><span class="badge b-ui">review</span>
+    <span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">A claim correction clones the active resolution into a new deterministic review run and changes only the reviewed projection — raw mentions stay immutable.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">doc_id</td><td class="t">TEXT</td><td class="n"><code>all_documents</code> · CASCADE</td></tr>
+      <tr class="fk"><td class="c">raw_mention_id</td><td class="t">TEXT</td><td class="n"><code>claim_mentions</code> · CASCADE — the durable structural anchor</td></tr>
+      <tr><td class="c">base_claim_id / replacement_claim_id / resolution_run_id</td><td class="t">TEXT</td><td class="n">Recorded as <em>values</em>, not FKs, so audit rows outlive pruned runs</td></tr>
+      <tr><td class="c">reviewer / reason</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">patch / receipt</td><td class="t">JSONB</td><td class="n">What was asked, and what actually changed</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-comparison_review_versions">
+  <header><span class="name">comparison_review_versions</span><span class="badge b-ui">review</span>
+    <span class="pk"><b>PK</b> id · no FK</span></header>
+  <p class="purpose">Pair-level judgment, separate from proposition facts — marking two statements not-comparable must not rewrite either source claim.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">comparison_id</td><td class="t">TEXT</td><td class="n">Stable over raw mention ids, so re-resolution keeps the judgment attached</td></tr>
+      <tr><td class="c">reviewer / reason</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">outcome</td><td class="t">TEXT</td><td class="n">CHECK · contested · flagged · comparable_agreeing · variance_to_expectation · time_series · supersession · not_comparable</td></tr>
+      <tr><td class="c">evidence_digest</td><td class="t">TEXT NULL</td><td class="n">The two PROPOSITIONS as they were shown (ADR 0124 D3). A correction is honoured only while it still matches — NULL means a row written before the column, which is never current and is never back-filled</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Note the vocabulary</b> — "an actual vs. guidance" is <code>variance_to_expectation</code>, not a conflict; adjacent periods are a <code>time_series</code>. Contestation requires overlapping periods. <b>And the identity is not the receipt</b>: <code>comparison_id</code> is durable over the raw mentions so a judgment survives a re-resolve, while <code>evidence_digest</code> stops it surviving a change in what those mentions were resolved <i>into</i>.</div>
+</div>
+
+<div class="tbl" id="t-relation_review_versions">
+  <header><span class="name">relation_review_versions</span><span class="badge b-ui">review</span>
+    <span class="pk"><b>PK</b> id · no FK</span></header>
+  <p class="purpose">Accept / reject / retype one harvested or curated edge.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id / edge_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">reviewer / reason</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">decision</td><td class="t">TEXT</td><td class="n">CHECK · accept (promote a withheld lead) · reject · retype</td></tr>
+      <tr><td class="c">relation_type</td><td class="t">TEXT</td><td class="n"><strong>CHECK: required when retyping</strong></td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>The gap this closed</b> — a <code>co-mentioned</code> edge is correctly withheld as a review lead, but with no endpoint to record a decision, a lead was a <em>permanent</em> lead and harvest precision could never improve from analyst judgment.</div>
+</div>
+
+<div class="tbl" id="t-entity_review_versions">
+  <header><span class="name">entity_review_versions</span><span class="badge b-ui">review</span>
+    <span class="pk"><b>PK</b> id · no FK</span></header>
+  <p class="purpose">Confirm, suppress or merge a proposed entity.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id / entity_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">reviewer / reason</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">decision</td><td class="t">TEXT</td><td class="n">CHECK · accept · reject · merge</td></tr>
+      <tr><td class="c">merge_into</td><td class="t">TEXT</td><td class="n"><strong>CHECK: required when merging</strong></td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-finding_review_versions">
+  <header><span class="name">finding_review_versions</span><span class="badge b-ui">review</span>
+    <span class="pk"><b>PK</b> id · no FK</span></header>
+  <p class="purpose">The analyst's decision on a FINDING (rung 12, ADR 0122 D7) — a lead reviewed as not material, or reopened. Append-only, latest-wins, keyed on the durable finding id so it survives every recomputation.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n">the receipt id the analyst is shown</td></tr>
+      <tr><td class="c">workspace_id / finding_id / finding_key</td><td class="t">TEXT</td><td class="n">the durable id, and the key it matched at the time</td></tr>
+      <tr><td class="c">finding_version</td><td class="t">INTEGER</td><td class="n">CHECK &gt; 0 · the version the analyst was SHOWN — a decision over a later one is a 409</td></tr>
+      <tr><td class="c">evidence_digest</td><td class="t">TEXT</td><td class="n"><strong>what the decision was taken OVER</strong> — honoured only while the finding still rests on it (rule 13)</td></tr>
+      <tr><td class="c">decision</td><td class="t">TEXT</td><td class="n">CHECK · not_material · reopen</td></tr>
+      <tr><td class="c">cells</td><td class="t">JSONB</td><td class="n"><strong>every evidence-grid cell an absence decision marks</strong> — <code>[{subject, role, period, dutyId, digest}]</code>, one per duty the absent thing discharges (one unheld filing is owed under two Reg 33 duties on two roles), each with ITS duty's digest so the grid can recompute and compare it from what it renders. CERTIFIED at decision time against the finding's own digest, else the decision is refused. CHECK array; empty for any other finding, a break, and a reopen (CHECK)</td></tr>
+      <tr><td class="c">reviewer / reason</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n">clock_timestamp(), so two decisions in one transaction never tie</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>The gap this closed</b> — <code>reviewed_not_material</code> was a declared evidence state with no record anywhere and no surface to create one; the grid hard-wired it empty. A decision now reaches the grid, and stops reaching it the moment the evidence it was taken over moves.</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="d-dash">Dashboard · numeric facts <span class="badge b-l1">L1</span></h2>
+
+<div class="note">
+  <span class="tag">Why numbers get their own table</span>
+  <p>
+    The fact tables are a <strong>measurement</strong>-shaped sibling of claims, not a second
+    substrate (invariant #8): one Postgres, the same entity spine for subjects, the same temporal
+    model, the same authority vocabulary, the same citations resolving to L0. It exists because a
+    claim is <em>assertion</em>-shaped and cannot hold a level figure without semantic abuse — a
+    measurement has no polarity, and dozens of statement line items have no business inside a
+    ~13-attribute contestation lens.
+  </p>
+  <p>
+    A numeric-lookup tool must therefore query <strong>both</strong>. And numbers are never embedded
+    and fuzzily retrieved — that is how RAG hallucinates financials.
+  </p>
+</div>
+
+<div class="tbl" id="t-instruments">
+  <header><span class="name">instruments</span><span class="badge b-l1">global</span>
+    <span class="pk"><b>PK</b> isin</span></header>
+  <p class="purpose">The identity layer <em>upstream</em> of the entity spine — every listed Indian equity. <strong>No <code>workspace_id</code></strong>: this is reference data about the market, not workspace knowledge.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">isin</td><td class="t">TEXT PK</td><td class="n"><strong>The canonical join key</strong> — what makes <code>RELIANCE.NS</code> and BSE <code>500325</code> one company</td></tr>
+      <tr><td class="c">name</td><td class="t">TEXT</td><td class="n">Indexed on <code>lower(name)</code></td></tr>
+      <tr><td class="c">nse_symbol / bse_code</td><td class="t">TEXT</td><td class="n">Seeded from the exchanges' free masters</td></tr>
+      <tr><td class="c">sector / industry</td><td class="t">TEXT</td><td class="n">NULL from these masters — the free lists don't carry them. Filled by vendor profile, labelled as vendor data, <em>never guessed</em></td></tr>
+      <tr><td class="c">entity_id</td><td class="t">TEXT</td><td class="n">Spine slug, filled when a company is first opened on the Dashboard</td></tr>
+      <tr><td class="c">listed</td><td class="t">BOOLEAN</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Why global</b> — so the analyst can type any listed name, not just companies that happen to appear in ingested documents.</div>
+</div>
+
+<div class="tbl" id="t-line_items">
+  <header><span class="name">line_items</span><span class="badge b-l1">L1</span>
+    <span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">The single canonical statement vocabulary both extraction lanes resolve into.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, id</td><td class="t">TEXT</td><td class="n"><code>'total_revenue'</code>, <code>'pat'</code>, <code>'cfo'</code></td></tr>
+      <tr><td class="c">label</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">statement</td><td class="t">TEXT</td><td class="n">CHECK · pnl · balance_sheet · cashflow · ratio · per_share</td></tr>
+      <tr><td class="c">unit_kind</td><td class="t">TEXT</td><td class="n">CHECK · inr · percent · ratio · count · inr_per_share</td></tr>
+      <tr><td class="c">sector</td><td class="t">TEXT</td><td class="n">NULL = universal; sector rows are additive (banks add NII…)</td></tr>
+      <tr><td class="c">display_order</td><td class="t">INTEGER</td><td class="n"></td></tr>
+      <tr><td class="c">role</td><td class="t">TEXT</td><td class="n">The <b>analytical role</b> this filed line belongs to (rung 7 / ADR 0094) &mdash; the join that did not exist, so 508 cited filed figures could reach no role. Authored in <code>LINE_ITEM_ROLE</code>. <b>NULL is a decided value</b>, not a missing one (<code>other_income</code> is revenue for a bank and treasury for an exporter). Deliberately <b>no FK</b> to <code>attributes_coarse</code>: the seeders are separate entry points, and an offline test gates validity instead.</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Vocabulary here, mapping in code</b> — the vendor-field → id mapping lives in reviewed, tested Python. Only unambiguous fields are mapped; ambiguous ones stay out rather than colliding wrongly. This is what makes the provenance-upgrade path real: a vendor figure and a filed figure can only corroborate if they share a line-item id.</div>
+</div>
+
+<div class="tbl" id="t-fact_mentions">
+  <header><span class="name">fact_mentions</span><span class="badge b-l3">immutable</span>
+    <span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">One measured CELL exactly as the document printed it, plus the extraction-time
+    gate decision. Mirrors <code>claim_mentions</code>; written by rung 6b.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, id</td><td class="t">TEXT</td><td class="n"><code>uuid5(extraction_run | element_id | row | col)</code></td></tr>
+      <tr class="fk"><td class="c">extraction_run_id</td><td class="t">TEXT</td><td class="n"><code>extraction_runs</code> · CASCADE</td></tr>
+      <tr class="fk"><td class="c">doc_id</td><td class="t">TEXT</td><td class="n"><code>all_documents</code> · CASCADE</td></tr>
+      <tr><td class="c">element_id<br>row_index / col_index</td><td class="t">TEXT · INTEGER</td><td class="n"><strong>THE CELL ANCHOR</strong> — ADR 0063: <em>a page does not identify a cell</em>. A citation resolving to a page of forty numbers asks the analyst to redo the reading we claimed to have done</td></tr>
+      <tr><td class="c">row_label / col_label</td><td class="t">TEXT</td><td class="n"><strong>The anchor is DOUBLE, and this is why:</strong> <code>elements.id</code> is run-scoped (&ldquo;stable within a run&rdquo;), so a re-parse may renumber it. A coordinate-only anchor would still RESOLVE after a re-parse — to a <em>different</em> cell. Verbatim labels let the cell be re-found, and make a mismatch detectable rather than silently wrong</td></tr>
+      <tr><td class="c">page_number</td><td class="t">INTEGER</td><td class="n">For display; never the identity</td></tr>
+      <tr><td class="c">line_item_text<br>period_text<br>value_text</td><td class="t">TEXT</td><td class="n"><strong>Verbatim, pre-resolution</strong> — the row label, the column header, and the cell exactly as printed (<code>41,764</code>, <code>(1,203)</code>, <code>—</code>)</td></tr>
+      <tr><td class="c">value<br>unit_text<br>scale_multiplier</td><td class="t">NUMERIC · TEXT</td><td class="n">Parsed value, the unit the table STATED (<code>₹ crore</code>), and what that unit meant (1e7). <strong>CHECK <code>fact_mentions_scale_shape</code></strong>: a parsed value requires its scale, so &ldquo;a number with no stated scale&rdquo; is unrepresentable. This is the lakh/crore boundary made structural (invariant #5)</td></tr>
+      <tr><td class="c">status / reject_reason</td><td class="t">TEXT</td><td class="n">CHECK · kept · rejected · review_required. <strong>Reason required unless kept</strong> — makes a <code>done_zero</code> run auditable</td></tr>
+      <tr><td class="c">citation</td><td class="t">JSONB</td><td class="n">The exact evidence Citation (invariant #1)</td></tr>
+      <tr><td class="c">segment_text<br>segment_dimension</td><td class="t">TEXT</td><td class="n"><strong>Rung 6d.</strong> Which PART of the business the cell is about, exactly as the note printed it, and WHICH PARTITION that part belongs to (<code>business</code> / <code>geography</code>). NULL on every statement-lane mention: that figure is about the whole entity. <code>''</code> is different from NULL and means the note&rsquo;s own disclosed TOTAL</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-fact_versions">
+  <header><span class="name">fact_versions</span><span class="badge b-l3">projection</span>
+    <span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">A resolved measurement — one resolution run's output. <strong>Replaced
+    <code>fin_facts</code> at rung 6a-ii</strong> (ADR 0085/0087): that table had no run / version /
+    active-swap, so invariant #7 was true of claims and merely <em>asserted</em> of facts. Read
+    through <code>active_facts</code>, never directly.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, id</td><td class="t">TEXT</td><td class="n">the VERSION id — uuid5 over (resolution run | mention) for a run-produced row, the stable key itself for a run-less vendor row. Run-scoping is not cosmetic: with a stable id an identical re-run inserted nothing (<code>ON CONFLICT DO NOTHING</code> against rows bound to the PREVIOUS run) and then activated the empty run it had just created — 516 facts to 0 (ADR 0089)</td></tr>
+      <tr><td class="c">fact_key</td><td class="t">TEXT</td><td class="n">the IDENTITY, stable across runs — uuid5 over (subject | line_item | period | <strong>frame</strong> | tier | doc). The frame is part of it, or a second basis would collapse onto the first. This is what dedup inside a run, rerun-survival across runs, and the change RECEIPT all read (ADR 0089/0091)</td></tr>
+      <tr><td class="c">value_step</td><td class="t">NUMERIC</td><td class="n">how precisely the SOURCE printed this figure, in base units — the size of its last stated digit (<code>"2,565,891.41"</code> crore ⇒ 1e5; <code>"34%"</code> ⇒ 1; <code>"33.6%"</code> ⇒ 0.1). NULL = unknown, the honest answer for a vendor payload. Stored because it CANNOT be recovered from the number: deriving it from the float made <code>Decimal(100.0).normalize()</code> read as "nearest hundred" and declared 100 and 200 in agreement (ADR 0091)</td></tr>
+      <tr class="fk"><td class="c">run_id</td><td class="t">TEXT</td><td class="n"><code>resolution_runs</code> · CASCADE. <strong>NULLABLE on purpose</strong>: a deterministic producer (the vendor lane, derived ratios) has no run to stage or retire and is always active — the identical posture <code>claim_versions</code> gives the lens bridge</td></tr>
+      <tr class="fk"><td class="c">raw_mention_id</td><td class="t">TEXT</td><td class="n"><code>fact_mentions</code> · CASCADE. NULL with <code>run_id</code>: a yfinance figure has no cell in a document the analyst holds, and pretending otherwise fabricates provenance. <strong>CHECK <code>fact_versions_run_rows_carry_mention</code></strong></td></tr>
+      <tr class="fk"><td class="c">subject / line_item</td><td class="t">TEXT</td><td class="n"><code>entities</code> · CASCADE · <code>line_items</code> · RESTRICT</td></tr>
+      <tr><td class="c">period_kind / period_value<br>period_source</td><td class="t">TEXT</td><td class="n">CHECK · fiscal_year · quarter, Indian FY labels · stated · inferred · defaulted</td></tr>
+      <tr><td class="c">value / unit / currency</td><td class="t">NUMERIC · TEXT</td><td class="n">CHECK · inr · percent · ratio · count · inr_per_share. Currency as the source REPORTED it — never converted with an FX rate of our choosing (invariant #1)</td></tr>
+      <tr><td class="c">authority_tier</td><td class="t">TEXT</td><td class="n">CHECK · the 12-value passport vocabulary</td></tr>
+      <tr><td class="c">asserted_at</td><td class="t">TEXT</td><td class="n">IST ISO-8601 (invariant #5)</td></tr>
+      <tr class="fk"><td class="c">source_doc_id</td><td class="t">TEXT</td><td class="n"><code>all_documents</code> · CASCADE</td></tr>
+      <tr><td class="c">provenance</td><td class="t">JSONB</td><td class="n"><strong>CHECK: at least one Citation</strong> — even a vendor fact resolves to a stored L0 artifact</td></tr>
+      <tr><td class="c">derivation</td><td class="t">JSONB</td><td class="n">Computed tier only: {formula, input_fact_ids[]}. <strong>CHECK: required when tier = computed</strong></td></tr>
+      <tr><td class="c">supersedes / created_at</td><td class="t">TEXT · TIMESTAMPTZ</td><td class="n">Same-lineage revision (vendor refresh / restatement)</td></tr>
+      <tr><td class="c">segment<br>segment_dimension</td><td class="t">TEXT</td><td class="n"><strong>Rung 6d · in <code>fact_key</code>.</strong> The resolved part and its partition. NULL segment = the WHOLE entity, which every pre-6d fact is. <strong>CHECK <code>fact_versions_segment_dimension_check</code></strong> (business · geography) and <strong><code>fact_versions_segment_shape</code></strong> (a part must name its partition). Two parts of one metric and period are DIFFERENT measurements, so both columns are in the identity: without them HDFC&rsquo;s eight segment revenues hashed to one key and seven were dropped as duplicates, the survivor reading as the company; without the partition, Domestic and International joined Treasury and Wholesale and the &ldquo;parts&rdquo; summed to 167% of the business</td></tr>
+      <tr><td class="c">frame_consolidation<br>frame_consolidation_tier</td><td class="t">TEXT</td><td class="n">CHECK · consolidated · standalone, beside the tier that supplied it</td></tr>
+      <tr><td class="c">frame_adjustment<br>frame_adjustment_tier<br>frame_adjustment_item</td><td class="t">TEXT</td><td class="n">CHECK · reported · adjusted, plus WHAT was excluded. <strong>Tier may never be <code>document</code></strong></td></tr>
+      <tr><td class="c">frame_accounting_standard<br>frame_accounting_standard_tier</td><td class="t">TEXT</td><td class="n">CHECK · ind_as · ifrs · us_gaap · other</td></tr>
+      <tr><td class="c">frame_denomination_currency<br>frame_denomination_currency_tier</td><td class="t">TEXT</td><td class="n">CHECK · ISO-4217 <code>^[A-Z]{3}$</code></td></tr>
+      <tr><td class="c">frame_currency_basis<br>frame_currency_basis_tier</td><td class="t">TEXT</td><td class="n">CHECK · reported · constant. Also never <code>document</code>-tiered</td></tr>
+      <tr><td class="c">frame_averaging<br>frame_averaging_tier</td><td class="t">TEXT</td><td class="n">CHECK · period_end · average</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>ONE frame for claims AND facts</b> (ADR 0085) — the same 13 columns and six
+    CHECK constraints as <code>claim_versions</code>, so a fact inherits the identical refusals.
+    <b>The key includes the frame.</b> <code>fin_facts</code> was indexed on
+    <code>(workspace_id, subject, line_item, period_value, basis)</code> while its READER keyed on
+    two of those five columns: the store could always hold a consolidated AND a standalone figure,
+    and the projection silently kept one — on an equal authority tier, whichever row the driver
+    yielded first. Widening the index without widening the reader is how that survived review, so
+    <code>app/dashboard/statements.py</code> was fixed in the same change.</div>
+</div>
+
+<div class="tbl" id="t-active_facts">
+  <header><span class="name">active_facts</span><span class="badge b-l3">view</span>
+    <span class="pk"><b>VIEW</b> over fact_versions</span></header>
+  <p class="purpose"><strong>THE one read surface for facts</strong>, exactly as
+    <code>active_claims</code> is for claims. Every consumer — Dashboard statements / KPI / derived /
+    bridge, Canvas figures and the Excel assistant, eval, the CLIs — reads this and never
+    <code>fact_versions</code>, so a staged, retired or failed run is <em>structurally</em> invisible
+    and an interrupted rerun leaves the prior figures on screen intact.</p>
+  <table class="cols">
+    <thead><tr><th>Definition</th></tr></thead>
+    <tbody>
+      <tr><td class="n"><code>SELECT fv.* FROM fact_versions fv LEFT JOIN resolution_runs rr ON rr.id = fv.run_id JOIN line_items li ON li.workspace_id = fv.workspace_id AND li.id = fv.line_item WHERE (fv.run_id IS NULL OR rr.active) AND li.statement &lt;&gt; 'segment' AND fv.segment IS NULL</code></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>The whole segment lane is excluded</b> (rung 6d), and both halves matter. A
+    figure about a PART of the business is not a figure about the company &mdash; every consumer of
+    this view asks about the ISSUER, so a segment row answering one would be HDFC&rsquo;s Treasury
+    revenue served as HDFC&rsquo;s revenue. And a note&rsquo;s own disclosed TOTAL is excluded too,
+    though it IS about the whole company, because it is not what a question about the company
+    means: HDFC&rsquo;s segment revenue totals &#8377;6.01 lakh crore against income from operations
+    of &#8377;4.08 lakh crore, the difference being the inter-segment revenue the note has not yet
+    eliminated. Excluded HERE rather than by a clause each consumer remembers, because a rule
+    applied at one call site is not applied (<code>LESSONS.md</code> &sect;14).</div>
+</div>
+
+<div class="tbl" id="t-active_segment_facts">
+  <header><span class="name">active_segment_facts</span><span class="badge b-l3">view</span>
+    <span class="pk"><b>VIEW</b> over fact_versions</span></header>
+  <p class="purpose"><strong>The segment lane&rsquo;s own read surface</strong> (rung 6d) &mdash; the
+    PARTS and the note&rsquo;s own disclosed WHOLE together, which is the pair rung 11b&rsquo;s gap
+    row is the difference of. A whole carries <code>segment IS NULL</code>, so the two are told
+    apart by that column and never by position or by summing. The lane NEVER sums: a share-of-business
+    track computed from a total we manufactured would always be exactly full, and the one thing it
+    exists to show &mdash; that the parts do not account for the whole &mdash; would be gone.</p>
+  <table class="cols">
+    <thead><tr><th>Definition</th></tr></thead>
+    <tbody>
+      <tr><td class="n"><code>SELECT fv.* FROM fact_versions fv LEFT JOIN resolution_runs rr ON rr.id = fv.run_id JOIN line_items li ON li.workspace_id = fv.workspace_id AND li.id = fv.line_item WHERE (fv.run_id IS NULL OR rr.active) AND li.statement = 'segment'</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-active_lane2_facts">
+  <header><span class="name">active_lane2_facts</span><span class="badge b-l3">view</span>
+    <span class="pk"><b>VIEW</b> over fact_versions</span></header>
+  <p class="purpose"><strong>Both lanes together, for the one question that is about the RECORD
+    and not about a number</strong> (rung 6d audit, ADR 0117 D9): <em>does this workspace hold
+    filed evidence here?</em> <code>active_facts</code> answers &ldquo;what is this company&rsquo;s
+    figure&rdquo; and must never return a part; the evidence grid asks something else entirely,
+    and the split made it lie &mdash; rung 6d gave the segment line items an analytical role,
+    which correctly took <code>concentration_dependency</code> and
+    <code>asset_base_replenishment</code> out of the Lane-2 blind spot, and the grid then counted
+    their evidence off a view where no segment row can appear. ICICI FY2026 held six concentration
+    facts and six asset-replenishment facts and both cells reported
+    <code>fact_count = 0 &middot; not_found_in_scope</code>.
+    <strong>Declared for <code>app/evidence/</code> alone</strong> and gated by
+    <code>segment_gates.leak_failures</code>: a consumer that wants a VALUE must pick a lane.</p>
+  <table class="cols">
+    <thead><tr><th>Definition</th></tr></thead>
+    <tbody>
+      <tr><td class="n"><code>SELECT fv.* FROM fact_versions fv LEFT JOIN resolution_runs rr ON rr.id = fv.run_id WHERE (fv.run_id IS NULL OR rr.active)</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-vendor_snapshots">
+  <header><span class="name">vendor_snapshots</span><span class="badge b-l0">L0 registry</span>
+    <span class="pk"><b>PK</b> (workspace_id, symbol)</span></header>
+  <p class="purpose">The per-symbol L0 trail under whichever vendor document currently owns the symbol.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id, symbol</td><td class="t">TEXT</td><td class="n"><code>'INFY.NS'</code></td></tr>
+      <tr><td class="c">subject</td><td class="t">TEXT</td><td class="n">Entity-spine id the facts landed on</td></tr>
+      <tr class="fk"><td class="c">doc_id</td><td class="t">TEXT</td><td class="n"><code>all_documents</code> · CASCADE — deleting the vendor card removes the registry and its facts</td></tr>
+      <tr><td class="c">sha256 / local_path</td><td class="t">TEXT</td><td class="n">Content-addressed snapshot file</td></tr>
+      <tr><td class="c">fetched_at</td><td class="t">TIMESTAMPTZ</td><td class="n">Freshness gate for the refetch policy</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>Orphan sweep at runtime, not by migration</b> — any <code>yfinance://statements%</code> source with no registry row pointing at it is deleted on every KB add/remove.</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="d-canvas">Canvas &amp; workbooks <span class="badge b-ui">UI</span></h2>
+<p>
+  The canvas graph is <strong>layout and wiring — deliberately not knowledge</strong> (invariant #8:
+  no second store). What a run <em>produces</em> is an <code>artifacts</code> row: the durable, cited
+  blackboard artifact other nodes consume.
+</p>
+
+<div class="tbl" id="t-canvases">
+  <header><span class="name">canvases</span><span class="badge b-ui">UI</span><span class="pk"><b>PK</b> id</span></header>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n">Client-generated, validated <code>^[A-Za-z0-9_-]{1,64}$</code> at the contract boundary</td></tr>
+      <tr><td class="c">workspace_id / title</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">rev</td><td class="t">INTEGER</td><td class="n"><strong>Optimistic-concurrency guard</strong> — a PUT with a stale baseRev gets 409, never silent last-writer-wins</td></tr>
+      <tr><td class="c">created_at / updated_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-canvas_nodes">
+  <header><span class="name">canvas_nodes</span><span class="badge b-ui">UI</span><span class="pk"><b>PK</b> id</span></header>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">canvas_id</td><td class="t">TEXT</td><td class="n"><code>canvases</code> · CASCADE</td></tr>
+      <tr><td class="c">type</td><td class="t">TEXT</td><td class="n">CHECK · source · ai · table · chart · sticky · excel · document · section · ask (17b: a Graph Ask chat continued on the board)</td></tr>
+      <tr><td class="c">x / y</td><td class="t">DOUBLE</td><td class="n"></td></tr>
+      <tr><td class="c">params</td><td class="t">JSONB</td><td class="n"></td></tr>
+      <tr><td class="c">latest_artifact_id</td><td class="t">TEXT</td><td class="n">Server-owned pointer. <strong>Deliberately no FK</strong> — it would be circular with <code>artifacts.node_id</code>; artifacts only disappear via the same cascade, so it cannot dangle</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-canvas_edges">
+  <header><span class="name">canvas_edges</span><span class="badge b-ui">UI</span><span class="pk"><b>PK</b> id</span></header>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">canvas_id</td><td class="t">TEXT</td><td class="n"><code>canvases</code> · CASCADE</td></tr>
+      <tr class="fk"><td class="c">src_node / dst_node</td><td class="t">TEXT</td><td class="n"><code>canvas_nodes</code> · CASCADE</td></tr>
+      <tr><td class="c">src_port / dst_port</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">kind</td><td class="t">TEXT</td><td class="n">CHECK · context · data · live. <strong>Inferred from the port pair and re-derived on every PUT</strong>, so a client can never persist a mislabeled edge</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-findings">
+  <header><span class="name">findings</span><span class="badge b-ui">L3 projection</span><span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">Durable identity for a computed finding (rung 5 · ADR 0065 §1 / 0080 §1 / 0084). The projection itself is a pure function of the claim store — <strong>first-seen is the one thing that cannot be recomputed</strong>, which is why this table exists and why nothing else about rung 5 is stateful. Without it <code>version</code> is always 1, <code>lifecycle</code> is always open/current, both timestamps are the request time, and every later binding (a rung-19 falsifier, a rung-22 note, a rung-15 graph handoff) hangs off an id that moves whenever the key does.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n">The <strong>durable identity</strong>, assigned once at first sight. A recompute adopts it (ADR 0080 §1)</td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">key</td><td class="t">TEXT</td><td class="n">The semantic key — a <strong>MATCHER</strong>, never the identity. UNIQUE per workspace; a vocabulary migration re-keys with a ledger entry rather than re-identifying</td></tr>
+      <tr><td class="c">family</td><td class="t">TEXT</td><td class="n"><code>FindingFamily</code> at the time of writing</td></tr>
+      <tr><td class="c">kind</td><td class="t">TEXT</td><td class="n">lead · observation (ADR 0079 §2)</td></tr>
+      <tr><td class="c">version</td><td class="t">INTEGER</td><td class="n">Moves ONLY when <code>evidence_digest</code> changes — a recompute over identical evidence is not a new version, or every page load would look like a change</td></tr>
+      <tr><td class="c">evidence_digest</td><td class="t">TEXT</td><td class="n">Digest over the claim + comparison ids. What <code>version</code> moves on, and the articulation cache key (ADR 0081)</td></tr>
+      <tr><td class="c">digest_covering</td><td class="t">BOOLEAN NULL</td><td class="n">Was <code>evidence_digest</code> measured over the WHOLE workspace, or merely recorded to give a first-sighted finding an identity? Only a covering measurement may answer &ldquo;you have seen all of this&rdquo;; without it a second identical narrowed read found the subset the first one wrote and called the view complete. NULL = written before the column, never taken for covering, never back-filled</td></tr>
+      <tr><td class="c">lifecycle</td><td class="t">TEXT</td><td class="n">CHECK · open · resolved (leads) · current (observations) · superseded (either)</td></tr>
+      <tr><td class="c">first_seen_at</td><td class="t">TIMESTAMPTZ</td><td class="n"><strong>The non-computable column.</strong> Survives every recomputation</td></tr>
+      <tr><td class="c">last_seen_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+      <tr><td class="c">superseded_at</td><td class="t">TIMESTAMPTZ</td><td class="n">Set when the evidence stops producing the finding — never a DELETE, because an analyst who bound a falsifier needs to read what happened. Only a <strong>whole-workspace</strong> projection may set it: a scoped read is a view, not a retraction</td></tr>
+      <tr><td class="c">snapshot</td><td class="t">JSONB</td><td class="n">ADR 0065 §1's immutable evidence snapshot — claim and comparison <strong>references</strong> as they stood at this version. Never rendered prose (rung 11 regenerates it) and never node ids (a stored projection, 0080 §6)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-captures">
+  <header><span class="name">captures</span><span class="badge b-ui">UI</span><span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">The capture substrate (rung 8d · ADR 0099 D6) — an analyst pointed at something and said why. <strong>Notes is rung 22; its substrate cannot be</strong>: if the ability to point arrives with the notes surface, every signed-off surface has to reopen to grow a capture affordance, and each invents its own idea of what it is pointing at. The prototype's notes record a surface <em>name</em> with empty references — enough to draw, not enough to resolve. The same union carries the export/handoff path.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n">uuid4, minted by the writer and returned via <code>RETURNING</code> so the caller can link to what it just wrote</td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">surface</td><td class="t">TEXT</td><td class="n">CHECK · library · graph · canvas · dashboard · notes · connectors. Provenance for the <strong>act</strong>, never for the evidence</td></tr>
+      <tr><td class="c">ref</td><td class="t">JSONB</td><td class="n">A typed <code>ObjectRef</code> (<code>packages/contracts/src/object-ref.ts</code>), validated by the discriminated union before it reaches here. JSONB rather than eight nullable columns because the arms have genuinely different fields — a page ref needs a page number, an element ref needs the document that <strong>scopes</strong> it (<code>elements.id</code> is run-scoped) — and eight columns of which six are always NULL is a union pretending to be a table</td></tr>
+      <tr><td class="c">ref_type</td><td class="t">TEXT GENERATED</td><td class="n">STORED projection of <code>ref-&gt;&gt;'type'</code> · CHECK · document · page · element · claim · fact · finding · graph_node · board. <strong>Generated, not denormalised:</strong> a copy the writer maintained would be the same-rule-at-two-call-sites shape; a generated column cannot drift</td></tr>
+      <tr><td class="c">note</td><td class="t">TEXT</td><td class="n">May be empty — pointing at a thing IS the act, and requiring a comment would make the cheapest useful capture ("keep this") impossible</td></tr>
+      <tr><td class="c">ref_fingerprint</td><td class="t">TEXT</td><td class="n">What the target's identity-bearing <strong>content</strong> looked like when the analyst pointed at it. The ref on the wire is a <strong>coordinate</strong>, and coordinates are reused: <code>element_id()</code> is <code>p{page:04d}-e{index:03d}</code> and a re-parse runs <code>DELETE FROM elements WHERE doc_id = …</code> then re-inserts, so the same id exists before and after with possibly different content. Carrying <code>doc_id</code> detects nothing — it is unchanged too — so without this the resolver could only spot a coordinate that had <strong>vanished</strong>, never one that had been <strong>reused</strong>, and the reused case resolves cleanly to evidence the analyst never read. Stamped server-side by <code>app/captures/fingerprint.py</code>, never supplied by the caller. NULL means "taken before this column existed" and is read as <strong>unverifiable</strong>, never as a match</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n">Newest first, and half the paging cursor (<code>created_at|id</code>) — the exact sort key, so it stays total when two captures share a timestamp</td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>No foreign key to the target, deliberately.</b> The eight arms point into six different tables and one <strong>projection</strong> (a graph node id is minted by the current ontology; rung 15 replaces it), so there is no single column to reference. <code>app/captures/resolve.py</code> reports an unresolvable ref <strong>loudly</strong> instead — which is also the honest behaviour when a document is deleted: the analyst's note about it still exists and should say what happened to its anchor, not vanish with it. <code>board</code> is a <strong>declared exemption</strong> with a named unblocker (boards are client-side until rung 20/21), and <code>test_captures.py</code> fails the day a <code>boards</code> table lands while the resolver still refuses.</div>
+</div>
+
+<div class="tbl" id="t-ask_threads">
+  <header><span class="name">ask_threads</span><span class="badge b-ui">UI</span><span class="pk"><b>PK</b> (workspace_id, id)</span></header>
+  <p class="purpose">The Graph Ask's chats, kept per workspace (the Graph review, round 3 · ADR 0140 D13). A chat is a line of enquiry the analyst returns to, so it is a <strong>record in the store</strong>, never a browser cache (ladder §1): it survives a reload, another browser and another machine, and a workspace purge removes it with everything else. Written <strong>whole</strong> each time a turn settles, by <code>app/graph/ask_threads.py</code>.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id</td><td class="t">TEXT PK</td><td class="n">A chat id means nothing in another workspace (ADR 0108)</td></tr>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n">Minted by the page when the chat's first question is sent · CHECK 1–64 characters</td></tr>
+      <tr><td class="c">title</td><td class="t">TEXT</td><td class="n">The chat's first question, shortened · CHECK 1–64 characters</td></tr>
+      <tr><td class="c">turns</td><td class="t">JSONB</td><td class="n">The contract's <code>AskTurnRecord[]</code>, oldest first, validated before it reaches here — only <strong>settled</strong> turns: an answer exactly as the door returned it (its scope receipt and every citation inside), or the sentence saying why it reached none · CHECK an array · at most 20</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n">When the chat began — kept across every rewrite</td></tr>
+      <tr><td class="c">updated_at</td><td class="t">TIMESTAMPTZ</td><td class="n">The STORE's clock, never the client's: orders the list (most recently asked first). Past 20 chats a workspace's oldest leaves</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-scope_exclusions">
+  <header><span class="name">scope_exclusions</span><span class="badge b-ui">UI</span><span class="pk"><b>PK</b> (workspace_id, doc_id)</span></header>
+  <p class="purpose">The research scope as <strong>saved</strong>: which of a workspace's sources the analyst switched off (rung 17a · ADR 0148 D1). It was browser memory — lost on a reload, unseen by a second tab, copied into links by value. One row per switched-off document, so a toggle is a per-document write (<code>PATCH /scope</code> takes a delta) and two tabs never erase each other's. <strong>No door reads it:</strong> Library, Graph and Canvas load it (<code>GET /scope</code>) and send the scope they mean, so a probe naming its own scope is never narrowed by the analyst's last click. Canvas reads it for a quiet mark only, never a filter (D2). Written by <code>app/workspace/scope.py</code>.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id</td><td class="t">TEXT PK</td><td class="n">A scope belongs to one workspace; a document id is global, so the door refuses another workspace's</td></tr>
+      <tr class="key"><td class="c">doc_id</td><td class="t">TEXT PK → all_documents ON DELETE CASCADE</td><td class="n">A deleted document takes its exclusion with it</td></tr>
+      <tr><td class="c">excluded_at</td><td class="t">TIMESTAMPTZ</td><td class="n">The store's clock (<code>clock_timestamp()</code>) when it was switched off</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-story_versions">
+  <header><span class="name">story_versions</span><span class="badge b-l3">L3 · derived</span><span class="pk"><b>PK</b> (workspace_id, key)</span></header>
+  <p class="purpose"><em>How this business works</em>, the expert story (rung 14 · ADR 0145 D6·5). One row per written <strong>part</strong> — the standing story or the current chapter — under the hash of what it was written over. Same key, same story: it is never written twice. Derived and rebuildable (invariant 7): a purge loses only model calls. Written by <code>app/brief/story/keep.py</code>.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr class="key"><td class="c">key</td><td class="t">TEXT PK</td><td class="n">sha256 of the dossier's hash, the writer and reviewer pins, the prompt version — and, for the chapter, the standing story's key · CHECK 64 characters</td></tr>
+      <tr><td class="c">part</td><td class="t">TEXT</td><td class="n">CHECK <code>standing</code> · <code>chapter</code></td></tr>
+      <tr><td class="c">story</td><td class="t">JSONB</td><td class="n">The contract's <code>StoryPart</code>, validated before it reaches here — every statement with its standing, cites and (for an interpretation) falsifier; the figures and sources it cites; the counts withheld by reason · CHECK an object</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-story_index">
+  <header><span class="name">story_index</span><span class="badge b-l3">L3 · memo</span><span class="pk"><b>PK</b> (workspace_id, scope_key, fingerprint)</span></header>
+  <p class="purpose">Which stored story a <strong>record state</strong> resolves to, so a page view reads a fingerprint and two short queries and never re-gathers the dossier (3–6 s, measured 2026-10-01). The fingerprint hashes every input the gather reads — the documents in scope and the active claim, fact, segment, role, label, review, pack and entity rows — so a new document or extraction run misses it and ONE background job writes the story again. <code>story_probe --store</code> gates it: where a row maps the current fingerprint, a fresh gather must produce that row's key.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">workspace_id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr class="key"><td class="c">scope_key</td><td class="t">TEXT PK</td><td class="n"><code>all</code>, or a hash of a view's sorted document ids — a <em>Rewrite for these sources</em> (D7) · CHECK 3–64 characters</td></tr>
+      <tr class="key"><td class="c">fingerprint</td><td class="t">TEXT PK</td><td class="n">sha256 of the record's inputs and the pins · CHECK 64 characters</td></tr>
+      <tr><td class="c">status</td><td class="t">TEXT</td><td class="n">CHECK <code>ready</code> · <code>thin</code> (no model call — the record cannot carry a story) · CHECK ready ⇔ <code>standing_key</code> present</td></tr>
+      <tr><td class="c">subject</td><td class="t">TEXT</td><td class="n">The covered company's name, as the gather resolved it</td></tr>
+      <tr><td class="c">standing_key</td><td class="t">TEXT</td><td class="n">→ <code>story_versions.key</code></td></tr>
+      <tr><td class="c">chapter_key</td><td class="t">TEXT</td><td class="n">→ <code>story_versions.key</code>; NULL while it writes, or when nothing followed the annual report</td></tr>
+      <tr><td class="c">chapter_due</td><td class="t">BOOLEAN</td><td class="n">A chapter is owed and not yet written — the door says <code>writing</code> and serves the standing story meanwhile</td></tr>
+      <tr><td class="c">gaps</td><td class="t">JSONB</td><td class="n">The contract's <code>StoryGap[]</code> — what the record lacks, computed, never the model's · CHECK an array</td></tr>
+      <tr><td class="c">detail</td><td class="t">TEXT</td><td class="n">Why a <code>thin</code> record has no story</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-artifacts">
+  <header><span class="name">artifacts</span><span class="badge b-ui">blackboard</span><span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">The durable, cited output of a canvas run. Append-only history.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr class="fk"><td class="c">canvas_id / node_id</td><td class="t">TEXT</td><td class="n"><code>canvases</code> / <code>canvas_nodes</code> · CASCADE</td></tr>
+      <tr><td class="c">kind</td><td class="t">TEXT</td><td class="n">CHECK · markdown · table · chart_spec · changeset · document · graph_answer (17b: the payload IS a <code>GraphAnswer</code>; cited, so not exempt)</td></tr>
+      <tr><td class="c">payload</td><td class="t">JSONB</td><td class="n"></td></tr>
+      <tr><td class="c">citations</td><td class="t">JSONB</td><td class="n"><strong>CHECK: ≥1 unless kind ∈ {chart_spec, changeset, document}</strong> — see below</td></tr>
+      <tr><td class="c">model_id</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">reasoning_effort</td><td class="t">TEXT</td><td class="n">NULL · the effort the run SENT (ADR 0150 D3); NULL for a model with no effort dial and on rows before 2026-10-02</td></tr>
+      <tr><td class="c">inputs_hash</td><td class="t">TEXT</td><td class="n">sha256 over canonical JSON of inputs + prompt + model — drives the staleness chip</td></tr>
+      <tr><td class="c">scope</td><td class="t">JSONB</td><td class="n">The frozen run-input snapshot: docIds, input artifact ids, sticky notes, workspace scope</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+  <div class="foot"><b>The three citation exemptions are principled, not lax</b> — <code>chart_spec</code> has no LLM in its path (provenance chains through the input artifact); <code>changeset</code> is a mechanical formula/format edit, not a claim; <code>document</code> is mixed-authorship, where hand-written sections are the analyst's own judgment. Enforcement moves to where the claim is made: a draft run declines app-side when nothing grounds it.</div>
+</div>
+
+<div class="tbl" id="t-canvas_usage">
+  <header><span class="name">canvas_usage</span><span class="badge b-ui">telemetry</span><span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">What each AI operation on a canvas cost (17b-r, ADR 0152 D2) — one row per run, section draft, assistant turn or Ask follow-up that reached a model, written even on a decline or an error (the tokens were spent). Telemetry, not research: cited by nothing.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id</td><td class="t">TEXT</td><td class="n">purge finds the row by it</td></tr>
+      <tr class="fk"><td class="c">canvas_id</td><td class="t">TEXT</td><td class="n"><code>canvases</code> · CASCADE</td></tr>
+      <tr><td class="c">node_id</td><td class="t">TEXT</td><td class="n"><strong>Deliberately no FK</strong> — a deleted step's spend stays in the board's total</td></tr>
+      <tr><td class="c">operation</td><td class="t">TEXT</td><td class="n">CHECK · run · draft · assistant · ask</td></tr>
+      <tr class="fk"><td class="c">artifact_id</td><td class="t">TEXT</td><td class="n"><code>artifacts</code> · SET NULL · NULL for a decline, an error, a turn that lands none</td></tr>
+      <tr><td class="c">calls</td><td class="t">INT</td><td class="n">≥ 1 — an operation that reached no model writes no row</td></tr>
+      <tr><td class="c">input_tokens / cached_input_tokens / output_tokens / reasoning_tokens</td><td class="t">BIGINT</td><td class="n">Summed over the calls that REPORTED them (the rest are <code>unmeasured_calls</code>)</td></tr>
+      <tr><td class="c">cost_usd</td><td class="t">DOUBLE</td><td class="n">USD from the one catalogue · <strong>NULL = no call priced, never 0</strong></td></tr>
+      <tr><td class="c">unpriced_calls / unmeasured_calls / estimated_calls</td><td class="t">INT</td><td class="n">priced-model gaps · no usage at all · a tiktoken estimate (a stream stopped early)</td></tr>
+      <tr><td class="c">measured</td><td class="t">TEXT</td><td class="n">CHECK · provider · estimated · partial · unmeasured</td></tr>
+      <tr><td class="c">price_table_version</td><td class="t">TEXT</td><td class="n">The catalogue's version the cost was read from</td></tr>
+      <tr><td class="c">detail</td><td class="t">JSONB</td><td class="n">Each call: model, effort, tokens, cost, estimated</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"><code>clock_timestamp()</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-workbooks">
+  <header><span class="name">workbooks</span><span class="badge b-ui">UI</span><span class="pk"><b>PK</b> id</span></header>
+  <p class="purpose">A canvas-owned, versioned Excel document. Deliberately <em>not</em> in <code>sources</code>/<code>documents</code> — xlsx must not run the PDF parse→chunk→embed pipeline.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key"><td class="c">id</td><td class="t">TEXT PK</td><td class="n"></td></tr>
+      <tr><td class="c">workspace_id / title</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">current_version</td><td class="t">INTEGER</td><td class="n"></td></tr>
+      <tr><td class="c">created_at / updated_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="t-workbook_versions">
+  <header><span class="name">workbook_versions</span><span class="badge b-ui">UI</span>
+    <span class="pk"><b>PK</b> (workbook_id, version)</span></header>
+  <p class="purpose">One immutable version per row. A revert lands a <em>new</em> version whose bytes copy an old one — history is never rewritten.</p>
+  <table class="cols">
+    <thead><tr><th>Column</th><th>Type</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="key fk"><td class="c">workbook_id</td><td class="t">TEXT</td><td class="n"><code>workbooks</code> · CASCADE</td></tr>
+      <tr class="key"><td class="c">version</td><td class="t">INTEGER</td><td class="n"></td></tr>
+      <tr><td class="c">sha256 / local_path</td><td class="t">TEXT</td><td class="n">The .xlsx bytes are the L0 ground truth on disk</td></tr>
+      <tr><td class="c">author</td><td class="t">TEXT</td><td class="n">CHECK · user · assistant · system</td></tr>
+      <tr><td class="c">note</td><td class="t">TEXT</td><td class="n"></td></tr>
+      <tr><td class="c">op_log</td><td class="t">JSONB</td><td class="n">Audit of the assistant turn that produced this version</td></tr>
+      <tr><td class="c">created_at</td><td class="t">TIMESTAMPTZ</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="views">The three views — the only read surface</h2>
+<p>
+  This is the single most important operational rule in the schema. <strong>Consumers never read the
+  run tables directly.</strong> Ask, graph assembly, the signals engine, eval suites, Canvas tools and
+  the CLIs all read these views — so a staged, retired or failed run is <em>structurally</em>
+  invisible rather than filtered out by each caller remembering to.
+</p>
+
+<div class="tbl" id="v-active_claims">
+  <header><span class="name">active_claims</span><span class="badge b-view">VIEW</span></header>
+  <p class="purpose">Active runs' output, plus non-run producers' rows.</p>
+  <div class="foot" style="border-top:none">
+    <code>SELECT cv.* FROM claim_versions cv LEFT JOIN resolution_runs rr ON rr.id = cv.run_id WHERE cv.run_id IS NULL OR rr.active</code>
+  </div>
+</div>
+
+<div class="tbl" id="v-active_relations">
+  <header><span class="name">active_relations</span><span class="badge b-view">VIEW</span></header>
+  <p class="purpose">Curated seeds ∪ an aggregation over all active runs' relation versions, grouped by the deterministic edge id — so one document's rerun never destroys another document's evidence for the same edge.</p>
+  <table class="cols">
+    <thead><tr><th>Computed atom</th><th>Derivation</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td class="c">mentions_by_lineage</td><td class="n">Count per <code>documents.lineage_id</code></td><td class="n">Assertions per <strong>voice</strong>, never per document — one issuer's AR + investor deck is one voice, not two</td></tr>
+      <tr><td class="c">document_count</td><td class="n">DISTINCT source docs</td><td class="n">Breadth of paper behind the edge</td></tr>
+      <tr><td class="c">best_evidence_label</td><td class="n">MIN of rank: reported(1) &gt; explicit(2) &gt; co-mentioned(3)</td><td class="n">The strongest computed evidence class</td></tr>
+      <tr><td class="c">top_authority_tier</td><td class="n">MIN over the 12-tier rank</td><td class="n">Strongest passport authority among contributing documents</td></tr>
+      <tr><td class="c">weight</td><td class="n">1.0 / 0.8 / 0.5 from <code>best_evidence_label</code> alone</td><td class="n"><strong>Display strength</strong> — not stored, not a blend, not a model number: a deterministic consequence of one atom</td></tr>
+      <tr><td class="c">purpose</td><td class="n">commercial-wins over contributing mentions</td><td class="n">Any commercial evidence makes the edge commercial; an all-unclassified edge stays honestly NULL</td></tr>
+      <tr><td class="c">provenance</td><td class="n">Deduped union across contributing documents</td><td class="n"></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tbl" id="v-active_concept_mentions">
+  <header><span class="name">active_concept_mentions</span><span class="badge b-view">VIEW</span></header>
+  <p class="purpose">Kept mentions joined to their one active mapping version, exposing <code>resolved_concept_id</code>, <code>resolution_run_id</code> and <code>mutation_id</code>.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="fks">Foreign-key map</h2>
+<p>
+  47 foreign keys. Note the delete-action column — it encodes intent:
+  <strong>CASCADE</strong> means "this row has no meaning without its parent";
+  <strong>SET NULL</strong> means "the assertion outlives the reference";
+  <strong>RESTRICT</strong> means "history blocks deletion".
+</p>
+
+<div class="wrap">
+<table class="ref">
+  <thead><tr><th>From</th><th>Column(s)</th><th>To</th><th>On delete</th></tr></thead>
+  <tbody>
+    <tr><td class="m">pages</td><td class="m">doc_id</td><td class="m">sources</td><td>CASCADE</td></tr>
+    <tr><td class="m">all_documents</td><td class="m">id</td><td class="m">sources</td><td>CASCADE</td></tr>
+    <tr><td class="m">all_documents</td><td class="m">(workspace_id, issuer_entity_id)</td><td class="m">entities</td><td>SET NULL</td></tr>
+    <tr><td class="m">all_documents</td><td class="m">derived_from_doc_id</td><td class="m">all_documents</td><td>SET NULL</td></tr>
+    <tr><td class="m">elements</td><td class="m">doc_id</td><td class="m">sources</td><td>CASCADE</td></tr>
+    <tr><td class="m">transcript_speakers</td><td class="m">doc_id</td><td class="m">sources</td><td>CASCADE</td></tr>
+    <tr><td class="m">transcript_events</td><td class="m">doc_id</td><td class="m">sources</td><td>CASCADE</td></tr>
+    <tr><td class="m">chunks</td><td class="m">doc_id</td><td class="m">all_documents</td><td>CASCADE</td></tr>
+    <tr><td class="m">document_roles</td><td class="m">(workspace_id, doc_id)</td><td class="m">all_documents</td><td>CASCADE</td></tr>
+    <tr><td class="m">document_roles</td><td class="m">(workspace_id, entity_id)</td><td class="m">entities</td><td>SET NULL</td></tr>
+    <tr><td class="m">acquisitions</td><td class="m">doc_id</td><td class="m">all_documents</td><td>CASCADE</td></tr>
+    <tr><td class="m">attributes_fine</td><td class="m">(workspace_id, coarse_id)</td><td class="m">attributes_coarse</td><td>CASCADE</td></tr>
+    <tr><td class="m">concept_definitions</td><td class="m">(workspace_id, concept_id)</td><td class="m">concepts</td><td>CASCADE</td></tr>
+    <tr><td class="m">entity_pack_applicability</td><td class="m">(workspace_id, entity_id)</td><td class="m">entities</td><td>CASCADE</td></tr>
+    <tr><td class="m">concept_mentions</td><td class="m">(workspace_id, doc_id)</td><td class="m">all_documents</td><td>CASCADE</td></tr>
+    <tr><td class="m">concept_mentions</td><td class="m">(workspace_id, discovery_run_id)</td><td class="m">concept_discovery_runs</td><td>CASCADE</td></tr>
+    <tr><td class="m">concept_mentions</td><td class="m">(workspace_id, concept_id)</td><td class="m">concepts</td><td>SET NULL</td></tr>
+    <tr><td class="m">concept_mutations</td><td class="m">(workspace_id, concept_id)</td><td class="m">concepts</td><td><strong>RESTRICT</strong></td></tr>
+    <tr><td class="m">concept_mention_versions</td><td class="m">(workspace_id, mention_id)</td><td class="m">concept_mentions</td><td>CASCADE</td></tr>
+    <tr><td class="m">concept_mention_versions</td><td class="m">(workspace_id, concept_id)</td><td class="m">concepts</td><td><strong>RESTRICT</strong></td></tr>
+    <tr><td class="m">concept_mention_versions</td><td class="m">(workspace_id, mutation_id)</td><td class="m">concept_mutations</td><td>SET NULL</td></tr>
+    <tr><td class="m">extraction_runs</td><td class="m">doc_id</td><td class="m">all_documents</td><td>CASCADE</td></tr>
+    <tr><td class="m">claim_mentions</td><td class="m">extraction_run_id</td><td class="m">extraction_runs</td><td>CASCADE</td></tr>
+    <tr><td class="m">resolution_runs</td><td class="m">extraction_run_id</td><td class="m">extraction_runs</td><td>CASCADE</td></tr>
+    <tr><td class="m">resolution_runs</td><td class="m">(workspace_id, spine_snapshot_hash)</td><td class="m">spine_snapshots</td><td>NO ACTION</td></tr>
+    <tr><td class="m">claim_versions</td><td class="m">run_id</td><td class="m">resolution_runs</td><td>CASCADE</td></tr>
+    <tr><td class="m">claim_versions</td><td class="m">raw_mention_id</td><td class="m">claim_mentions</td><td>CASCADE</td></tr>
+    <tr><td class="m">claim_versions</td><td class="m">(workspace_id, subject)</td><td class="m">entities</td><td>CASCADE</td></tr>
+    <tr><td class="m">claim_versions</td><td class="m">(workspace_id, attribute_coarse)</td><td class="m">attributes_coarse</td><td>CASCADE</td></tr>
+    <tr><td class="m">claim_versions</td><td class="m">(workspace_id, attribute_fine)</td><td class="m">attributes_fine</td><td>SET NULL</td></tr>
+    <tr><td class="m">resolve_verdict_memo</td><td class="m">raw_mention_id</td><td class="m">claim_mentions</td><td>CASCADE</td></tr>
+    <tr><td class="m">claim_review_versions</td><td class="m">doc_id</td><td class="m">all_documents</td><td>CASCADE</td></tr>
+    <tr><td class="m">claim_review_versions</td><td class="m">raw_mention_id</td><td class="m">claim_mentions</td><td>CASCADE</td></tr>
+    <tr><td class="m">entity_relations</td><td class="m">(workspace_id, source_entity)</td><td class="m">entities</td><td>CASCADE</td></tr>
+    <tr><td class="m">entity_relations</td><td class="m">(workspace_id, target_entity)</td><td class="m">entities</td><td>CASCADE</td></tr>
+    <tr><td class="m">relation_mentions</td><td class="m">extraction_run_id</td><td class="m">extraction_runs</td><td>CASCADE</td></tr>
+    <tr><td class="m">relation_versions</td><td class="m">run_id</td><td class="m">resolution_runs</td><td>CASCADE</td></tr>
+    <tr><td class="m">relation_versions</td><td class="m">(workspace_id, source_entity)</td><td class="m">entities</td><td>CASCADE</td></tr>
+    <tr><td class="m">relation_versions</td><td class="m">(workspace_id, target_entity)</td><td class="m">entities</td><td>CASCADE</td></tr>
+    <tr><td class="m">fact_versions</td><td class="m">(workspace_id, subject)</td><td class="m">entities</td><td>CASCADE</td></tr>
+    <tr><td class="m">fact_versions</td><td class="m">(workspace_id, line_item)</td><td class="m">line_items</td><td>NO ACTION</td></tr>
+    <tr><td class="m">fact_versions</td><td class="m">source_doc_id</td><td class="m">all_documents</td><td>CASCADE</td></tr>
+    <tr><td class="m">fact_versions</td><td class="m">run_id</td><td class="m">resolution_runs</td><td>CASCADE</td></tr>
+    <tr><td class="m">fact_versions</td><td class="m">(workspace_id, raw_mention_id)</td><td class="m">fact_mentions</td><td>CASCADE</td></tr>
+    <tr><td class="m">fact_mentions</td><td class="m">extraction_run_id</td><td class="m">extraction_runs</td><td>CASCADE</td></tr>
+    <tr><td class="m">fact_mentions</td><td class="m">doc_id</td><td class="m">all_documents</td><td>CASCADE</td></tr>
+    <tr><td class="m">vendor_snapshots</td><td class="m">doc_id</td><td class="m">all_documents</td><td>CASCADE</td></tr>
+    <tr><td class="m">canvas_nodes</td><td class="m">canvas_id</td><td class="m">canvases</td><td>CASCADE</td></tr>
+    <tr><td class="m">canvas_edges</td><td class="m">canvas_id</td><td class="m">canvases</td><td>CASCADE</td></tr>
+    <tr><td class="m">canvas_edges</td><td class="m">src_node, dst_node</td><td class="m">canvas_nodes</td><td>CASCADE</td></tr>
+    <tr><td class="m">artifacts</td><td class="m">canvas_id</td><td class="m">canvases</td><td>CASCADE</td></tr>
+    <tr><td class="m">artifacts</td><td class="m">node_id</td><td class="m">canvas_nodes</td><td>CASCADE</td></tr>
+    <tr><td class="m">canvas_usage</td><td class="m">canvas_id</td><td class="m">canvases</td><td>CASCADE</td></tr>
+    <tr><td class="m">canvas_usage</td><td class="m">artifact_id</td><td class="m">artifacts</td><td>SET NULL</td></tr>
+    <tr><td class="m">workbook_versions</td><td class="m">workbook_id</td><td class="m">workbooks</td><td>CASCADE</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>
+  <strong>Deliberately FK-free:</strong> <code>relation_review_versions</code>,
+  <code>entity_review_versions</code>, <code>comparison_review_versions</code> (judgments must survive
+  a re-harvest that rebuilds every underlying row) · <code>instruments</code> (global reference data) ·
+  <code>canvas_nodes.latest_artifact_id</code> (would be circular).
+</p>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="vocab">Controlled vocabularies</h2>
+<p>These CHECK vocabularies mirror <code>app/contracts/models.py</code> — <strong>change them together.</strong></p>
+
+<div class="wrap">
+<table class="ref">
+  <thead><tr><th>Vocabulary</th><th>Used by</th><th>Values</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="m">authority_tier</td>
+      <td class="m">documents · claim_versions · fact_versions</td>
+      <td>audited_filing → exchange_filing → regulatory → company_stated → broker_research → news_reported → news_opinion → user → vendor_data → computed → ai_derived → unverified <em>(ranked strongest first)</em></td>
+    </tr>
+    <tr><td class="m">section</td><td class="m">all_documents</td>
+      <td>annual_reports · results · transcripts · presentations · analyst_reports · news · dashboard · canvas · others</td></tr>
+    <tr><td class="m">document_kind</td><td class="m">all_documents</td>
+      <td>annual_report · drhp · results_filing · transcript · presentation · press_release · exchange_intimation · broker_research · news · dashboard_snapshot · canvas_artifact · unknown</td></tr>
+    <tr><td class="m">source_class</td><td class="m">all_documents</td>
+      <td>primary_statutory · primary_exchange_filed · primary_spoken · primary · independent_secondary · secondary · internal_derived · unknown</td></tr>
+    <tr><td class="m">entity type</td><td class="m">entities · concepts</td>
+      <td><strong>produced:</strong> company · segment · geography · client · product_service · regulator — <strong>reserved:</strong> theme · risk · person · deal</td></tr>
+    <tr><td class="m">relation_type</td><td class="m">entity_relations · relation_versions</td>
+      <td>competes · supplies · partners · parent_of · serves · operates_in · has_segment · offers · regulated_by</td></tr>
+    <tr><td class="m">harvest kind</td><td class="m">relation_mentions</td>
+      <td>client · competitor · geography · segment · product_service · regulator · subsidiary · partner</td></tr>
+    <tr><td class="m">evidence_label</td><td class="m">relation_mentions</td>
+      <td>reported &gt; explicit &gt; co-mentioned <em>(computed, never asserted)</em></td></tr>
+    <tr><td class="m">polarity</td><td class="m">claim_versions</td>
+      <td>improving · deteriorating · stable <em>(directional, not good/bad)</em></td></tr>
+    <tr><td class="m">modality</td><td class="m">claim_versions</td>
+      <td>reported · guidance · opinion · estimate</td></tr>
+    <tr><td class="m">voice</td><td class="m">claim_mentions · claim_versions</td>
+      <td>management · company · analyst · journalist · unknown</td></tr>
+    <tr><td class="m">object_kind</td><td class="m">claim_mentions · claim_versions</td>
+      <td>observation · assertion · estimate · event · relationship · mechanism_hypothesis</td></tr>
+    <tr><td class="m">causal_origin</td><td class="m">claim_mentions · claim_versions</td>
+      <td>arithmetic · source_asserted · empirically_inferred · ai_proposed · analyst_authored</td></tr>
+    <tr><td class="m">concept family</td><td class="m">concepts · concept_mentions</td>
+      <td>measure · mechanism · business_object · event_state · analytical_frame</td></tr>
+    <tr><td class="m">run state</td><td class="m">extraction_runs · resolution_runs</td>
+      <td>running · done · <strong>done_zero</strong> · failed · stale</td></tr>
+    <tr><td class="m">comparison outcome</td><td class="m">comparison_review_versions</td>
+      <td>contested · flagged · comparable_agreeing · variance_to_expectation · time_series · supersession · not_comparable</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<h2 id="obs">Observations from reading the schema</h2>
+
+<div class="note warn">
+  <span class="tag">① A CHECK constraint is silently re-narrowed by file order</span>
+  <p>
+    <code>entity_relations_relation_type_check</code> is widened to nine types at line&nbsp;1219 — and
+    then a <em>later</em> Phase-5 migration block at line&nbsp;1730 drops and re-adds it with the
+    <strong>seven-type list</strong>, omitting <code>offers</code> and <code>regulated_by</code>.
+    Because <code>schema.sql</code> applies top to bottom, the narrow version wins and is the
+    constraint that actually exists on the database.
+  </p>
+  <p>
+    <strong>Impact today: latent, not live.</strong> Those two types are produced only by the harvest,
+    which writes <code>relation_versions</code> — whose own CHECK <em>is</em> correctly widened and not
+    re-narrowed. <code>entity_relations</code> holds only curated seeds, and no seed currently uses
+    them. But the moment an analyst seeds an <code>offers</code> or <code>regulated_by</code> edge, the
+    insert fails. This is exactly the trap the schema's own comment at line&nbsp;1629 warns about
+    ("add new types THERE as well as here, or the later re-add silently narrows the constraint back" —
+    which was written about <code>canvas_nodes</code> after this exact bug bit a live smoke test).
+    The fix is to delete the stale block, since the earlier one supersedes it.
+  </p>
+</div>
+
+<div class="note">
+  <span class="tag">② A duplicated index statement</span>
+  <p>
+    <code>CREATE UNIQUE INDEX … documents_ws_id_key</code> appears twice (lines 298 and 510). Harmless
+    — <code>IF NOT EXISTS</code> makes the second a no-op — but it signals that two feature blocks each
+    added the prerequisite independently.
+  </p>
+</div>
+
+<div class="note">
+  <span class="tag">③ The schema carries its own reasoning</span>
+  <p>
+    Roughly 40% of the file is comment, and it is unusually high-value: most constraints explain the
+    <em>failure they prevent</em>, often with the concrete incident that motivated them (the
+    HDFC-Bank lineage mislabel, the model-confidence edge weight, the vendor-card explosion). That is
+    worth preserving deliberately — it is the reason this document could be written from the file
+    alone.
+  </p>
+</div>
+
+<div class="note">
+  <span class="tag">④ No migration tool is a real trade-off</span>
+  <p>
+    Idempotent <code>apply_schema</code> is right for a pre-live demo and keeps the whole schema
+    readable in one file. But drop-and-re-add constraint blocks accumulate, order-dependence is
+    invisible until it bites (see ①), and there is no down-path. The file itself flags this as
+    ADR-worthy: "revisit if schema churn demands real migrations." At 1,845 lines and 42 tables,
+    that point is approaching.
+  </p>
+</div>
+
+<p style="margin-top:34px; padding-top:16px; border-top:1px solid var(--border); font-size:12px; color:var(--faint)">
+  Generated from <code>services/ai/app/db/schema.sql</code> (1,807 lines) · 2026-07-26 ·
+  Regenerate this page whenever the schema changes materially.
+</p>
+
+</main>
+</div>
+
+<script>
+  // Theme toggle — stamps data-theme on the root so it beats the media query both ways.
+  (function () {
+    var root = document.documentElement;
+    var saved = null;
+    try { saved = localStorage.getItem('n4a-schema-theme'); } catch (e) {}
+    if (saved) root.setAttribute('data-theme', saved);
+    document.getElementById('theme').addEventListener('click', function () {
+      var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var current = root.getAttribute('data-theme') || (dark ? 'dark' : 'light');
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('n4a-schema-theme', next); } catch (e) {}
+    });
+  })();
+
+  // Filter — matches table names and column names, hides non-matching cards and any
+  // section heading left with nothing under it.
+  (function () {
+    var input = document.getElementById('filter');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.tbl'));
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      cards.forEach(function (card) {
+        card.classList.toggle('hidden', q !== '' && card.textContent.toLowerCase().indexOf(q) === -1);
+      });
+      // Dim prose while filtering so the results read as a list.
+      document.querySelectorAll('main > p, main > .wrap, main > .note, main > h4, main > .diagram, main > .dg-cap, main > .stats')
+        .forEach(function (el) { el.classList.toggle('hidden', q !== ''); });
+    });
+  })();
+</script>
+
+</body>
+</html>
